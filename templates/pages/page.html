@@ -12,26 +12,8 @@
   <body >
     
 <!-- NAV -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
-  </a>
+{% include 'pages/header.html' %}
 
-<div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Live Stream</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Chat</a>
-      </li>
-      </ul>
-</div>
-  </div>
-</nav>
 
 <div class="container">
   
@@ -55,7 +37,7 @@
     <p></p>
     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
       {% for keyword in openreview.content.keywords %}
-      <a href="keyword_{{keyword}}" class="text-secondary text-decoration-none">{{keyword}}</a>,
+      <a href="keyword_{{keyword}}.html" class="text-secondary text-decoration-none">{{keyword}}</a>,
       {% endfor %}
     </p>    
   </div>
