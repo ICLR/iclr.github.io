@@ -42,7 +42,7 @@ def poster(poster):
 
     node_id = int(poster)
     print(poster, notes[node_id])
-    data = {"openreview": notes[node_id], "id": node_id}
+    data = {"openreview": notes[node_id], "id": node_id, "next": node_id +1 , "prev": node_id-1}
     print(data)
     if "TL;DR" in data["openreview"].content:
         data["openreview"].content["TLDR"] = data["openreview"].content["TL;DR"]
