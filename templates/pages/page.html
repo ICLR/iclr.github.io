@@ -89,7 +89,10 @@
 {{author}},
 {% endfor %}
 </h6>
-    <p class="card-text">TL;DR: {{openreview.content.TLDR}}</p>
+
+
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> {{openreview.content.TLDR}}</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> {{openreview.content.abstract}}</p>
 
     <center>
     <a class="card-link"  href="http://www.openreview.net{{openreview.content.pdf}}">Paper</a>
@@ -97,11 +100,15 @@
     <a href="{{openreview.content.slides}}" class="card-link">Slides</a>
     </center>
     <p></p>
-    <p class="card-text">Keywords:
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
       {% for keyword in openreview.content.keywords %}
-      <a>{{keyword}}</a>,
+      <a href="keyword_{{keyword}}" class="text-secondary text-decoration-none">{{keyword}}</a>,
       {% endfor %}
+
+      
     </p>
+
+    
   </div>
 </div>
 
