@@ -5,20 +5,13 @@ app.config.from_object(__name__)
 
 
 from flask import Flask, render_template, render_template_string
-
 from flask_frozen import Freezer
 import pickle
 import os.path
 from os import path
+import sys
 
-
-# https://openreview.net/group?id=ICLR.cc/2020
-def prerender_jinja(text):
-    """ Pre-renders Jinja templates before markdown. """
-    prerendered_body = render_template_string(text)
-    return prerendered_body
-
-
+# Load all for openreview one time. 
 if path.exists("cached_or"):
     notes = pickle.load(open("cached_or", "br"))
 
@@ -33,6 +26,7 @@ else:
     pickle.dump(notes, open("cached_or", "bw"))
 
 
+# Pull the OpenReview info for a poster. 
 @app.route('/poster_<poster>.html')
 def poster(poster):
 
@@ -45,14 +39,16 @@ def poster(poster):
         data["openreview"].content["TLDR"] = data["openreview"].content["TL;DR"]
     return render_template('pages/page.html', **data)
 
+
+# Code to turn it all static
 freezer = Freezer(app, with_no_argument_rules=False, log_url_for=False)
 @freezer.register_generator
 def your_generator_here():
     for i in range(1, 10):
         yield "poster", {"poster": str(i)}
 
-import sys
-# Modified Main
+
+# Start the app
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "build":
         freezer.freeze()

@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title> ICLR 2020: {{openreview.content.title}} </title>
+    <title> ICLR: {{openreview.content.title}} </title>
 </head>
 
-
+  <body >
+    
+<!-- NAV -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">
     <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
@@ -28,119 +30,70 @@
       </li>
       </ul>
 </div>
-  <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-  <!--   <ul class="navbar-nav mr-auto"> -->
-  <!--     <li class="nav-item active"> -->
-  <!--       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
-  <!--     </li> -->
-  <!--     <li class="nav-item"> -->
-  <!--       <a class="nav-link" href="#">Link</a> -->
-  <!--     </li> -->
-  <!--     <li class="nav-item dropdown"> -->
-  <!--       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
-  <!--         Dropdown -->
-  <!--       </a> -->
-  <!--       <div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
-  <!--         <a class="dropdown-item" href="#">Action</a> -->
-  <!--         <a class="dropdown-item" href="#">Another action</a> -->
-  <!--         <div class="dropdown-divider"></div> -->
-  <!--         <a class="dropdown-item" href="#">Something else here</a> -->
-  <!--       </div> -->
-  <!--     </li> -->
-  <!--     <li class="nav-item"> -->
-  <!--       <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
-  <!--     </li> -->
-  <!--   </ul> -->
-    <!-- <form class="form-inline my-2 my-lg-0"> -->
-    <!--   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
-    <!--   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-    <!-- </form> -->
   </div>
 </nav>
 
-
-<!-- <div style="overflow: hidden;height: 250px;"> <\!-- For Demo, Represents the body -\-> -->
-<!-- <nav class="demo"> -->
-<!--   <a href="#" class="brand"> -->
-<!--     <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png" /> -->
-<!--   </a> -->
-
-<!--   <\!-- responsive-\-> -->
-<!--   <input id="bmenub" type="checkbox" class="show"> -->
-<!--   <label for="bmenub" class="burger pseudo button">menu</label> -->
-
-
-
-<!--   <div class="menu"> -->
-<!--     <a href="#" class="pseudo button icon-picture">Live Stream</a> -->
-<!--     <a href="#" class="pseudo  button icon-puzzle">Chat</a> -->
-<!--     <a href="#" class="pseudo button icon-puzzle">Sponsors</a> -->
-<!--   </div> -->
-<!-- </nav> -->
-<!-- </div> -->
-
 <div class="container">
-
+  
+ <!-- Title -->
 
 <div class="card" >
   <div class="card-body">
     <h3 class="card-title">{{openreview.content.title}}</h3>
     <h6 class="card-subtitle mb-2 text-muted">{% for author in openreview.content.authors %}
-{{author}},
-{% endfor %}
-</h6>
-
-
+      {{author}},
+      {% endfor %}
+    </h6>
     <p class="card-text"><span class="font-weight-bold">TL;DR:</span> {{openreview.content.TLDR}}</p>
     <p class="card-text"><span class="font-weight-bold">Abstract:</span> {{openreview.content.abstract}}</p>
-
+    
     <center>
-    <a class="card-link"  href="http://www.openreview.net{{openreview.content.pdf}}">Paper</a>
-    <a href="{{openreview.content.code}}" class="card-link">Code</a>
-    <a href="{{openreview.content.slides}}" class="card-link">Slides</a>
+      <a class="card-link"  href="http://www.openreview.net{{openreview.content.pdf}}">Paper</a>
+      <a href="{{openreview.content.code}}" class="card-link">Code</a>
+      <a href="{{openreview.content.slides}}" class="card-link">Slides</a>
     </center>
     <p></p>
     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
       {% for keyword in openreview.content.keywords %}
       <a href="keyword_{{keyword}}" class="text-secondary text-decoration-none">{{keyword}}</a>,
       {% endfor %}
-
-      
-    </p>
-
-    
+    </p>    
   </div>
 </div>
 
-
 <div>
+</div>
 
 </div>
 
 
-
-<!-- {{openreview.content}} -->
-
-</div>
-
+<!-- SlidesLive -->
 <div id="presentation-embed-38915748" class="container container-sm"></div>
 <script src='https://slideslive.com/embed_presentation.js'></script>
 <script>
-    embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true
     });
 </script>
-<body >
+
+
+<!-- Buttons -->
 <div  class="container" style="padding-bottom: 30px; padding-top:30px">
-  <center>   <span><a href="poster_{{prev}}.html" class="btn btn-secondary">Prev</a></span> <span><a href="" class="btn btn-secondary">OpenReview</a></span> <span><a href="" class="btn btn-secondary">Video Call</a></span>   <span><a class="btn btn-secondary" href="https://gitter.im/iclr/poster{{id}}/">Chat</a></span> <span><a href="poster_{{next}}.html" class="btn btn-secondary">Next</a></span> </center>
+  <center>
+    <span><a href="poster_{{prev}}.html" class="btn btn-secondary">Prev</a></span>
+    <span><a href="" class="btn btn-secondary">OpenReview</a></span>
+    <span><a href="" class="btn btn-secondary">Video Call</a></span>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/poster{{id}}/">Chat</a></span>
+    <span><a href="poster_{{next}}.html" class="btn btn-secondary">Next</a></span> </center>
 </div>
 
+<!-- Gitter -->
 <div id="gitter" class="gitter container" height="600px">
   <center>
-<div class="border">
-  <center> <iframe frameborder="0" src="https://gitter.im/iclr/poster{{id}}/~embed" width="900px" height="400px"></iframe> </center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/poster{{id}}/~embed" width="900px" height="400px"></iframe> </center>
     </div>
   </center>
 </div>
