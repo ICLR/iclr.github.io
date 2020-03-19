@@ -26,6 +26,8 @@ else:
 
     pickle.dump(notes, open("cached_or", "bw"))
 
+author_recs = pickle.load(open("rec_cached", "br"))
+
 keywords = {}
 for i, n in enumerate(notes):
     n.content["iclr_id"] = i
@@ -59,6 +61,13 @@ def keyword(keyword):
             "openreviews": keywords[keyword]}
     return render_template('pages/keyword.html', **data)
 
+# Show by Keyword
+@app.route('/recs_<author>.html')
+def recs(author):
+    data = {"keyword": author,
+            "openreviews": [notes[n] for n in author_recs[author]]}
+    return render_template('pages/keyword.html', **data)
+
 
 
 # Code to turn it all static
@@ -71,6 +80,10 @@ def your_generator_here():
     for k in keywords:
         if "/" not in k:
             yield "keyword", {"keyword": k}
+
+    for a in author_recs:
+        if "/" not in k:
+            yield "recs", {"author": a}
 
 
 # Start the app
