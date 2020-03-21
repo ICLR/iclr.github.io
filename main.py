@@ -12,11 +12,12 @@ from os import path
 import sys
 
 # Load all for openreview one time.
-notes = pickle.load(open("cached_or", "br"))
+notes = pickle.load(open("cached_or.pkl", "br"))
+notes_keys = list(notes.keys())
 author_recs = pickle.load(open("rec_cached", "br"))
 
 keywords = {}
-for i, n in enumerate(notes):
+for i, n in enumerate(notes.values()):
     n.content["iclr_id"] = i
 
     if "TL;DR" in n.content:
@@ -32,11 +33,9 @@ for i, n in enumerate(notes):
 # Pull the OpenReview info for a poster. 
 @app.route('/poster_<poster>.html')
 def poster(poster):
-
-    node_id = int(poster)
-    print(poster, notes[node_id])
-    data = {"openreview": notes[node_id], "id": node_id,
-            "next": node_id +1 , "prev": node_id-1}
+    note_id = int(poster)
+    data = {"openreview": notes[notes_keys[note_id]], "id": note_id,
+            "next": note_id +1 , "prev": note_id-1}
     print(data)
     return render_template('pages/page.html', **data)
 
@@ -61,7 +60,7 @@ def recs(author):
 freezer = Freezer(app, with_no_argument_rules=False, log_url_for=False)
 @freezer.register_generator
 def your_generator_here():
-    for i in range(1, 10):
+    for i in range(len(notes_keys)):
         yield "poster", {"poster": str(i)}
 
     for k in keywords:

@@ -13,12 +13,4 @@ for k, v in blind_notes.items():
     for author in v.content["authors"]:
         authors.append(author)
 pickle.dump(authors, open("authors", "wb"))
-# with gzip.open("scratch/papers.json.gz", "r") as f:
-#     db = [json.loads(x) for x in f]  # for debug
-#     db_abs = [x['paperAbstract'] for x in db]
-
-        
-# inp = [{"ids":[""], "names":[author]} for n in authors]
-# out = calc_reviewer_db_mapping(inp,
-#                                db, author_col="name", author_field='authors')
         

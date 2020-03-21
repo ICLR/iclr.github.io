@@ -35,8 +35,8 @@ for i in range(papers.shape[0]):
         
 # Get author recs. 
 with gzip.open("scratch/papers.json.gz", "r") as f:
-        db = [json.loads(x) for x in f]  # for debug
-        db_abs = [x['paperAbstract'] for x in db]
+        db = [json.loads(x) for x in f][:100]  # for debug
+        db_abs = [x['paperAbstract'] for x in db][:100]
 mat = calc_similarity_matrix(model, db_abs, conf_abs)
 
 
@@ -56,6 +56,6 @@ def get_papers(names):
         #     print()
         data[n] = papers.tolist()
     return data
-recs2 = get_papers(pickle.load("authors"))
+recs2 = get_papers(pickle.load(open("authors", "br")))
 
-pickle.dump((recs, recs2), "rec.pkl")
+pickle.dump((recs, recs2), open("rec.pkl", "bw"))
