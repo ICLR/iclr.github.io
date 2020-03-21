@@ -11,21 +11,8 @@ import os.path
 from os import path
 import sys
 
-# Load all for openreview one time. 
-if path.exists("cached_or"):
-    notes = pickle.load(open("cached_or", "br"))
-
-else:
-    import openreview
-    c = openreview.Client(baseurl='https://openreview.net')
-    notes = c.get_notes(invitation='ICLR.cc/2020/Conference/-/Blind_Submission') + \
-            c.get_notes(invitation='ICLR.cc/2020/Conference/-/Blind_Submission',
-                        offset=1000, limit=1000) + \
-            c.get_notes(invitation='ICLR.cc/2020/Conference/-/Blind_Submission',
-                        offset=2000, limit=1000)
-
-    pickle.dump(notes, open("cached_or", "bw"))
-
+# Load all for openreview one time.
+notes = pickle.load(open("cached_or", "br"))
 author_recs = pickle.load(open("rec_cached", "br"))
 
 keywords = {}
