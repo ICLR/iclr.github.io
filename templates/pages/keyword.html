@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: {{keyword}} </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+{% include 'pages/header.html' %}
+<div class="container">
+  {% for openreview in openreviews %}
+  <div class="card" >
+    <div class="card-body">
+      <a href="poster_{{openreview.content.iclr_id}}.html" class="text-dark"><h3 class="card-title">{{openreview.content.title}}</h3></a>
+      <h6 class="card-subtitle mb-2 text-muted">{% for author in openreview.content.authors %}
+        {{author}},
+        {% endfor %}
+      </h6>
+      <p class="card-text"> {{openreview.content.TLDR}}</p>
+      <!-- <p class="card-text"><span class="font-weight-bold">Abstract:</span> {{openreview.content.abstract}}</p> -->
+ 
+      <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+        {% for keyword in openreview.content.keywords %}
+        <a href="keyword_{{keyword}}.html" class="text-secondary text-decoration-none">{{keyword}}</a>,
+        {% endfor %}
+      </p>    
+      
+      <center>
+        <a href="poster_{{openreview.content.iclr_id}}.html" class="btn btn-primary">Visit</a>
+        <!-- <a class="card-link"  href="http://www.openreview.net{{openreview.content.pdf}}">Paper</a> -->
+        <!-- <a href="{{openreview.content.code}}" class="card-link">Code</a> -->
+        <!-- <a href="{{openreview.content.slides}}" class="card-link">Slides</a> -->
+      </center>
+      <p></p>
+    </div>
+  </div>
+  <p></p>
+  <!-- <div class="container"></div> -->
+  {% endfor %}
+</div>
+</body>

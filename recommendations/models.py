@@ -11,7 +11,7 @@ import os
 from torch.nn.modules.distance import CosineSimilarity
 from torch.nn.utils.rnn import pad_packed_sequence as unpack
 from torch.nn.utils.rnn import pack_padded_sequence as pack
-from evaluate_similarity import evaluate
+# from evaluate_similarity import evaluate
 from torch import optim
 from model_utils import Example
 from tqdm import tqdm
