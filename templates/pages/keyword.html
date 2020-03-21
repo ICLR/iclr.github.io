@@ -40,7 +40,7 @@
           <p class="card-text"> {{openreview.content.TLDR}}</p>
           <p class="card-text"><span class="font-weight-bold">Keywords:</span>
             {% for keyword in openreview.content.keywords %}
-            <a href="keyword_{{keyword}}.html" class="text-secondary text-decoration-none">{{keyword}}</a>,
+            <a href="keyword_{{keyword}}.html" class="text-secondary text-decoration-none">{{keyword.lower()}}</a>,
             {% endfor %}
           </p>    
 

@@ -19,8 +19,9 @@ paper_recs, author_recs = pickle.load(open("rec.pkl", "br"))
 # print(author_recs["Yuntian Deng"])
 titles = {}
 keywords = {}
-for i, n in enumerate(notes.values()):
+for i, (k,n) in enumerate(notes.items()):
     n.content["iclr_id"] = i
+    n.content["key_id"] = k
 
     if "TL;DR" in n.content:
         n.content["TLDR"] = n.content["TL;DR"]
