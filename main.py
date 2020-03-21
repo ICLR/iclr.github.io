@@ -16,7 +16,7 @@ notes = pickle.load(open("cached_or.pkl", "br"))
 notes_keys = list(notes.keys())
 # author_recs = pickle.load(open("rec_cached", "br"))
 paper_recs, author_recs = pickle.load(open("rec.pkl", "br"))
-# print(author_recs)
+print(author_recs["Yuntian Deng"])
 keywords = {}
 for i, n in enumerate(notes.values()):
     n.content["iclr_id"] = i

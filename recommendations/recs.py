@@ -54,7 +54,7 @@ def get_papers(names):
         #     print("\t", accepted_submissions[i].content["title"])
         #     print()
         #     print()
-        data[n] = papers.tolist()
+        data[n] = [abstract_keys[p] for p in papers.tolist()]
     return data
 recs2 = get_papers(pickle.load(open("authors", "br")))
 
