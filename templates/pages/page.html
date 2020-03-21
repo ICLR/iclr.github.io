@@ -31,6 +31,9 @@
     
     <center>
       <a class="card-link"  href="http://www.openreview.net{{openreview.content.pdf}}">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net{{openreview.content.pdf}}">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
       <a href="{{openreview.content.code}}" class="card-link">Code</a>
       <a href="{{openreview.content.slides}}" class="card-link">Slides</a>
     </center>
@@ -63,14 +66,19 @@
 
 <!-- Buttons -->
 <div  class="container" style="padding-bottom: 30px; padding-top:30px">
-  <center>
-    <span><a href="poster_{{prev}}.html" class="btn btn-secondary">Prev</a></span>
-    <span><a href="" class="btn btn-secondary">OpenReview</a></span>
-    <span><a href="" class="btn btn-secondary">Video Call</a></span>
-    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/poster{{id}}/">Chat</a></span>
-    <span><a href="poster_{{next}}.html" class="btn btn-secondary">Next</a></span> </center>
-</div>
+<!--   <center> -->
+<!--     <span><a href="poster_{{prev}}.html" class="btn btn-secondary">Prev</a></span> -->
 
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_{{next}}.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/poster{{id}}/">Chat</a></span>
+</center>
+<p></p>
 <!-- Gitter -->
 <div id="gitter" class="gitter container" height="600px">
   <center>
@@ -80,33 +88,42 @@
   </center>
 </div>
 
-<!-- Gitter -->
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
 <div  class="container" >
-  {% for openreview in paper_recs %}
+  <div class="row">
+    <div class="card-deck">
+
+      {% for openreview in paper_recs %}
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
-    <div class="card-body">
-      <a href="poster_{{openreview.content.iclr_id}}.html" class="text-dark"><h3 class="card-title">{{openreview.content.title}}</h3></a>
-      <h6 class="card-subtitle mb-2 text-muted">{% for author in openreview.content.authors %}
-        {{author}},
-        {% endfor %}
-      </h6>
-      <p class="card-text"> {{openreview.content.TLDR}}</p>
-      <!-- <p class="card-text"><span class="font-weight-bold">Abstract:</span> {{openreview.content.abstract}}</p> -->
- 
-      <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-        {% for keyword in openreview.content.keywords %}
-        <a href="keyword_{{keyword}}.html" class="text-secondary text-decoration-none">{{keyword}}</a>,
-        {% endfor %}
-      </p>          
+    <div class="card-header">
+        <a href="poster_{{openreview.content.iclr_id}}.html" class="text-dark"><h5 class="card-title">{{openreview.content.title}}</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> {{openreview.content.TLDR}}</p>
+      </div>
+      
+      <div class="card-footer">
       <center>
         <a href="poster_{{openreview.content.iclr_id}}.html" class="btn btn-primary">Visit</a>
-      </center>
-      <p></p>
-    </div>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
   </div>
-  <p></p>
-  <!-- <div class="container"></div> -->
   {% endfor %}
-</DIV>
+    </DIV>
+          </DIV>
+      </DIV>
 
 </body>
