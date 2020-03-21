@@ -80,4 +80,33 @@
   </center>
 </div>
 
+<!-- Gitter -->
+<div  class="container" >
+  {% for openreview in paper_recs %}
+  <div class="card" >
+    <div class="card-body">
+      <a href="poster_{{openreview.content.iclr_id}}.html" class="text-dark"><h3 class="card-title">{{openreview.content.title}}</h3></a>
+      <h6 class="card-subtitle mb-2 text-muted">{% for author in openreview.content.authors %}
+        {{author}},
+        {% endfor %}
+      </h6>
+      <p class="card-text"> {{openreview.content.TLDR}}</p>
+      <!-- <p class="card-text"><span class="font-weight-bold">Abstract:</span> {{openreview.content.abstract}}</p> -->
+ 
+      <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+        {% for keyword in openreview.content.keywords %}
+        <a href="keyword_{{keyword}}.html" class="text-secondary text-decoration-none">{{keyword}}</a>,
+        {% endfor %}
+      </p>          
+      <center>
+        <a href="poster_{{openreview.content.iclr_id}}.html" class="btn btn-primary">Visit</a>
+      </center>
+      <p></p>
+    </div>
+  </div>
+  <p></p>
+  <!-- <div class="container"></div> -->
+  {% endfor %}
+</DIV>
+
 </body>

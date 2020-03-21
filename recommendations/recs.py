@@ -29,7 +29,7 @@ _, papers =  torch.topk(torch.tensor(intra_recs), 5, -1)
 for i in range(papers.shape[0]):
     # print(accepted_submissions[i].content["title"])
     recs[abstract_keys[i]] = []
-    for j in range(5):
+    for j in papers[i]:
         # print("\t", accepted_submissions[papers[i, j]].content["title"])
         recs[abstract_keys[i]].append(abstract_keys[j])
         

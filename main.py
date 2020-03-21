@@ -14,8 +14,9 @@ import sys
 # Load all for openreview one time.
 notes = pickle.load(open("cached_or.pkl", "br"))
 notes_keys = list(notes.keys())
-author_recs = pickle.load(open("rec_cached", "br"))
-
+# author_recs = pickle.load(open("rec_cached", "br"))
+paper_recs, author_recs = pickle.load(open("rec.pkl", "br"))
+# print(author_recs)
 keywords = {}
 for i, n in enumerate(notes.values()):
     n.content["iclr_id"] = i
@@ -27,14 +28,20 @@ for i, n in enumerate(notes.values()):
     for k in n.content["keywords"]:
         keywords.setdefault(k, [])
         keywords[k].append(n)
-
             
 
+# 
+@app.route('/')
+def index():
+    return render_template('pages/main.html', **{})
+
+        
 # Pull the OpenReview info for a poster. 
 @app.route('/poster_<poster>.html')
 def poster(poster):
     note_id = int(poster)
     data = {"openreview": notes[notes_keys[note_id]], "id": note_id,
+            "paper_recs" : [notes[n] for n in paper_recs[notes_keys[note_id]]],
             "next": note_id +1 , "prev": note_id-1}
     print(data)
     return render_template('pages/page.html', **data)
@@ -70,7 +77,7 @@ def your_generator_here():
     for a in author_recs:
         if "/" not in k:
             yield "recs", {"author": a}
-
+    yield "index"
 
 # Start the app
 if __name__ == "__main__":
