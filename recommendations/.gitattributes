@@ -1,2 +1,0 @@
-scratch/papers.json.gz filter=lfs diff=lfs merge=lfs -text
-scratch/similarity-model.pt filter=lfs diff=lfs merge=lfs -text
