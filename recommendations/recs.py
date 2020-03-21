@@ -35,8 +35,8 @@ for i in range(papers.shape[0]):
         
 # Get author recs. 
 with gzip.open("scratch/papers.json.gz", "r") as f:
-        db = [json.loads(x) for x in f][:100]  # for debug
-        db_abs = [x['paperAbstract'] for x in db][:100]
+        db = [json.loads(x) for x in f]  # for debug
+        db_abs = [x['paperAbstract'] for x in db]
 mat = calc_similarity_matrix(model, db_abs, conf_abs)
 
 
