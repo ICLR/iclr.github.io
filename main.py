@@ -20,9 +20,9 @@ paper_recs, author_recs = pickle.load(open("rec.pkl", "br"))
 titles = {}
 keywords = {}
 for i, (k,n) in enumerate(notes.items()):
-    n.content["iclr_id"] = i
-    n.content["key_id"] = k
-
+    n.content["iclr_id"] = k
+    # n.content["key_id"] = 
+    titles[n.content["title"]] = k
     if "TL;DR" in n.content:
         n.content["TLDR"] = n.content["TL;DR"]
     else:
@@ -30,7 +30,7 @@ for i, (k,n) in enumerate(notes.items()):
     for k in n.content["keywords"]:
         keywords.setdefault(k.lower(), [])
         keywords[k.lower()].append(n)
-    titles[n.content["title"]] = i
+
          
 @app.route('/livestream.html')
 def livestream():
@@ -64,10 +64,9 @@ def title(title):
 # Pull the OpenReview info for a poster. 
 @app.route('/poster_<poster>.html')
 def poster(poster):
-    note_id = int(poster)
-    data = {"openreview": notes[notes_keys[note_id]], "id": note_id,
-            "paper_recs" : [notes[n] for n in paper_recs[notes_keys[note_id]]][1:],
-            "next": note_id +1 , "prev": note_id-1}
+    note_id = poster
+    data = {"openreview": notes[note_id], "id": note_id,
+            "paper_recs" : [notes[n] for n in paper_recs[note_id]][1:]}
     # print(data)
     return render_template('pages/page.html', **data)
 
@@ -98,7 +97,7 @@ def your_generator_here():
     yield "recommendations", {}
 
 
-    for i in range(len(notes_keys)):
+    for i in notes.keys():
         yield "poster", {"poster": str(i)}
 
     # for t in titles:

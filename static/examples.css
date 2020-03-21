@@ -6,11 +6,6 @@ html {
   *overflow-x: hidden;
 }
 
-.container {
-  max-width: 750px;
-  margin: 0 auto;
-  text-align: center;
-}
 
 .tt-menu,
 .gist {
@@ -20,58 +15,7 @@ html {
 /* base styles */
 /* ----------- */
 
-html {
-  font: normal normal normal 18px/1.2 "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
-  color: #292f33;
-}
 
-
-a {
-  color: #03739c;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.table-of-contents li {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-}
-
-.table-of-contents li a {
-  font-size: 16px;
-  color: #999;
-}
-
-p + p {
-  margin: 30px 0 0 0;
-}
-
-/* site theme */
-/* ---------- */
-
-.title {
-  margin: 20px 0 0 0;
-  font-size: 64px;
-}
-
-.example {
-  padding: 30px 0;
-}
-
-.example-name {
-  margin: 20px 0;
-  font-size: 32px;
-}
-
-.demo {
-  position: relative;
-  *z-index: 1;
-  margin: 50px 0;
-}
 
 .typeahead,
 .tt-query,
