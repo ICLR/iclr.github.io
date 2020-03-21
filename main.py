@@ -27,8 +27,8 @@ for i, n in enumerate(notes.values()):
     else:
         n.content["TLDR"] = n.content["abstract"][:250] + "..."
     for k in n.content["keywords"]:
-        keywords.setdefault(k, [])
-        keywords[k].append(n)
+        keywords.setdefault(k.lower(), [])
+        keywords[k.lower()].append(n)
     titles[n.content["title"]] = i
          
 @app.route('/livestream.html')
@@ -74,8 +74,8 @@ def poster(poster):
 # Show by Keyword
 @app.route('/keyword_<keyword>.html')
 def keyword(keyword):
-    data = {"keyword": keyword,
-            "openreviews": keywords[keyword]}
+    data = {"keyword": keyword.lower(),
+            "openreviews": keywords[keyword.lower()]}
     return render_template('pages/keyword.html', **data)
 
 # Show by Keyword
