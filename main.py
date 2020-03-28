@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -21,7 +21,7 @@ titles = {}
 keywords = {}
 for i, (k,n) in enumerate(notes.items()):
     n.content["iclr_id"] = k
-    # n.content["key_id"] = 
+    # n.content["key_id"] =
     titles[n.content["title"]] = k
     if "TL;DR" in n.content:
         n.content["TLDR"] = n.content["TL;DR"]
@@ -31,7 +31,7 @@ for i, (k,n) in enumerate(notes.items()):
         keywords.setdefault(k.lower(), [])
         keywords[k.lower()].append(n)
 
-         
+
 @app.route('/livestream.html')
 def livestream():
     return render_template('pages/main.html', **{})
@@ -47,6 +47,11 @@ def papers():
     return render_template('pages/keyword.html', **data)
 
 
+@app.route('/papers.json')
+def papers_raw():
+    paper_list = [value.__dict__ for value in notes.values()]
+    return jsonify(paper_list)
+
 @app.route('/recs.html')
 def recommendations():
     data = {"choices": author_recs.keys(),
@@ -60,8 +65,8 @@ def recommendations():
 @app.route('/title_<title>.html')
 def title(title):
     return poster(titles[title])
-    
-# Pull the OpenReview info for a poster. 
+
+# Pull the OpenReview info for a poster.
 @app.route('/poster_<poster>.html')
 def poster(poster):
     note_id = poster
