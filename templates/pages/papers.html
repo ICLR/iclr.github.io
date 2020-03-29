@@ -6,6 +6,8 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="static/typeahead.css">
+
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -35,7 +37,7 @@
 <div class="container" style="padding-top: 20px;">
 
     <div class="row">
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-lg-4">
             {#            A:<input class="typeahead_author" type="text"#}
             {#                     placeholder="author">#}
             {#            <button type="button" class="close typeahead_author_close"#}
@@ -55,7 +57,7 @@
             </div>
 
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-lg-4">
             <div class="input-group mb-3">
                 <input type="text" class="form-control typeahead_keyword"
                        placeholder="keyword"
@@ -68,14 +70,37 @@
                 </div>
             </div>
         </div>
-{#        <div class="col-4">#}
-{#            T:<input class="typeahead_title" type="text"#}
-{#                     placeholder="title" width=400px>#}
-{#        </div>#}
+        <div class="col-12 col-lg-4">
+            {#            <div class="float-right">#}
+            {#                <div class="btn-group" role="group" aria-label="Basic example">#}
+            {#                    <button type="button" class="btn btn-secondary render_compact active">compact#}
+            {#                    </button>#}
+            {#                    <button type="button" class="btn btn-secondary render_detail">detail#}
+            {#                    </button>#}
+            {#                </div>#}
+            {#            </div>#}
+            <div class="float-right">
+                <div class="btn-group btn-group-toggle render_option" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" value="compact"
+                               autocomplete="off" checked> compact
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" value="detail"
+                               autocomplete="off"> detail
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        {#        <div class="col-4">#}
+        {#            T:<input class="typeahead_title" type="text"#}
+        {#                     placeholder="title" width=400px>#}
+        {#        </div>#}
 
     </div>
 
-    <div class="cards row">
+    <div class="cards row" style="margin-top: 10px;">
 
     </div>
 
@@ -89,7 +114,8 @@
             authors: null,
             keywords: null,
             title: null
-        }
+        };
+        let render_mode = 'compact'
 
         const keyword = kw => `<a href="keyword_${kw}.html"
                        class="text-secondary text-decoration-none">${kw.toLowerCase()}</a>`
@@ -105,20 +131,21 @@
                         ${openreview.content.authors.join(',')}
                 </h6>
 
-            </div>
+            </div>`
+        +((render_mode==='detail')?`
             <div class="card-body">
                 <p class="card-text"> ${openreview.content.TLDR}</p>
                 <p class="card-text"><span class="font-weight-bold">Keywords:</span>
                     ${openreview.content.keywords.map(keyword).join(',')}
                 </p>
             </div>
-        </div>`
+        </div>`:'</div>')
 
         const updateCards = (papers) => {
             const all_mounted_cards = d3.select('.cards').selectAll('.myCard')
               .data(papers, d => d.number)
               .join('div')
-              .attr('class', 'myCard col-4')
+              .attr('class', 'myCard col-12 col-sm-6 col-lg-4')
               .html(card_html)
         }
 
@@ -218,9 +245,19 @@
         }
 
 
+        d3.selectAll('.render_option input').on('click', function(){
+            const me = d3.select(this);
+            render_mode = me.property('value');
+            filterByListAttributes();
+        })
+
+
+
+
     }
 
 
 </script>
+
 
 </body>
