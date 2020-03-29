@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title> ICLR: {{ keyword }} </title>
+</head>
+
+<body>
+
+<!-- NAV -->
+{% include 'pages/header.html' %}
+<div class="container" style="padding-bottom:20px">
+    <h2> Keyword: {{ keyword }} </h2>
+</div>
+<div class="container">
+
+    <div class="cards row">
+
+    </div>
+
+</div>
+
+<script>
+    window.onload = function () {
+        let allPapers = [];
+
+        const keyword = kw => `<a href="keyword_${kw}.html"
+                       class="text-secondary text-decoration-none">${kw.toLowerCase()}</a>`
+        //language=HTML
+        const card_html = openreview => `
+        <div class="card">
+            <div class="card-header">
+                <a href="poster_${openreview.content.iclr_id}.html"
+                   class="text-dark">
+                   <h4
+                        class="card-title"> ${openreview.content.title} </h4></a>
+                <h6 class="card-subtitle mb-2 text-muted">
+                        ${openreview.content.authors.join(',')}
+                </h6>
+
+            </div>
+            <div class="card-body">
+                <p class="card-text"> ${openreview.content.TLDR}</p>
+                <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+                    ${openreview.content.keywords.map(keyword).join(',')}
+                </p>
+            </div>
+        </div>`
+
+        const updateCards = () => {
+            const all_mounted_cards = d3.select('.cards').selectAll('card')
+              .data(allPapers, d => d.number)
+              .join('div')
+              .attr('class', 'myCard col-4')
+              .html(card_html)
+        }
+
+
+        d3.json('papers.json').then(papers => {
+
+            papers.sort(
+              (a, b) => d3.descending(a.content.title, b.content.title))
+
+            allPapers = papers;
+            updateCards()
+
+        }).catch(e => console.log(e, "--- e"))
+
+    }
+
+
+</script>
+
+</body>

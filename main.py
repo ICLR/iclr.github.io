@@ -46,6 +46,11 @@ def papers():
             "openreviews": notes.values()}
     return render_template('pages/keyword.html', **data)
 
+@app.route('/papers_v2.html')
+def papers_v2():
+    data = {"keyword": "all",
+            "openreviews": notes.values()}
+    return render_template('pages/papers.html', **data)
 
 @app.route('/papers.json')
 def papers_raw():
