@@ -58,6 +58,7 @@
 
         </div>
         <div class="col-12 col-sm-6 col-lg-4">
+
             <div class="input-group mb-3">
                 <input type="text" class="form-control typeahead_keyword"
                        placeholder="keyword"
@@ -79,6 +80,9 @@
             {#                    </button>#}
             {#                </div>#}
             {#            </div>#}
+
+            <button class="btn btn-outline-secondary reshuffle"> re-shuffle</button>
+
             <div class="float-right">
                 <div class="btn-group btn-group-toggle render_option" data-toggle="buttons">
                     <label class="btn btn-secondary active">
@@ -248,6 +252,11 @@
         d3.selectAll('.render_option input').on('click', function(){
             const me = d3.select(this);
             render_mode = me.property('value');
+            filterByListAttributes();
+        })
+
+        d3.select('.reshuffle').on('click', ()=>{
+            shuffleArray(allPapers);
             filterByListAttributes();
         })
 
