@@ -136,7 +136,8 @@
             {#papers.sort(#}
             {#  (a, b) => d3.descending(a.content.title, b.content.title))#}
 
-            shuffleArray(allPapers);
+            {#papers.sort(() => Math.random() - 0.5);#}
+            shuffleArray(papers);
 
             allPapers = papers;
 
