@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -95,6 +95,9 @@ def recs(author):
             "openreviews": [notes[n] for n in author_recs[author]]}
     return render_template('pages/keyword.html', **data)
 
+@app.route('/static/<path:path>')
+def send_static(path):
+    return send_from_directory('static', path)
 
 
 # Code to turn it all static
