@@ -31,65 +31,57 @@
 
 <!-- NAV -->
 {% include 'pages/header.html' %}
-{#<div class="container" style="padding-bottom:20px">#}
-{#    <h2> Keyword: {{ keyword }} </h2>#}
-{#</div>#}
+
 <div class="container" style="padding-top: 20px;">
 
     <div class="row">
         <div class="col-12 col-sm-6 col-lg-4">
-            {#            A:<input class="typeahead_author" type="text"#}
-            {#                     placeholder="author">#}
-            {#            <button type="button" class="close typeahead_author_close"#}
-            {#                    aria-label="Close">#}
-            {#                <span aria-hidden="true">&times;</span></button>#}
+
             <div class="input-group mb-3">
-                <input type="text" class="form-control typeahead_author"
-                       placeholder="Author"
-                       aria-label="Recipient's username"
-                       aria-describedby="basic-addon2">
+                <input type="text" class="form-control typeahead_all"
+                       placeholder="Search">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary typeahead_author_clear"
-                            type="button">
-                        &times;
+                    <button class="btn btn-outline-secondary typeahead_all_clear"
+                            type="button">&times;
                     </button>
                 </div>
             </div>
 
         </div>
         <div class="col-12 col-sm-6 col-lg-4">
-
-            <div class="input-group mb-3">
-                <input type="text" class="form-control typeahead_keyword"
-                       placeholder="keyword"
-                       aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary typeahead_keyword_clear"
-                            type="button">
-                        &times;
-                    </button>
-                </div>
+{#            <div class="float-right">#}
+                <div class="btn-group btn-group-toggle filter_option"
+                     data-toggle="buttons">
+                    <label class="btn btn-outline-secondary active">
+                        <input type="radio" name="options" value="authors"
+                               autocomplete="off" checked> author
+                    </label>
+                    <label class="btn btn-outline-secondary">
+                        <input type="radio" name="options" value="keywords"
+                               autocomplete="off"> keyword
+                    </label>
+                    <label class="btn btn-outline-secondary">
+                        <input type="radio" name="options" value="titles"
+                               autocomplete="off"> title
+                    </label>
+{#                </div>#}
             </div>
-        </div>
-        <div class="col-12 col-lg-4">
-            {#            <div class="float-right">#}
-            {#                <div class="btn-group" role="group" aria-label="Basic example">#}
-            {#                    <button type="button" class="btn btn-secondary render_compact active">compact#}
-            {#                    </button>#}
-            {#                    <button type="button" class="btn btn-secondary render_detail">detail#}
-            {#                    </button>#}
-            {#                </div>#}
-            {#            </div>#}
 
-            <button class="btn btn-outline-secondary reshuffle"> re-shuffle</button>
+        </div>
+
+        <div class="col-12 col-lg-4">
+
+            <button class="btn btn-outline-secondary reshuffle"> re-shuffle
+            </button>
 
             <div class="float-right">
-                <div class="btn-group btn-group-toggle render_option" data-toggle="buttons">
-                    <label class="btn btn-secondary active">
+                <div class="btn-group btn-group-toggle render_option"
+                     data-toggle="buttons">
+                    <label class="btn btn-outline-secondary active">
                         <input type="radio" name="options" value="compact"
                                autocomplete="off" checked> compact
                     </label>
-                    <label class="btn btn-secondary">
+                    <label class="btn btn-outline-secondary">
                         <input type="radio" name="options" value="detail"
                                autocomplete="off"> detail
                     </label>
@@ -110,161 +102,11 @@
 
 </div>
 
+<script src="static/papers.js"></script>
 <script>
     window.onload = function () {
-        let allPapers = [];
-        let allAuthors = [];
-        const filters = {
-            authors: null,
-            keywords: null,
-            title: null
-        };
-        let render_mode = 'compact'
-
-        const keyword = kw => `<a href="keyword_${kw}.html"
-                       class="text-secondary text-decoration-none">${kw.toLowerCase()}</a>`
-        //language=HTML
-        const card_html = openreview => `
-        <div class="card" style="margin-bottom: 10px;">
-            <div class="card-header">
-                <a href="poster_${openreview.content.iclr_id}.html"
-                   class="text-dark">
-                   <h4
-                        class="card-title"> ${openreview.content.title} </h4></a>
-                <h6 class="card-subtitle mb-2 text-muted">
-                        ${openreview.content.authors.join(',')}
-                </h6>
-
-            </div>`
-        +((render_mode==='detail')?`
-            <div class="card-body">
-                <p class="card-text"> ${openreview.content.TLDR}</p>
-                <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-                    ${openreview.content.keywords.map(keyword).join(',')}
-                </p>
-            </div>
-        </div>`:'</div>')
-
-        const updateCards = (papers) => {
-            const all_mounted_cards = d3.select('.cards').selectAll('.myCard')
-              .data(papers, d => d.number)
-              .join('div')
-              .attr('class', 'myCard col-12 col-sm-6 col-lg-4')
-              .html(card_html)
-        }
-
-        /* Randomize array in-place using Durstenfeld shuffle algorithm */
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                const temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-            }
-        }
-
-        d3.json('papers.json').then(papers => {
-            {#papers.sort(#}
-            {#  (a, b) => d3.descending(a.content.title, b.content.title))#}
-
-            {#papers.sort(() => Math.random() - 0.5);#}
-            shuffleArray(papers);
-
-            allPapers = papers;
-
-            const collectAuthors = new Set();
-            const collectKeywords = new Set();
-            allPapers.forEach(
-              d => {
-                  d.content.authors.forEach(a => collectAuthors.add(a));
-                  d.content.keywords.forEach(a => collectKeywords.add(a))
-              });
-            allAuthors = Array.from(collectAuthors);
-            const allKeywords = Array.from(collectKeywords);
-
-            initTypeAhead(allAuthors, '.typeahead_author', 'authors',
-              (e, it) => {
-                  filters['authors'] = it.length > 0 ? it : null;
-                  filterByListAttributes()
-              })
-
-            initTypeAhead(allKeywords, '.typeahead_keyword', 'authors',
-              (e, it) => {
-                  filters['keywords'] = it.length > 0 ? it : null;
-                  filterByListAttributes()
-              })
-
-
-            updateCards(allPapers)
-
-        }).catch(e => console.error(e))
-
-        const filterByListAttributes = () => {
-            const f_test = [];
-            Object.keys(filters)
-              .forEach(k => {filters[k] ? f_test.push([k, filters[k]]) : null})
-
-            if (f_test.length === 0) updateCards(allPapers)
-            else {
-                const fList = allPapers.filter(
-                  d => {
-                      let i = 0, pass_test = true;
-                      while (i < f_test.length && pass_test) {
-                          pass_test &= d.content[f_test[i][0]].indexOf(
-                            f_test[i][1]) > -1
-                          i++;
-                      }
-                      return pass_test;
-                  });
-                console.log(fList, "--- fList");
-                updateCards(fList)
-            }
-
-        }
-
-
-        const initTypeAhead = (list, css_sel, name, callback) => {
-            const bh = new Bloodhound({
-                datumTokenizer: Bloodhound.tokenizers.whitespace,
-                queryTokenizer: Bloodhound.tokenizers.whitespace,
-                local: list
-            });
-            $(css_sel).typeahead({
-                  hint: true,
-                  highlight: true, /* Enable substring highlighting */
-                  minLength: 1 /* Specify minimum characters required for showing suggestions */
-              },
-              {
-                  name,
-                  source: bh
-              })
-              .on('typeahead:selected', function (evt, item) {
-                  callback(evt, item)
-              })
-
-            $(css_sel + '_clear').on('click', function () {
-                $(css_sel).val('');
-                callback(null, '');
-            })
-        }
-
-
-        d3.selectAll('.render_option input').on('click', function(){
-            const me = d3.select(this);
-            render_mode = me.property('value');
-            filterByListAttributes();
-        })
-
-        d3.select('.reshuffle').on('click', ()=>{
-            shuffleArray(allPapers);
-            filterByListAttributes();
-        })
-
-
-
-
+        start()
     }
-
 
 </script>
 
