@@ -99,6 +99,15 @@ def recs(author):
 def send_static(path):
     return send_from_directory('static', path)
 
+@app.route('/embeddings_<emb>.json')
+def embeddings(emb):
+    return send_from_directory('static', 'embeddings_'+emb+'.json')
+
+@app.route('/papers_vis.html')
+def paperVis():
+    return render_template('pages/papers_vis.html')
+
+
 
 # Code to turn it all static
 freezer = Freezer(app, with_no_argument_rules=False, log_url_for=False)
