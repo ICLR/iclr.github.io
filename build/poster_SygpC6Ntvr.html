@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: Minimizing FLOPs to Learn Efficient Sparse Representations </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">Minimizing FLOPs to Learn Efficient Sparse Representations</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Biswajit Paria,
+      
+      Chih-Kuan Yeh,
+      
+      Ian E.H. Yen,
+      
+      Ning Xu,
+      
+      Pradeep Ravikumar,
+      
+      Barnabás Póczos,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> We propose an approach to learn sparse high dimensional representations that are fast to search, by incorporating a surrogate of the number of operations directly into the loss function.</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> Deep representation learning has become one of the most widely adopted approaches for visual search, recommendation, and identification. Retrieval of such  representations from a large database is however computationally challenging. Approximate methods based on learning compact representations, have been widely explored for this problem, such as locality sensitive hashing, product quantization, and PCA. In this work, in contrast to learning compact representations, we propose to learn high dimensional and sparse representations that have similar representational capacity as dense embeddings while being more efficient due to sparse matrix multiplication operations which can be much faster than dense multiplication. Following the key insight that the number of operations decreases quadratically with the sparsity of embeddings provided the non-zero entries are distributed uniformly across dimensions, we propose a novel approach to learn such distributed sparse embeddings via the use of a carefully constructed regularization function that directly minimizes a continuous relaxation of the number of floating-point operations (FLOPs) incurred during retrieval. Our experiments show that our approach is competitive to the other baselines and yields a similar or better speed-vs-accuracy tradeoff on practical datasets</p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/91215045fcdc274bcbe6cb882ecc9f9c95e39d5b.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=SygpC6Ntvr">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="https://github.com/biswajitsc/sparse-embed" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_sparse embeddings.html" class="text-secondary text-decoration-none">sparse embeddings</a>,
+      
+      <a href="keyword_deep representations.html" class="text-secondary text-decoration-none">deep representations</a>,
+      
+      <a href="keyword_metric learning.html" class="text-secondary text-decoration-none">metric learning</a>,
+      
+      <a href="keyword_regularization.html" class="text-secondary text-decoration-none">regularization</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterSygpC6Ntvr/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterSygpC6Ntvr/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_HkxARkrFwB.html" class="text-dark"><h5 class="card-title">word2ket: Space-efficient Word Embeddings inspired by Quantum Entanglement</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We use ideas from quantum computing to propose word embeddings that utilize much fewer trainable parameters.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_HkxARkrFwB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_BkxpMTEtPB.html" class="text-dark"><h5 class="card-title">GLAD: Learning Sparse Graph Recovery</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> A data-driven learning algorithm based on unrolling the Alternating Minimization optimization for sparse graph recovery.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_BkxpMTEtPB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_HyeYTgrFPB.html" class="text-dark"><h5 class="card-title">Massively Multilingual Sparse Word Representations</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We propose an efficient algorithm for determining multilingually comparable sparse word representations that we release for 27 typologically diverse languages.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_HyeYTgrFPB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_SJxzFySKwH.html" class="text-dark"><h5 class="card-title">On the Equivalence between Positional Node Embeddings and Structural Graph Representations</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We develop the foundations of a unifying theoretical framework connecting node embeddings and structural graph representations through invariant theory</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_SJxzFySKwH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>

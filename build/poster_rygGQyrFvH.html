@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: The Curious Case of Neural Text Degeneration </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">The Curious Case of Neural Text Degeneration</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Ari Holtzman,
+      
+      Jan Buys,
+      
+      Li Du,
+      
+      Maxwell Forbes,
+      
+      Yejin Choi,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> Current language generation systems either aim for high likelihood and devolve into generic repetition or miscalibrate their stochasticity—we provide evidence of both and propose a solution: Nucleus Sampling.</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> Despite considerable advances in neural language modeling, it remains an open question what the best decoding strategy is for text generation from a language model (e.g. to generate a story). The counter-intuitive empirical observation is that even though the use of likelihood as training objective leads to high quality models for a broad range of language understanding tasks, maximization-based decoding methods such as beam search lead to degeneration — output text that is bland, incoherent, or gets stuck in repetitive loops.
+
+To address this we propose Nucleus Sampling, a simple but effective method to draw considerably higher quality text out of neural language models than previous decoding strategies. Our approach avoids text degeneration by truncating the unreliable tail of the probability distribution, sampling from the dynamic nucleus of tokens containing the vast majority of the probability mass.
+
+To properly examine current maximization-based and stochastic decoding methods, we compare generations from each of these methods to the distribution of human text along several axes such as likelihood, diversity, and repetition. Our results show that (1) maximization is an inappropriate decoding objective for open-ended text generation, (2) the probability distributions of the best current language models have an unreliable tail which needs to be truncated during generation and (3) Nucleus Sampling is currently the best available decoding strategy for generating long-form text that is both high-quality — as measured by human evaluation — and as diverse as human-written text.</p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/fe5e0a4c8461032e7d2c289a34236bb349b1b38a.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=rygGQyrFvH">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="https://github.com/ari-holtzman/degen" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_generation.html" class="text-secondary text-decoration-none">generation</a>,
+      
+      <a href="keyword_text.html" class="text-secondary text-decoration-none">text</a>,
+      
+      <a href="keyword_NLG.html" class="text-secondary text-decoration-none">NLG</a>,
+      
+      <a href="keyword_NLP.html" class="text-secondary text-decoration-none">NLP</a>,
+      
+      <a href="keyword_natural language.html" class="text-secondary text-decoration-none">natural language</a>,
+      
+      <a href="keyword_natural language generation.html" class="text-secondary text-decoration-none">natural language generation</a>,
+      
+      <a href="keyword_language model.html" class="text-secondary text-decoration-none">language model</a>,
+      
+      <a href="keyword_neural.html" class="text-secondary text-decoration-none">neural</a>,
+      
+      <a href="keyword_neural language model.html" class="text-secondary text-decoration-none">neural language model</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterrygGQyrFvH/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterrygGQyrFvH/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_SJeYe0NtvH.html" class="text-dark"><h5 class="card-title">Neural Text Generation With Unlikelihood Training</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Neural text generation is a key tool in natural language applications, but it is well known there are major problems at its core. In particular, standard likelihood training and decoding leads to dull and repetitive outputs. While some post-hoc fixes...</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_SJeYe0NtvH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_HklOo0VFDH.html" class="text-dark"><h5 class="card-title">Decoding As Dynamic Programming For Recurrent Autoregressive Models</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Approximate inference using dynamic programming for Autoregressive models.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_HklOo0VFDH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_B1l8L6EtDS.html" class="text-dark"><h5 class="card-title">Self-Adversarial Learning with Comparative Discrimination for Text Generation</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We propose a self-adversarial learning (SAL) paradigm which improves the generator in a self-play fashion for improving GANs&#39; performance in text generation.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_B1l8L6EtDS.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_BJgza6VtPB.html" class="text-dark"><h5 class="card-title">Language GANs Falling Short</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> GANs have been applied to text generation and are believed SOTA. However, we propose a new evaluation protocol demonstrating that maximum-likelihood trained models are still better.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_BJgza6VtPB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>

@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: Simplified Action Decoder for Deep Multi-Agent Reinforcement Learning </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">Simplified Action Decoder for Deep Multi-Agent Reinforcement Learning</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Hengyuan Hu,
+      
+      Jakob N Foerster,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> We develop Simplified Action Decoder, a simple MARL algorithm that beats previous SOTA on Hanabi by a big margin across 2- to 5-player games.</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> In recent years we have seen fast progress on a number of benchmark problems in AI, with modern methods achieving near or super human performance in Go, Poker and Dota. One common aspect of all of these challenges is that they are by design adversarial or, technically speaking, zero-sum. In contrast to these settings, success in the real world commonly requires humans to collaborate and communicate with others, in settings that are, at least partially, cooperative. In the last year, the card game Hanabi has been established as a new benchmark environment for AI to fill this gap. In particular, Hanabi is interesting to humans since it is entirely focused on theory of mind, i.e. the ability to effectively reason over the intentions, beliefs and point of view of other agents when observing their actions. Learning to be informative when observed by others is an interesting challenge for Reinforcement Learning (RL): Fundamentally, RL requires agents to explore in order to discover good policies. However, when done naively, this randomness will inherently make their actions less informative to others during training. We present a new deep multi-agent RL method, the Simplified Action Decoder (SAD), which resolves this contradiction exploiting the centralized training phase. During training SAD allows other agents to not only observe the (exploratory) action chosen, but agents instead also observe the greedy action of their team mates. By combining this simple intuition with an auxiliary task for state prediction and best practices for multi-agent learning, SAD establishes a new state of the art for 2-5 players on the self-play part of the Hanabi challenge.</p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/d81a17f86e6d742e583fdde70b183e75617f89e6.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=B1xm3RVtwB">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="https://bit.ly/2mBJLyk" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_multi-agent RL.html" class="text-secondary text-decoration-none">multi-agent RL</a>,
+      
+      <a href="keyword_theory of mind.html" class="text-secondary text-decoration-none">theory of mind</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterB1xm3RVtwB/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterB1xm3RVtwB/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_S1xKd24twB.html" class="text-dark"><h5 class="card-title">SQIL: Imitation Learning via Reinforcement Learning with Sparse Rewards</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> A simple and effective alternative to adversarial imitation learning: initialize experience replay buffer with demonstrations, set their reward to +1, set reward for all other data to 0, run Q-learning or soft actor-critic to train.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_S1xKd24twB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_S1xCPJHtDB.html" class="text-dark"><h5 class="card-title">Model Based Reinforcement Learning for Atari</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We use video prediction models, a model-based reinforcement learning algorithm and 2h of gameplay per game to train agents for 26 Atari games.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_S1xCPJHtDB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_HJgEMpVFwB.html" class="text-dark"><h5 class="card-title">Adversarial Policies: Attacking Deep Reinforcement Learning</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Deep RL policies can be attacked by other agents taking actions so as to create natural observations that are adversarial.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_HJgEMpVFwB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_r1xGP6VYwH.html" class="text-dark"><h5 class="card-title">Optimistic Exploration even with a Pessimistic Initialisation</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We augment the Q-value estimates with a count-based bonus that ensures optimism during action selection and bootstrapping, even if the Q-value estimates are pessimistic.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_r1xGP6VYwH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>

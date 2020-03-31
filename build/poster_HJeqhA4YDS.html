@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: Denoising and Regularization via Exploiting the Structural Bias of Convolutional Generators </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">Denoising and Regularization via Exploiting the Structural Bias of Convolutional Generators</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Reinhard Heckel and Mahdi Soltanolkotabi,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> Convolutional Neural Networks (CNNs) have emerged as highly successful tools for image generation, recovery, and restoration. A major contributing factor to this success is that convolutional networks impose strong prior assumptions about natural ima...</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> Convolutional Neural Networks (CNNs) have emerged as highly successful tools for image generation, recovery, and restoration. A major contributing factor to this success is that convolutional networks impose strong prior assumptions about natural images. A surprising experiment that highlights this architectural bias towards natural images is that one can remove noise and corruptions from a natural image without using any training data, by simply fitting (via gradient descent) a randomly initialized, over-parameterized convolutional generator to the corrupted image. While this over-parameterized network can fit the corrupted image perfectly, surprisingly after a few iterations of gradient descent it generates an almost uncorrupted image. This intriguing phenomenon enables state-of-the-art CNN-based denoising and regularization of other inverse problems. In this paper, we attribute this effect to a particular architectural choice of convolutional networks, namely convolutions with fixed interpolating filters. We then formally characterize the dynamics of fitting a two-layer convolutional generator to a noisy signal and prove that early-stopped gradient descent denoises/regularizes. Our proof relies on showing that convolutional generators fit the structured part of an image significantly faster than the corrupted portion. </p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/de835d58f86f19412df72738c87d7ecfe7cbb93c.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=HJeqhA4YDS">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="https://github.com/MLI-lab/overparameterized_convolutional_generators" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_theory for deep learning.html" class="text-secondary text-decoration-none">theory for deep learning</a>,
+      
+      <a href="keyword_convolutional network.html" class="text-secondary text-decoration-none">convolutional network</a>,
+      
+      <a href="keyword_deep image prior.html" class="text-secondary text-decoration-none">deep image prior</a>,
+      
+      <a href="keyword_deep decoder.html" class="text-secondary text-decoration-none">deep decoder</a>,
+      
+      <a href="keyword_dynamics of gradient descent.html" class="text-secondary text-decoration-none">dynamics of gradient descent</a>,
+      
+      <a href="keyword_overparameterization.html" class="text-secondary text-decoration-none">overparameterization</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterHJeqhA4YDS/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterHJeqhA4YDS/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_HJlSmC4FPS.html" class="text-dark"><h5 class="card-title">Robust And Interpretable Blind Image Denoising Via Bias-Free Convolutional Neural Networks</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We show that removing constant terms from CNN architectures ensures strong generalization across noise levels, and also provides interpretability of the denoising method via linear-algebra techniques.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_HJlSmC4FPS.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_SJeLIgBKPS.html" class="text-dark"><h5 class="card-title">Gradient Descent Maximizes the Margin of Homogeneous Neural Networks</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We study the implicit bias of gradient descent and prove under a minimal set of assumptions that the parameter direction of homogeneous models converges to KKT points of a natural margin maximization problem.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_SJeLIgBKPS.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_ryeFY0EFwS.html" class="text-dark"><h5 class="card-title">Coherent Gradients: An Approach to Understanding Generalization in Gradient Descent-based Optimization</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We propose a hypothesis for why gradient descent generalizes based on how per-example gradients interact with each other.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_ryeFY0EFwS.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_B1esx6EYvr.html" class="text-dark"><h5 class="card-title">A critical analysis of self-supervision, or what we can learn from a single image</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We evaluate self-supervised feature learning methods and find that with sufficient data augmentation early layers can be learned using just one image.  This is informative about self-supervision and the role of augmentations.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_B1esx6EYvr.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>

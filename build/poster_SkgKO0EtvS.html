@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: Neural Execution of Graph Algorithms </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">Neural Execution of Graph Algorithms</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Petar Veličković,
+      
+      Rex Ying,
+      
+      Matilde Padovano,
+      
+      Raia Hadsell,
+      
+      Charles Blundell,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> We supervise graph neural networks to imitate intermediate and step-wise outputs of classical graph algorithms, recovering highly favourable insights.</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> Graph Neural Networks (GNNs) are a powerful representational tool for solving problems on graph-structured inputs. In almost all cases so far, however, they have been applied to directly recovering a final solution from raw inputs, without explicit guidance on how to structure their problem-solving. Here, instead, we focus on learning in the space of algorithms: we train several state-of-the-art GNN architectures to imitate individual steps of classical graph algorithms, parallel (breadth-first search, Bellman-Ford) as well as sequential (Prim&#39;s algorithm). As graph algorithms usually rely on making discrete decisions within neighbourhoods, we hypothesise that maximisation-based message passing neural networks are best-suited for such objectives, and validate this claim empirically. We also demonstrate how learning in the space of algorithms can yield new opportunities for positive transfer between tasks---showing how learning a shortest-path algorithm can be substantially improved when simultaneously learning a reachability algorithm.</p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/c0a6e40b48c2e2ed3ead72556fef85e539b1e58d.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=SkgKO0EtvS">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_Graph Neural Networks.html" class="text-secondary text-decoration-none">Graph Neural Networks</a>,
+      
+      <a href="keyword_Graph Algorithms.html" class="text-secondary text-decoration-none">Graph Algorithms</a>,
+      
+      <a href="keyword_Learning to Execute.html" class="text-secondary text-decoration-none">Learning to Execute</a>,
+      
+      <a href="keyword_Program Synthesis.html" class="text-secondary text-decoration-none">Program Synthesis</a>,
+      
+      <a href="keyword_Message Passing Neural Networks.html" class="text-secondary text-decoration-none">Message Passing Neural Networks</a>,
+      
+      <a href="keyword_Deep Learning.html" class="text-secondary text-decoration-none">Deep Learning</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterSkgKO0EtvS/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterSkgKO0EtvS/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_r1laNeBYPB.html" class="text-dark"><h5 class="card-title">Memory-Based Graph Networks</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We introduce an efficient memory layer to jointly learn representations and coarsen the input graphs.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_r1laNeBYPB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_rkeIIkHKvS.html" class="text-dark"><h5 class="card-title">Measuring and Improving the Use of Graph Information in Graph Neural Networks</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Graph neural networks (GNNs) have been widely used for representation learning on graph data. However, there is limited understanding on how much performance GNNs actually gain from graph data. This paper introduces a context-surrounding GNN framewor...</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_rkeIIkHKvS.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_B1lnbRNtwr.html" class="text-dark"><h5 class="card-title">Global Relational Models of Source Code</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Models of source code that combine global and structural features learn more powerful representations of programs.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_B1lnbRNtwr.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_BylEqnVFDB.html" class="text-dark"><h5 class="card-title">Curvature Graph Network</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Graph-structured data is prevalent in many domains. Despite the widely celebrated success of deep neural networks, their power in graph-structured data is yet to be fully explored. We propose a novel network architecture that incorporates advanced gr...</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_BylEqnVFDB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>

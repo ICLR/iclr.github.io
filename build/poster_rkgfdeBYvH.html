@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: Effect of Activation Functions on the Training of Overparametrized Neural Nets </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">Effect of Activation Functions on the Training of Overparametrized Neural Nets</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Abhishek Panigrahi,
+      
+      Abhishek Shetty,
+      
+      Navin Goyal,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> We provide theoretical results about the effect of activation function on the training of highly overparametrized 2-layer neural networks</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> It is well-known that overparametrized neural networks trained using gradient based methods quickly achieve small training error with appropriate hyperparameter settings. Recent papers have proved this statement theoretically for highly overparametrized networks under reasonable assumptions. These results either assume that the activation function is ReLU or they depend on the minimum eigenvalue of a certain Gram matrix. In the latter case, existing works only prove that this minimum eigenvalue is non-zero and do not provide quantitative bounds which require that this eigenvalue be large. Empirically, a number of alternative activation functions have been proposed which tend to perform better than ReLU at least in some settings but no clear understanding has emerged. This state of affairs underscores the importance of theoretically understanding the impact of activation functions on training. In the present paper, we provide theoretical results about the effect of activation function on the training of highly overparametrized 2-layer neural networks. A crucial property that governs the performance of an activation is whether or not it is smooth: 
+• For non-smooth activations such as ReLU, SELU, ELU, which are not smooth because there is a point where either the ﬁrst order or second order derivative is discontinuous, all eigenvalues of the associated Gram matrix are large under minimal assumptions on the data. 
+• For smooth activations such as tanh, swish, polynomial, which have derivatives of all orders at all points, the situation is more complex: if the subspace spanned by the data has small dimension then the minimum eigenvalue of the Gram matrix can be small leading to slow training. But if the dimension is large and the data satisﬁes another mild condition, then the eigenvalues are large. If we allow deep networks, then the small data dimension is not a limitation provided that the depth is sufﬁcient. 
+We discuss a number of extensions and applications of these results.</p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/fbbea6ca741f5700e790389e48dc9245d16dbca9.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=rkgfdeBYvH">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="https://drive.google.com/file/d/1Erj761XggITFSlcdiJJ8fKAkoEALU4L8/view?usp=sharing" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_activation functions.html" class="text-secondary text-decoration-none">activation functions</a>,
+      
+      <a href="keyword_deep learning theory.html" class="text-secondary text-decoration-none">deep learning theory</a>,
+      
+      <a href="keyword_neural networks.html" class="text-secondary text-decoration-none">neural networks</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterrkgfdeBYvH/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterrkgfdeBYvH/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_BJlBSkHtDS.html" class="text-dark"><h5 class="card-title">Padé Activation Units: End-to-end Learning of Flexible Activation Functions in Deep Networks</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We introduce PAU, a new learnable activation function for neural networks. They free the network designers from the activation selection process and increase the test prediction accuracy.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_BJlBSkHtDS.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_rkllGyBFPH.html" class="text-dark"><h5 class="card-title">Beyond Linearization: On Quadratic and Higher-Order Approximation of Wide Neural Networks</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Wide neural networks can escape the NTK regime and couple with quadratic models, with provably nice optimization landscape and better generalization.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_rkllGyBFPH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_B1x6BTEKwr.html" class="text-dark"><h5 class="card-title">Piecewise linear activations substantially shape the loss surfaces of neural networks</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> This paper presents how the loss surfaces of nonlinear neural networks are substantially shaped by the nonlinearities in activations.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_B1x6BTEKwr.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_SJeLIgBKPS.html" class="text-dark"><h5 class="card-title">Gradient Descent Maximizes the Margin of Homogeneous Neural Networks</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We study the implicit bias of gradient descent and prove under a minimal set of assumptions that the parameter direction of homogeneous models converges to KKT points of a natural margin maximization problem.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_SJeLIgBKPS.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>

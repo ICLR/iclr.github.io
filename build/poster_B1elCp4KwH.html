@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: Learning Hierarchical Discrete Linguistic Units from Visually-Grounded Speech </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">Learning Hierarchical Discrete Linguistic Units from Visually-Grounded Speech</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      David Harwath*,
+      
+      Wei-Ning Hsu*,
+      
+      James Glass,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> Vector quantization layers incorporated into a self-supervised neural model of speech audio learn hierarchical and discrete linguistic units (phone-like, word-like) when trained with a visual-grounding objective. </p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> In this paper, we present a method for learning discrete linguistic units by incorporating vector quantization layers into neural models of visually grounded speech. We show that our method is capable of capturing both word-level and sub-word units, depending on how it is configured. What differentiates this paper from prior work on speech unit learning is the choice of training objective. Rather than using a reconstruction-based loss, we use a discriminative, multimodal grounding objective which forces the learned units to be useful for semantic image retrieval. We evaluate the sub-word units on the ZeroSpeech 2019 challenge, achieving a 27.3% reduction in ABX error rate over the top-performing submission, while keeping the bitrate approximately the same. We also present experiments demonstrating the noise robustness of these units. Finally, we show that a model with multiple quantizers can simultaneously learn phone-like detectors at a lower layer and word-like detectors at a higher layer. We show that these detectors are highly accurate, discovering 279 words with an F1 score of greater than 0.5.</p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/b6c83d3610d9351a995d4a4ccc8c408fea0510e6.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=B1elCp4KwH">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_visually-grounded speech.html" class="text-secondary text-decoration-none">visually-grounded speech</a>,
+      
+      <a href="keyword_self-supervised learning.html" class="text-secondary text-decoration-none">self-supervised learning</a>,
+      
+      <a href="keyword_discrete representation learning.html" class="text-secondary text-decoration-none">discrete representation learning</a>,
+      
+      <a href="keyword_vision and language.html" class="text-secondary text-decoration-none">vision and language</a>,
+      
+      <a href="keyword_vision and speech.html" class="text-secondary text-decoration-none">vision and speech</a>,
+      
+      <a href="keyword_hierarchical representation learning.html" class="text-secondary text-decoration-none">hierarchical representation learning</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterB1elCp4KwH/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterB1elCp4KwH/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_rJehVyrKwH.html" class="text-dark"><h5 class="card-title">And the Bit Goes Down: Revisiting the Quantization of Neural Networks</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Using a structured quantization technique aiming at better in-domain reconstruction to compress convolutional neural networks</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_rJehVyrKwH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_H1lBj2VFPS.html" class="text-dark"><h5 class="card-title">Linear Symmetric Quantization of Neural Networks for Low-precision Integer Hardware</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We introduce an efficient quantization process that allows for performance acceleration on specialized integer-only neural network accelerator.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_H1lBj2VFPS.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_BJxSI1SKDH.html" class="text-dark"><h5 class="card-title">A Latent Morphology Model for Open-Vocabulary Neural Machine Translation</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Translation into morphologically-rich languages challenges neural machine translation (NMT) models with extremely sparse vocabularies where atomic treatment of surface forms is unrealistic. This problem is typically addressed by either pre-processing...</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_BJxSI1SKDH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_H1gmHaEKwB.html" class="text-dark"><h5 class="card-title">Data-Independent Neural Pruning via Coresets</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We propose an efficient, provable and data independent method for network compression via neural pruning using coresets of neurons -- a novel construction proposed in this paper.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_H1gmHaEKwB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>

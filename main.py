@@ -67,9 +67,9 @@ def recommendations():
     return render_template('pages/recs.html', **data)
 
 
-@app.route('/title_<title>.html')
-def title(title):
-    return poster(titles[title])
+# @app.route('/title_<title>.html')
+# def title(title):
+#     return poster(titles[title])
 
 # Pull the OpenReview info for a poster.
 @app.route('/poster_<poster>.html')
@@ -81,19 +81,19 @@ def poster(poster):
     return render_template('pages/page.html', **data)
 
 
-# Show by Keyword
-@app.route('/keyword_<keyword>.html')
-def keyword(keyword):
-    data = {"keyword": keyword.lower(),
-            "openreviews": keywords[keyword.lower()]}
-    return render_template('pages/keyword.html', **data)
+# # Show by Keyword
+# @app.route('/keyword_<keyword>.html')
+# def keyword(keyword):
+#     data = {"keyword": keyword.lower(),
+#             "openreviews": keywords[keyword.lower()]}
+#     return render_template('pages/keyword.html', **data)
 
-# Show by Keyword
-@app.route('/recs_<author>.html')
-def recs(author):
-    data = {"keyword": author,
-            "openreviews": [notes[n] for n in author_recs[author]]}
-    return render_template('pages/keyword.html', **data)
+# # Show by Keyword
+# @app.route('/recs_<author>.html')
+# def recs(author):
+#     data = {"keyword": author,
+#             "openreviews": [notes[n] for n in author_recs[author]]}
+#     return render_template('pages/keyword.html', **data)
 
 @app.route('/static/<path:path>')
 def send_static(path):
@@ -101,7 +101,10 @@ def send_static(path):
 
 @app.route('/embeddings_<emb>.json')
 def embeddings(emb):
-    return send_from_directory('static', 'embeddings_'+emb+'.json')
+    try:
+        return send_from_directory('static', 'embeddings_'+emb+'.json')
+    except FileNotFoundError:
+        return ""
 
 @app.route('/paper_vis.html')
 def paperVis():
@@ -116,8 +119,16 @@ def your_generator_here():
     yield "livestream", {}
     yield "home", {}
     yield "papers", {}
+    yield "papers_raw", {}
+    yield "paperVis", {}
+    yield "papers_v2", {}
+
+    # yield "send_static", {}
+
     yield "recommendations", {}
 
+    # for i in notes.keys():
+    #     yield "embeddings", {"emb": str(i)}
 
     for i in notes.keys():
         yield "poster", {"poster": str(i)}
@@ -125,13 +136,13 @@ def your_generator_here():
     # for t in titles:
     #     yield "title", {"title": t}
 
-    for k in keywords:
-        if "/" not in k:
-            yield "keyword", {"keyword": k}
+    # for k in keywords:
+    #     if "/" not in k:
+    #         yield "keyword", {"keyword": k}
 
-    for a in author_recs:
-        if "/" not in k:
-            yield "recs", {"author": a}
+    # for a in author_recs:
+    #     if "/" not in k:
+    #         yield "recs", {"author": a}
 
 # Start the app
 if __name__ == "__main__":

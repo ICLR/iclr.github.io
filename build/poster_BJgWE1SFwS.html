@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: PCMC-Net: Feature-based Pairwise Choice Markov Chains </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">PCMC-Net: Feature-based Pairwise Choice Markov Chains</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Alix Lhéritier,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> We propose a generic neural network architecture equipping Pairwise Choice Markov Chains choice models with amortized and automatic differentiation based inference using alternatives&#39; and individuals&#39; features.</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> Pairwise Choice Markov Chains (PCMC) have been recently introduced to overcome limitations of choice models based on traditional axioms unable to express empirical observations from modern behavior economics like context effects occurring when a choice between two options is altered by adding a third alternative. The inference approach that estimates the transition rates between each possible pair of alternatives via maximum likelihood suffers when the examples of each alternative are scarce and is inappropriate when new alternatives can be observed at test time. In this work, we propose an amortized inference approach for PCMC by embedding its definition into a neural network that represents transition rates as a function of the alternatives&#39; and individual&#39;s features. We apply our construction to the complex case of airline itinerary booking where singletons are common (due to varying prices and individual-specific itineraries), and context effects and behaviors strongly dependent on market segments are observed. Experiments show our network significantly outperforming, in terms of prediction accuracy and logarithmic loss, feature engineered standard and latent class Multinomial Logit models as well as recent machine learning approaches.</p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/c156e921437557833ce502262c1c9455daf0b48c.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=BJgWE1SFwS">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="https://github.com/alherit/PCMC-Net" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_choice modeling.html" class="text-secondary text-decoration-none">choice modeling</a>,
+      
+      <a href="keyword_pairwise choice Markov chains.html" class="text-secondary text-decoration-none">pairwise choice Markov chains</a>,
+      
+      <a href="keyword_deep learning.html" class="text-secondary text-decoration-none">deep learning</a>,
+      
+      <a href="keyword_amortized inference.html" class="text-secondary text-decoration-none">amortized inference</a>,
+      
+      <a href="keyword_automatic differentiation.html" class="text-secondary text-decoration-none">automatic differentiation</a>,
+      
+      <a href="keyword_airline itinerary choice modeling.html" class="text-secondary text-decoration-none">airline itinerary choice modeling</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterBJgWE1SFwS/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterBJgWE1SFwS/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_SylkYeHtwr.html" class="text-dark"><h5 class="card-title">SUMO: Unbiased Estimation of Log Marginal Probability for Latent Variable Models</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We create an unbiased estimator for the log probability of latent variable models, extending such models to a larger scope of applications.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_SylkYeHtwr.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_BJxG_0EtDS.html" class="text-dark"><h5 class="card-title">Prediction, Consistency, Curvature: Representation Learning for Locally-Linear Control</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Learning embedding for control with high-dimensional observations</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_BJxG_0EtDS.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_S1efxTVYDr.html" class="text-dark"><h5 class="card-title">Data-dependent Gaussian Prior Objective for Language Generation</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We introduce an extra data-dependent Gaussian prior objective to augment the current MLE training, which is designed to capture the prior knowledge in the ground-truth data.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_S1efxTVYDr.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_BJliakStvH.html" class="text-dark"><h5 class="card-title">Maximum Likelihood Constraint Inference for Inverse Reinforcement Learning</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Our method infers constraints on task execution by leveraging the principle of maximum entropy to quantify how demonstrations differ from expected, un-constrained behavior.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_BJliakStvH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>

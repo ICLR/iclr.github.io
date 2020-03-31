@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: MMA Training: Direct Input Space Margin Maximization through Adversarial Training </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">MMA Training: Direct Input Space Margin Maximization through Adversarial Training</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Gavin Weiguang Ding,
+      
+      Yash Sharma,
+      
+      Kry Yik Chau Lui,
+      
+      Ruitong Huang,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> We propose MMA training to directly maximize input space margin in order to improve adversarial robustness primarily by removing the requirement of specifying a fixed distortion bound.</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> We study adversarial robustness of neural networks from a margin maximization perspective, where margins are defined as the distances from inputs to a classifier&#39;s decision boundary.
+Our study shows that maximizing margins can be achieved by minimizing the adversarial loss on the decision boundary at the &#34;shortest successful perturbation&#34;, demonstrating a close connection between adversarial losses and the margins. We propose Max-Margin Adversarial (MMA) training to directly maximize the margins to achieve adversarial robustness. 
+Instead of adversarial training with a fixed $\epsilon$, MMA offers an improvement by enabling adaptive selection of the &#34;correct&#34; $\epsilon$ as the margin individually for each datapoint. In addition, we rigorously analyze adversarial training with the perspective of margin maximization, and provide an alternative interpretation for adversarial training, maximizing either a lower or an upper bound of the margins. Our experiments empirically confirm our theory and demonstrate MMA training&#39;s efficacy on the MNIST and CIFAR10 datasets w.r.t. $\ell_\infty$ and $\ell_2$ robustness.</p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/9f14831bcf0b20a9bf5d64248db43a0697453114.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=HkeryxBtPB">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="https://github.com/BorealisAI/mma_training" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_adversarial robustness.html" class="text-secondary text-decoration-none">adversarial robustness</a>,
+      
+      <a href="keyword_perturbation.html" class="text-secondary text-decoration-none">perturbation</a>,
+      
+      <a href="keyword_margin maximization.html" class="text-secondary text-decoration-none">margin maximization</a>,
+      
+      <a href="keyword_deep learning.html" class="text-secondary text-decoration-none">deep learning</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterHkeryxBtPB/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterHkeryxBtPB/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_HkgTTh4FDH.html" class="text-dark"><h5 class="card-title">Implicit Bias of Gradient Descent based Adversarial Training on Separable Data</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> The solution of gradient descent based adversarial training converges in direction to a robust max margin solution that is adapted to adversary geometry, using L2 perturbation also shows significant speed-up in convergence compared to clean training.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_HkgTTh4FDH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_HJxdTxHYvB.html" class="text-dark"><h5 class="card-title">BREAKING  CERTIFIED  DEFENSES:  SEMANTIC  ADVERSARIAL  EXAMPLES  WITH  SPOOFED  ROBUSTNESS  CERTIFICATES</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Defenses against adversarial attacks can be classified into certified and non-certified. Certifiable defenses make networks robust within a certain $\ell_p$-bounded radius, so that it is impossible for the adversary to make adversarial examples in th...</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_HJxdTxHYvB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_rklOg6EFwS.html" class="text-dark"><h5 class="card-title">Improving Adversarial Robustness Requires Revisiting Misclassified Examples</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> By differentiating misclassified and correctly classified data, we propose a new misclassification aware defense that improves the state-of-the-art adversarial robustness.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_rklOg6EFwS.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_H1lZJpVFvr.html" class="text-dark"><h5 class="card-title">Robust Local Features for Improving the Generalization of Adversarial Training</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We propose a new stream of adversarial training approach called Robust Local Features for Adversarial Training (RLFAT) that significantly improves both the adversarially robust generalization and the standard generalization.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_H1lZJpVFvr.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>

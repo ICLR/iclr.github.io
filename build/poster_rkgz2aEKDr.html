@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: On the Variance of the Adaptive Learning Rate and Beyond </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">On the Variance of the Adaptive Learning Rate and Beyond</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Liyuan Liu,
+      
+      Haoming Jiang,
+      
+      Pengcheng He,
+      
+      Weizhu Chen,
+      
+      Xiaodong Liu,
+      
+      Jianfeng Gao,
+      
+      Jiawei Han,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> If warmup is the answer, what is the question?</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> The learning rate warmup heuristic achieves remarkable success in stabilizing training, accelerating convergence and improving generalization for adaptive stochastic optimization algorithms like RMSprop and Adam. Pursuing the theory behind warmup, we identify a problem of the adaptive learning rate -- its variance is problematically large in the early stage, and presume warmup works as a variance reduction technique. We provide both empirical and theoretical evidence to verify our hypothesis. We further propose Rectified Adam (RAdam), a novel variant of Adam, by introducing a term to rectify the variance of the adaptive learning rate. Experimental results on image classification, language modeling, and neural machine translation verify our intuition and demonstrate the efficacy and robustness of RAdam. </p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/4dbb68ed4eb409f773d227c4c157de6b31b3080b.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=rkgz2aEKDr">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="https://github.com/LiyuanLucasLiu/RAdam" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_warmup.html" class="text-secondary text-decoration-none">warmup</a>,
+      
+      <a href="keyword_adam.html" class="text-secondary text-decoration-none">adam</a>,
+      
+      <a href="keyword_adaptive learning rate.html" class="text-secondary text-decoration-none">adaptive learning rate</a>,
+      
+      <a href="keyword_variance.html" class="text-secondary text-decoration-none">variance</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterrkgz2aEKDr/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterrkgz2aEKDr/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_rkeNfp4tPr.html" class="text-dark"><h5 class="card-title">Escaping Saddle Points Faster with Stochastic Momentum</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Higher momentum parameter $\beta$ helps for escaping saddle points faster</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_rkeNfp4tPr.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_Syx4wnEtvH.html" class="text-dark"><h5 class="card-title">Large Batch Optimization for Deep Learning: Training BERT in 76 minutes</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> A fast optimizer for general applications and large-batch training.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_Syx4wnEtvH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_ryxz8CVYDH.html" class="text-dark"><h5 class="card-title">Learning to Learn by Zeroth-Order Oracle</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Novel variant of learning to learn framework for zeroth-order optimization that learns both the update rule and the Gaussian sampling rule.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_ryxz8CVYDH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_r1g87C4KwB.html" class="text-dark"><h5 class="card-title">The Break-Even Point on Optimization Trajectories of Deep Neural Networks</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> In the early phase of training of deep neural networks there exists a &#34;break-even point&#34; which determines properties of the entire optimization trajectory.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_r1g87C4KwB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>

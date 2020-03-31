@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: Why Not to Use Zero Imputation? Correcting Sparsity Bias in Training Neural Networks </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">Why Not to Use Zero Imputation? Correcting Sparsity Bias in Training Neural Networks</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Joonyoung Yi,
+      
+      Juhyuk Lee,
+      
+      Kwang Joon Kim,
+      
+      Sung Ju Hwang,
+      
+      Eunho Yang,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> Handling missing data is one of the most fundamental problems in machine learning. Among many approaches, the simplest and most intuitive way is zero imputation, which treats the value of a missing entry simply as zero. However, many studies have exp...</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> Handling missing data is one of the most fundamental problems in machine learning. Among many approaches, the simplest and most intuitive way is zero imputation, which treats the value of a missing entry simply as zero. However, many studies have experimentally confirmed that zero imputation results in suboptimal performances in training neural networks. Yet, none of the existing work has explained what brings such performance degradations. In this paper, we introduce the variable sparsity problem (VSP), which describes a phenomenon where the output of a predictive model largely varies with respect to the rate of missingness in the given input, and show that it adversarially affects the model performance. We first theoretically analyze this phenomenon and propose a simple yet effective technique to handle missingness, which we refer to as Sparsity Normalization (SN), that directly targets and resolves the VSP. We further experimentally validate SN on diverse benchmark datasets, to show that debiasing the effect of input-level sparsity improves the performance and stabilizes the training of neural networks.</p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/cc3e53cdbd7be11a0296d5a730ecb98d53f296fa.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=BylsKkHYvH">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="https://github.com/JoonyoungYi/sparsity-normalization" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_Missing Data.html" class="text-secondary text-decoration-none">Missing Data</a>,
+      
+      <a href="keyword_Collaborative Filtering.html" class="text-secondary text-decoration-none">Collaborative Filtering</a>,
+      
+      <a href="keyword_Health Care.html" class="text-secondary text-decoration-none">Health Care</a>,
+      
+      <a href="keyword_Tabular Data.html" class="text-secondary text-decoration-none">Tabular Data</a>,
+      
+      <a href="keyword_High Dimensional Data.html" class="text-secondary text-decoration-none">High Dimensional Data</a>,
+      
+      <a href="keyword_Deep Learning.html" class="text-secondary text-decoration-none">Deep Learning</a>,
+      
+      <a href="keyword_Neural Networks.html" class="text-secondary text-decoration-none">Neural Networks</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterBylsKkHYvH/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterBylsKkHYvH/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_Syx1DkSYwB.html" class="text-dark"><h5 class="card-title">Variance Reduction With Sparse Gradients</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We use sparsity to improve the computational complexity of variance reduction methods.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_Syx1DkSYwB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_rylBK34FDS.html" class="text-dark"><h5 class="card-title">DeepHoyer: Learning Sparser Neural Network with Differentiable Scale-Invariant Sparsity Measures</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We propose almost everywhere differentiable and scale invariant regularizers for DNN pruning, which can lead to supremum sparsity through standard SGD training.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_rylBK34FDS.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_HJx8HANFDH.html" class="text-dark"><h5 class="card-title">Four Things Everyone Should Know to Improve Batch Normalization</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Four things that improve batch normalization across all batch sizes</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_HJx8HANFDH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_SyxIWpVYvr.html" class="text-dark"><h5 class="card-title">Input Complexity and Out-of-distribution Detection with Likelihood-based Generative Models</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We pose that generative models&#39; likelihoods are excessively influenced by the input&#39;s complexity, and propose a way to compensate it when detecting out-of-distribution inputs</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_SyxIWpVYvr.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>

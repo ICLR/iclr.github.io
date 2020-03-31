@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: On Identifiability in Transformers </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">On Identifiability in Transformers</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Gino Brunner,
+      
+      Yang Liu,
+      
+      Damian Pascual,
+      
+      Oliver Richter,
+      
+      Massimiliano Ciaramita,
+      
+      Roger Wattenhofer,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> We investigate the identifiability and interpretability of attention distributions and tokens within contextual embeddings in the self-attention based BERT model.</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> In this paper we delve deep in the Transformer architecture by investigating two of its core components: self-attention and contextual embeddings. In particular, we study the identifiability of attention weights and token embeddings, and the aggregation of context into hidden tokens. We show that, for sequences longer than the attention head dimension, attention weights are not identifiable. We propose effective attention as a complementary tool for improving explanatory interpretations based on attention. Furthermore, we show that input tokens retain to a large degree their identity across the model. We also find evidence suggesting that identity information is mainly encoded in the angle of the embeddings and gradually decreases with depth. Finally, we demonstrate strong mixing of input information in the generation of contextual embeddings by means of a novel quantification method based on gradient attribution. Overall, we show that self-attention distributions are not directly interpretable and present tools to better understand and further investigate Transformer models.   </p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/93b48ea21212ada64c99298c6f32e8503e99d0e2.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=BJg1f6EFDB">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_Self-attention.html" class="text-secondary text-decoration-none">Self-attention</a>,
+      
+      <a href="keyword_interpretability.html" class="text-secondary text-decoration-none">interpretability</a>,
+      
+      <a href="keyword_identifiability.html" class="text-secondary text-decoration-none">identifiability</a>,
+      
+      <a href="keyword_BERT.html" class="text-secondary text-decoration-none">BERT</a>,
+      
+      <a href="keyword_Transformer.html" class="text-secondary text-decoration-none">Transformer</a>,
+      
+      <a href="keyword_NLP.html" class="text-secondary text-decoration-none">NLP</a>,
+      
+      <a href="keyword_explanation.html" class="text-secondary text-decoration-none">explanation</a>,
+      
+      <a href="keyword_gradient attribution.html" class="text-secondary text-decoration-none">gradient attribution</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterBJg1f6EFDB/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterBJg1f6EFDB/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_rkecJ6VFvr.html" class="text-dark"><h5 class="card-title">Logic and the 2-Simplicial Transformer</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We introduce the 2-simplicial Transformer and show that this architecture is a useful inductive bias for logical reasoning in the context of deep reinforcement learning.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_rkecJ6VFvr.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_ByxRM0Ntvr.html" class="text-dark"><h5 class="card-title">Are Transformers universal approximators of sequence-to-sequence functions?</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We prove that Transformer networks are universal approximators of sequence-to-sequence functions.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_ByxRM0Ntvr.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_ByeMPlHKPH.html" class="text-dark"><h5 class="card-title">Lite Transformer with Long-Short Range Attention</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Transformer has become ubiquitous in natural language processing (e.g., machine translation, question answering); however, it requires enormous amount of computations to achieve high performance, which makes it not suitable for mobile applications si...</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_ByeMPlHKPH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_Hyg96gBKPS.html" class="text-dark"><h5 class="card-title">Monotonic Multihead Attention</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Make the transformer streamable with monotonic attention.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_Hyg96gBKPS.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>

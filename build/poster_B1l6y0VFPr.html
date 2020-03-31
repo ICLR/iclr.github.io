@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: Identity Crisis: Memorization and Generalization Under Extreme Overparameterization </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">Identity Crisis: Memorization and Generalization Under Extreme Overparameterization</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Chiyuan Zhang,
+      
+      Samy Bengio,
+      
+      Moritz Hardt,
+      
+      Michael C. Mozer,
+      
+      Yoram Singer,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> We study the interplay between memorization and generalization of
+overparameterized networks in the extreme case of a single training example and an identity-mapping task. We examine fully-connected and convolutional networks (FCN and CNN), both line...</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> We study the interplay between memorization and generalization of
+overparameterized networks in the extreme case of a single training example and an identity-mapping task. We examine fully-connected and convolutional networks (FCN and CNN), both linear and nonlinear, initialized randomly and then trained to minimize the reconstruction error. The trained networks stereotypically take one of two forms: the constant function (memorization) and the identity function (generalization).
+We formally characterize generalization in single-layer FCNs and CNNs.
+We show empirically that different architectures exhibit strikingly different inductive biases.
+For example, CNNs of up to 10 layers are able to generalize
+from a single example, whereas FCNs cannot learn the identity function reliably from 60k examples. Deeper CNNs often fail, but nonetheless do astonishing work to memorize the training output: because CNN biases are location invariant, the model must progressively grow an output pattern from the image boundaries via the coordination of many layers. Our work helps to quantify and visualize the sensitivity of inductive biases to architectural choices such as depth, kernel width, and number of channels.
+</p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/cabbbd0e36a514055f84f92c88975788671de490.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=B1l6y0VFPr">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_Generalization.html" class="text-secondary text-decoration-none">Generalization</a>,
+      
+      <a href="keyword_Memorization.html" class="text-secondary text-decoration-none">Memorization</a>,
+      
+      <a href="keyword_Understanding.html" class="text-secondary text-decoration-none">Understanding</a>,
+      
+      <a href="keyword_Inductive Bias.html" class="text-secondary text-decoration-none">Inductive Bias</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterB1l6y0VFPr/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterB1l6y0VFPr/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_rygjHxrYDB.html" class="text-dark"><h5 class="card-title">Deep Audio Priors Emerge From Harmonic Convolutional Networks</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> A new operation called Harmonic Convolution makes deep network model audio priors without training.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_rygjHxrYDB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_HJlnC1rKPB.html" class="text-dark"><h5 class="card-title">On the Relationship between Self-Attention and Convolutional Layers</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> A self-attention layer can perform convolution and often learns to do so in practice.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_HJlnC1rKPB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_H1lj0nNFwB.html" class="text-dark"><h5 class="card-title">The Implicit Bias of Depth: How Incremental Learning Drives Generalization</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We study the sparsity-inducing bias of deep models, caused by their learning dynamics.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_H1lj0nNFwB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_B1esx6EYvr.html" class="text-dark"><h5 class="card-title">A critical analysis of self-supervision, or what we can learn from a single image</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We evaluate self-supervised feature learning methods and find that with sufficient data augmentation early layers can be learned using just one image.  This is informative about self-supervision and the role of augmentations.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_B1esx6EYvr.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>

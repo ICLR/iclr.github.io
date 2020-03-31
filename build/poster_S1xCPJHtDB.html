@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> ICLR: Model Based Reinforcement Learning for Atari </title>
+</head>
+
+  <body >
+    
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+
+<style>
+    body{font-family: 'Lato', sans-serif;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="livestream.html">Live Stream</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper_vis.html">PaperVis</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+</div>
+  </div>
+</nav>
+
+
+<div class="container">
+  
+ <!-- Title -->
+
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title">Model Based Reinforcement Learning for Atari</h3>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Łukasz Kaiser,
+      
+      Mohammad Babaeizadeh,
+      
+      Piotr Miłos,
+      
+      Błażej Osiński,
+      
+      Roy H Campbell,
+      
+      Konrad Czechowski,
+      
+      Dumitru Erhan,
+      
+      Chelsea Finn,
+      
+      Piotr Kozakowski,
+      
+      Sergey Levine,
+      
+      Afroz Mohiuddin,
+      
+      Ryan Sepassi,
+      
+      George Tucker,
+      
+      Henryk Michalewski,
+      
+    </h6>
+    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> We use video prediction models, a model-based reinforcement learning algorithm and 2h of gameplay per game to train agents for 26 Atari games.</p>
+    <p class="card-text"><span class="font-weight-bold">Abstract:</span> Model-free reinforcement learning (RL) can be used to learn effective policies for complex tasks, such as Atari games, even from image observations. However, this typically requires very large amounts of interaction -- substantially more, in fact, than a human would need to learn the same games. How can people learn so quickly? Part of the answer may be that people can learn how the game works and predict which actions will lead to desirable outcomes. In this paper, we explore how video prediction models can similarly enable agents to solve Atari games with fewer interactions than model-free methods. We describe Simulated Policy Learning (SimPLe), a complete model-based deep RL algorithm based on video prediction models and present a comparison of several model architectures, including a novel architecture that yields the best results in our setting. Our experiments evaluate SimPLe on a range of Atari games in low data regime of 100k interactions between the agent and the environment, which corresponds to two hours of real-time play. In most games SimPLe outperforms state-of-the-art model-free algorithms, in some games by over an order of magnitude.</p>
+    
+    <center>
+      <a class="card-link"  href="http://www.openreview.net/pdf/4f55ddc41b7b1bce40220c3b9577d8a60028a4cb.pdf">Paper</a>
+      <a class="card-link"  href="http://www.openreview.net/forum?id=S1xCPJHtDB">OpenReview</a>
+    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+
+      <a href="http://bit.ly/2wjgn1a" class="card-link">Code</a>
+      <a href="" class="card-link">Slides</a>
+    </center>
+    <p></p>
+    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+      
+      <a href="keyword_reinforcement learning.html" class="text-secondary text-decoration-none">reinforcement learning</a>,
+      
+      <a href="keyword_model based rl.html" class="text-secondary text-decoration-none">model based rl</a>,
+      
+      <a href="keyword_video prediction model.html" class="text-secondary text-decoration-none">video prediction model</a>,
+      
+      <a href="keyword_atari.html" class="text-secondary text-decoration-none">atari</a>,
+      
+    </p>    
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+
+
+<!-- SlidesLive -->
+<div id="presentation-embed-38915748" class="container container-sm"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
+
+
+<!-- Buttons -->
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+<!--   <center> -->
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
+
+<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
+
+<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
+<!-- </div> -->
+<!--   <center> -->
+<center>
+    <h2> Paper Discussion       </h2>
+    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterS1xCPJHtDB/">Chat</a></span>
+</center>
+<p></p>
+<!-- Gitter -->
+<div id="gitter" class="gitter container" height="600px">
+  <center>
+    <div class="border">
+      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterS1xCPJHtDB/~embed" width="900px" height="400px"></iframe> </center>
+    </div>
+  </center>
+</div>
+
+<!-- Recs -->
+<p></p>
+<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+    <div class="card-deck">
+
+      
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_BJewlyStDr.html" class="text-dark"><h5 class="card-title">On Bonus Based Exploration Methods In The Arcade Learning Environment</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We find that existing bonus-based exploration methods have not been able to address the exploration-exploitation trade-off in the Arcade Learning Environment. </p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_BJewlyStDr.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_HJl8_eHYvS.html" class="text-dark"><h5 class="card-title">Discriminative Particle Filter Reinforcement Learning for Complex Partial observations</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We introduce DPFRL, a framework for reinforcement learning under partial and complex observations with an importance-weighted particle filter</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_HJl8_eHYvS.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_rklHqRVKvH.html" class="text-dark"><h5 class="card-title">Harnessing Structures for Value-Based Planning and Reinforcement Learning</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> We propose a generic framework that allows for exploiting the low-rank structure in both planning and deep reinforcement learning.</p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_rklHqRVKvH.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+      
+  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
+  <div class="card" >
+    <div class="card-header">
+        <a href="poster_rkl3m1BFDB.html" class="text-dark"><h5 class="card-title">Exploratory Not Explanatory: Counterfactual Analysis of Saliency Maps for Deep Reinforcement Learning</h5></a>      
+
+    </div>
+      <div class="card-body">
+        <p class="card-text"> Proposing a new counterfactual-based methodology to evaluate the hypotheses generated from saliency maps about deep RL agent behavior. </p>
+      </div>
+      
+      <div class="card-footer">
+      <center>
+        <a href="poster_rkl3m1BFDB.html" class="btn btn-primary">Visit</a>
+        </center>
+
+      </div>
+      <!-- </div> -->
+
+  </div>
+  
+    </DIV>
+          </DIV>
+      </DIV>
+
+</body>
