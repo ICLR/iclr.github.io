@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="static/typeahead.css">
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="static/typeahead.bundle.js"></script>
+
+    <title> ICLR: {{ keyword }} </title>
+</head>
+
+<body>
+
+<!-- NAV -->
+{% include 'pages/header.html' %}
+
+<div class="container" style="padding-top: 20px;">
+
+    <div class="row">
+        <div class="col-12 col-sm-6 col-lg-4">
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control typeahead_all"
+                       placeholder="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary typeahead_all_clear"
+                            type="button">&times;
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" style="margin-bottom: 10px;">
+{#            <div class="float-right">#}
+                <div class="btn-group btn-group-toggle filter_option"
+                     data-toggle="buttons">
+                    <label class="btn btn-outline-secondary active">
+                        <input type="radio" name="options" value="authors"
+                               autocomplete="off" checked> author
+                    </label>
+                    <label class="btn btn-outline-secondary">
+                        <input type="radio" name="options" value="keywords"
+                               autocomplete="off"> keyword
+                    </label>
+                    <label class="btn btn-outline-secondary">
+                        <input type="radio" name="options" value="titles"
+                               autocomplete="off"> title
+                    </label>
+{#                </div>#}
+            </div>
+
+        </div>
+
+        <div class="col-12 col-lg-4">
+
+            <button class="btn btn-outline-secondary reshuffle"> re-shuffle
+            </button>
+
+            <div class="float-right">
+                <div class="btn-group btn-group-toggle render_option"
+                     data-toggle="buttons">
+                    <label class="btn btn-outline-secondary active">
+                        <input type="radio" name="options" value="compact"
+                               autocomplete="off" checked> compact
+                    </label>
+                    <label class="btn btn-outline-secondary">
+                        <input type="radio" name="options" value="detail"
+                               autocomplete="off"> detail
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        {#        <div class="col-4">#}
+        {#            T:<input class="typeahead_title" type="text"#}
+        {#                     placeholder="title" width=400px>#}
+        {#        </div>#}
+
+    </div>
+
+    <div class="cards row" style="margin-top: 10px;">
+
+    </div>
+
+</div>
+
+<script src="static/typeahead_tools.js"></script>
+<script src="static/papers.js"></script>
+
+<script>
+    window.onload = function () {
+        start()
+    }
+
+</script>
+
+
+</body>

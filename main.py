@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify, send_from_directory
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -21,7 +21,7 @@ titles = {}
 keywords = {}
 for i, (k,n) in enumerate(notes.items()):
     n.content["iclr_id"] = k
-    # n.content["key_id"] = 
+    # n.content["key_id"] =
     titles[n.content["title"]] = k
     if "TL;DR" in n.content:
         n.content["TLDR"] = n.content["TL;DR"]
@@ -31,7 +31,7 @@ for i, (k,n) in enumerate(notes.items()):
         keywords.setdefault(k.lower(), [])
         keywords[k.lower()].append(n)
 
-         
+
 @app.route('/livestream.html')
 def livestream():
     return render_template('pages/main.html', **{})
@@ -40,12 +40,22 @@ def livestream():
 def home():
     return render_template('pages/home.html', **{})
 
-@app.route('/papers.html')
+@app.route('/papers_old.html')
 def papers():
     data = {"keyword": "all",
             "openreviews": notes.values()}
     return render_template('pages/keyword.html', **data)
 
+@app.route('/papers.html')
+def papers_v2():
+    data = {"keyword": "all",
+            "openreviews": notes.values()}
+    return render_template('pages/papers.html', **data)
+
+@app.route('/papers.json')
+def papers_raw():
+    paper_list = [value.__dict__ for value in notes.values()]
+    return jsonify(paper_list)
 
 @app.route('/recs.html')
 def recommendations():
@@ -60,8 +70,8 @@ def recommendations():
 @app.route('/title_<title>.html')
 def title(title):
     return poster(titles[title])
-    
-# Pull the OpenReview info for a poster. 
+
+# Pull the OpenReview info for a poster.
 @app.route('/poster_<poster>.html')
 def poster(poster):
     note_id = poster
@@ -84,6 +94,18 @@ def recs(author):
     data = {"keyword": author,
             "openreviews": [notes[n] for n in author_recs[author]]}
     return render_template('pages/keyword.html', **data)
+
+@app.route('/static/<path:path>')
+def send_static(path):
+    return send_from_directory('static', path)
+
+@app.route('/embeddings_<emb>.json')
+def embeddings(emb):
+    return send_from_directory('static', 'embeddings_'+emb+'.json')
+
+@app.route('/paper_vis.html')
+def paperVis():
+    return render_template('pages/papers_vis.html')
 
 
 
