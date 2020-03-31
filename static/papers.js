@@ -114,7 +114,9 @@ const card_html = openreview => `
                    <h4 class="card-title"> ${openreview.content.title} </h4></a>
                 <h6 class="card-subtitle mb-2 text-muted">
                         ${openreview.content.authors.join(', ')}
-                </h6>
+</h6>
+    <img src="https://iclr.github.io/iclr-images/${openreview.content.iclr_id}.png" width=100%/>
+    
             </div>`
   + ((render_mode === 'detail') ? `
             <div class="card-body">
