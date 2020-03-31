@@ -1,16 +1,19 @@
 
 
-## Install Requirements
+## Installation
 
+For installing, follow these intructions
 
 ```
-python -r requirements.txt
+conda env create -f environment.yml
+source activate iclr_website
+pip install -r requirements.txt
 ```
 
 ## Test
 
 ```
-bash run.sh
+bash run.sh or sh run.sh
 ```
 
 Starts a server goto http://localhost:5000/index.html
