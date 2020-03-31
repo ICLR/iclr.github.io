@@ -40,13 +40,13 @@ def livestream():
 def home():
     return render_template('pages/home.html', **{})
 
-@app.route('/papers.html')
+@app.route('/papers_old.html')
 def papers():
     data = {"keyword": "all",
             "openreviews": notes.values()}
     return render_template('pages/keyword.html', **data)
 
-@app.route('/papers_v2.html')
+@app.route('/papers.html')
 def papers_v2():
     data = {"keyword": "all",
             "openreviews": notes.values()}
@@ -103,7 +103,7 @@ def send_static(path):
 def embeddings(emb):
     return send_from_directory('static', 'embeddings_'+emb+'.json')
 
-@app.route('/papers_vis.html')
+@app.route('/paper_vis.html')
 def paperVis():
     return render_template('pages/papers_vis.html')
 

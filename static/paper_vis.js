@@ -1,4 +1,5 @@
 let all_papers = [];
+let all_pos = [];
 const allKeys = {
     authors: [],
     keywords: [],
@@ -13,14 +14,15 @@ const filters = {
 let currentTippy = null;
 
 const sizes = {
-    margins: {l: 20, b: 20, r: 5, t: 5}
+    margins: {l: 20, b: 20, r: 20, t: 20}
 }
 
 const plot_size = () => {
     const cont = document.getElementById('container');
     // console.log(window.innerHeight-100, cont.offsetWidth,"--- window.innerWidth, cont.offsetWidth");
-    const wh = Math.min(cont.offsetWidth, window.innerHeight - 200)
-    return [wh, wh]
+    const wh = Math.max(window.innerHeight - 200, 300)
+    const ww = Math.max(cont.offsetWidth, 300)
+    return [ww, wh]
 }
 
 const xS = d3.scaleLinear().range([0, 500]);
@@ -41,12 +43,20 @@ const updateVis = () => {
     xS.range([sizes.margins.l, pW - sizes.margins.r]);
     yS.range([sizes.margins.t, pH - sizes.margins.b]);
 
+    all_pos = all_papers.map(d => {
+        const r2 = (d.is_selected ? 8 : 4);
+        const [x, y] = [xS(d.pos[0]), yS(d.pos[1])];
+        return new cola.Rectangle(x - r2, x + r2, y - r2, y + r2);
+    })
+
+    cola.removeOverlaps(all_pos);
+
     l_main.selectAll('.dot').data(all_papers, d => d.id)
       .join('circle')
       .attr('class', 'dot')
-      // .attr('r', 3)
-      .attr('cx', d => xS(d.pos[0]))
-      .attr('cy', d => yS(d.pos[1]))
+      .attr('r', d => d.is_selected ? 8 : 6)
+      .attr('cx', (d,i) => all_pos[i].cx())
+      .attr('cy', (d,i) => all_pos[i].cy())
       .classed('highlight', d => d.is_selected)
       .classed('non-highlight', d => !d.is_selected && is_filtered)
       .on('click',
@@ -139,3 +149,5 @@ d3.selectAll('.filter_option input').on('click', function () {
     setTypeAhead(filter_mode, allKeys, filters, render);
 
 })
+
+$(window).on('resize', _.debounce(updateVis, 150));
