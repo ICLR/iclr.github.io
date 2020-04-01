@@ -1,21 +1,21 @@
+# ICLR Conference Portal
 
-
-## Install Requirements
-
+### Install Requirements
 
 ```
-python -r requirements.txt
+pip install -r requirements.txt
 ```
+Replace `pip` with `pip3` according to your system.
 
-## Test
+### Test
 
 ```
 bash run.sh
 ```
 
-Starts a server goto http://localhost:5000
+Starts a server, goto http://localhost:5000
 
-## Make static pages
+### Make static pages
 
 ```
 bash freeze.sh
@@ -23,7 +23,7 @@ bash freeze.sh
 
 Puts the static pages in `build/`
 
-## Code
+### Code
 
 Code is all in `main.py`
 
