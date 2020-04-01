@@ -13,7 +13,7 @@ python -r requirements.txt
 bash run.sh
 ```
 
-Starts a server goto http://localhost:5000/index.html
+Starts a server goto http://localhost:5000
 
 ## Make static pages
 

@@ -4,7 +4,6 @@ from flask_frozen import Freezer
 import pickle
 import sys
 
-
 app = Flask(__name__)
 app.config.from_object(__name__)
 
@@ -31,7 +30,8 @@ for i, (k,n) in enumerate(notes.items()):
         keywords[k.lower()].append(n)
 
 
-# Endpoints
+# ENDPOINTS
+
 @app.route('/')
 def index():
     return redirect('/index.html')
