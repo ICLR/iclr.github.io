@@ -1,7 +1,7 @@
 import pickle, json
 from tqdm import tqdm
 
-
+# Converts pkl/cached_or.pkl file to json/cached_or.json
 def convert_cached_or():
     notes = pickle.load(open("pkl/cached_or.pkl", "rb"))
 
@@ -16,6 +16,8 @@ def convert_cached_or():
     with open('json/cached_or.json', 'w') as f:
         f.write(cached_or_json)
 
+
+# Converts pkl/rec.pkl file to json/author_records.json and json/paper_records.json
 def convert_rec():
     paper_records, author_records = pickle.load(open("pkl/rec.pkl", "rb"))
 
@@ -28,4 +30,7 @@ def convert_rec():
     with open('json/author_records.json', 'w') as f:
         f.write(author_records_json)
 
-convert_rec()
+
+if __name__ == '__main__':
+    convert_cached_or()
+    convert_rec()

@@ -32,7 +32,6 @@ keywords = {}
 
 for i, (k,n) in enumerate(notes.items()):
     n["content"]["iclr_id"] = k
-    # n.content["key_id"] =
     titles[n["content"]["title"]] = k
     if "TL;DR" in n["content"]:
         n["content"]["TLDR"] = n["content"]["TL;DR"]
