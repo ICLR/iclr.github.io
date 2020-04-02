@@ -1,7 +1,7 @@
 from flask import Flask, render_template, render_template_string
 from flask import jsonify, send_from_directory, redirect
 from flask_frozen import Freezer
-import pickle
+import pickle, json
 import sys
 
 app = Flask(__name__)
@@ -9,23 +9,36 @@ app.config.from_object(__name__)
 
 
 # Load all for openreview one time.
-notes = pickle.load(open("cached_or.pkl", "br"))
+notes_file = open("openreview_data/json/cached_or.json", "r")
+
+notes = json.loads(notes_file.read())
 notes_keys = list(notes.keys())
 
-paper_recs, author_recs = pickle.load(open("rec.pkl", "br"))
+notes_file.close()
+
+# Reading paper records
+paper_recs_file = open("openreview_data/json/paper_records.json", 'r')
+paper_recs = json.loads(paper_recs_file.read())
+paper_recs_file.close()
+
+# Reading author records
+author_recs_file = open("openreview_data/json/author_records.json", 'r')
+author_recs = json.loads(author_recs_file.read())
+author_recs_file.close()
+
 
 titles = {}
 keywords = {}
 
 for i, (k,n) in enumerate(notes.items()):
-    n.content["iclr_id"] = k
+    n["content"]["iclr_id"] = k
     # n.content["key_id"] =
-    titles[n.content["title"]] = k
-    if "TL;DR" in n.content:
-        n.content["TLDR"] = n.content["TL;DR"]
+    titles[n["content"]["title"]] = k
+    if "TL;DR" in n["content"]:
+        n["content"]["TLDR"] = n["content"]["TL;DR"]
     else:
-        n.content["TLDR"] = n.content["abstract"][:250] + "..."
-    for k in n.content["keywords"]:
+        n["content"]["TLDR"] = n["content"]["abstract"][:250] + "..."
+    for k in n["content"]["keywords"]:
         keywords.setdefault(k.lower(), [])
         keywords[k.lower()].append(n)
 
@@ -68,7 +81,7 @@ def papers_old():
 
 @app.route('/papers.json')
 def paper_json():
-    paper_list = [value.__dict__ for value in notes.values()]
+    paper_list = [value for value in notes.values()]
     return jsonify(paper_list)
 
 
