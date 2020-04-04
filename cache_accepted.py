@@ -10,4 +10,4 @@ accepted_submissions = {decision_note.forum : blind_notes[decision_note.forum]
                         if 'Accept' in decision_note.content['decision']}
 
 # Write out accepted submissions
-pickle.dump(accepted_submissions, open("openreview_data/pkl/cached_or.pkl", "bw"))
+pickle.dump(accepted_submissions, open("data/pkl/cached_or.pkl", "bw"))
