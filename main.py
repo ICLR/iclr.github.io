@@ -178,7 +178,11 @@ if __name__ == "__main__":
 
         main(notes_path, paper_recs_path, author_recs_path)
 
-        debug_val = os.getenv("FLASK_DEBUG", False)
+        debug_val = False
+        
+        if(os.getenv("FLASK_DEBUG") == True):
+            debug_val = True
+
         app.run(port=5000, debug=debug_val)
 
     else:
