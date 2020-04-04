@@ -62,6 +62,7 @@ def livestream():
 @app.route('/papers.html')
 def papers():
     data = {"keyword": "all",
+            "page": "papers",
             "openreviews": notes.values()}
     return render_template('pages/papers.html', **data)
 
@@ -89,8 +90,28 @@ def recommendations():
     data = {"choices": author_recs.keys(),
             "keywords": keywords.keys(),
             "titles": titles.keys()}
-
     return render_template('pages/recs.html', **data)
+
+
+@app.route('/faq.html')
+def faq():
+    return render_template('pages/faq.html')
+
+@app.route('/calendar.html')
+def schedule():
+    return render_template('pages/calendar.html')
+
+@app.route('/socials.html')
+def socials():
+    return render_template('pages/socials.html')
+
+@app.route('/sponsors.html')
+def sponsors():
+    return render_template('pages/sponsors.html')
+
+@app.route('/workshops.html')
+def workshops():
+    return render_template('pages/workshops.html')
 
 
 # Pull the OpenReview info for a poster.

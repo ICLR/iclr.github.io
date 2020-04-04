@@ -1,48 +1,81 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% set page_title = "ICLR: " + openreview.content.title %}
+  {% include 'pages/head.html' %}
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title> ICLR: {{openreview.content.title}} </title>
-</head>
 
   <body >
-    
+
 <!-- NAV -->
 {% include 'pages/header.html' %}
 
 
 <div class="container">
-  
+
  <!-- Title -->
 
-<div class="card" >
+<div class="card m-3" style="">
   <div class="card-body">
-    <h3 class="card-title">{{openreview.content.title}}</h3>
-    <h6 class="card-subtitle mb-2 text-muted">{% for author in openreview.content.authors %}
-      {{author}},
+    <h3 class="card-title" style="font-family: 'Cuprum'; font-weight: 700; font-size2.4em; color: #2294e0">{{openreview.content.title}}</h3>
+
+    <h5 class="card-subtitle mb-2 text-muted">    <span class="font-weight-bold">Authors:</span> {% for author in openreview.content.authors %}
+      {{author}}{{ "," if not loop.last }}
+
       {% endfor %}
-    </h6>
-    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> {{openreview.content.TLDR}}</p>
-    <p class="card-text"><span class="font-weight-bold">Abstract:</span> {{openreview.content.abstract}}</p>
-    
-    <center>
-      <a class="card-link"  href="http://www.openreview.net{{openreview.content.pdf}}">Paper</a>
-      <a class="card-link"  href="http://www.openreview.net/forum?id={{openreview.forum}}">OpenReview</a>
+    </h5>
+
+    <center class="p-3">
+      <a class="card-link" data-toggle="collapse" role="button" href="#details">
+        <button class="btn btn-outline-secondary">
+          Abstract
+        </button>
+      </a>
+
+
+      <a class="card-link"  target="_blank" href="http://www.openreview.net{{openreview.content.pdf}}">
+        <button class="btn btn-outline-secondary">
+          Paper
+        </button>
+      </a>
+      <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id={{openreview.forum}}">
+        <button class="btn btn-outline-secondary">
+          OpenReview
+        </button>
+      </a>
     <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
 
-      <a href="{{openreview.content.code}}" class="card-link">Code</a>
-      <a href="{{openreview.content.slides}}" class="card-link">Slides</a>
+    <a href="{{openreview.content.code}}" target="_blank"  class="card-link">
+      <button class="btn btn-outline-secondary">
+        Code
+      </button>
+    </a>
+
+    <a href="{{openreview.content.slides}}" target="_blank"  class="card-link">
+      <button class="btn btn-outline-secondary">
+        Slides
+      </button>
+    </a>
     </center>
+
+  </div>
+</div>
+
+<div id="details" class="card m-3 collapse" style="font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+  <div class="card-body">
+    <p class="card-text">
+      <div id="abstractExample">
+        <span class="font-weight-bold">Abstract:</span>
+        {{openreview.content.abstract}}
+      </div>
+
+    </p>
+
     <p></p>
     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
       {% for keyword in openreview.content.keywords %}
-      <a href="keyword_{{keyword}}.html" class="text-secondary text-decoration-none">{{keyword}}</a>,
+      <a href="keyword_{{keyword}}.html" class="text-secondary text-decoration-none">{{keyword}}</a>{{ "," if not loop.last }}
       {% endfor %}
-    </p>    
+    </p>
   </div>
 </div>
 
@@ -61,39 +94,35 @@
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
-  zoomRatio: 0.4,
-  hideTitle: true
+        zoomRatio: 0.4,
+        hideTitle: true
     });
 </script>
 
 
 <!-- Buttons -->
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
-<!--   <center> -->
-<!--     <span><a href="poster_{{prev}}.html" class="btn btn-secondary">Prev</a></span> -->
-
-<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
-
-<!--     <span><a href="poster_{{next}}.html" class="btn btn-secondary">Next</a></span> </center> -->
-<!-- </div> -->
-<!--   <center> -->
-<center>
-    <h2> Paper Discussion       </h2>
-    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/poster{{id}}/">Chat</a></span>
-</center>
-<p></p>
-<!-- Gitter -->
-<div id="gitter" class="gitter container" height="600px">
+<div class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
-    <div class="border">
-      <center> <iframe frameborder="0" src="https://gitter.im/iclr/poster{{id}}/~embed" width="900px" height="400px"></iframe> </center>
-    </div>
+    <h2> Paper Discussion       </h2>
+    <!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/poster{{id}}/">Chat</a></span> -->
   </center>
+  <p></p>
+  <!-- Gitter -->
+  <div id="gitter" class="gitter container" height="600px">
+    <center>
+      <div class="border">
+        <center> <iframe frameborder="0" src="https://gitter.im/iclr/poster{{id}}/~embed" width="900px" height="400px"></iframe> </center>
+      </div>
+    </center>
+  </div>
 </div>
 
-<!-- Recs -->
-<p></p>
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
     <h2> Similar Papers </h2>
 </div>
@@ -104,17 +133,17 @@
     <div class="card-deck">
 
       {% for openreview in paper_recs %}
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_{{openreview.content.iclr_id}}.html" class="text-dark"><h5 class="card-title">{{openreview.content.title}}</h5></a>      
+        <a href="poster_{{openreview.content.iclr_id}}.html" class="text-dark"><h5 class="card-title">{{openreview.content.title}}</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> {{openreview.content.TLDR}}</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_{{openreview.content.iclr_id}}.html" class="btn btn-primary">Visit</a>
