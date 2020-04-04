@@ -16,7 +16,8 @@ const updateCards = (papers) => {
     const all_mounted_cards = d3.select('.cards').selectAll('.myCard')
       .data(papers, d => d.number)
       .join('div')
-      .attr('class', 'myCard col-12 col-sm-6 col-lg-4')
+      .attr('class', 'myCard col-xs-6 col-md-4')
+      .attr('style', 'display: flex;flex-flow: wrap;margin-left: 0;box-sizing: border-box;')
       .html(card_html)
 }
 
@@ -107,15 +108,15 @@ const keyword = kw => `<a href="keyword_${kw}.html"
                        class="text-secondary text-decoration-none">${kw.toLowerCase()}</a>`
 //language=HTML
 const card_html = openreview => `
-        <div class="card" style="margin-bottom: 10px;">
-            <div class="card-header">
+        <div class="card" style="margin-bottom: 1em;display: block; overflow: hidden;">
+            <div class="card-header" style="height: 300px">
                 <a href="poster_${openreview.content.iclr_id}.html"
-                   class="text-dark">
-                   <h4 class="card-title"> ${openreview.content.title} </h4></a>
-                <h6 class="card-subtitle mb-2 text-muted">
+                   class="text-muted">
+                   <h5 class="card-title" align="center" style="font-family: sans-serif; font-size: 20px;"> ${openreview.content.title} </h5></a>
+                <h6 class="card-subtitle text-muted" align="center" style="font-size: 13px; font-family: sans-serif;">
                         ${openreview.content.authors.join(', ')}
 </h6>
-    <img src="https://iclr.github.io/iclr-images/${openreview.content.iclr_id}.png" width=100%/>
+    <center><img src="https://iclr.github.io/iclr-images/${openreview.content.iclr_id}.png" width=110px height=100px style="margin-top: 40px; border-radius: 50%;"/></center>
     
             </div>`
   + ((render_mode === 'detail') ? `
