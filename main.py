@@ -1,36 +1,59 @@
 from flask import Flask, render_template, render_template_string
 from flask import jsonify, send_from_directory, redirect
 from flask_frozen import Freezer
-import pickle
-import sys
+import pickle, json
+import os, sys
+
+notes = {}
+paper_recs = {}
+author_recs = {}
+titles = {}
+keywords = {}
+
+# Loads up the necessary data
+def main(notes_path, paper_recs_path, author_recs_path):
+    global notes
+    global paper_recs
+    global author_recs
+    global titles
+    global keywords
+
+    # Load all for notes data one time.
+    notes_file = open(notes_path, "r")
+    notes = json.loads(notes_file.read())
+    notes_keys = list(notes.keys())
+
+    notes_file.close()
+
+    # Reading paper records
+    paper_recs_file = open(paper_recs_path, 'r')
+    paper_recs = json.loads(paper_recs_file.read())
+    paper_recs_file.close()
+
+    # Reading author records
+    author_recs_file = open(author_recs_path, 'r')
+    author_recs = json.loads(author_recs_file.read())
+    author_recs_file.close()
+
+    for i, (k,n) in enumerate(notes.items()):
+        n["content"]["iclr_id"] = k
+        titles[n["content"]["title"]] = k
+        if "TL;DR" in n["content"]:
+            n["content"]["TLDR"] = n["content"]["TL;DR"]
+        else:
+            n["content"]["TLDR"] = n["content"]["abstract"][:250] + "..."
+        for k in n["content"]["keywords"]:
+            keywords.setdefault(k.lower(), [])
+            keywords[k.lower()].append(n)
+    
+    print("Data Successfully Loaded")
+
+
+# ------------- SERVER CODE -------------------->
 
 app = Flask(__name__)
 app.config.from_object(__name__)
 
-
-# Load all for openreview one time.
-notes = pickle.load(open("cached_or.pkl", "br"))
-notes_keys = list(notes.keys())
-
-paper_recs, author_recs = pickle.load(open("rec.pkl", "br"))
-
-titles = {}
-keywords = {}
-
-for i, (k,n) in enumerate(notes.items()):
-    n.content["iclr_id"] = k
-    # n.content["key_id"] =
-    titles[n.content["title"]] = k
-    if "TL;DR" in n.content:
-        n.content["TLDR"] = n.content["TL;DR"]
-    else:
-        n.content["TLDR"] = n.content["abstract"][:250] + "..."
-    for k in n.content["keywords"]:
-        keywords.setdefault(k.lower(), [])
-        keywords[k.lower()].append(n)
-
-
-# ENDPOINTS
 
 @app.route('/')
 def index():
@@ -69,7 +92,7 @@ def papers_old():
 
 @app.route('/papers.json')
 def paper_json():
-    paper_list = [value.__dict__ for value in notes.values()]
+    paper_list = [value for value in notes.values()]
     return jsonify(paper_list)
 
 
@@ -141,10 +164,27 @@ def your_generator_here():
     for i in notes.keys():
         yield "poster", {"poster": str(i)}
 
+# --------------- DRIVER CODE -------------------------->
 
-# Start the app
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "build":
+    if len(sys.argv) == 2 and sys.argv[1] == "build":
         freezer.freeze()
+
+    elif len(sys.argv) == 4:
+        # paths for json data
+        notes_path = sys.argv[1]
+        paper_recs_path = sys.argv[2]
+        author_recs_path = sys.argv[3]
+
+        main(notes_path, paper_recs_path, author_recs_path)
+
+        debug_val = False
+        
+        if(os.getenv("FLASK_DEBUG") == True):
+            debug_val = True
+
+        app.run(port=5000, debug=debug_val)
+
     else:
-        app.run(port=5000)
+        raise ValueError("Please enter the paths for the required json data")
+        
