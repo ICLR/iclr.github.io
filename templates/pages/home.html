@@ -1,26 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title> ICLR 2020 </title>
-</head>
-
-  <body >
-    
-<!-- NAV -->
-{% include 'pages/header.html' %}
+  {% set page_title = "ICLR 2020" %}
+  {% include 'pages/head.html' %}
 
 
-<div class="container">
-  ICLR 2020
+  <body>
+    <!-- NAV -->
+    {% set active_page = "Home" %}
+    {% include 'pages/header.html' %}
+
+    <div class="jumbotron jumbotron-fluid" style="background: url('static/mount.jpg') no-repeat fixed center; background-size: auto;">
+      <div class="container">
+
+        <div class="row">
+          <div class="p-2 mx-auto text-center text-white">
+            <img src="static/ICLR-logo-white.png"/>
+          </div>
+        </div>
+        <div class="row header">
+
+          <div class="p-1 mx-auto text-center text-white col-5">
+            <h1 class="">
+            EIGHTH
+            INTERNATIONAL
+            CONFERENCE IN
+            LEARNING
+            REPRESENTATIONS
+            </h1>
 
 
-  Intro and explanation of the event
-</div>
+            <h3 class="p-3" >
+              26 – 30 April 2020
+            </h3>
+          </div>
+        </div>
 
-
-</body>
+      </div>
+    </div>
+  </body>
+</html>
