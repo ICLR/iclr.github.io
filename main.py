@@ -2,7 +2,7 @@ from flask import Flask, render_template, render_template_string
 from flask import jsonify, send_from_directory, redirect
 from flask_frozen import Freezer
 import pickle, json
-import os, sys
+import os, sys, argparse
 
 notes = {}
 paper_recs = {}
@@ -21,7 +21,6 @@ def main(notes_path, paper_recs_path, author_recs_path):
     # Load all for notes data one time.
     notes_file = open(notes_path, "r")
     notes = json.loads(notes_file.read())
-    notes_keys = list(notes.keys())
 
     notes_file.close()
 
@@ -48,6 +47,24 @@ def main(notes_path, paper_recs_path, author_recs_path):
     
     print("Data Successfully Loaded")
 
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(description="ICLR Portal Command Line")
+    
+    parser.add_argument('--build', action='store_true', default=False, 
+                        help="Convert the site to static assets")
+    
+    parser.add_argument('-b', action='store_true', default=False, dest="build", 
+                        help="Convert the site to static assets")
+
+    parser.add_argument('--paths', action='append', type=argparse.FileType("r"), nargs='+',
+                        help="Pass the JSON data paths and run the server")
+    
+    parser.add_argument('-p', action='append', type=argparse.FileType("r"), nargs='+', dest="paths",
+                        help="Pass the JSON data paths and run the server")
+
+    args = parser.parse_args()
+    return args
 
 # ------------- SERVER CODE -------------------->
 
@@ -164,27 +181,28 @@ def your_generator_here():
     for i in notes.keys():
         yield "poster", {"poster": str(i)}
 
+
 # --------------- DRIVER CODE -------------------------->
 
 if __name__ == "__main__":
-    if len(sys.argv) == 2 and sys.argv[1] == "build":
+    args = parse_arguments()
+    
+    if args.build:
         freezer.freeze()
-
-    elif len(sys.argv) == 4:
-        # paths for json data
-        notes_path = sys.argv[1]
-        paper_recs_path = sys.argv[2]
-        author_recs_path = sys.argv[3]
-
-        main(notes_path, paper_recs_path, author_recs_path)
-
-        debug_val = False
-        
-        if(os.getenv("FLASK_DEBUG") == True):
-            debug_val = True
-
-        app.run(port=5000, debug=debug_val)
-
     else:
-        raise ValueError("Please enter the paths for the required json data")
+        try:
+            notes_path = args.paths[0][0].name
+            paper_recs_path = args.paths[0][1].name
+            author_recs_path = args.paths[0][2].name
         
+            main(notes_path, paper_recs_path, author_recs_path)
+
+            debug_val = False        
+            if(os.getenv("FLASK_DEBUG") == "True"):
+                debug_val = True
+    
+            app.run(port=5000, debug=debug_val)
+        
+        except IndexError:
+            raise IndexError("Please enter all the required paths")
+
