@@ -11,26 +11,31 @@ def convert_cached_or():
     for k in tqdm(keys):
         cached_or_dict[k] = notes[k].__dict__
 
-    cached_or_json = json.dumps(cached_or_dict, indent=2)
-
-    with open('json/cached_or.json', 'w') as f:
-        f.write(cached_or_json)
-
+    return cached_or_dict
 
 # Converts pkl/rec.pkl file to json/author_records.json and json/paper_records.json
 def convert_rec():
     paper_records, author_records = pickle.load(open("pkl/rec.pkl", "rb"))
 
-    paper_records_json = json.dumps(dict(paper_records), indent=2)
-    author_records_json = json.dumps(dict(author_records), indent=2)
+    paper_records_dict = dict(paper_records)
+    author_records_dict = dict(author_records)
 
-    with open('json/paper_records.json', 'w') as f:
-        f.write(paper_records_json)
-    
-    with open('json/author_records.json', 'w') as f:
-        f.write(author_records_json)
+    return paper_records_dict, author_records_dict
 
 
 if __name__ == '__main__':
-    convert_cached_or()
-    convert_rec()
+    site_data = {}
+
+    cached_or = convert_cached_or()
+    paper_records, author_records = convert_rec()
+
+    site_data["cached_or"] = cached_or
+    site_data["paper_records"] = paper_records
+    site_data["author_records"] = author_records
+    site_data["sponsors"] = {}
+    site_data["workshops"] = {}
+    site_data["socials"] = {}
+    site_data["calendar"] = {}
+
+    with open("json/site_data.json", "w") as f:
+        f.write(json.dumps(site_data, indent=2))

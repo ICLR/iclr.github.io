@@ -7,33 +7,42 @@ import os, sys, argparse
 notes = {}
 paper_recs = {}
 author_recs = {}
+sponsors = {}
+workshops = {}
+socials = {}
+calendar = {}
+
 titles = {}
 keywords = {}
 
 # Loads up the necessary data
-def main(notes_path, paper_recs_path, author_recs_path):
+def main(site_data_path):
     global notes
     global paper_recs
     global author_recs
+    global sponsors
+    global workshops
+    global socials
+    global calendar
+
     global titles
     global keywords
 
     # Load all for notes data one time.
-    notes_file = open(notes_path, "r")
-    notes = json.loads(notes_file.read())
+    site_data_file = open(site_data_path, "r")
+    site_data = json.loads(site_data_file.read())
+    site_data_file.close()
 
-    notes_file.close()
+    # Setting up data from the site_data file
 
-    # Reading paper records
-    paper_recs_file = open(paper_recs_path, 'r')
-    paper_recs = json.loads(paper_recs_file.read())
-    paper_recs_file.close()
-
-    # Reading author records
-    author_recs_file = open(author_recs_path, 'r')
-    author_recs = json.loads(author_recs_file.read())
-    author_recs_file.close()
-
+    notes = site_data["cached_or"]
+    paper_recs = site_data["paper_records"]
+    author_recs = site_data["author_records"]
+    sponsors = site_data["sponsors"]
+    workshops = site_data["workshops"]
+    socials = site_data["socials"]
+    calendar = site_data["calendar"]
+    
     for i, (k,n) in enumerate(notes.items()):
         n["content"]["iclr_id"] = k
         titles[n["content"]["title"]] = k
@@ -48,6 +57,7 @@ def main(notes_path, paper_recs_path, author_recs_path):
     print("Data Successfully Loaded")
 
 
+
 def parse_arguments():
     parser = argparse.ArgumentParser(description="ICLR Portal Command Line")
     
@@ -57,14 +67,16 @@ def parse_arguments():
     parser.add_argument('-b', action='store_true', default=False, dest="build", 
                         help="Convert the site to static assets")
 
-    parser.add_argument('--paths', action='append', type=argparse.FileType("r"), nargs='+',
+    parser.add_argument('--paths', action='append', type=argparse.FileType("r"),
                         help="Pass the JSON data paths and run the server")
     
-    parser.add_argument('-p', action='append', type=argparse.FileType("r"), nargs='+', dest="paths",
+    parser.add_argument('-p', action='append', type=argparse.FileType("r"), dest="paths",
                         help="Pass the JSON data paths and run the server")
 
     args = parser.parse_args()
     return args
+
+
 
 # ------------- SERVER CODE -------------------->
 
@@ -190,19 +202,12 @@ if __name__ == "__main__":
     if args.build:
         freezer.freeze()
     else:
-        try:
-            notes_path = args.paths[0][0].name
-            paper_recs_path = args.paths[0][1].name
-            author_recs_path = args.paths[0][2].name
+        site_data_path = args.paths[0].name
         
-            main(notes_path, paper_recs_path, author_recs_path)
-
-            debug_val = False        
-            if(os.getenv("FLASK_DEBUG") == "True"):
-                debug_val = True
-    
-            app.run(port=5000, debug=debug_val)
+        main(site_data_path)
         
-        except IndexError:
-            raise IndexError("Please enter all the required paths")
+        debug_val = False        
+        if(os.getenv("FLASK_DEBUG") == "True"):
+            debug_val = True
 
+        app.run(port=5000, debug=debug_val)
