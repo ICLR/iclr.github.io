@@ -3,12 +3,14 @@ from flask import jsonify, send_from_directory, redirect
 from flask_frozen import Freezer
 import pickle, json
 import os, sys
+import yaml
 
 notes = {}
 paper_recs = {}
 author_recs = {}
 titles = {}
 keywords = {}
+
 
 # Loads up the necessary data
 def main(notes_path, paper_recs_path, author_recs_path):
@@ -35,7 +37,7 @@ def main(notes_path, paper_recs_path, author_recs_path):
     author_recs = json.loads(author_recs_file.read())
     author_recs_file.close()
 
-    for i, (k,n) in enumerate(notes.items()):
+    for i, (k, n) in enumerate(notes.items()):
         n["content"]["iclr_id"] = k
         titles[n["content"]["title"]] = k
         if "TL;DR" in n["content"]:
@@ -45,7 +47,7 @@ def main(notes_path, paper_recs_path, author_recs_path):
         for k in n["content"]["keywords"]:
             keywords.setdefault(k.lower(), [])
             keywords[k.lower()].append(n)
-    
+
     print("Data Successfully Loaded")
 
 
@@ -108,17 +110,21 @@ def recommendations():
 def faq():
     return render_template('pages/faq.html')
 
+
 @app.route('/calendar.html')
 def schedule():
     return render_template('pages/calendar.html')
+
 
 @app.route('/socials.html')
 def socials():
     return render_template('pages/socials.html')
 
+
 @app.route('/sponsors.html')
 def sponsors():
     return render_template('pages/sponsors.html')
+
 
 @app.route('/workshops.html')
 def workshops():
@@ -130,7 +136,7 @@ def workshops():
 def poster(poster):
     note_id = poster
     data = {"openreview": notes[note_id], "id": note_id,
-            "paper_recs" : [notes[n] for n in paper_recs[note_id]][1:]}
+            "paper_recs": [notes[n] for n in paper_recs[note_id]][1:]}
 
     return render_template('pages/page.html', **data)
 
@@ -143,14 +149,24 @@ def send_static(path):
 @app.route('/embeddings_<emb>.json')
 def embeddings(emb):
     try:
-        return send_from_directory('static', 'embeddings_'+emb+'.json')
+        return send_from_directory('static', 'embeddings_' + emb + '.json')
     except FileNotFoundError:
         return ""
 
 
+@app.route('/schedule.json')
+def schedule_json():
+    try:
+        s = yaml.load(open('static/schedule.yml', 'r'))
+        return jsonify(s)
+    except FileNotFoundError:
+        return ""
+
 
 # Code to turn it all static
 freezer = Freezer(app, with_no_argument_rules=False, log_url_for=False)
+
+
 @freezer.register_generator
 def your_generator_here():
     yield "livestream", {}
@@ -163,6 +179,7 @@ def your_generator_here():
 
     for i in notes.keys():
         yield "poster", {"poster": str(i)}
+
 
 # --------------- DRIVER CODE -------------------------->
 
@@ -179,12 +196,11 @@ if __name__ == "__main__":
         main(notes_path, paper_recs_path, author_recs_path)
 
         debug_val = False
-        
-        if(os.getenv("FLASK_DEBUG") == True):
+
+        if (os.getenv("FLASK_DEBUG") == True):
             debug_val = True
 
         app.run(port=5000, debug=debug_val)
 
     else:
         raise ValueError("Please enter the paths for the required json data")
-        
