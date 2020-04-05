@@ -1,1 +1,1 @@
-python main.py build
+python main.py --build

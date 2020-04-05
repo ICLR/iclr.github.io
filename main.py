@@ -68,10 +68,10 @@ def parse_arguments():
                         help="Convert the site to static assets")
 
     parser.add_argument('--paths', action='append', type=argparse.FileType("r"),
-                        help="Pass the JSON data paths and run the server")
+                        help="Pass the JSON data path and run the server")
     
     parser.add_argument('-p', action='append', type=argparse.FileType("r"), dest="paths",
-                        help="Pass the JSON data paths and run the server")
+                        help="Pass the JSON data path and run the server")
 
     args = parser.parse_args()
     return args
