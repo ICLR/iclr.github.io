@@ -67,10 +67,10 @@ def parse_arguments():
     parser.add_argument('-b', action='store_true', default=False, dest="build", 
                         help="Convert the site to static assets")
 
-    parser.add_argument('--paths', action='append', type=argparse.FileType("r"),
+    parser.add_argument('--path', action='append', type=argparse.FileType("r"),
                         help="Pass the JSON data path and run the server")
     
-    parser.add_argument('-p', action='append', type=argparse.FileType("r"), dest="paths",
+    parser.add_argument('-p', action='append', type=argparse.FileType("r"), dest="path",
                         help="Pass the JSON data path and run the server")
 
     args = parser.parse_args()
@@ -202,7 +202,7 @@ if __name__ == "__main__":
     if args.build:
         freezer.freeze()
     else:
-        site_data_path = args.paths[0].name
+        site_data_path = args.path[0].name
         
         main(site_data_path)
         
