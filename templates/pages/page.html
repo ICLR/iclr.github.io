@@ -109,16 +109,7 @@
       </script>
     </div>
     
-    <div class="col-5 p-1 my-auto">
-      <!-- Buttons -->
-      <!-- <div  style="padding-bottom: 30px; padding-top:30px"> -->
-        <!-- <center> -->
-        <!--   <h2> Paper Discussion       </h2> -->
-        <!--   <\!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/poster{{id}}/">Chat</a></span> -\-> -->
-        <!-- </center> -->
-        <!-- <p></p> -->
-        
-        
+    <div class="col-5 p-1 my-auto">        
         <div id="gitter" class="gitter container " >
           <center>
             <div class="border">
@@ -143,32 +134,22 @@
 
 <div  class="container" >
   <div class="row">
-    <div class="card-deck">
+  
 
       {% for openreview in paper_recs %}
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_{{openreview.content.iclr_id}}.html" class="text-dark"><h5 class="card-title">{{openreview.content.title}}</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/{{openreview.content.iclr_id}}.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_{{openreview.content.iclr_id}}.html" class="text-dark"><h5 class="card-title">{{openreview.content.title}}</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> {{openreview.content.TLDR}}</p>
+            <p class="card-text"> {{openreview.content.TLDR}}</p>
+            
+          </div>      
+        </div>
       </div>
-
-      <div class="card-footer">
-      <center>
-        <a href="poster_{{openreview.content.iclr_id}}.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
-  {% endfor %}
-    </DIV>
-          </DIV>
-      </DIV>
+      {% endfor %}
+  </DIV>
+</DIV>
 
 </body>

@@ -32,8 +32,8 @@ workshops:
     - name: AI for Affordable Healthcare
       organizers: "Alison O'Neil · Aneta Lisowska · Tewodros Bekele · Ashenafi Gutema · Emanuele Trucco"
       website: https://sites.google.com/view/ai4ah-iclr2020/home
-    - name:  "Beyond “tabula rasa” in reinforcement learning: agents that remember, adapt, and generalize"
-      orgnanizers: "Louis Kirsch · Ignasi Clavera · Kate Rakelly · Chelsea Finn · Jane Wang · Jeff Clune"
+    - name:  "Beyond 'tabula rasa' in reinforcement learning: agents that remember, adapt, and generalize"
+      organizers: "Louis Kirsch · Ignasi Clavera · Kate Rakelly · Chelsea Finn · Jane Wang · Jeff Clune"
       website: http://www.betr-rl.ml/2020/
     - name: Computer Vision for Agriculture (CV4A)
       organizers: "Yannis Kalantidis · Laura Sevilla · Ernest Mwebaze · David Guerena · Hamed Alemohammad · Dina Machuve"

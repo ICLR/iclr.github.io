@@ -8,4 +8,37 @@
   <!-- NAV -->
   {% set active_page = "Sponsors" %}
   {% include 'pages/header.html' %}
+
+    <div class="container">
+    <div class="row p-4">
+      <div class="col-12 bd-content ">
+        <h2 class="text-center"> Sponsors </h2>
+      </div>
+    </div>
+
+    {% for section in sponsors %}
+    <div class="row p-3">
+      <div class="col-12 bd-content ">
+        <h3 class=""> {{section.tier}} </h2>
+      </div>
+    </div>
+    <div class="row">
+    {% set rowloop = loop.index %}
+
+    {% for sponsor in section.vals %}
+    <div class="col-4 p-2" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+      <div class="card "style="display:block; overflow:hidden; width:100%;">
+        <div class="card-header d-flex flex-wrap justify-content-center align-items-center" style="height: 250px;">
+          
+            {{sponsor.img|safe}}
+          
+        </div>
+      </div>
+      </div>
+    {% endfor %}
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+
 </body>

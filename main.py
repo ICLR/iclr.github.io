@@ -133,7 +133,13 @@ def socials():
 
 @app.route('/sponsors.html')
 def sponsors():
-    return render_template('pages/sponsors.html')
+    try:
+        s = yaml.load(open('static/sponsors.yml', 'r'))
+        return render_template('pages/sponsors.html', **s)
+    except FileNotFoundError:
+        return ""
+
+
 
 
 @app.route('/workshops.html')

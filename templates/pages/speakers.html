@@ -9,6 +9,13 @@
   {% set active_page = "Speakers" %}
   {% include 'pages/header.html' %}
 
+  <div class="row p-4">
+    <div class="col-12 bd-content ">
+      <h2 class="text-center"> Speakers </h2>
+    </div>
+  </div>
+
+  
   <div class ="container">
     {% for speaker in speakers %}
     <div class="row">
@@ -21,14 +28,21 @@
               </div>
 
               <div class="col-10 ">
-                <h3 class="card-title">
-                  {{speaker.speaker}}
-                </h3>
-                {{speaker.institution}}
 
-                <h4>
+                <div class="m-3">
+                <span class="card-title h3" >
+                  {{speaker.speaker}}
+                </span> 
+                <span>
+                  {{speaker.institution}}
+                </span>
+                </div>
+                
+                <div class="m-3">
+                <h3>
                   {{speaker.title}}
-                </h4>
+                </h3>
+                </div>
               </div>
             </div>
           </div>
