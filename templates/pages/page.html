@@ -14,128 +14,122 @@
 
  <!-- Title -->
 
-<div class="card m-3" style="">
-  <div class="card-header">
-    <h3 class="card-title main-title text-center" style="">
-      {{openreview.content.title}}
-    </h3>
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       {{openreview.content.title}}
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       {% for author in openreview.content.authors %}
+       {{author}}{{ "," if not loop.last }}
+       {% endfor %}
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
 
-    <h5 class="card-subtitle mb-2 text-muted text-center">
-      {% for author in openreview.content.authors %}
-      {{author}}{{ "," if not loop.last }}
-      {% endfor %}
-    </h5>
+       <a class="card-link"  target="_blank" href="http://www.openreview.net{{openreview.content.pdf}}">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id={{openreview.forum}}">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       <a href="{{openreview.content.code}}" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Code
+         </button>
+       </a>
+       
+       <a href="{{openreview.content.slides}}" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Slides
+         </button>
+       </a>
+     </center>
+     
+   </div>
+ </div>
 
-    <center class="p-3">
-      <a class="card-link" data-toggle="collapse" role="button" href="#details">
-        <button class="btn btn-outline-secondary">
-          Abstract
-        </button>
-      </a>
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         {{openreview.content.abstract}}
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       {% for keyword in openreview.content.keywords %}
+       <a href="keyword_{{keyword}}.html" class="text-secondary text-decoration-none">{{keyword}}</a>{{ "," if not loop.last }}
+       {% endfor %}
+     </p>
+   </div>
+ </div>
 
-
-      <a class="card-link"  target="_blank" href="http://www.openreview.net{{openreview.content.pdf}}">
-        <button class="btn btn-outline-secondary">
-          Paper
-        </button>
-      </a>
-      <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id={{openreview.forum}}">
-        <button class="btn btn-outline-secondary">
-          OpenReview
-        </button>
-      </a>
-    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
-
-    <a href="{{openreview.content.code}}" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Code
-      </button>
-    </a>
-
-    <a href="{{openreview.content.slides}}" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Slides
-      </button>
-    </a>
-    </center>
-
-  </div>
 </div>
-
-<div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
-  <div class="card-body">
-    <p class="card-text">
-      <div id="abstractExample">
-        <span class="font-weight-bold">Abstract:</span>
-        {{openreview.content.abstract}}
-      </div>
-
-    </p>
-
-    <p></p>
-    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-      {% for keyword in openreview.content.keywords %}
-      <a href="keyword_{{keyword}}.html" class="text-secondary text-decoration-none">{{keyword}}</a>{{ "," if not loop.last }}
-      {% endfor %}
-    </p>
-  </div>
-</div>
-
-<div>
-</div>
-
-</div>
-
 
 <!-- SlidesLive -->
-<div id="presentation-embed-38915748" class="container container-sm"></div>
-<script src='https://slideslive.com/embed_presentation.js'></script>
-<script>
-  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
         zoomRatio: 0.4,
         hideTitle: true
-    });
-</script>
-
-
-<!-- Buttons -->
-<div class="container" style="padding-bottom: 30px; padding-top:30px">
-  <center>
-    <h2> Paper Discussion       </h2>
-    <!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/poster{{id}}/">Chat</a></span> -->
-  </center>
-  <p></p>
-
-  <!-- Gitter -->
-  <!-- <div id='discourse-comments'></div> -->
-
-
-<!-- <script type="text/javascript"> -->
-<!--   DiscourseEmbed = { discourseUrl: 'https://iclr.trydiscourse.com/', -->
-<!--                      topicId: 20}; -->
-
-<!--   (function() { -->
-<!--     var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; -->
-<!--     d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; -->
-<!--     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); -->
-<!--   })(); -->
-<!-- </script> -->
-
-
-  <div id="gitter" class="gitter container" height="600px">
-    <center>
-      <div class="border">
-
-        <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_{{openreview.forum}}?layout=embedded" width="900px" height="400px"></iframe> </center>
+        });
+      </script>
+    </div>
+    
+    <div class="col-5 p-1 my-auto">
+      <!-- Buttons -->
+      <!-- <div  style="padding-bottom: 30px; padding-top:30px"> -->
+        <!-- <center> -->
+        <!--   <h2> Paper Discussion       </h2> -->
+        <!--   <\!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/poster{{id}}/">Chat</a></span> -\-> -->
+        <!-- </center> -->
+        <!-- <p></p> -->
+        
+        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_{{openreview.forum}}?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
       </div>
-    </center>
+    </div>
   </div>
 </div>
-
 
   <!-- Recs -->
   <p></p>
