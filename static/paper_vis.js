@@ -110,6 +110,7 @@ const tooltip_template = (d) => `
     <div>
         <div class="tt-title">${d.content.title}</div>
         <p>${d.content.authors.join(', ')}</p>
+        <img src="https://iclr.github.io/iclr-images/${d.content.iclr_id}.png" width=100%/>
      </div>   
 `
 
