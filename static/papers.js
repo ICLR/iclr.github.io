@@ -112,12 +112,12 @@ const card_html = openreview => `
             <div class="card-header" style="height: 300px">
                 <a href="poster_${openreview.content.iclr_id}.html"
                    class="text-muted">
-                   <h5 class="card-title" align="center" style="font-family: sans-serif; font-size: 20px;"> ${openreview.content.title} </h5></a>
-                <h6 class="card-subtitle text-muted" align="center" style="font-size: 13px; font-family: sans-serif;">
+                   <h5 class="card-title" align="center" style="font-family: font-size: 20px;"> ${openreview.content.title} </h5></a>
+                <h6 class="card-subtitle text-muted" align="center" style="font-size: 13px; ">
                         ${openreview.content.authors.join(', ')}
 </h6>
-    <center><img src="https://iclr.github.io/iclr-images/${openreview.content.iclr_id}.png" width=110px height=100px style="margin-top: 40px; border-radius: 50%;"/></center>
-    
+    <center><img src="https://iclr.github.io/iclr-images/${openreview.content.iclr_id}.png" width="75%"  style="margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
             </div>`
   + ((render_mode === 'detail') ? `
             <div class="card-body">

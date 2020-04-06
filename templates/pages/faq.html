@@ -10,31 +10,29 @@
   {% include 'pages/header.html' %}
 
   <div class="container">
-    <div class="row p-5">
+    <div class="row p-4">
       <div class="col-12 bd-content ">
         <h2 class="text-center"> Frequently Asked Questions </h2>
       </div>
     </div>
 
     {% for section in FAQ %}
-    <div class="row p-5">
+    <div class="row p-3">
       <div class="col-12 bd-content ">
-        <h2 class="text-center"> {{section.Section}} </h2>
+        <h3 class=""> {{section.Section}} </h2>
       </div>
     </div>
     {% set rowloop = loop.index %}
 
     {% for qa in section.QA %}
-    <div class="row">
+    <div class="row ">
 
-      <div class="col-12 m-2 accordion" id="accordionExample">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{rowloop}}-{{loop.index}}" aria-expanded="true" aria-controls="collapse{{rowloop}}-{{loop.index}}">
+      <div class="col-12 m-2  " id="accordionExample">
+        <div class=" card">
+          <div class="card-header" >
+              <a class=" btn-link" type="button" data-toggle="collapse" data-target="#collapse{{rowloop}}-{{loop.index}}" aria-expanded="true" aria-controls="collapse{{rowloop}}-{{loop.index}}">
                 {{qa.Question}}
-              </button>
-            </h2>
+              </a>
           </div>
 
           <div id="collapse{{rowloop}}-{{loop.index}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
