@@ -205,6 +205,9 @@ def your_generator_here():
     yield "paper_json", {}
     yield "index", {}
     yield "faq", {}
+    yield "speakers", {}
+    yield "schedule", {}
+    yield "schedule_json", {}
     yield "recommendations", {}
     yield "embeddings", {"emb":"tsne"}
 
