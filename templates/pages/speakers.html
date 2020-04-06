@@ -1,17 +1,16 @@
 <!doctype html>
 <html lang="en">
 
-{% set page_title = "ICLR 2020 - Workshops" %}
+{% set page_title = "ICLR 2020 - Speakers" %}
 {% include 'pages/head.html' %}
 
 <body>
   <!-- NAV -->
-  {% set active_page = "Workshops" %}
+  {% set active_page = "Speakers" %}
   {% include 'pages/header.html' %}
 
   <div class ="container">
-
-  {% for workshop in workshops %}
+    {% for speaker in speakers %}
     <div class="row">
       <div class="col-12 m-3 ">
         <div class="card">
@@ -19,15 +18,18 @@
             <div class="container">
               <div class="row">
                 <div class="col-2  ">
-                  <img src="{{workshop.image}}" width="100%">
+                  <img src="{{speaker.image}}" width="100%">
                 </div>
 
                 <div class="col-10">
                   <h3 class="card-title">
-                    {{workshop.name}}
+                    {{speaker.speaker}}
                   </h3>
-                  {{workshop.organizers}}
+                  {{speaker.institution}}
 
+                  <h4>
+                    {{speaker.title}}
+                  </h4>
                 </div>
               </div>
             </div>

@@ -1,0 +1,15 @@
+
+FAQ:
+    - Section: Getting Started
+      QA:
+        - Question: "What is the recommended way of using this site and navigatings the conference?"
+          Answer: ""
+        - Question: What tools and systems requirements are needed?
+          Answer: "To access the site you will need a modern browser. This site has been tested with Chrome 80.0, Brave 1.4.95, Firefox , 73.0, and browsers built on Chromium 80.0."
+
+        - Question: How can I best plan my time?
+          Answer: ""
+    - Section: Website Navigation
+      QA:
+        - Question: "Zoom, Slido, Rocket, and Other tools"
+          Answer: This website integrates several different tools.

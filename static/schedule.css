@@ -1,0 +1,56 @@
+.main-table{
+    display: flex;
+    flex-direction: row;
+
+}
+@media (max-width: 575.98px) {
+    .main-table{
+        flex-direction: column;
+    }
+
+    .day{
+        border-top: 3px solid #333;
+        padding-bottom: 5px;
+    }
+
+}
+
+
+.day {
+    position: relative;
+    flex-grow: 1;
+    /*min-height: 100px;*/
+    /*background-color: #999999;*/
+    /*border: 2px solid gray;*/
+}
+
+.day.today {
+    /*flex-grow: 1.5;*/
+}
+
+
+.event {
+    position: absolute;
+    /*background-color: #0097cf;*/
+    border-radius: 5px;
+    /*margin: 3px;*/
+    left:2px;
+    right:2px;
+    padding: 3px;
+    /*width: calc(100% - 2px);*/
+    font-size: x-small;
+}
+
+
+.event.poster {
+    background-color: #bed972;
+}
+
+.event.qa{
+    padding-top: 1px;
+     background-color: #4fcaea;
+}
+
+.time_slot {
+    font-weight: bold;
+}
