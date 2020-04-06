@@ -45,7 +45,7 @@ def main(notes_path, paper_recs_path, author_recs_path):
         for k in n["content"]["keywords"]:
             keywords.setdefault(k.lower(), [])
             keywords[k.lower()].append(n)
-    
+
     print("Data Successfully Loaded")
 
 
@@ -156,10 +156,17 @@ def your_generator_here():
     yield "livestream", {}
     yield "home", {}
     yield "papers", {}
-    yield "papers_raw", {}
+    yield "schedule", {}
+    yield "socials", {}
+    yield "sponsors", {}
+    yield "workshops", {}
     yield "paperVis", {}
-    yield "papers_v2", {}
+    yield "papers", {}
+    yield "paper_json", {}
+    yield "index", {}
+    yield "faq", {}
     yield "recommendations", {}
+    yield "embeddings", {"emb":"tsne"}
 
     for i in notes.keys():
         yield "poster", {"poster": str(i)}
@@ -167,24 +174,25 @@ def your_generator_here():
 # --------------- DRIVER CODE -------------------------->
 
 if __name__ == "__main__":
-    if len(sys.argv) == 2 and sys.argv[1] == "build":
-        freezer.freeze()
 
-    elif len(sys.argv) == 4:
+    if len(sys.argv) == 5:
+
         # paths for json data
-        notes_path = sys.argv[1]
-        paper_recs_path = sys.argv[2]
-        author_recs_path = sys.argv[3]
+        notes_path = sys.argv[2]
+        paper_recs_path = sys.argv[3]
+        author_recs_path = sys.argv[4]
 
         main(notes_path, paper_recs_path, author_recs_path)
+        if sys.argv[1] == "build":
+            freezer.freeze()
 
-        debug_val = False
-        
-        if(os.getenv("FLASK_DEBUG") == True):
-            debug_val = True
+        if sys.argv[1] == "run":
+            debug_val = False
 
-        app.run(port=5000, debug=debug_val)
+            if(os.getenv("FLASK_DEBUG") == "true"):
+                debug_val = True
+
+            app.run(port=5000, debug=debug_val)
 
     else:
         raise ValueError("Please enter the paths for the required json data")
-        
