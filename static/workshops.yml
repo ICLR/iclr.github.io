@@ -1,46 +1,46 @@
 workshops:
     - name: Fundamental Science in the era of AI
       organizers: "Richard Armstrong · Bruce Bassett · Michelle Lochner · Nadeem Oozeer"
-      website:
+      website: https://iclr2020-fsai.github.io/FSAI/
     - name: AI for Overcoming Global Disparities in Cancer Care
       organizers: "Thomas Fuchs · Gabriele Campanella · Dig Vijay Kumar Yarlagadda · Christina Virgo · Hassan Muhammad · Johan Lundin · Peter Kingham · Olusegun Isaac Alatise"
-      website:
+      website: https://ai4cc.org/
     - name: AI for Earth Sciences
       organizers: "Surya Karthik Mukkavilli · Kelly Kochanski · Johanna Hansen · Trooper Sanders · Pierre Gentine · Mary C Hill · Gregory Dudek · Aaron Courville · Vipin Kumar"
-      website:
+      website: https://ai4earthscience.github.io/iclr-2020-workshop/
     - name: Bridging AI and Cognitive Science (BAICS)
       organizers: "Aida Nematzadeh · Jessica Hamrick · Kaylee Burns · Joshua B Tenenbaum · Alison Gopnik · Emmanuel Dupoux"
-      website:
+      website: https://baicsworkshop.github.io/
     - name: Integration of Deep Neural Models and Differential Equations
       organizers: "Tan M Nguyen · Richard Baraniuk · Animesh Garg · Stanley J Osher · Anima Anandkumar · Bao Wang"
-      website:
+      website: http://iclr2020deepdiffeq.rice.edu/
     - name: "Towards Trustworthy ML: Rethinking Security and Privacy for ML"
       organizers: "Nicolas Papernot · Carmela Troncoso · Nicholas Carlini · Florian Tramer · Shibani Santurkar"
-      website:
+      website: https://trustworthyiclr20.github.io/
     - name: Tackling Climate Change with ML
       organizers: "Priya Donti · David Rolnick · Lynn Kaack · Sasha Luccioni · Kris Sankaran · Sharon Zhou · Moustapha Cisse · Carla Gomes · Andrew Ng · Yoshua Bengio"
-      website:
+      website: https://www.climatechange.ai/ICLR2020_workshop.html
     - name: "ML-IRL: Machine Learning in Real Life"
       organizers: "Samantha Kleinberg · Rumi Chunara"
-      website:
+      website: https://sites.google.com/nyu.edu/ml-irl-2020/
     - name: Neural Architecture Search
       organizers: "Frank Hutter · Arber Zela · Aaron Klein · Jan Metzen · Liam Li"
-      website:
+      website: https://sites.google.com/view/nas2020
     - name: AfricaNLP - Unlocking Local Languages
       organizers: "Kathleen Siminyu · Laura Martinus · Vukosi Marivate · Davor Orlic"
-      website:
+      website: https://africanlp-workshop.github.io/
     - name: AI for Affordable Healthcare
       organizers: "Alison O'Neil · Aneta Lisowska · Tewodros Bekele · Ashenafi Gutema · Emanuele Trucco"
-      website:
+      website: https://sites.google.com/view/ai4ah-iclr2020/home
     - name:  "Beyond “tabula rasa” in reinforcement learning: agents that remember, adapt, and generalize"
       orgnanizers: "Louis Kirsch · Ignasi Clavera · Kate Rakelly · Chelsea Finn · Jane Wang · Jeff Clune"
-      website:
+      website: http://www.betr-rl.ml/2020/
     - name: Computer Vision for Agriculture (CV4A)
       organizers: "Yannis Kalantidis · Laura Sevilla · Ernest Mwebaze · David Guerena · Hamed Alemohammad · Dina Machuve"
-      website:
+      website: https://www.cv4gc.org/cv4a2020/
     - name: Workshop on Causal Learning For Decision Making
       organizers: "Nan Rosemary Ke · Anirudh Goyal Alias Parth Goyal · Jane Wang · Silvia Chiappa · Jovana Mitrovic · Theophane Weber · Danilo Jimenez Rezende · Stefan Bauer"
-      website:
+      website: https://sites.google.com/view/causal-learning-icrl2020/home
     - name: "Practical ML for Developing Countries: learning under limited/low resource scenarios"
       organizers: "Esube Bekele · Ioana Baldini · Nyalleng Moorosi · Vukosi Marivate · VICTOR Dibia · Amanuel Mersha · Tewodros Gebreselassie · Meareg Hailemariam · Michael Melese · Timnit Gebru · Red Abebe · Waheeda Saib"
-      website:
+      website: https://pml4dc.github.io/iclr2020/cfp.html
