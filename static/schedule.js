@@ -57,7 +57,7 @@ function updateTable() {
 
           }else if (d.type === 'qa'){
               res+= `<span class="time_slot">${tf(d.time_slot[0])} </span><span class="session-title">`+
-                `Q&A: ${d.name} </span>`
+                `${d.name} </span>`
           }
 
           // res+=`<br/><span  class="time_slot"> ${tf(d.time_slot[0])} - ${tf(
