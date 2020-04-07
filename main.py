@@ -5,13 +5,8 @@ import pickle, json
 import os, sys, argparse
 import yaml
 
-notes = {}
-paper_recs = {}
-author_recs = {}
-sponsors = {}
-workshops = {}
-socials = {}
-calendar = {}
+# has keys => ['cached_or', 'paper_records', 'author_records', 'sponsors', 'workshops', 'socials', 'calendar']
+site_data = {}
 
 titles = {}
 keywords = {}
@@ -19,13 +14,7 @@ keywords = {}
 
 # Loads up the necessary data
 def main(site_data_path):
-    global notes
-    global paper_recs
-    global author_recs
-    global sponsors
-    global workshops
-    global socials
-    global calendar
+    global site_data
 
     global titles
     global keywords
@@ -34,18 +23,8 @@ def main(site_data_path):
     site_data_file = open(site_data_path, "r")
     site_data = json.loads(site_data_file.read())
     site_data_file.close()
-
-    # Setting up data from the site_data file
-
-    notes = site_data["cached_or"]
-    paper_recs = site_data["paper_records"]
-    author_recs = site_data["author_records"]
-    sponsors = site_data["sponsors"]
-    workshops = site_data["workshops"]
-    socials = site_data["socials"]
-    calendar = site_data["calendar"]
     
-    for i, (k,n) in enumerate(notes.items()):
+    for i, (k,n) in enumerate(site_data["cached_or"].items()):
         n["content"]["iclr_id"] = k
         titles[n["content"]["title"]] = k
         if "TL;DR" in n["content"]:
@@ -69,12 +48,9 @@ def parse_arguments():
     parser.add_argument('-b', action='store_true', default=False, dest="build", 
                         help="Convert the site to static assets")
 
-    parser.add_argument('--path', action='append', type=argparse.FileType("r"),
+    parser.add_argument('path', action='append', type=argparse.FileType("r"),
                         help="Pass the JSON data path and run the server")
     
-    parser.add_argument('-p', action='append', type=argparse.FileType("r"), dest="path",
-                        help="Pass the JSON data path and run the server")
-
     args = parser.parse_args()
     return args
 
@@ -105,7 +81,7 @@ def livestream():
 def papers():
     data = {"keyword": "all",
             "page": "papers",
-            "openreviews": notes.values()}
+            "openreviews": site_data["cached_or"].values()}
     return render_template('pages/papers.html', **data)
 
 
@@ -117,19 +93,19 @@ def paperVis():
 @app.route('/papers_old.html')
 def papers_old():
     data = {"keyword": "all",
-            "openreviews": notes.values()}
+            "openreviews": site_data["cached_or"].values()}
     return render_template('pages/keyword.html', **data)
 
 
 @app.route('/papers.json')
 def paper_json():
-    paper_list = [value for value in notes.values()]
+    paper_list = [value for value in site_data["cached_or"].values()]
     return jsonify(paper_list)
 
 
 @app.route('/recs.html')
 def recommendations():
-    data = {"choices": author_recs.keys(),
+    data = {"choices": site_data["author_records"].keys(),
             "keywords": keywords.keys(),
             "titles": titles.keys()}
     return render_template('pages/recs.html', **data)
@@ -194,8 +170,8 @@ def speakers():
 @app.route('/poster_<poster>.html')
 def poster(poster):
     note_id = poster
-    data = {"openreview": notes[note_id], "id": note_id,
-            "paper_recs": [notes[n] for n in paper_recs[note_id]][1:]}
+    data = {"openreview": site_data["cached_or"][note_id], "id": note_id,
+            "paper_recs": [site_data["cached_or"][n] for n in site_data["paper_records"][note_id]][1:]}
 
     return render_template('pages/page.html', **data)
 
@@ -246,7 +222,7 @@ def your_generator_here():
     yield "recommendations", {}
     yield "embeddings", {"emb":"tsne"}
 
-    for i in notes.keys():
+    for i in site_data["cached_or"].keys():
         yield "poster", {"poster": str(i)}
 
 
@@ -255,13 +231,12 @@ def your_generator_here():
 if __name__ == "__main__":
     args = parse_arguments()
     
+    site_data_path = args.path[0].name    
+    main(site_data_path)
+
     if args.build:
         freezer.freeze()
     else:
-        site_data_path = args.path[0].name
-        
-        main(site_data_path)
-        
         debug_val = False        
         if(os.getenv("FLASK_DEBUG") == "True"):
             debug_val = True
