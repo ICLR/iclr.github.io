@@ -1,0 +1,46 @@
+workshops:
+    - name: Fundamental Science in the era of AI
+      organizers: "Richard Armstrong · Bruce Bassett · Michelle Lochner · Nadeem Oozeer"
+      website:
+    - name: AI for Overcoming Global Disparities in Cancer Care
+      organizers: "Thomas Fuchs · Gabriele Campanella · Dig Vijay Kumar Yarlagadda · Christina Virgo · Hassan Muhammad · Johan Lundin · Peter Kingham · Olusegun Isaac Alatise"
+      website:
+    - name: AI for Earth Sciences
+      organizers: "Surya Karthik Mukkavilli · Kelly Kochanski · Johanna Hansen · Trooper Sanders · Pierre Gentine · Mary C Hill · Gregory Dudek · Aaron Courville · Vipin Kumar"
+      website:
+    - name: Bridging AI and Cognitive Science (BAICS)
+      organizers: "Aida Nematzadeh · Jessica Hamrick · Kaylee Burns · Joshua B Tenenbaum · Alison Gopnik · Emmanuel Dupoux"
+      website:
+    - name: Integration of Deep Neural Models and Differential Equations
+      organizers: "Tan M Nguyen · Richard Baraniuk · Animesh Garg · Stanley J Osher · Anima Anandkumar · Bao Wang"
+      website:
+    - name: "Towards Trustworthy ML: Rethinking Security and Privacy for ML"
+      organizers: "Nicolas Papernot · Carmela Troncoso · Nicholas Carlini · Florian Tramer · Shibani Santurkar"
+      website:
+    - name: Tackling Climate Change with ML
+      organizers: "Priya Donti · David Rolnick · Lynn Kaack · Sasha Luccioni · Kris Sankaran · Sharon Zhou · Moustapha Cisse · Carla Gomes · Andrew Ng · Yoshua Bengio"
+      website:
+    - name: "ML-IRL: Machine Learning in Real Life"
+      organizers: "Samantha Kleinberg · Rumi Chunara"
+      website:
+    - name: Neural Architecture Search
+      organizers: "Frank Hutter · Arber Zela · Aaron Klein · Jan Metzen · Liam Li"
+      website:
+    - name: AfricaNLP - Unlocking Local Languages
+      organizers: "Kathleen Siminyu · Laura Martinus · Vukosi Marivate · Davor Orlic"
+      website:
+    - name: AI for Affordable Healthcare
+      organizers: "Alison O'Neil · Aneta Lisowska · Tewodros Bekele · Ashenafi Gutema · Emanuele Trucco"
+      website:
+    - name:  "Beyond “tabula rasa” in reinforcement learning: agents that remember, adapt, and generalize"
+      orgnanizers: "Louis Kirsch · Ignasi Clavera · Kate Rakelly · Chelsea Finn · Jane Wang · Jeff Clune"
+      website:
+    - name: Computer Vision for Agriculture (CV4A)
+      organizers: "Yannis Kalantidis · Laura Sevilla · Ernest Mwebaze · David Guerena · Hamed Alemohammad · Dina Machuve"
+      website:
+    - name: Workshop on Causal Learning For Decision Making
+      organizers: "Nan Rosemary Ke · Anirudh Goyal Alias Parth Goyal · Jane Wang · Silvia Chiappa · Jovana Mitrovic · Theophane Weber · Danilo Jimenez Rezende · Stefan Bauer"
+      website:
+    - name: "Practical ML for Developing Countries: learning under limited/low resource scenarios"
+      organizers: "Esube Bekele · Ioana Baldini · Nyalleng Moorosi · Vukosi Marivate · VICTOR Dibia · Amanuel Mersha · Tewodros Gebreselassie · Meareg Hailemariam · Michael Melese · Timnit Gebru · Red Abebe · Waheeda Saib"
+      website:

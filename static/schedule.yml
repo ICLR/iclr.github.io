@@ -1,0 +1,107 @@
+
+# ALL TIMES have to be in UTC
+time_slots:
+  5a: [5:00 AM,7:00 AM]
+  8a: [8:00 AM,10:00 AM]
+  11a: [11:00 AM, 11:30 AM]
+  12p: [12:00 PM, 2:00 PM]
+  2p: [2:00 PM, 2:30 PM]
+  4p: [4:00 PM, 4:30 PM]
+  5p: [5:00 PM, 7:00 PM]
+  7p: [7:00 PM, 7:30 PM]
+  8p: [8:00 PM, 10:00 PM]
+
+
+conference:
+  - day: "2020-04-27"
+    events:
+      - slot: 5a
+        type: poster
+        short: P1S1
+      - slot: 8a
+        type: poster
+        short: P1S2
+      - slot: 12p
+        type: poster
+        short: P1S3
+      - slot: 2p
+        name: Aisha Walcott-Bryant
+        type: qa
+      - slot: 5p
+        type: poster
+        short: P1S4
+      - slot: 7p
+        type: qa
+        name: Leslie Kaebling
+      - slot: 8p
+        type: poster
+        short: P1S5
+  - day: "2020-04-28"
+    events:
+    - slot: 5a
+      type: poster
+      short: P1S1
+    - slot: 8a
+      type: poster
+      short: P1S2
+    - slot: 12p
+      type: poster
+      short: P1S3
+    - slot: 2p
+      name: Ruha Benjamin
+      type: qa
+    - slot: 5p
+      type: poster
+      short: P1S4
+    - slot: 7p
+      type: qa
+      name: Laurent Dinh
+    - slot: 8p
+      type: poster
+      short: P1S5
+  - day: "2020-04-29"
+    events:
+    - slot: 5a
+      type: poster
+      short: P1S1
+    - slot: 8a
+      type: poster
+      short: P1S2
+    - slot: 11a
+      name: Mihaela van der Schaar
+      type: qa
+    - slot: 12p
+      type: poster
+      short: P1S3
+    - slot: 4p
+      type: qa
+      name: Devi Parikh
+    - slot: 5p
+      type: poster
+      short: P1S4
+    - slot: 8p
+      type: poster
+      short: P1S5
+  - day: "2020-04-30"
+    events:
+    - slot: 5a
+      type: poster
+      short: P1S1
+    - slot: 8a
+      type: poster
+      short: P1S2
+    - slot: 12p
+      type: poster
+      short: P1S3
+    - slot: 4p
+      name: Yoshua Benjio and Yann LeCun
+      type: qa
+    - slot: 5p
+      type: poster
+      short: P1S4
+    - slot: 7p
+      type: qa
+      name: Michael I. Jordan o
+    - slot: 8p
+      type: poster
+      short: P1S5

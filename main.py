@@ -3,6 +3,7 @@ from flask import jsonify, send_from_directory, redirect
 from flask_frozen import Freezer
 import pickle, json
 import os, sys, argparse
+import yaml
 
 notes = {}
 paper_recs = {}
@@ -14,6 +15,7 @@ calendar = {}
 
 titles = {}
 keywords = {}
+
 
 # Loads up the necessary data
 def main(site_data_path):
@@ -53,7 +55,7 @@ def main(site_data_path):
         for k in n["content"]["keywords"]:
             keywords.setdefault(k.lower(), [])
             keywords[k.lower()].append(n)
-    
+
     print("Data Successfully Loaded")
 
 
@@ -135,23 +137,51 @@ def recommendations():
 
 @app.route('/faq.html')
 def faq():
-    return render_template('pages/faq.html')
+    try:
+        s = yaml.load(open('static/faq.yml', 'r'))
+        return render_template('pages/faq.html', **s)
+    except FileNotFoundError:
+        return ""
+
 
 @app.route('/calendar.html')
 def schedule():
     return render_template('pages/calendar.html')
 
+
 @app.route('/socials.html')
 def socials():
-    return render_template('pages/socials.html')
+    try:
+        s = yaml.load(open('static/socials.yml', 'r'))
+        return render_template('pages/socials.html', **s)
+    except FileNotFoundError:
+        return ""
+
+
+
 
 @app.route('/sponsors.html')
 def sponsors():
     return render_template('pages/sponsors.html')
 
+
 @app.route('/workshops.html')
 def workshops():
-    return render_template('pages/workshops.html')
+    try:
+        s = yaml.load(open('static/workshops.yml', 'r'))
+        return render_template('pages/workshops.html', **s)
+    except FileNotFoundError:
+        return ""
+
+
+@app.route('/speakers.html')
+def speakers():
+    try:
+        s = yaml.load(open('static/speakers.yml', 'r'))
+        return render_template('pages/speakers.html', **s)
+    except FileNotFoundError:
+        return ""
+
 
 
 # Pull the OpenReview info for a poster.
@@ -159,7 +189,7 @@ def workshops():
 def poster(poster):
     note_id = poster
     data = {"openreview": notes[note_id], "id": note_id,
-            "paper_recs" : [notes[n] for n in paper_recs[note_id]][1:]}
+            "paper_recs": [notes[n] for n in paper_recs[note_id]][1:]}
 
     return render_template('pages/page.html', **data)
 
@@ -172,23 +202,43 @@ def send_static(path):
 @app.route('/embeddings_<emb>.json')
 def embeddings(emb):
     try:
-        return send_from_directory('static', 'embeddings_'+emb+'.json')
+        return send_from_directory('static', 'embeddings_' + emb + '.json')
     except FileNotFoundError:
         return ""
 
 
+@app.route('/schedule.json')
+def schedule_json():
+    try:
+        s = yaml.load(open('static/schedule.yml', 'r'))
+        return jsonify(s)
+    except FileNotFoundError:
+        return ""
+
 
 # Code to turn it all static
 freezer = Freezer(app, with_no_argument_rules=False, log_url_for=False)
+
+
 @freezer.register_generator
 def your_generator_here():
     yield "livestream", {}
     yield "home", {}
     yield "papers", {}
-    yield "papers_raw", {}
+    yield "schedule", {}
+    yield "socials", {}
+    yield "sponsors", {}
+    yield "workshops", {}
     yield "paperVis", {}
-    yield "papers_v2", {}
+    yield "papers", {}
+    yield "paper_json", {}
+    yield "index", {}
+    yield "faq", {}
+    yield "speakers", {}
+    yield "schedule", {}
+    yield "schedule_json", {}
     yield "recommendations", {}
+    yield "embeddings", {"emb":"tsne"}
 
     for i in notes.keys():
         yield "poster", {"poster": str(i)}

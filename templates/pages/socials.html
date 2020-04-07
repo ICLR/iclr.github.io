@@ -8,4 +8,32 @@
   <!-- NAV -->
   {% set active_page = "Socials" %}
   {% include 'pages/header.html' %}
+
+
+  <div class ="container">
+    {% for social in socials %}
+    <div class="row">
+      <div class="col-12 m-3 ">
+        <div class="card">
+          <div class="card-body
+            <div class="container">
+              <div class="row">
+                <div class="col-2  ">
+                  <img src="{{social.image}}" width="100%">
+                </div>
+
+                <div class="col-10">
+                  {{social.name}}
+
+                  {{social.organizers}}
+
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
 </body>
