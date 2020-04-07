@@ -9,33 +9,55 @@
     {% set active_page = "Live" %}
     {% include 'pages/header.html' %}
 
+<div class="container">
 
-    <!-- SlidesLive -->
-    <div id="presentation-embed-38915748" class="container container-sm"></div>
-    <script src='https://slideslive.com/embed_presentation.js'></script>
-    <script>
-      embed = new SlidesLiveEmbed('presentation-embed-38915748', {
-      presentationId: '38915748',
-      autoPlay: false, // change to true to autoplay the embedded presentation
-      verticalEnabled: true,
-      allowHiddenControlsWhenPaused: true,
-      zoomRatio: 0.4,
-      hideTitle: true
-      });
-    </script>
+ <!-- Title -->
+  <div class="row p-4">
+    <div class="col-12 bd-content ">
+      <h2 class="text-center"> Live Stream</h2>
+    </div>
+  </div>
 
-    <p></p>
-    <p></p>
+</div>
 
-    <div class="container">
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true,
+        allowHiddenControlsWhenPaused: true,
+        zoomRatio: 0.4,
+        hideTitle: true
+        });
+      </script>
+    </div>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
       <center>
         <iframe
           src="https://app.sli.do/event/zm1aof3l"
-          height="500px"
-          width="700px"
+          height="680px"
+          width="100%"
           style="min-height: 560px;"
         ></iframe>
       </center>
+
+              
+            </div>
+          </center>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+    
   </body>
 </html>

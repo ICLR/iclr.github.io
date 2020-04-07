@@ -11,14 +11,14 @@ speakers:
       title: "2020 Vision: Reimagining the Default Settings of Technology & Society"
       image: static/ruha.jpeg
       institution: Princeton
-    - speaker: Laurent Dinh
+    - speaker: Dr. Laurent Dinh
       title: Invertible Models and Normalizing Flows
       image: static/laurent.jpg
       institution: Google AI
     - speaker: Prof. Mihaela van der Schaar
       title: "Machine Learning: Changing the future of healthcare"
       image: static/Mihaela_photo_new.jpg
-      institution: University of Cambridge, The Alan Turing Institute, University of California Los Angeles
+      institution: University of Cambridge, The Alan Turing Institute, UCLA
     - speaker: Prof. Devi Parikh
       title: AI Systems That Can See And Talk
       image: static/devi.png
@@ -26,7 +26,7 @@ speakers:
     - speaker: Profs. Yoshua Benjio and Yann LeCun
       image: static/
       title: Reflections from the Turing Award Winners
-      institution: Facebook AI Research and New York University / Montreal Institute for Learning Algorithms
+      institution: Facebook AI + NYU / MILA
     - speaker: Prof. Michael I. Jordan
       title: "The Decision-Making Side of Machine Learning: Dynamical, Statistical and Economic Perspectives"
       institution: University of California, Berkeley

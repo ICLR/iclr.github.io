@@ -94,14 +94,14 @@ conference:
       type: poster
       short: P1S3
     - slot: 4p
-      name: Yoshua Benjio and Yann LeCun
+      name: Yoshua Bengio / Yann LeCun
       type: qa
     - slot: 5p
       type: poster
       short: P1S4
     - slot: 7p
       type: qa
-      name: Michael I. Jordan o
+      name: Michael I. Jordan
     - slot: 8p
       type: poster
       short: P1S5
