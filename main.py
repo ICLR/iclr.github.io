@@ -150,6 +150,14 @@ def workshops():
     except FileNotFoundError:
         return ""
 
+@app.route('/workshops_<workshop>.html')
+def workshop(workshop):
+    try:
+        s = yaml.load(open('static/workshops.yml', 'r'))
+        return render_template('pages/workshop.html', **{"info": s["workshops"][int(workshop)]})
+    except FileNotFoundError:
+        return ""
+
 
 @app.route('/speakers.html')
 def speakers():
