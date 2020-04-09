@@ -154,7 +154,7 @@ def workshops():
 def workshop(workshop):
     try:
         s = yaml.load(open('static/workshops.yml', 'r'))
-        return render_template('pages/workshop.html', **{"info": s["workshops"][int(workshop)]})
+        return render_template('pages/workshop.html', **{"info": s["workshops"][int(workshop) -1 ]})
     except FileNotFoundError:
         return ""
 
