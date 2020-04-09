@@ -1,0 +1,18 @@
+name	Sponsorship Level	Image Tag
+Facebook	Diamond	<a href='https://ai.facebook.com/'><img src='https://iclr.cc/static/admin/img/sponsor_logos/facebook.png' class='sponsorLogo' alt='Facebook'></a><br>
+Google	Diamond	<a href='https://research.google'><img src='https://iclr.cc/static/admin/img/sponsor_logos/google-iclr-2020.png' class='sponsorLogo' alt='Google'></a><br>
+DeepMind	Diamond	<a href='http://www.deepmind.com'><img src='https://iclr.cc/static/admin/img/sponsor_logos/DeepMind-nips-2019.png' class='sponsorLogo' alt='DeepMind'></a><br>
+Jane Street	Gold	<a href='https://www.janestreet.com/'><img src='https://iclr.cc/static/admin/img/sponsor_logos/jane-street-nips-2018.png' class='sponsorLogo' alt='Jane Street'></a><br>
+Salesforce	Gold	<a href='https://einstein.ai/'><img src='https://iclr.cc/static/admin/img/sponsor_logos/salesforce-2017.png' class='sponsorLogo' alt='Salesforce'></a><br>
+Amazon	Gold	<a href='https://www.amazon.jobs/en/landing_pages/ICLR'><img src='https://iclr.cc/static/admin/img/sponsor_logos/amazon-icml-2018.png' class='sponsorLogo' alt='Amazon'></a><br>
+OpenAI	Gold	<a href='https://openai.com/'><img src='https://iclr.cc/static/admin/img/sponsor_logos/openai-iclr-2019.png' class='sponsorLogo' alt='OpenAI'></a><br>
+IBM Research	Gold	<a href='https://www.research.ibm.com/artificial-intelligence/'><img src='https://iclr.cc/static/admin/img/sponsor_logos/ibm-nips-2019.png' class='sponsorLogo' alt='IBM Research'></a><br>
+Alibaba Group	Silver	<a href='https://www.alibabagroup.com/en/about/overview'><img src='https://iclr.cc/static/admin/img/sponsor_logos/alibaba.png' class='sponsorLogo' alt='Alibaba Group'></a><br>
+Apple	Silver	<a href='https://www.apple.com/jobs/us/teams/machine-learning-and-ai.html'><img src='https://iclr.cc/static/admin/img/sponsor_logos/apple-nips-2019.png' class='sponsorLogo' alt='Apple'></a><br>
+Microsoft	Silver	<a href='http://www.microsoft.com/research'><img src='https://iclr.cc/static/admin/img/sponsor_logos/microsoft-nips-2018.png' class='sponsorLogo' alt='Microsoft'></a><br>
+ByteDance	Silver	<a href='http://www.bytedance.com'><img src='https://iclr.cc/static/admin/img/sponsor_logos/ ByteDance-nips-2019.png' class='sponsorLogo' alt='ByteDance'></a><br>
+The D. E. Shaw Group	Bronze	<a href='http://www.deshaw.com'><img src='https://iclr.cc/static/admin/img/sponsor_logos/de_shaw-iclr-2019.png' class='sponsorLogo' alt='The D. E. Shaw Group'></a><br>
+Two Sigma	Bronze	<a href='http://www.twosigma.com'><img src='https://iclr.cc/static/admin/img/sponsor_logos/two_sigma.png' class='sponsorLogo' alt='Two Sigma'></a><br>
+Lambda	Bronze	<a href='https://lambdalabs.com/'><img src='https://iclr.cc/static/admin/img/sponsor_logos/lambda-nips-2017.png' class='sponsorLogo' alt='Lambda'></a><br>
+Element AI	Start-Up Companies	<a href='http://www.elementai.com'><img src='https://iclr.cc/static/admin/img/sponsor_logos/element-ai-2017.png' class='sponsorLogo' alt='Element AI'></a><br>
+Visual Computing Center at KAUST	Academic Research Institutions	<a href='http://vcc.kaust.edu.sa'><img src='https://iclr.cc/static/admin/img/sponsor_logos/kaust-iclr-2019.png' class='sponsorLogo' alt='Visual Computing Center at KAUST'></a><br>

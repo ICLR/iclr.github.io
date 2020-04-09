@@ -1,0 +1,48 @@
+sponsors:
+- tier: Diamond
+  vals:
+  - {img: '<a href=''https://ai.facebook.com/''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/facebook.png''
+      class=''sponsorLogo'' alt=''Facebook''></a><br>', name: Facebook}
+  - {img: '<a href=''https://research.google''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/google-iclr-2020.png''
+      class=''sponsorLogo'' alt=''Google''></a><br>', name: Google}
+  - {img: '<a href=''http://www.deepmind.com''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/DeepMind-nips-2019.png''
+      class=''sponsorLogo'' alt=''DeepMind''></a><br>', name: DeepMind}
+- tier: Gold
+  vals:
+  - {img: '<a href=''https://www.janestreet.com/''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/jane-street-nips-2018.png''
+      class=''sponsorLogo'' alt=''Jane Street''></a><br>', name: Jane Street}
+  - {img: '<a href=''https://einstein.ai/''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/salesforce-2017.png''
+      class=''sponsorLogo'' alt=''Salesforce''></a><br>', name: Salesforce}
+  - {img: '<a href=''https://www.amazon.jobs/en/landing_pages/ICLR''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/amazon-icml-2018.png''
+      class=''sponsorLogo'' alt=''Amazon''></a><br>', name: Amazon}
+  - {img: '<a href=''https://openai.com/''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/openai-iclr-2019.png''
+      class=''sponsorLogo'' alt=''OpenAI''></a><br>', name: OpenAI}
+  - {img: '<a href=''https://www.research.ibm.com/artificial-intelligence/''><img
+      src=''https://iclr.cc/static/admin/img/sponsor_logos/ibm-nips-2019.png'' class=''sponsorLogo''
+      alt=''IBM Research''></a><br>', name: IBM Research}
+- tier: Silver
+  vals:
+  - {img: '<a href=''https://www.alibabagroup.com/en/about/overview''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/alibaba.png''
+      class=''sponsorLogo'' alt=''Alibaba Group''></a><br>', name: Alibaba Group}
+  - {img: '<a href=''https://www.apple.com/jobs/us/teams/machine-learning-and-ai.html''><img
+      src=''https://iclr.cc/static/admin/img/sponsor_logos/apple-nips-2019.png'' class=''sponsorLogo''
+      alt=''Apple''></a><br>', name: Apple}
+  - {img: '<a href=''http://www.microsoft.com/research''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/microsoft-nips-2018.png''
+      class=''sponsorLogo'' alt=''Microsoft''></a><br>', name: Microsoft}
+  - {img: '<a href=''http://www.bytedance.com''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/
+      ByteDance-nips-2019.png'' class=''sponsorLogo'' alt=''ByteDance''></a><br>',
+    name: ByteDance}
+- tier: Bronze
+  vals:
+  - {img: '<a href=''http://www.deshaw.com''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/de_shaw-iclr-2019.png''
+      class=''sponsorLogo'' alt=''The D. E. Shaw Group''></a><br>', name: The D. E.
+      Shaw Group}
+  - {img: '<a href=''http://www.twosigma.com''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/two_sigma.png''
+      class=''sponsorLogo'' alt=''Two Sigma''></a><br>', name: Two Sigma}
+  - {img: '<a href=''https://lambdalabs.com/''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/lambda-nips-2017.png''
+      class=''sponsorLogo'' alt=''Lambda''></a><br>', name: Lambda}
+- tier: Start-Up Companies
+  vals:
+  - {img: '<a href=''http://www.elementai.com''><img src=''https://iclr.cc/static/admin/img/sponsor_logos/element-ai-2017.png''
+      class=''sponsorLogo'' alt=''Element AI''></a><br>', name: Element AI}
+
