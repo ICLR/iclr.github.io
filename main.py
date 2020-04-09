@@ -2,42 +2,29 @@ from flask import Flask, render_template, render_template_string
 from flask import jsonify, send_from_directory, redirect
 from flask_frozen import Freezer
 import pickle, json
-import os, sys
+import os, sys, argparse
 import yaml
 
-notes = {}
-paper_recs = {}
-author_recs = {}
+# has keys => ['cached_or', 'paper_records', 'author_records', 'sponsors', 'workshops', 'socials', 'calendar']
+site_data = {}
+
 titles = {}
 keywords = {}
 
 
 # Loads up the necessary data
-def main(notes_path, paper_recs_path, author_recs_path):
-    global notes
-    global paper_recs
-    global author_recs
+def main(site_data_path):
+    global site_data
+
     global titles
     global keywords
 
     # Load all for notes data one time.
-    notes_file = open(notes_path, "r")
-    notes = json.loads(notes_file.read())
-    notes_keys = list(notes.keys())
-
-    notes_file.close()
-
-    # Reading paper records
-    paper_recs_file = open(paper_recs_path, 'r')
-    paper_recs = json.loads(paper_recs_file.read())
-    paper_recs_file.close()
-
-    # Reading author records
-    author_recs_file = open(author_recs_path, 'r')
-    author_recs = json.loads(author_recs_file.read())
-    author_recs_file.close()
-
-    for i, (k, n) in enumerate(notes.items()):
+    site_data_file = open(site_data_path, "r")
+    site_data = json.loads(site_data_file.read())
+    site_data_file.close()
+    
+    for i, (k,n) in enumerate(site_data["cached_or"].items()):
         n["content"]["iclr_id"] = k
         titles[n["content"]["title"]] = k
         if "TL;DR" in n["content"]:
@@ -49,6 +36,24 @@ def main(notes_path, paper_recs_path, author_recs_path):
             keywords[k.lower()].append(n)
 
     print("Data Successfully Loaded")
+
+
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(description="ICLR Portal Command Line")
+    
+    parser.add_argument('--build', action='store_true', default=False, 
+                        help="Convert the site to static assets")
+    
+    parser.add_argument('-b', action='store_true', default=False, dest="build", 
+                        help="Convert the site to static assets")
+
+    parser.add_argument('path', action='append', type=argparse.FileType("r"),
+                        help="Pass the JSON data path and run the server")
+    
+    args = parser.parse_args()
+    return args
+
 
 
 # ------------- SERVER CODE -------------------->
@@ -76,7 +81,7 @@ def livestream():
 def papers():
     data = {"keyword": "all",
             "page": "papers",
-            "openreviews": notes.values()}
+            "openreviews": site_data["cached_or"].values()}
     return render_template('pages/papers.html', **data)
 
 
@@ -88,19 +93,19 @@ def paperVis():
 @app.route('/papers_old.html')
 def papers_old():
     data = {"keyword": "all",
-            "openreviews": notes.values()}
+            "openreviews": site_data["cached_or"].values()}
     return render_template('pages/keyword.html', **data)
 
 
 @app.route('/papers.json')
 def paper_json():
-    paper_list = [value for value in notes.values()]
+    paper_list = [value for value in site_data["cached_or"].values()]
     return jsonify(paper_list)
 
 
 @app.route('/recs.html')
 def recommendations():
-    data = {"choices": author_recs.keys(),
+    data = {"choices": site_data["author_records"].keys(),
             "keywords": keywords.keys(),
             "titles": titles.keys()}
     return render_template('pages/recs.html', **data)
@@ -173,8 +178,8 @@ def speakers():
 @app.route('/poster_<poster>.html')
 def poster(poster):
     note_id = poster
-    data = {"openreview": notes[note_id], "id": note_id,
-            "paper_recs": [notes[n] for n in paper_recs[note_id]][1:]}
+    data = {"openreview": site_data["cached_or"][note_id], "id": note_id,
+            "paper_recs": [site_data["cached_or"][n] for n in site_data["paper_records"][note_id]][1:]}
 
     return render_template('pages/page.html', **data)
 
@@ -225,31 +230,23 @@ def your_generator_here():
     yield "recommendations", {}
     yield "embeddings", {"emb":"tsne"}
 
-    for i in notes.keys():
+    for i in site_data["cached_or"].keys():
         yield "poster", {"poster": str(i)}
 
 
 # --------------- DRIVER CODE -------------------------->
 
 if __name__ == "__main__":
+    args = parse_arguments()
+    
+    site_data_path = args.path[0].name    
+    main(site_data_path)
 
-    if len(sys.argv) == 5:
-
-        # paths for json data
-        notes_path = sys.argv[2]
-        paper_recs_path = sys.argv[3]
-        author_recs_path = sys.argv[4]
-
-        main(notes_path, paper_recs_path, author_recs_path)
-        if sys.argv[1] == "build":
-            freezer.freeze()
-
-        if sys.argv[1] == "run":
-            debug_val = False
-
-            if(os.getenv("FLASK_DEBUG") == "true"):
-                debug_val = True
-            app.run(port=5000, debug=debug_val)
-
+    if args.build:
+        freezer.freeze()
     else:
-        raise ValueError("Please enter the paths for the required json data")
+        debug_val = False        
+        if(os.getenv("FLASK_DEBUG") == "True"):
+            debug_val = True
+
+        app.run(port=5000, debug=debug_val)
