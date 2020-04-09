@@ -23,7 +23,7 @@ speakers:
       title: AI Systems That Can See And Talk
       image: static/devi.png
       institution: Georgia Tech and Facebook AI Research
-    - speaker: Profs. Yann LeCun and Yoshua Benjio
+    - speaker: Profs. Yann LeCun and Yoshua Bengio
       image: static/lecun+bengio.png
       title: Reflections from the Turing Award Winners
       institution: Facebook AI + NYU / MILA
