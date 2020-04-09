@@ -1,3 +1,2 @@
-export FLASK_DEBUG=true
-export FLASK_ENV=development
-python3 main.py run data/json/cached_or.json data/json/paper_records.json data/json/author_records.json
+export FLASK_DEBUG=True
+python3 main.py data/json/site_data.json
