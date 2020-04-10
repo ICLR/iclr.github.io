@@ -7,6 +7,13 @@ pip install -r requirements.txt
 Replace `pip` with `pip3` according to your system.
 
 
+## Files
+
+* Static files js/css/image `static/`
+* Site data files yaml/json `sitedata/`
+* HTML Template files `templates/pages`
+
+
 ### Test
 ```
 bash run.sh or sh run.sh

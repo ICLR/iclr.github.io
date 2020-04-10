@@ -1,5 +1,4 @@
 flask
-openreview-py
 frozen-flask
 tqdm
 PyYAML

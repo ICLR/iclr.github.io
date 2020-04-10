@@ -19,7 +19,7 @@ def main(site_data_path):
     global keywords
 
     # Load all for notesj data one time.
-    for f in glob.glob("sitedata/*.yml"):
+    for f in glob.glob(site_data_path +"/*.yml"):
 
         name, typ = f.split("/")[-1].split(".")
         if typ == "json":
@@ -51,7 +51,7 @@ def parse_arguments():
     parser.add_argument('-b', action='store_true', default=False, dest="build", 
                         help="Convert the site to static assets")
 
-    parser.add_argument('path', action='append', type=argparse.FileType("r"),
+    parser.add_argument('path', 
                         help="Pass the JSON data path and run the server")
     
     args = parser.parse_args()
@@ -195,6 +195,8 @@ def your_generator_here():
 
     for i in site_data["papers"].keys():
         yield "poster", {"poster": str(i)}
+    for i in range(len(site_data["workshops"])):
+        yield "workshop", {"workshop": str(i)}
 
 
 # --------------- DRIVER CODE -------------------------->
@@ -202,7 +204,7 @@ def your_generator_here():
 if __name__ == "__main__":
     args = parse_arguments()
     
-    site_data_path = args.path[0].name    
+    site_data_path = args.path    
     main(site_data_path)
 
     if args.build:
