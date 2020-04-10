@@ -1,5 +1,6 @@
-import pickle, json
+import pickle
 from tqdm import tqdm
+import yaml, json
 
 # Converts pkl/cached_or.pkl file to json/cached_or.json
 def convert_cached_or():
@@ -9,7 +10,10 @@ def convert_cached_or():
     keys = list(notes.keys())
 
     for k in tqdm(keys):
-        cached_or_dict[k] = notes[k].__dict__
+        cached_or_dict[k] = {}
+        for k2 in notes[k].__dict__:
+            if k2 in ["content", "forum", "id"]:
+                cached_or_dict[k][k2] = notes[k].__dict__[k2]
 
     return cached_or_dict
 
@@ -37,5 +41,11 @@ if __name__ == '__main__':
     site_data["socials"] = {}
     site_data["calendar"] = {}
 
-    with open("json/site_data.json", "w") as f:
-        f.write(json.dumps(site_data, indent=2))
+    with open("../sitedata/papers.json", "w") as f:
+        f.write(json.dumps(site_data["cached_or"]))
+
+    with open("../sitedata/paper_recs.json", "w") as f:
+        f.write(json.dumps(site_data["paper_records"]))
+
+    with open("../sitedata/author_recs.json", "w") as f:
+        f.write(json.dumps(site_data["author_records"]))
