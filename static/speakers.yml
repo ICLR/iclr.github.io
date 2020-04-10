@@ -1,33 +1,33 @@
 speakers:
     - speaker: Dr. Aisha Walcott-Bryant
       title:  "AI + Africa = Global Innovation"
-      image: static/aisha.jpg
+      image: static/images/aisha.jpg
       institution: IBM Research Africa, Nairobi
     - speaker: Prof. Leslie Kaebling
       title: Doing for Our Robots What Nature Did For Us
-      image: static/Kaelbling-1.jpg
+      image: static/images/Kaelbling-1.jpg
       institution: MIT
     - speaker: Prof. Ruha Benjamin
       title: "2020 Vision: Reimagining the Default Settings of Technology & Society"
-      image: static/ruha.jpeg
+      image: static/images/ruha.jpeg
       institution: Princeton
     - speaker: Dr. Laurent Dinh
       title: Invertible Models and Normalizing Flows
-      image: static/laurent.jpg
+      image: static/images/laurent.jpg
       institution: Google AI
     - speaker: Prof. Mihaela van der Schaar
       title: "Machine Learning: Changing the future of healthcare"
-      image: static/Mihaela_photo_new.jpg
+      image: static/images/Mihaela_photo_new.jpg
       institution: University of Cambridge, The Alan Turing Institute, UCLA
     - speaker: Prof. Devi Parikh
       title: AI Systems That Can See And Talk
-      image: static/devi.png
+      image: static/images/devi.png
       institution: Georgia Tech and Facebook AI Research
     - speaker: Profs. Yann LeCun and Yoshua Bengio
-      image: static/lecun+bengio.png
+      image: static/images/lecun+bengio.png
       title: Reflections from the Turing Award Winners
       institution: Facebook AI + NYU / MILA
     - speaker: Prof. Michael I. Jordan
       title: "The Decision-Making Side of Machine Learning: Dynamical, Statistical and Economic Perspectives"
       institution: University of California, Berkeley
-      image: static/jordan.jpg
+      image: static/images/jordan.jpg

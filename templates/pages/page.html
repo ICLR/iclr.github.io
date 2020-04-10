@@ -51,17 +51,21 @@
          </button>
        </a>
        
+       {% if openreview.content.code != blank %}
        <a href="{{openreview.content.code}}" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
            Code
          </button>
        </a>
+       {% endif %}
        
+       {% if openreview.content.sildes != blank %}
        <a href="{{openreview.content.slides}}" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
            Slides
          </button>
        </a>
+       {% endif %}
      </center>
      
    </div>
