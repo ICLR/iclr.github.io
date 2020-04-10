@@ -4,7 +4,7 @@ from flask_frozen import Freezer
 import pickle, json, yaml
 import os, sys, argparse
 import glob
-
+from itertools import chain
 
 site_data = {}
 
@@ -19,15 +19,16 @@ def main(site_data_path):
     global keywords
 
     # Load all for notesj data one time.
-    for f in glob.glob(site_data_path +"/*.yml"):
-
+    extensions = ["yml", "json"]
+    for f in chain(*[glob.glob(os.path.join(site_data_path, f"*.{ext}")) for ext in extensions]):
+        print(f)
         name, typ = f.split("/")[-1].split(".")
         if typ == "json":
-            site_data[name] = json.load(open(f).read())
+            site_data[name] = json.load(open(f))
         else:
             site_data[name] = yaml.load(open(f).read(),
                                         Loader=yaml.BaseLoader)
-    
+
     for i, (k,n) in enumerate(site_data["papers"].items()):
         n["content"]["iclr_id"] = k
         titles[n["content"]["title"]] = k
@@ -44,16 +45,16 @@ def main(site_data_path):
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="ICLR Portal Command Line")
-    
-    parser.add_argument('--build', action='store_true', default=False, 
-                        help="Convert the site to static assets")
-    
-    parser.add_argument('-b', action='store_true', default=False, dest="build", 
+
+    parser.add_argument('--build', action='store_true', default=False,
                         help="Convert the site to static assets")
 
-    parser.add_argument('path', 
+    parser.add_argument('-b', action='store_true', default=False, dest="build",
+                        help="Convert the site to static assets")
+
+    parser.add_argument('path',
                         help="Pass the JSON data path and run the server")
-    
+
     args = parser.parse_args()
     return args
 
@@ -203,14 +204,14 @@ def your_generator_here():
 
 if __name__ == "__main__":
     args = parse_arguments()
-    
-    site_data_path = args.path    
+
+    site_data_path = args.path
     main(site_data_path)
 
     if args.build:
         freezer.freeze()
     else:
-        debug_val = False        
+        debug_val = False
         if(os.getenv("FLASK_DEBUG") == "True"):
             debug_val = True
 
