@@ -20,14 +20,13 @@ def main(site_data_path):
 
     # Load all for notesj data one time.
     for f in glob.glob(site_data_path +"/*.yml"):
-
         name, typ = f.split("/")[-1].split(".")
         if typ == "json":
             site_data[name] = json.load(open(f).read())
         else:
             site_data[name] = yaml.load(open(f).read(),
                                         Loader=yaml.BaseLoader)
-    
+        
     for i, (k,n) in enumerate(site_data["papers"].items()):
         n["content"]["iclr_id"] = k
         titles[n["content"]["title"]] = k

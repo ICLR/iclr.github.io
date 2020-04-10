@@ -1,2 +1,2 @@
-python3 main.py sitedata/ --build
+python main.py sitedata/ --build
 
