@@ -19,11 +19,11 @@ def main(site_data_path):
     global keywords
 
     # Load all for notesj data one time.
-    for f in glob.glob(site_data_path +"/*.yml"):
+    for f in glob.glob(site_data_path +"/*"):
         name, typ = f.split("/")[-1].split(".")
         if typ == "json":
-            site_data[name] = json.load(open(f).read())
-        else:
+            site_data[name] = json.load(open(f))
+        elif typ == "yml":
             site_data[name] = yaml.load(open(f).read(),
                                         Loader=yaml.BaseLoader)
         
