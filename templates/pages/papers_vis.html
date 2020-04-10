@@ -1,3 +1,4 @@
+<!--language=FLASK-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -57,59 +58,111 @@
 
         </div>
         <div class="col-12 col-sm-6 col-lg-4" style="margin-bottom: 10px;">
-            {#            <div class="float-right">#}
-            <div class="btn-group btn-group-toggle filter_option"
-                 data-toggle="buttons">
-                <label class="btn btn-outline-secondary active">
-                    <input type="radio" name="options" value="authors"
-                           autocomplete="off" checked> author
-                </label>
-                <label class="btn btn-outline-secondary">
-                    <input type="radio" name="options" value="keywords"
-                           autocomplete="off"> keyword
-                </label>
-                <label class="btn btn-outline-secondary">
-                    <input type="radio" name="options" value="titles"
-                           autocomplete="off"> title
-                </label>
-                {#                </div>#}
+            {#
+            <div class="float-right">#}
+                <div class="btn-group btn-group-toggle filter_option"
+                     data-toggle="buttons">
+                    <label class="btn btn-outline-secondary active">
+                        <input type="radio" name="options" value="authors"
+                               autocomplete="off" checked> author
+                    </label>
+                    <label class="btn btn-outline-secondary">
+                        <input type="radio" name="options" value="keywords"
+                               autocomplete="off"> keyword
+                    </label>
+                    <label class="btn btn-outline-secondary">
+                        <input type="radio" name="options" value="titles"
+                               autocomplete="off"> title
+                    </label>
+                    {#
+                </div>
+                #}
             </div>
 
         </div>
 
-        {#        <div class="col-12 col-lg-4">#}
-        {##}
-        {#            <button class="btn btn-outline-secondary reshuffle"> re-shuffle#}
-        {#            </button>#}
-        {##}
-        {#            <div class="float-right">#}
-        {#                <div class="btn-group btn-group-toggle render_option"#}
-        {#                     data-toggle="buttons">#}
-        {#                    <label class="btn btn-outline-secondary active">#}
-        {#                        <input type="radio" name="options" value="compact"#}
-        {#                               autocomplete="off" checked> compact#}
-        {#                    </label>#}
-        {#                    <label class="btn btn-outline-secondary">#}
-        {#                        <input type="radio" name="options" value="detail"#}
-        {#                               autocomplete="off"> detail#}
-        {#                    </label>#}
-        {#                </div>#}
-        {#            </div>#}
-        {#        </div>#}
+        {#
+        <div class="col-12 col-lg-4">#}
+            {##}
+            {#
+            <button class="btn btn-outline-secondary reshuffle"> re-shuffle#}
+                {#
+            </button>
+            #}
+            {##}
+            {#
+            <div class="float-right">#}
+                {#
+                <div class="btn-group btn-group-toggle render_option" #}
+                     {# data-toggle="buttons">#}
+                    {# <label class="btn btn-outline-secondary active">#}
+                        {# <input type="radio" name="options" value="compact" #}
+                                  {# autocomplete="off" checked> compact#}
+                        {# </label>#}
+                    {# <label class="btn btn-outline-secondary">#}
+                        {# <input type="radio" name="options" value="detail" #}
+                                  {# autocomplete="off"> detail#}
+                        {# </label>#}
+                    {#
+                </div>
+                #}
+                {#
+            </div>
+            #}
+            {#
+        </div>
+        #}
 
-        {#        <div class="col-4">#}
-        {#            T:<input class="typeahead_title" type="text"#}
-        {#                     placeholder="title" width=400px>#}
-        {#        </div>#}
+        {#
+        <div class="col-4">#}
+            {# T:<input class="typeahead_title" type="text" #}
+                        {# placeholder="title" width=400px>#}
+            {#
+        </div>
+        #}
 
     </div>
 
     <div class="row " style="margin-top: 10px; text-align: center;">
-      <div class="card" style="margin-right: -40px">
-        <div class="card-header">
-          <svg class="plot" style="display: block; margin: auto;"></svg>
+        <div class="card" style="margin-right: -40px">
+            <div class="card-header">
+
+                <div id='outer_svg'
+                     style="display: inline-block; vertical-align: top;">
+                    <svg class="plot"
+                         style="display: block; "></svg>
+                </div>
+                <div class="results"
+                     style="display: inline-block; width:200px;vertical-align: top; text-align: left;">
+                    <div style="display: block; overflow-y: auto;" id="table_info">
+                        <div id="explain_text_plot" >
+                                <p>If you <b>hover</b> over a dot, you see the
+                                    related
+                                    paper.</p>
+                                <p>If you <b>click</b> on a dot, you go to the
+                                    related
+                                    paper page.</p>
+                                <p>You can <b>search</b> for papers by author,
+                                    keyword,
+                                    or title </p>
+                                <p><b>Drag a rectangle </b> to summarize an area
+                                    of
+                                    the
+                                    block.</p>
+                        </div>
+                        <div id="summary_selection" style="">
+
+                        </div>
+                        <div style="overflow-y: auto; bottom: 0;margin-top:5pt;">
+                                <div id="sel_papers">
+
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
     </div>
 
 </div>
