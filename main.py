@@ -73,12 +73,12 @@ def index():
 
 @app.route('/index.html')
 def home():
-    return render_template('pages/home.html', **{})
+    return render_template('pages/index.html', **{})
 
 
 @app.route('/livestream.html')
 def livestream():
-    return render_template('pages/main.html', **{})
+    return render_template('pages/livestream.html', **{})
 
 
 @app.route('/papers.html')
@@ -108,7 +108,7 @@ def faq():
 
 @app.route('/calendar.html')
 def schedule():
-    return render_template('pages/calendar.html')
+    return render_template('pages/schedule.html')
 
 @app.route('/socials.html')
 def socials():
