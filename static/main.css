@@ -1,0 +1,85 @@
+body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .jumbotron{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .btn-group{background-color: white}
+  .btn {background-color: white}
+  #main-nav {padding-top:10px; padding-bottom:10px;}
+  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
+  .header {font: "Montserrat"; }
+  .card-header { border: 4px solid #eee;
+                font-family: "Exo";}
+  .pp-card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1); margin-bottom: 1em;display: block; overflow: hidden;}
+  .pp-card-header {border: 4px solid #eee; font-family: "Exo"; height: 300px;}
+  .cards_img {margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;}
+
+  .card-title {margin-top: 10px; font-size: 20px;}
+  .card-subtitle.text-muted {text-align: center; font-size: 13px;}
+
+  .container {margin-top: 10px;}
+
+  .cards.myCard {display: flex;flex-flow: wrap;margin-left: 0;box-sizing: border-box;}
+  .cards {margin-top: 10px;}
+  
+  .main-title {font-weight: 700;  color: #2294e0;}
+
+  .myAccordion {
+
+  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    margin-bottom: 18px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .sponsorLogo {
+  width: 250px;
+  display: block;
+  margin-left: auto;
+    margin-right: auto;
+  margin-top: auto;
+    margin-bottom: auto;
+
+  }
+  
+  .slp {
+
+  background: #fff
+
+  padding: 10px;
+
+  border: 4px solid #eee;
+
+  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
+  }
+  
+  .border {
+  background: #fff
+  
+  padding: 10px;
+
+  border: 4px solid #eee;
+
+  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
+  }
+  
+  #abstractExample.collapse:not(.show) {
+  display: block;
+  /* height = lineheight * no of lines to display */
+  height: 4.5em;
+  overflow: hidden;
+  }
+
+  #abstractExample.collapsing {
+  height: 4.5em;
+  }
+
+
+#absShow.collapsed:after {
+  content: '+ Show More';
+}
+
+#absShow:not(.collapsed):after {
+  content: '- Show Less';
+}
