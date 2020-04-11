@@ -2,7 +2,8 @@ const table_height = 600;
 
 let sc = null;
 let min_max_time = [];
-
+let currentTimeZone = moment.tz.guess(true);
+let tzNames = moment.tz.names();
 
 function updateTable() {
     const scale = d3.scaleTime().domain(min_max_time).range([25, table_height])
@@ -33,7 +34,15 @@ function updateTable() {
     const parse_full_time = d3.utcParse('%Y-%m-%e %I:%M %p');
     const utc_time_format = d3.utcFormat('%I:%M %p');
 
-    const tf = d3.timeFormat('%I:%M %p')
+    // const tf = d3.timeFormat('%I:%M %p')
+
+    const tf = date => moment(date).tz(currentTimeZone).format('hh:mm A')
+    // const tf_moment_GMT = date => moment(date).tz('GMT').format('hh:mm A')
+    const day_diff = date => {
+        const m = moment(date)
+        return m.tz(currentTimeZone).date() - m.utc().date();
+    }
+
     days.selectAll('.event').data(d => d.events.map(event => {
         event.time_slot = slots[event.slot];
         event.real_times = slots[event.slot]
@@ -44,19 +53,21 @@ function updateTable() {
       .attr('class', d => 'event ' + d.type)
       .style('top', d => scale(d.time_slot[0]) + "px")
       .style('height',
-        d => (scale(d.time_slot[1]) - scale(d.time_slot[0]) - 2) + 'px')
+        d => Math.max(20,
+          (scale(d.time_slot[1]) - scale(d.time_slot[0]) - 2)) + 'px')
       .html(d => {
           let res = '';
-          if (d.type==='poster'){
+          if (d.type === 'poster') {
               const matches = d.short.match(/P([0-9]+)S([0-9]+)/);
-              // console.log(matches, d.short,"--- matches, d.short");
-              res+=`<div  class="time_slot"> ${tf(d.time_slot[0])} - ${tf(
-            d.time_slot[1])} </div>`
-              res+= `<span class="session-title">`+
+              const dd = day_diff(d.real_times[1]);
+              res += `<div  class="time_slot"> ${tf(d.real_times[0])} - ${tf(
+                d.real_times[1])} ${dd!==0 ? '+' + dd + 'd' : ''} </div>`
+              res += `<span class="session-title">` +
                 `Poster Day ${matches[1]} Session ${matches[2]} (${d.short})</span>`
 
-          }else if (d.type === 'qa'){
-              res+= `<span class="time_slot">${tf(d.time_slot[0])} </span><span class="session-title">`+
+          } else if (d.type === 'qa') {
+              res += `<span class="time_slot">${tf(
+                d.real_times[0])} </span><span class="session-title">` +
                 `${d.name} </span>`
           }
 
@@ -84,12 +95,24 @@ const start = () => {
 
 
         d3.select('.info')
-          .text(`Times are displayed for timezone: ${Intl.DateTimeFormat().resolvedOptions().timeZone}`)
+          .text(`Times are displayed for timezone: ${currentTimeZone}`)
 
         updateTable();
     })
       .catch(e => console.error(e))
 
+    const tzOptons = d3.select('#tzOptions')
+    tzOptons.selectAll('option').data(tzNames)
+      .join('option')
+      .attr('data-tokens', d => d.split("/").join(" "))
+      .text(d => d)
+    $('.selectpicker')
+      .selectpicker('val', currentTimeZone)
+      .on('changed.bs.select',
+        function (e, clickedIndex, isSelected, previousValue) {
+            currentTimeZone = tzNames[clickedIndex]
+            updateTable();
+        })
 
 }
 
