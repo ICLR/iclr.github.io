@@ -18,16 +18,16 @@
 
     {% for section in FAQ %}
     <div class="row p-3">
-      <div class="col-12 bd-content ">
-        <h3 class=""> {{section.Section}} </h2>
+      <div class="col-12 bd-content">
+        <h3 class=""> {{section.Section}} </h3>
       </div>
     </div>
     {% set rowloop = loop.index %}
 
     {% for qa in section.QA %}
-    <div class="row ">
+    <div class="row">
 
-      <div class="col-12 m-2  " id="accordionExample">
+      <div class="col-12 m-2" id="accordionExample">
         <div class=" card">
           <div class="card-header" >
               <a class="" href="#" data-toggle="collapse" data-target="#collapse{{rowloop}}-{{loop.index}}" aria-expanded="true" aria-controls="collapse{{rowloop}}-{{loop.index}}">
@@ -45,6 +45,19 @@
     </div>
     {% endfor %}
     {% endfor %}
+  </div>
+
+  <div class="container">
+    <div class="row p-3">
+      <div class="col-12 bd-content">
+        <h3 class="">Chat for Help</h3>
+      </div>
+    </div>
+    <div class="border">
+      <center>
+        <iframe frameborder="0" src="https://iclr.rocket.chat/channel/tech-support" width="100%" height="680px"></iframe>
+      </center>
+    </div>
   </div>
 
 </body>
