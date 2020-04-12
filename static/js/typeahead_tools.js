@@ -24,6 +24,7 @@ const initTypeAhead = (list, css_sel, name, callback) => {
           }
       })
       .on('typeahead:selected', function (evt, item) {
+          evt.preventDefault();
           callback(evt, item)
       })
 
@@ -52,7 +53,7 @@ let calcAllKeys = function (allPapers, allKeys) {
     allPapers.forEach(
       d => {
           d.content.authors.forEach(a => collectAuthors.add(a));
-          d.content.keywords.forEach(a => collectKeywords.add(a))
+          d.content.keywords_gen.forEach(a => collectKeywords.add(a))
           allKeys.titles.push(d.content.title)
       });
     allKeys.authors = Array.from(collectAuthors);

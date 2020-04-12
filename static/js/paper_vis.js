@@ -39,7 +39,6 @@ const l_main = plot.append('g');
 const l_fg = plot.append('g');
 
 const brush_start = () => {
-    console.log(currentTippy, "--- currentTippy");
     currentTippy.forEach(t => t.disable());
     brushed();
 }
@@ -47,7 +46,7 @@ const brushed = () => {
     let [[x0, y0], [x1, y1]] = d3.event.selection;
     x0 = Math.round(x0), y0 = Math.round(y0);
     x1 = Math.round(x1), y1 = Math.round(y1);
-    console.log(x0, x1, y1, y0, "--- x0,x1,y1,y0");
+    // console.log(x0, x1, y1, y0, "--- x0,x1,y1,y0");
 
     l_main.selectAll('.dot')
       .classed('rect_selected', function () {
@@ -110,7 +109,6 @@ function brush_ended() {
       .on('click',
         d => window.open(`poster_${d.content.iclr_id}.html`, '_blank'))
       .on('mouseenter', d => {
-          console.log(d, "--- d");
           l_main.selectAll('.dot').filter(dd => dd.id === d.id)
             .classed('highlight_sel', true)
             .each(function () {
@@ -189,10 +187,14 @@ const render = () => {
     let test = d => {
         let i = 0, pass_test = true;
         while (i < f_test.length && pass_test) {
-            if (f_test[i][0] === 'titles') {
+            let k = f_test[i][0];
+            if (k === 'titles') {
                 pass_test &= d.content['title'] === f_test[i][1];
+            } else if (k === 'keywords') {
+                pass_test &= d.content['abstract_lc'].indexOf(
+                  f_test[i][1]) > -1
             } else {
-                pass_test &= d.content[f_test[i][0]].indexOf(
+                pass_test &= d.content[k].indexOf(
                   f_test[i][1]) > -1
             }
             i++;
@@ -227,6 +229,9 @@ const start = () => {
         // all_proj = proj;
 
         proj.forEach((pos, i) => papers[i].pos = pos)
+        papers.forEach(p => {
+            p.content.abstract_lc =p.content.abstract.toLowerCase();
+        })
         all_papers = papers;
 
         calcAllKeys(all_papers, allKeys);
