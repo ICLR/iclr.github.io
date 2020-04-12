@@ -42,10 +42,14 @@ const render = () => {
           d => {
               let i = 0, pass_test = true;
               while (i < f_test.length && pass_test) {
-                  if (f_test[i][0] === 'titles') {
+                  const k = f_test[i][0];
+                  if (k === 'titles') {
                       pass_test &= d.content['title'] === f_test[i][1];
+                  } else if (k === 'keywords') {
+                      pass_test &= d.content['abstract_lc'].indexOf(
+                        f_test[i][1]) > -1
                   } else {
-                      pass_test &= d.content[f_test[i][0]].indexOf(
+                      pass_test &= d.content[k].indexOf(
                         f_test[i][1]) > -1
                   }
                   i++;
@@ -65,6 +69,9 @@ let callstox = 0;
  */
 const start = () => {
     d3.json('papers.json').then(papers => {
+        papers.forEach(p => {
+            p.content.abstract_lc =p.content.abstract.toLowerCase();
+        })
         shuffleArray(papers);
 
         allPapers = papers;
