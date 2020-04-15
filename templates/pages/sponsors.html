@@ -29,9 +29,7 @@
     <div class="col-4 p-2" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
       <div class="card "style="display:block; overflow:hidden; width:100%;">
         <div class="card-header d-flex flex-wrap justify-content-center align-items-center" style="height: 250px;">
-          
-            {{sponsor.img|safe}}
-          
+            <a href="{{sponsor.img_url}}"><img src="{{sponsor.img_src}}" class="sponsorLogo" alt="{{sponsor.name}}" /></a>
         </div>
       </div>
       </div>
