@@ -35,6 +35,7 @@ sponsors:
     - name: Apple
       img_url: https://www.apple.com/jobs/us/teams/machine-learning-and-ai.html
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/apple-nips-2019.png
+      size: 200px
     - name: Microsoft
       img_url: http://www.microsoft.com/research
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/microsoft-nips-2018.png

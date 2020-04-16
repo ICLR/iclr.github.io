@@ -212,6 +212,9 @@ def your_generator_here():
     yield "schedule", {}
     yield "schedule_json", {}
     yield "embeddings", {"emb":"tsne"}
+    for day in ["Monday", "Tuesday",
+                "Wednesday","Thursday"]:
+        yield "daily", {"day": day}
 
     for i in site_data["papers"].keys():
         yield "poster", {"poster": str(i)}
