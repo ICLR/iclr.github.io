@@ -59,18 +59,48 @@ body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
 
   }
 
-  .slp {
+  .slp iframe {
+      background: #fff
+      margin: 5 px;
 
-  background: #fff
-
-  padding: 10px;
-
-  border: 4px solid #eee;
-
-  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
+      border: 1px solid rgba(0,0,0,.125);
+      border-radius: .25rem;
   }
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
 
-  .border {
+
+/* .carousel-inner .carousel-item-right.active, */
+/* .carousel-inner .carousel-item-next { */
+/*   transform: translateX(25%); */
+/* } */
+
+/* .carousel-inner .carousel-item-left.active, */
+/* .carousel-inner .carousel-item-prev { */
+/*   transform: translateX(-25%); */
+/* } */
+
+/* .carousel-inner .carousel-item-right, */
+/* .carousel-inner .carousel-item-left{ */
+/*   transform: translateX(0); */
+
+/* } */
+
+
+.carousel-control-prev-icon {
+  filter: invert(1);
+  transform: translateX(-200%);
+}
+
+.carousel-control-next-icon {
+  filter: invert(1);
+  transform: translateX(200%);
+}
+
+.border {
   background: #fff
 
   padding: 10px;

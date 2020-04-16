@@ -19,20 +19,20 @@
      <h3 class="card-title main-title text-center" style="">
        {{openreview.content.title}}
      </h3>
-     
+
      <h5 class="card-subtitle mb-2 text-muted text-center">
        {% for author in openreview.content.authors %}
        {{author}}{{ "," if not loop.last }}
        {% endfor %}
      </h5>
-     
+
      <center class="p-3">
        <a class="card-link" data-toggle="collapse" role="button" href="#details">
          <button class="btn btn-outline-secondary">
            Abstract
          </button>
        </a>
-       
+
 
        <a class="card-link"  target="_blank" href="http://www.openreview.net{{openreview.content.pdf}}">
          <button class="btn btn-outline-secondary">
@@ -44,13 +44,19 @@
            OpenReview
          </button>
        </a>
-       
+
        <a href="" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
            Zoom
          </button>
        </a>
-       
+
+       <a href="https://iclr.rocket.chat/channel/paper_channel_{{openreview.forum}}" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Chat
+         </button>
+       </a>
+
        {% if openreview.content.code != blank %}
        <a href="{{openreview.content.code}}" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
@@ -58,7 +64,7 @@
          </button>
        </a>
        {% endif %}
-       
+
        {% if openreview.content.sildes != blank %}
        <a href="{{openreview.content.slides}}" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
@@ -67,7 +73,7 @@
        </a>
        {% endif %}
      </center>
-     
+
    </div>
  </div>
 
@@ -78,9 +84,9 @@
          <span class="font-weight-bold">Abstract:</span>
          {{openreview.content.abstract}}
        </div>
-       
+
      </p>
-     
+
      <p></p>
      <p class="card-text"><span class="font-weight-bold">Keywords:</span>
        {% for keyword in openreview.content.keywords %}
@@ -96,29 +102,27 @@
 
 
 
-<div class="container ">
+ <div class="jumbotron" style="background-color:white; padding: 0px;">
   <div class="row m-2">
-    <div class="col-7">
-      <div id="presentation-embed-38915748" class="slp"></div>
+    <div class="col-md-7 col-xs-12 my-auto p-2" >
+      <div id="presentation-embed-38915748" class="slp my-auto"></div>
       <script src='https://slideslive.com/embed_presentation.js'></script>
       <script>
         embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
+        verticalWhenWidthLte: 2000,
         allowHiddenControlsWhenPaused: true,
-        zoomRatio: 0.4,
         hideTitle: true
         });
       </script>
     </div>
-    
-    <div class="col-5 p-1 my-auto">        
-        <div id="gitter" class="gitter container " >
+
+    <div class="col-md-5 col-xs-12 p-2">
+        <div id="gitter" class="slp">
           <center>
-            <div class="border">
-              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_{{openreview.forum}}?layout=embedded" width="100%" height="680px"></iframe> </center>
-            </div>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_{{openreview.forum}}?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -138,18 +142,24 @@
 
 <div  class="container" >
   <div class="row">
-  
 
       {% for openreview in paper_recs %}
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_{{openreview.content.iclr_id}}.html" class="text-dark"><h5 class="card-title">{{openreview.content.title}}</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/{{openreview.content.iclr_id}}.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_{{openreview.content.iclr_id}}.html" class="text-muted">
+              <h5 class="card-title" align="center">{{openreview.content.title}}</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              {% for a in openreview.content.authors %}
+              {{a}},
+              {% endfor %}
+            </h6>
 
-            <p class="card-text"> {{openreview.content.TLDR}}</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/{{openreview.content.iclr_id}}.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> {{openreview.content.TLDR}}</p> -->
+
+          </div>
         </div>
       </div>
       {% endfor %}

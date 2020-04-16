@@ -3,31 +3,39 @@ speakers:
       title:  "AI + Africa = Global Innovation"
       image: static/images/aisha.jpg
       institution: IBM Research Africa, Nairobi
+      day: Monday
     - speaker: Prof. Leslie Kaebling
       title: Doing for Our Robots What Nature Did For Us
       image: static/images/Kaelbling-1.jpg
       institution: MIT
+      day: Monday
     - speaker: Prof. Ruha Benjamin
       title: "2020 Vision: Reimagining the Default Settings of Technology & Society"
       image: static/images/ruha.jpeg
       institution: Princeton
+      day: Tuesday
     - speaker: Dr. Laurent Dinh
       title: Invertible Models and Normalizing Flows
       image: static/images/laurent.jpg
       institution: Google AI
+      day: Tuesday
     - speaker: Prof. Mihaela van der Schaar
       title: "Machine Learning: Changing the future of healthcare"
       image: static/images/Mihaela_photo_new.jpg
       institution: University of Cambridge, The Alan Turing Institute, UCLA
+      day: Wednesday
     - speaker: Prof. Devi Parikh
       title: AI Systems That Can See And Talk
       image: static/images/devi.png
       institution: Georgia Tech and Facebook AI Research
+      day: Wednesday
     - speaker: Profs. Yann LeCun and Yoshua Bengio
       image: static/images/lecun+bengio.png
       title: Reflections from the Turing Award Winners
       institution: Facebook AI + NYU / MILA
+      day: Thursday
     - speaker: Prof. Michael I. Jordan
       title: "The Decision-Making Side of Machine Learning: Dynamical, Statistical and Economic Perspectives"
       institution: University of California, Berkeley
       image: static/images/jordan.jpg
+      day: Thursday
