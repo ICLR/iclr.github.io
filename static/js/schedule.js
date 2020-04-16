@@ -60,10 +60,21 @@ function updateTable() {
           if (d.type === 'poster') {
               const matches = d.short.match(/P([0-9]+)S([0-9]+)/);
               const dd = day_diff(d.real_times[1]);
+              day = ""
+              if (matches[1] == 1) {
+                  day = "Mon";
+              } else if (matches[1] == 2) {
+                  day = "Tues";
+              } else if (matches[1] == 3) {
+                  day = "Wed";
+              } else if (matches[1] == 4) {
+                  day = "Thurs";
+              }
+
               res += `<div  class="time_slot"> ${tf(d.real_times[0])} - ${tf(
                 d.real_times[1])} ${dd!==0 ? '+' + dd + 'd' : ''} </div>`
-              res += `<span class="session-title">` +
-                `Poster Day ${matches[1]} Session ${matches[2]} (${d.short})</span>`
+              res += `<a href="papers.html?filter=session&search=${day}+Session+${matches[2]}"> <span class="session-title">` +
+                `Poster Day ${matches[1]} Session ${matches[2]} (${d.short})</span> </a>`
 
           } else if (d.type === 'qa') {
               res += `<span class="time_slot">${tf(
@@ -115,4 +126,3 @@ const start = () => {
         })
 
 }
-

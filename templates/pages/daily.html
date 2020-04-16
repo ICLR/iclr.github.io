@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  {% set page_title = "ICLR"  %}
+  {% include 'pages/head.html' %}
+
+
+<body>
+
+  <!-- NAV -->
+  {% include 'pages/header.html' %}
+
+
+  <div class="container">
+    <div class="row p-4">
+      <div class="col-12 bd-content ">
+        <h2 class="text-center">  {{day}} Orals </h2>
+      </div>
+    </div>
+
+
+    {% for s in section %}
+    <div class="row p-3">
+      <h3>Session: {{s.theme}}</h3>
+    </div>
+
+    <div class="row">
+
+      {% for openreview in s.papers %}
+      <div class="col-4  ">
+        <div class="pp-card">
+          <div class="pp-card-header">
+            <a href="poster_{{openreview.content.iclr_id}}.html"
+               class="text-muted">
+              <h5 class="card-title" align="center"> {{openreview.content.title}} </h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              {% for a in openreview.content.authors %}
+              {{a}},
+              {% endfor %}
+            </h6>
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/{{openreview.content.iclr_id}}.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+
+</body>

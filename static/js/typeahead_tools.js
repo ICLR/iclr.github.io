@@ -2,8 +2,21 @@ const initTypeAhead = (list, css_sel, name, callback) => {
     const bh = new Bloodhound({
         datumTokenizer: Bloodhound.tokenizers.whitespace,
         queryTokenizer: Bloodhound.tokenizers.whitespace,
-        local: list
+        local: list,
+        identify: function(obj) { return obj; },
+
     });
+    function bhDefaults(q, sync) {
+
+        if (q === '' && name == 'session') {
+            sync(bh.all()); // This is the only change needed to get 'ALL' items as the defaults
+        }
+
+        else {
+            bh.search(q, sync);
+        }
+    }
+
 
     // remove old
     $(css_sel).typeahead('destroy')
@@ -14,9 +27,9 @@ const initTypeAhead = (list, css_sel, name, callback) => {
     $(css_sel).typeahead({
           hint: true,
           highlight: true, /* Enable substring highlighting */
-          minLength: 1 /* Specify minimum characters required for showing suggestions */
+          minLength: 0 /* Specify minimum characters required for showing suggestions */
       },
-      {name, source: bh})
+      {name, source: bhDefaults})
       .on('keydown', function (e) {
           if (e.which === 13) {
               e.preventDefault();
@@ -38,23 +51,28 @@ const setTypeAhead = (subset, allKeys,filters, render) => {
     Object.keys(filters).forEach(k => filters[k] = null);
 
     initTypeAhead(allKeys[subset], '.typeahead_all', subset,
-      (e, it) => {
-          filters[subset] = it.length > 0 ? it : null;
-          render()
-      })
+                  (e, it) => {
+                      setQueryStringParameter("search", it);
+                      filters[subset] = it.length > 0 ? it : null;
+                      render();
+                  });
 }
 
 
 let calcAllKeys = function (allPapers, allKeys) {
     const collectAuthors = new Set();
     const collectKeywords = new Set();
+    const collectSessions = new Set();
 
     allPapers.forEach(
       d => {
           d.content.authors.forEach(a => collectAuthors.add(a));
           d.content.keywords.forEach(a => collectKeywords.add(a))
+          d.content.session.forEach(a => collectSessions.add(a))
           allKeys.titles.push(d.content.title)
       });
     allKeys.authors = Array.from(collectAuthors);
     allKeys.keywords = Array.from(collectKeywords);
+    allKeys.session = Array.from(collectSessions);
+    allKeys.session.sort();
 };

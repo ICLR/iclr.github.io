@@ -1,0 +1,224 @@
+- day: Monday
+  section:
+  - ids:
+    - SJlpYJBKvH
+    - rkgbYyHtwB
+    - S1xitgHtvS
+    - rJe2syrtvS
+    - rygf-kSYwH
+    - S1glGANtDr
+    - r1etN1rtPB
+    - ryxdEkHtPS
+    theme: Reliable RL
+  - ids:
+    - H1ebhnEYDH
+    - B1e9Y2NYvS
+    - BJlRs34Fvr
+    - Skgvy64tvr
+    - H1xscnEKDr
+    - SJeqs6EFvB
+    - SJxSDxrKDr
+    - B1evfa4tPB
+    theme: Robustness and Verification
+  - ids:
+    - Skep6TVYDB
+    - H1gBsgBYwH
+    - BJe55gBtvH
+    - Bkeb7lHtvH
+    - rkxZyaNtwB
+    - S1gFvANKDS
+    - BJgnXpVYwS
+    - HJxNAnVtDS
+    theme: Optimisation Theory
+  - ids:
+    - BJgy96EYvr
+    - SkxpxJBKwS
+    - B1xm3RVtwB
+    - Bkl5kxrKDr
+    - Syg-ET4FPS
+    theme: Multiagent Systems
+  - ids:
+    - ryeYpJSKwr
+    - BklEFpEYwS
+    - S1evHerYPr
+    - rkeiQlBFPB
+    - SJeD3CEFPH
+    theme: Meta-learning
+  - ids:
+    - HJenn6VFvB
+    - H1enKkrFDB
+    - B1lPaCNtPB
+    - Hkxzx0NtDB
+    - BkgzMCVtPB
+    theme: Generative models
+  - ids:
+    - rJeB36NKvB
+    - HyeSin4FPB
+    - rJgsskrFwH
+    - r1gfQgSFDr
+    - B1elCp4KwH
+    theme: Signals and Systems
+  - ids:
+    - B1x1ma4tDr
+    - HkxARkrFwB
+    theme: Sequence Representations
+- day: Tuesday
+  section:
+  - ids:
+    - HJlA0C4tPS
+    - r1eyceSYPr
+    - SylkYeHtwr
+    - B1eWbxStPH
+    - HygOjhEYDH
+    - SklD9yrFPS
+    - rkeZIJBYvr
+    - rkeS1RVtPS
+    theme: Probabilistic Approaches
+  - ids:
+    - HklSeREtPB
+    - HJxrVA4FDS
+    - SJxUjlBtwB
+    - S1e_9xrFvS
+    - SyxrxR4KPS
+    - rklr9kHFDB
+    - S1eALyrYDH
+    theme: Biology and ML
+  - ids:
+    - SJxpsxrYPS
+    - BygPO2VKPH
+    - rygeHgSFDH
+    - BkgrBgSYDS
+    - rkl8sJBYvH
+    - Hyx-jyBFPr
+    - BJgNJgSFPS
+    - BygXFkSYDH
+    theme: Representation Learning
+  - ids:
+    - rJljdh4KDH
+    - BJeKh3VYDH
+    - H1l_0JBYwS
+    - Skey4eBYPS
+    - S1xWh1rYwB
+    theme: Feature Discovery for Structured Data
+  - ids:
+    - rklEj2EFvB
+    - BJliakStvH
+    - r1genAVKPB
+    - rkgvXlrKwH
+    - HkxlcnVFwB
+    theme: RL and Estimation
+- day: Wednesday
+  section:
+  - ids:
+    - S1lOTC4tDS
+    - S1xCPJHtDB
+    - rJgJDAVKvB
+    - BkxUvnEYDH
+    - H1ldzA4tPr
+    - BJlQtJSKDB
+    - rklHqRVKvH
+    theme: RL and Planning
+  - ids:
+    - ByeGzlrKwH
+    - S1ldO2EFPr
+    - rJxbJeHFPS
+    - S1e4jkSKvB
+    - HyxyIgHFvr
+    - HklRwaEKwB
+    - SJeLIgBKPS
+    - r1eBeyHFDH
+    theme: Theory
+  - ids:
+    - BkgYPREtPr
+    - Hke-WTVtwr
+    - Syx79eBKwr
+    - Hkx7xRVYDr
+    - rkgNKkHtvB
+    - SJe5P6EYvS
+    theme: Sequence Representations
+  - ids:
+    - BJg866NFvB
+    - SkeyppEFvS
+    - HkxYzANYDB
+    - HJgzt2VKPB
+    - S1g2skStPB
+    theme: Actions and Counterfactuals
+  - ids:
+    - Sklgs0NFvr
+    theme: Actions and Counterfactuals (used to, moved 1008 to take its place)
+  - ids:
+    - SkeuexBtDr
+    - S1eZYeHFDS
+    - ryxjnREFwH
+    - Ske31kBtPr
+    - rkg6sJHYDr
+    theme: Symbols and Discovery
+  - ids:
+    - BJxsrgStvr
+    - rJg8TeSFDH
+    - SJgndT4KwB
+    - HyevIJStwH
+    - ryghZJBKPS
+    - rygixkHKDH
+    theme: Optimisation I
+- day: Thursday
+  section:
+  - ids:
+    - BygzbyHFvB
+    - BJxSI1SKDH
+    - Byl8hhNYPS
+    - Hke0K1HKwr
+    - H1eA7AEtvS
+    - BkxRRkSKwr
+    - HkxQRTNYPH
+    - S1efxTVYDr
+    theme: Natural Language
+  - ids:
+    - BJlS634tPr
+    - HJeTo2VFwH
+    - rkeu30EtvS
+    - H1gNOeHKPS
+    - rJehVyrKwH
+    - HJxyZkBKDr
+    - H1gDNyrKDS
+    - S1gSj0NKvB
+    theme: Network Architectures
+  - ids:
+    - ByxxgCEYDS
+    - S1e2agrFvS
+    - B1e3OlStPB
+    - r1lZ7AEKvB
+    - r1lfF2NYvH
+    - HJlWWJSFDH
+    - r1lGO0EKDH
+    - H1gax6VtDB
+    theme: Graphs and Representations
+  - ids:
+    - SJl5Np4tPr
+    - BJge3TNKwH
+    - SJgwNerKvB
+    - BJeAHkrYDS
+    - HJgLZR4KvH
+    - SJgwNerKvB
+    theme: Continual Learning and Few Shot Learning
+  - ids:
+    - Hklz71rYvS
+    - r1g87C4KwB
+    - BkevoJSYPB
+    - SJxstlHFPH
+    - H1lma24tPB
+    theme: Optimisation II
+  - ids:
+    - B1gdkxHFDH
+    - Hkekl0NFPr
+    - H1xFWgrFPS
+    - BJlrF24twB
+    - BkluqlSFDS
+    theme: Fairness, Interpretabiity and Deployment
+- day: ''
+  section:
+  - ids:
+    - ''
+    - ''
+    - ''
+    theme: ''

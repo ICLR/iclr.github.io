@@ -26,10 +26,19 @@ def main(site_data_path):
         elif typ == "yml":
             site_data[name] = yaml.load(open(f).read(),
                                         Loader=yaml.BaseLoader)
-        
+
+
+    paper_session = {}
+    for v in site_data["poster_schedule"]:
+        for poster in v["posters"]:
+            paper_session.setdefault(poster, [])
+            paper_session[poster].append( v["name"])
+
     for i, (k,n) in enumerate(site_data["papers"].items()):
         n["content"]["iclr_id"] = k
+        n["content"]["session"] = paper_session[k]
         titles[n["content"]["title"]] = k
+
         if "TL;DR" in n["content"]:
             n["content"]["TLDR"] = n["content"]["TL;DR"]
         else:
@@ -43,16 +52,16 @@ def main(site_data_path):
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="ICLR Portal Command Line")
-    
-    parser.add_argument('--build', action='store_true', default=False, 
-                        help="Convert the site to static assets")
-    
-    parser.add_argument('-b', action='store_true', default=False, dest="build", 
+
+    parser.add_argument('--build', action='store_true', default=False,
                         help="Convert the site to static assets")
 
-    parser.add_argument('path', 
+    parser.add_argument('-b', action='store_true', default=False, dest="build",
+                        help="Convert the site to static assets")
+
+    parser.add_argument('path',
                         help="Pass the JSON data path and run the server")
-    
+
     args = parser.parse_args()
     return args
 
@@ -78,6 +87,18 @@ def home():
 @app.route('/livestream.html')
 def livestream():
     return render_template('pages/livestream.html', **{})
+
+@app.route('/daily_<day>.html')
+def daily(day):
+    out = [s for s in site_data["oral_schedule"] if s["day"] == day][0]
+
+    out = { "day": out["day"],
+            "section":
+            [{"theme": o["theme"],
+              "papers": [site_data["papers"][id]
+                         for id in o["ids"]]}
+             for o in out["section"]] }
+    return render_template('pages/daily.html', **out)
 
 
 @app.route('/papers.html')
@@ -202,14 +223,14 @@ def your_generator_here():
 
 if __name__ == "__main__":
     args = parse_arguments()
-    
-    site_data_path = args.path    
+
+    site_data_path = args.path
     main(site_data_path)
 
     if args.build:
         freezer.freeze()
     else:
-        debug_val = False        
+        debug_val = False
         if(os.getenv("FLASK_DEBUG") == "True"):
             debug_val = True
 

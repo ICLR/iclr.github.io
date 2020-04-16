@@ -1,14 +1,32 @@
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
+function setQueryStringParameter(name, value) {
+    console.log("name", name, "value", value);
+    const params = new URLSearchParams(window.location.search);
+    params.set(name, value);
+    window.history.replaceState({}, "", decodeURIComponent(`${window.location.pathname}?${params}`));
+}
+
 let allPapers = [];
 const allKeys = {
     authors: [],
     keywords: [],
+    session: [],
     titles: []
 }
 const filters = {
     authors: null,
     keywords: null,
+    session: null,
     title: null
 };
+
 let render_mode = 'compact';
 
 
@@ -69,10 +87,15 @@ const start = () => {
 
         allPapers = papers;
         calcAllKeys(allPapers, allKeys);
-
-        setTypeAhead('authors', allKeys, filters, render);
-
+        console.log(getUrlParameter("filter") || 'authors');
+        setTypeAhead(getUrlParameter("filter") || 'authors',
+                     allKeys, filters, render);
         updateCards(allPapers)
+        if (getUrlParameter("search") != null) {
+            filters[getUrlParameter("filter")] = getUrlParameter("search");
+            $('.typeahead_all').val(getUrlParameter("search"));
+            render();
+        }
 
     }).catch(e => console.error(e))
 }
@@ -83,8 +106,11 @@ const start = () => {
  * **/
 
 d3.selectAll('.filter_option input').on('click', function () {
-    const me = d3.select(this);
+    const me = d3.select(this)
+
     const filter_mode = me.property('value');
+    setQueryStringParameter("filter", me.property('value'));
+
     setTypeAhead(filter_mode, allKeys, filters, render);
 })
 
@@ -115,11 +141,11 @@ const card_html = openreview => `
                 <h6 class="card-subtitle text-muted" align="center">
                         ${openreview.content.authors.join(', ')}
 </h6>
-    <center><img class="cards_img" src="https://iclr.github.io/iclr-images/${openreview.content.iclr_id}.png" width="70%"/></center>
+    <center><img class="cards_img" src="https://iclr.github.io/iclr-images/${openreview.content.iclr_id}.png" width="80%"/></center>
 
             </div>`
   + ((render_mode === 'detail') ? `
-            <div class="card-body">
+            <div class="pp-card-header">
                 <p class="card-text"> ${openreview.content.TLDR}</p>
                 <p class="card-text"><span class="font-weight-bold">Keywords:</span>
                     ${openreview.content.keywords.map(keyword).join(', ')}
