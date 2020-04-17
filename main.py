@@ -164,6 +164,7 @@ def faq():
 
 @app.route('/about.html')
 def about():
+    site_data["about"]["FAQ"] = site_data["faq"]["FAQ"]
     return render_template('pages/about.html', **site_data["about"])
 
 @app.route('/chat.html')
