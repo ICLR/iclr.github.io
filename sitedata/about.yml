@@ -43,5 +43,5 @@ committee:
     name: Adam White
     aff : DeepMind
   - role: Web Chair
-    name: Hendrick Strobelt
-    aff: IBM
+    name: Hendrik Strobelt
+    aff: MIT-IBM AI Lab
