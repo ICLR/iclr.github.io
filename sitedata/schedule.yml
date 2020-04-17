@@ -3,17 +3,18 @@
 time_slots:
   5a: [5:00 AM,7:00 AM]
   8a: [8:00 AM,10:00 AM]
-  11a: [11:00 AM, 11:30 AM]
+  11a: [11:00 AM, 12:00 PM]
   12p: [12:00 PM, 2:00 PM]
-  2p: [2:00 PM, 2:30 PM]
-  4p: [4:00 PM, 4:30 PM]
+  2p: [2:00 PM, 3:00 PM]
+  4p: [4:00 PM, 5:00 PM]
   5p: [5:00 PM, 7:00 PM]
-  7p: [7:00 PM, 7:30 PM]
+  7p: [7:00 PM, 8:00 PM]
   8p: [8:00 PM, 10:00 PM]
 
 
 conference:
   - day: "2020-04-27"
+    
     events:
       - slot: 5a
         type: poster

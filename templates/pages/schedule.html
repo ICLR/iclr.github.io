@@ -94,7 +94,7 @@
 
     <ul class="nav nav-pills justify-content-center">
       <li class="nav-item"><a class="nav-link active " data-toggle="tab" href="#tab-Monday" role="tab" aria-controls="nav-home" aria-selected="true">Monday</a></li>
-      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-Tuesday" role="tab" aria-controls="nav-home" aria-selected="true">Tuesday</a></li>
+      <li class="nav-item"><a class="nav-link"  href="#tab-Tuesday" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">Tuesday</a></li>
       <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-Wednesday" role="tab" aria-controls="nav-home" aria-selected="true">Wednesday</a></li>
       <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-Thursday" role="tab" aria-controls="nav-home" aria-selected="true">Thursday</a> </li>
     </ul>
@@ -129,17 +129,12 @@
 {% for base in days %}
 
 
-<div class="tab-pane {% if loop.index == 1%}active{% endif %} fade" id="tab-{{base.day}}" role="tabpanel" aria-labelledby="nav-profile-tab">
+<div class="tab-pane  {% if loop.index == 1%}active {% else %} fade{% endif %}" id="tab-{{base.day}}" role="tabpanel" aria-labelledby="nav-profile-tab">
   
 <div class="border-top my-4" id="{{base.day}}"></div>
 
 
 <div class="container" >
-  <div class="row p-4">
-    <div class="col-12 bd-content ">
-      <h2  class="text-center"> </h2>
-    </div>
-  </div>
 
 
   <div class="row p-4">
