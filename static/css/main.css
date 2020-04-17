@@ -32,6 +32,8 @@ body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
   .cards.myCard {display: flex;flex-flow: wrap;margin-left: 0;box-sizing: border-box;}
   .cards {margin-top: 10px;}
   .card-title {margin-top: 10px; font-size: 20px;}
+  h2.card-title  {margin-top: 10px; font-size: 30px;}
+  h3.card-subtitle.text-muted  {margin-top: 10px; font-size: 20px;}
   .card-subtitle.text-muted {text-align: center; font-size: 13px;}
 
   .main-title {font-weight: 700;  color: #2294e0;}
@@ -49,7 +51,7 @@ body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
   }
 
   .sponsorLogo {
-  width: 250px;
+  width: 300px;
   display: block;
   margin-left: auto;
     margin-right: auto;

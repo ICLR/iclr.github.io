@@ -11,7 +11,7 @@
 
 <!-- Title -->
 <div class="container">
- <div class="card m-3" style="">
+ <div class="pp-card m-3" style="">
    <div class="card-header">
      <h3 class="card-title main-title text-center" style="">
        {{info.name}}
@@ -23,27 +23,19 @@
      
      <center class="p-3">
        <a class="card-link" data-toggle="collapse" role="button" href="#details">
-         <button class="btn btn-outline-secondary">
            Description
-         </button>
        </a>
               
        <a href="" target="_blank"  class="card-link">
-         <button class="btn btn-outline-secondary">
            Zoom
-         </button>
        </a>
        
        <a href="{{info.website}}" target="_blank"  class="card-link">
-         <button class="btn btn-outline-secondary">
            Site
-         </button>
        </a>
 
        <a href="{{info.website}}" target="_blank"  class="card-link">
-         <button class="btn btn-outline-secondary">
            Schedule
-         </button>
        </a>
 
      </center>
@@ -51,7 +43,7 @@
    </div>
  </div>
 
- <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+ <div id="details" class="pp-card m-3 collapse" >
    <div class="card-body">
      <p class="card-text">
        <div id="abstractExample">
@@ -71,7 +63,7 @@
 
 <div class="container ">
   <div class="row m-2">
-    <div class="col-7">
+    <div class="col-md-7 col-xs-12 my-auto p-2" >
       <div id="presentation-embed-38915748" class="slp"></div>
       <script src='https://slideslive.com/embed_presentation.js'></script>
       <script>
@@ -85,12 +77,11 @@
         });
       </script>
     </div>
-    
-    <div class="col-5 p-1 my-auto">        
-        <div id="gitter" class="gitter container " >
+    <div class="col-md-5 col-xs-12 p-2"> 
+        <div id="gitter" class="slp " >
           <center>
             <div class="border">
-              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/workshop_{{info.chat}}?layout=embedded" width="100%" height="680px"></iframe> </center>
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/workshop_{{info.chat}}?layout=embedded" width="100%" height="700px"></iframe> </center>
             </div>
           </center>
         </div>

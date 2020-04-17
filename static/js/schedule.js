@@ -1,4 +1,4 @@
-const table_height = 600;
+const table_height = 800;
 
 let sc = null;
 let min_max_time = [];
@@ -32,6 +32,7 @@ function updateTable() {
       .classed('today', d => {
           return day_format(today) === day_format(day_parse(d.day))
       })
+      .style('margin-top', "15px")
       .style('height', `${table_height}px`)
 
     const slots = sc.time_slots;
@@ -78,7 +79,7 @@ function updateTable() {
               res += `<div  class="time_slot"> ${tf(d.real_times[0])} - ${tf(
                 d.real_times[1])} ${dd!==0 ? '+' + dd + 'd' : ''} </div>`
               res += `<a href="papers.html?filter=session&search=${day}+Session+${matches[2]}"> <span class="session-title">` +
-                `Poster Day ${matches[1]} Session ${matches[2]} (${d.short})</span> </a>`
+                `Poster Day ${matches[1]} Session ${matches[2]}</span> </a>`
 
           } else if (d.type === 'qa') {
               res += `<span class="time_slot">${tf(

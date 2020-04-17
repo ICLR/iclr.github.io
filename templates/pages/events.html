@@ -33,7 +33,7 @@
   <div class ="container">
     <div class="cards row">
     {% for workshop in workshops %}
-    <div class="col-6 p-3" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+    <div class="col-md-6 col-sm-12 p-3" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
       <div class="card" style="display:block; overflow:hidden; width:100%;">
         <div class="card-header text-center" style="min-height: 150px; width:100%;">
           <a class="" href="workshops_{{loop.index}}.html">
@@ -98,11 +98,11 @@
         <div class="card">
           <div class="card-header">
             <div class="row">
-              <div class="col-2">
+              <div class="col-md-2 col-sm-6">
                 <img src="{{speaker.image}}" width="100%">
               </div>
 
-              <div class="col-10 ">
+              <div class="col-md-10 col-sm-6">
 
                 <div class="m-3">
                 <span class="card-title h3" >

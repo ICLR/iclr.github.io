@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet" href="static/css/schedule.css">
-
+    <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -40,14 +40,10 @@
             integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
             crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="static/css/main.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
 
+ 
     <title> ICLR 2020: Schedule </title>
 </head>
 
@@ -59,12 +55,12 @@
 <div class="container" id="container" style="padding-top: 20px;">
 
 
-    <ul class="nav justify-content-center">
-      <li class="nav-item"><a class="nav-link" href="#Monday">Monday</a></li>
-      <li class="nav-item"><a class="nav-link" href="#Tuesday">Tuesday</a></li>
-      <li class="nav-item"><a class="nav-link" href="#Wednesday">Wednesday</a></li>
-      <li class="nav-item"><a class="nav-link" href="#Thursday">Thursday</a> </li>
-    </ul>
+    <!-- <ul class="nav justify-content-center"> -->
+    <!--   <li class="nav-item"><a class="nav-link" href="#Monday">Monday</a></li> -->
+    <!--   <li class="nav-item"><a class="nav-link" href="#Tuesday">Tuesday</a></li> -->
+    <!--   <li class="nav-item"><a class="nav-link" href="#Wednesday">Wednesday</a></li> -->
+    <!--   <li class="nav-item"><a class="nav-link" href="#Thursday">Thursday</a> </li> -->
+    <!-- </ul> -->
 
     <div class="my-3"></div>
 
@@ -110,6 +106,13 @@
 <div class="container" >
   <div class="row p-4">
     <div class="col-12 bd-content ">
+      <h2  class="text-center"> </h2>
+    </div>
+  </div>
+
+
+  <div class="row p-4">
+    <div class="col-12 bd-content ">
       <h2  class="text-center"> {{base.day}}</h2>
     </div>
   </div>
@@ -122,15 +125,15 @@
 
     {% for speaker in base.speakers %}
         <div class="row">
-      <div class="col-12 m-3 ">
+      <div class="col-md-12 m-3 ">
         <div class="card">
           <div class="card-header">
             <div class="row">
-              <div class="col-2">
+              <div class="col-md-2 col-sm-6">
                 <img src="{{speaker.image}}" width="100%">
               </div>
 
-              <div class="col-10 ">
+              <div class="col-md-10 col-sm-6">
 
                 <div class="m-3">
                 <span class="card-title h3" >
@@ -157,10 +160,10 @@
   <!-- Session -->
   {% for s in base.section %}
   <div class="row p-3">
-    <h3>Session: {{s.theme}}</h3>
+    <h3><a class="text-muted" href="papers.html?filter=session&search={{base.day}}: {{s.theme}}">Session: {{s.theme}}</a></h3>
   </div>
   <div class ="row my-auto mx-auto">
-    <div id="carouselExample{{base.day}}{{loop.index}}" class="carousel slide" data-interval="false">
+    <div id="carouselExample{{base.day}}{{loop.index}}" class="carousel slide d-none d-md-block" data-interval="false">
         <div class="carousel-inner cards" role="listbox">
           {% for openreview in s.papers %}
           {% if loop.index % 3 == 1 %}
@@ -209,7 +212,7 @@
     <div class="row">
       <div class="col-12">
            <h3 class="text-center">
-             <a class ="text-muted" href="papers.html?filter=session&search={{base.short}}+Session+{{i}}">Session {{i}}</a>
+             <a class ="text-muted" href="papers.html?filter=session&search={{base.short}}+Session+{{loop.index}}">Session {{i}}</a>
            </h3>
     </div>
     </div>

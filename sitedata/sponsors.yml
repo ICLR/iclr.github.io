@@ -2,59 +2,72 @@ sponsors:
 - tier: Diamond
   vals:
     - name: Facebook
+      url: https://iclr.6connex.com/event/VirtualEvent/
       img_url: https://ai.facebook.com/
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/facebook.png
     - name: Google
       img_url: https://research.google
+      url: https://iclr.6connex.com/event/VirtualEvent/
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/google-iclr-2020.png
     - name: DeepMind
       img_url: http://www.deepmind.com
+      url: https://iclr.6connex.com/event/VirtualEvent/
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/DeepMind-nips-2019.png
 - tier: Gold
   vals:
     - name: Jane Street
       img_url: https://www.janestreet.com/
+      url: https://iclr.6connex.com/event/VirtualEvent/
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/jane-street-nips-2018.png
     - name: Salesforce
       img_url: https://einstein.ai/
+      url: https://iclr.6connex.com/event/VirtualEvent/
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/salesforce-2017.png
     - name: Amazon
       img_url: https://www.amazon.jobs/en/landing_pages/ICLR
-      img_src: https://iclr.cc/static/admin/img/sponsor_logos/amazon-icml-2018.png
+      url: https://iclr.6connex.com/event/VirtualEvent/
+      img_src: static/amscience.png
+      size: 350px
     - name: OpenAI
       img_url: https://openai.com/
+      url: https://iclr.6connex.com/event/VirtualEvent/
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/openai-iclr-2019.png
     - name: IBM Research
       img_url: https://www.research.ibm.com/artificial-intelligence/
+      url: https://iclr.6connex.com/event/VirtualEvent/
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/ibm-nips-2019.png
 - tier: Silver
   vals:
     - name: Alibaba Group
       img_url: https://www.alibabagroup.com/en/about/overview
+      url: https://iclr.6connex.com/event/VirtualEvent/
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/alibaba.png
     - name: Apple
       img_url: https://www.apple.com/jobs/us/teams/machine-learning-and-ai.html
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/apple-nips-2019.png
+      url: https://iclr.6connex.com/event/VirtualEvent/
       size: 200px
     - name: Microsoft
       img_url: http://www.microsoft.com/research
+      url: https://iclr.6connex.com/event/VirtualEvent/
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/microsoft-nips-2018.png
     - name: ByteDance
       img_url: http://www.bytedance.com
+      url: https://iclr.6connex.com/event/VirtualEvent/
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/ByteDance-nips-2019.png
 - tier: Bronze
   vals:
     - name: The D. E. Shaw Group
-      img_url: http://www.deshaw.com
+      url: http://www.deshaw.com
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/de_shaw-iclr-2019.png
     - name: Two Sigma
-      img_url: http://www.twosigma.com/
+      url: http://www.twosigma.com/
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/two_sigma.png
     - name: Lambda
-      img_url: https://lambdalabs.com/
+      url: https://lambdalabs.com/
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/lambda-nips-2017.png
 - tier: Start-Up Companies
   vals:
     - name: Element AI
-      img_url: http://www.elementai.com
+      url: http://www.elementai.com
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/element-ai-2017.png

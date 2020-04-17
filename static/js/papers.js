@@ -18,13 +18,15 @@ const allKeys = {
     authors: [],
     keywords: [],
     session: [],
-    titles: []
+    titles: [],
+    recs: [],
 }
 const filters = {
     authors: null,
     keywords: null,
     session: null,
-    title: null
+    title: null,
+    recs: null,
 };
 
 let render_mode = 'compact';

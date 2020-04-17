@@ -33,10 +33,26 @@ def main(site_data_path):
         for poster in v["posters"]:
             paper_session.setdefault(poster, [])
             paper_session[poster].append( v["name"])
+    for s in site_data["oral_schedule"]:
+        day = s["day"]
+        for section in s["section"]:
+            key = day + ": " +section["theme"]
+            for poster in section["ids"]:
+                paper_session.setdefault(poster, [])
+                paper_session[poster].append(key)
 
+            
+    rec_to = {}
+    for k, v in site_data["author_recs"].items():
+        for v2 in v:
+            rec_to.setdefault(v2, [])
+            rec_to[v2].append(k)
+    
     for i, (k,n) in enumerate(site_data["papers"].items()):
         n["content"]["iclr_id"] = k
         n["content"]["session"] = paper_session[k]
+        n["content"]["recs"] = rec_to[k] + [site_data["papers"][t]["content"]["title"]
+                                            for t in site_data["paper_recs"][k]]
         titles[n["content"]["title"]] = k
 
         if "TL;DR" in n["content"]:
@@ -94,6 +110,13 @@ adays = {"Monday":"Mon",
  "Thursday":"Thurs"
 }
 
+
+times = ["1 - (05:00 to 07:00 GMT)",
+         "2 - (08:00 to 10:00 GMT)",
+         "3 - (12:00 to 14:00 GMT)",
+         "4 - (17:00 to 19:00 GMT)",
+         "5 - (20:00 to 22:00 GMT)"]
+
 @app.route('/daily_<day>.html')
 def daily(day):
 
@@ -104,7 +127,7 @@ def daily(day):
            if s["day"] == day][0]
     out = { "day": out["day"],
             "short": adays[day],
-            "sessions" : range(1, 6),
+            "sessions" : times,
             "speakers": speakers,
             "section":
             [{"theme": o["theme"],
@@ -167,7 +190,7 @@ def schedule():
         out = [s for s in site_data["oral_schedule"] if s["day"] == day][0]
         out = { "day": out["day"],
             "short": adays[day],
-            "sessions" : range(1, 6),
+            "sessions" : times,
             "speakers": speakers,
             "section":
             [{"theme": o["theme"],
@@ -261,6 +284,9 @@ def your_generator_here():
     yield "speakers", {}
     yield "schedule", {}
     yield "schedule_json", {}
+    yield "chat", {}
+    yield "events", {}
+    yield "about", {}
     yield "embeddings", {"emb":"tsne"}
     for day in ["Monday", "Tuesday",
                 "Wednesday","Thursday"]:
@@ -268,7 +294,7 @@ def your_generator_here():
 
     for i in site_data["papers"].keys():
         yield "poster", {"poster": str(i)}
-    for i in range(len(site_data["workshops"])):
+    for i in range(len(site_data["workshops"]["workshops"])):
         yield "workshop", {"workshop": str(i)}
 
 
