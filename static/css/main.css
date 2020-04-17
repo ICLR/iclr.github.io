@@ -1,5 +1,7 @@
 body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .jumbotron{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+.container a:hover { text-decoration: none;}
+
+.jumbotron{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
   .btn-group{background-color: white}
   .btn {background-color: white}
   #main-nav {padding-top:10px; padding-bottom:10px;}
@@ -118,6 +120,9 @@ div.anchor {
 
   box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
   }
+.details {
+    font-family: 'Lato', sans-serif;
+}
 
   #abstractExample.collapse:not(.show) {
   display: block;

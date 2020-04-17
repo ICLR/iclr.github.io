@@ -36,10 +36,10 @@
     <div class="col-md-6 col-sm-12 p-3" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
       <div class="card" style="display:block; overflow:hidden; width:100%;">
         <div class="card-header text-center" style="min-height: 150px; width:100%;">
-          <a class="" href="workshops_{{loop.index}}.html">
-          <h5 class="card-title">
+          <a class="text-muted" href="workshops_{{loop.index}}.html">
+          <h3 class="card-title">
             {{workshop.name}}
-          </h5>
+          </h3>
           </a>
           <div class="card-subtitle text-muted">
             {{workshop.organizers}}
@@ -61,13 +61,13 @@
  <div class ="container">
     <div class="cards row">
     {% for social in socials %}
-    <div class="col-6 p-3" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+    <div class="col-md-6 col-sm-12 p-3" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
       <div class="card" style="display:block; overflow:hidden; width:100%;">
         <div class="card-header text-center" style="min-height: 150px; width:100%;">
-          <a class="" href="workshops_{{loop.index}}.html">
-          <h5 class="card-title">
+          <a class="text-muted" href="workshops_{{loop.index}}.html">
+          <h3 class="card-title">
             {{social.name}}
-          </h5>
+          </h3>
           </a>
           <div class="card-subtitle text-muted">
             {{social.organizers}}
@@ -98,8 +98,8 @@
         <div class="card">
           <div class="card-header">
             <div class="row">
-              <div class="col-md-2 col-sm-6">
-                <img src="{{speaker.image}}" width="100%">
+              <div class="col-md-2 col-sm-5">
+                <img src="{{speaker.image}}"  width="100%" class="img-thumbnail">
               </div>
 
               <div class="col-md-10 col-sm-6">

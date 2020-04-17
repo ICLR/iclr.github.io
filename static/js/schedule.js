@@ -1,4 +1,4 @@
-const table_height = 800;
+const table_height = 8o00;
 
 let sc = null;
 let min_max_time = [];
@@ -32,7 +32,7 @@ function updateTable() {
       .classed('today', d => {
           return day_format(today) === day_format(day_parse(d.day))
       })
-      .style('margin-top', "15px")
+      .style('margin-top', "30px")
       .style('height', `${table_height}px`)
 
     const slots = sc.time_slots;

@@ -48,3 +48,5 @@
 .tt-suggestion:hover {
   cursor: pointer;
 }
+
+.twitter-typeahead, .tt-hint, .tt-input, .tt-menu { width: 90%; }
