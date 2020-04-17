@@ -9,6 +9,7 @@ function updateTable() {
     const scale = d3.scaleTime().domain(min_max_time).range([25, table_height])
 
     const day_format = d3.utcFormat('%a %m/%e');
+    const day_name = d3.utcFormat('%A');
     const day_parse = d3.utcParse('%Y-%m-%e');
 
     //TODO: replace
@@ -20,7 +21,7 @@ function updateTable() {
           const res = enter.append('div')
           res.append('a')
               .attr('class', 'day_header')
-              .attr("href", 'daily_Monday.html')             
+              .attr("href", d => "#" + day_name(day_parse(d.day)))             
             .text(d => day_format(day_parse(d.day)))
               .attr('data-name', d => day_parse(d.day));
 

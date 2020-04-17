@@ -1,0 +1,47 @@
+committee:
+
+
+  - role: General Chair
+    name: Alexander Rush
+    aff: Cornell Tech
+    im: https://avatars0.githubusercontent.com/u/35882?s=400&u=8f382f638b31f13a4754656140256241121c5916&v=4
+    tw: srush_nlp
+  - role: Senior Program Chair
+    name: Shakir Mohamed
+    aff: DeepMind
+    im:
+  - role: Program Chair
+    name: Martha White
+    aff: University of Alberta
+    im:
+  - role: Program Chair
+    name: Kyunghyun Cho
+    aff: NYU & FAIR
+    im:
+  - role: Program Chair
+    name: Dawn Song
+    aff: UC Berkeley
+  - role: Workshop Chair
+    name: Gabriel Synnaeve
+    aff: Facebook AI Research
+  - role: Workshop Chair
+    name: Asja Fischer,
+    aff: Ruhr University Bochum
+  - role: D&I Chair
+    name: Animashree Anandkumar
+    aff: Cal Tech / NVidia
+  - role: D&I Chair
+    name: Kevin Swersky
+    aff: Google AI
+  - role: Logistics Chair
+    name: Timnit Gebru
+    aff: Google Brain
+  - role: Logistics Chair
+    name: Esube Bekele
+    aff: In-Q-Tel
+  - role: Social Chair
+    name: Adam White
+    aff : DeepMind
+  - role: Web Chair
+    name: Hendrick Strobelt
+    aff: IBM

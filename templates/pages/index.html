@@ -4,22 +4,28 @@
   {% include 'pages/head.html' %}
 
 
+  <style>
+    .back {
+    background: url('static/images/mount.jpg') no-repeat fixed center;
+    background-size: auto;
+    }
+
+  </style>
   <body>
     <!-- NAV -->
     {% set active_page = "Home" %}
     {% include 'pages/header.html' %}
 
-    <div class="jumbotron jumbotron-fluid" style="background: url('static/images/mount.jpg') no-repeat fixed center; background-size: auto;">
+    <div class="jumbotron jumbotron-fluid back" >
       <div class="container">
 
-        <div class="row">
-          <div class="p-2 mx-auto text-center text-white">
-            <img src="static/images/ICLR-logo-white.png"/>
+        <div class="row" >
+          <div class="p-2 mx-auto text-center text-white" >
+            <img src="static/images/ICLR-logo-white.png"  />
           </div>
         </div>
         <div class="row header">
-
-          <div class="p-1 mx-auto text-center text-white col-5">
+          <div class="p-1 mx-auto text-center text-white col-5" >
             <h1 class="">
             EIGHTH
             INTERNATIONAL

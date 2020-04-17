@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+{% set page_title = "ICLR 2020 - About" %}
+{% include 'pages/head.html' %}
+
+<body>
+  <!-- NAV -->
+  {% set active_page = "About" %}
+  {% include 'pages/header.html' %}
+
+    <ul class="nav justify-content-center">
+      <li class="nav-item"><a class="nav-link" href="#organizers">Organizers</a></li>
+      <li class="nav-item"><a class="nav-link" href="#legal">Legal</a></li>
+    </ul>
+
+
+  <div class="container">
+    <div class="border-top my-3"></div>
+    <div class="row p-4" id="organizers">
+      <div class="col-12 bd-content ">
+        <h2 class="text-center"> Organizers </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      {% for org in committee %}
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="" class="text-muted">
+              <h5 class="card-title" align="center">{{org.name}}</h5></a>
+
+            <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              {{org.role}}
+            </h6>
+            </div>
+            <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              {{org.aff}} / <a href="http://twitter.com/{{org.tw}}">@{{org.tw}}</a>
+            </h6>
+            </div>
+
+            <center>
+              <img src="{{org.im}}" class="cards_img" style="max-height:1000px" width="50%"/>
+              </center>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div >
+
+    <div class="border-top my-3"></div>
+    <div class="row p-4" id="legal">
+      <div class="col-12 bd-content ">
+        <h2 class="text-center"> Legal </h2>
+      </div>
+    </div>
+
+  </div>
+    {% include 'pages/footer.html' %}
+</body>

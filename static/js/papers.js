@@ -129,7 +129,7 @@ d3.select('.reshuffle').on('click', () => {
  * CARDS
  */
 
-const keyword = kw => `<a href="keyword_${kw}.html"
+const keyword = kw => `<a href="papers.html?filter=keywords&search=${kw}"
                        class="text-secondary text-decoration-none">${kw.toLowerCase()}</a>`
 //language=HTML
 const card_html = openreview => `

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+{% set page_title = "ICLR 2020 - Chat" %}
+{% include 'pages/head.html' %}
+
+<body>
+
+  <!-- NAV -->
+  {% set active_page = "Chat" %}
+  {% include 'pages/header.html' %}
+
+  <div class="slp">
+    <iframe id="frame" width="100%" src="www.google.com">
+      </iframe>
+  </div>
+
+  <script type="text/javascript">
+    console.log("run out");
+    $( document ).ready(function() {
+    console.log("run");
+    var win_height;
+    var frm_height;
+    var oFrame = $("#frame");
+    console.log(oFrame);
+    // Get page height Firefox/IE
+    if(window.innerHeight) win_height = window.innerHeight;
+    else if(document.body.clientHeight) win_height = document.body.clientHeight;
+
+    // Dtermine new height
+    frm_height = win_height - oFrame.offset().top - 15; // replace 15 accordingly
+
+    // Set iframe height
+    console.log(frm_height)
+    oFrame.attr("height", frm_height + "px");
+    oFrame.attr("src", "https://iclr.rocket.chat/");
+    });
+  </script>
+
+</body>
