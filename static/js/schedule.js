@@ -1,4 +1,4 @@
-const table_height = 8o00;
+const table_height = 800;
 
 let sc = null;
 let min_max_time = [];
