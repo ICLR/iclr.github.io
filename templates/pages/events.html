@@ -13,10 +13,10 @@
 
 
     <ul class="nav nav-pills justify-content-center">
-      <li class="nav-item"><a class="nav-link active" href="#tab-workshops" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">Workshops</a></li>
-      <li class="nav-item"><a class="nav-link" href="#tab-socials" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">Socials</a></li>
-      <li class="nav-item"><a class="nav-link" href="#tab-speakers" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">Speakers</a></li>
-      <li class="nav-item"><a class="nav-link" href="#expos" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">Expos</a> </li>
+      <li class="nav-item"><a class="nav-link active text-muted" href="#tab-workshops" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">Workshops</a></li>
+      <li class="nav-item"><a class="nav-link text-muted" href="#tab-socials" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">Socials</a></li>
+      <li class="nav-item"><a class="nav-link text-muted" href="#tab-speakers" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">Speakers</a></li>
+      <li class="nav-item"><a class="nav-link text-muted" href="#expos" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">Expos</a> </li>
     </ul>
 
 
@@ -110,7 +110,7 @@
                   
                   <div class="col-md-10 col-sm-6">
                     
-                    <div class="m-3">
+                    <div class="m-3 text-muted ">
                       <span class="card-title h3" >
                         {{speaker.speaker}}
                       </span>
@@ -119,7 +119,7 @@
                       </span>
                     </div>
                     
-                    <div class="m-3">
+                    <div class="m-3 text-muted ">
                       <h3>
                         {{speaker.title}}
                       </h3>
@@ -135,5 +135,5 @@
     </div>
 </div>
 </div>
-
+{% include 'pages/footer.html' %}
   </body>

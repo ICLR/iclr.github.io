@@ -21,7 +21,6 @@ function updateTable() {
           const res = enter.append('div')
           res.append('a')
               .attr('class', 'day_header')
-              .attr("href", d => "#" + day_name(day_parse(d.day)))             
             .text(d => day_format(day_parse(d.day)))
               .attr('data-name', d => day_parse(d.day));
 

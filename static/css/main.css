@@ -1,3 +1,11 @@
+
+ h2,  h3 {
+    font-family: 'Lato';
+}
+label:text-muted, .nav-link {
+   font-family: 'Lato';
+}
+
 body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
 .container a:hover { text-decoration: none;}
 
@@ -24,10 +32,16 @@ body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
   .cards_img {margin-top: 20px;
               border-radius: 2;
               max-height: 100px;}
-
+  body .nav-pills .nav-link.active {
+      
+      background-color: #bed972;
+  }
+  
   .container {margin-top: 10px;}
   .card {font-family: 'Exo';}
   .card-header { 
+                font-family: "Exo";}
+  .card-header .card-title { 
                 font-family: "Exo";}
 
   .cards.myCard {display: flex;flex-flow: wrap;margin-left: 0;box-sizing: border-box;}
