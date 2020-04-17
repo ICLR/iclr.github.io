@@ -88,11 +88,24 @@ def home():
 def livestream():
     return render_template('pages/livestream.html', **{})
 
+adays = {"Monday":"Mon",
+ "Tuesday":"Tues",
+ "Wednesday":"Wed",
+ "Thursday":"Thurs"
+}
+
 @app.route('/daily_<day>.html')
 def daily(day):
-    out = [s for s in site_data["oral_schedule"] if s["day"] == day][0]
 
+    speakers = [s for s in site_data["speakers"]["speakers"]
+                if s["day"] == day]
+        
+    out = [s for s in site_data["oral_schedule"]
+           if s["day"] == day][0]
     out = { "day": out["day"],
+            "short": adays[day],
+            "sessions" : range(1, 6),
+            "speakers": speakers,
             "section":
             [{"theme": o["theme"],
               "papers": [site_data["papers"][id]

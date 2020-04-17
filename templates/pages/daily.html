@@ -13,14 +13,51 @@
   <div class="container">
     <div class="row p-4">
       <div class="col-12 bd-content ">
-        <h2 class="text-center">  {{day}} Orals </h2>
+        <h2 class="text-center">  {{day}} Schedule </h2>
       </div>
     </div>
 
+    <div class="row p-3">
+      <h3>Invited Speakers</h3>
+    </div>
+
+    {% for speaker in speakers %}
+        <div class="row">
+      <div class="col-12 m-3 ">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-2">
+                <img src="{{speaker.image}}" width="100%">
+              </div>
+
+              <div class="col-10 ">
+
+                <div class="m-3">
+                <span class="card-title h3" >
+                  {{speaker.speaker}}
+                </span> 
+                <span>
+                  {{speaker.institution}}
+                </span>
+                </div>
+                
+                <div class="m-3">
+                <h3>
+                  {{speaker.title}}
+                </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
 
     {% for s in section %}
     <div class="row p-3">
-      <h3>Session: {{s.theme}}</h3>
+      <h3>Oral Session: {{s.theme}}</h3>
     </div>
     <div class ="row my-auto mx-auto">
       <div id="carouselExample{{loop.index}}" class="carousel slide" data-interval="false">
@@ -44,7 +81,7 @@
               </div>
             </div>
           </div>
-          {% if loop.index % 3 == 0 %}
+          {% if loop.index % 3 == 0 or loop.index == loop.length%}
           </div>
           {% endif %}
           {% endfor %}
@@ -60,10 +97,23 @@
 
       </div>
     </div>
-
-
-
     {% endfor %}
+
+    <div class="row p-3">
+      <h3> Poster Sessions</h3>
+    </div>
+
+    {% for i in sessions %}
+    <div class="row">
+      <div class="col-12">
+           <h3 class="text-center">
+             <a class ="text-muted" href="papers.html?filter=session&search={{short}}+Session+{{i}}">Session {{i}}</a>
+           </h3>
+    </div>
+    </div>
+    {% endfor %}
+
+    
   </div>
 
 <!--   <script > -->

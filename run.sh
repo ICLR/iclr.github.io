@@ -1,2 +1,2 @@
 export FLASK_DEBUG=True
-python main.py sitedata/
+python3 main.py sitedata/

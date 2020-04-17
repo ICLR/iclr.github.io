@@ -18,10 +18,13 @@ function updateTable() {
       .selectAll('.day').data(sc.conference)
       .join(enter => {
           const res = enter.append('div')
-          res.append('div')
-            .attr('class', 'day_header')
+          res.append('a')
+              .attr('class', 'day_header')
+              .attr("href", 'daily_Monday.html')             
             .text(d => day_format(day_parse(d.day)))
-            .attr('data-name', d => day_parse(d.day))
+              .attr('data-name', d => day_parse(d.day));
+
+          
           return res;
       })
       .attr('class', d => 'day')
