@@ -1,0 +1,11 @@
+<script type="text/javascript">
+  var divId;
+
+  $('.nav-link').click(function(){
+  divId = $(this).attr('href');
+  console.log("run");
+  $('html, body').animate({
+  scrollTop: $(divId).offset().top - 80
+  }, 100);
+  });
+</script>

@@ -95,6 +95,14 @@ body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
   transform: translateX(-200%);
 }
 
+
+div.anchor {
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
+}
+
 .carousel-control-next-icon {
   filter: invert(1);
   transform: translateX(200%);

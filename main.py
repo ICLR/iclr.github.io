@@ -126,9 +126,39 @@ def recommendations():
 def faq():
     return render_template('pages/faq.html', **site_data["faq"])
 
+@app.route('/about.html')
+def about():
+    return render_template('pages/about.html', **site_data["about"])
+
+@app.route('/chat.html')
+def chat():
+    return render_template('pages/chat.html')
+
+
+@app.route('/events.html')
+def events():
+    data = {}
+    data["workshops"] = site_data["workshops"]["workshops"]
+    data["speakers"] = site_data["speakers"]["speakers"]
+    data["socials"] = site_data["socials"]["socials"]
+    return render_template('pages/events.html', **data)
+
+
 @app.route('/calendar.html')
 def schedule():
-    return render_template('pages/schedule.html')
+    all_days = {"days": []}
+    for day in ["Monday", "Tuesday", "Wednesday", "Thursday"]:
+        out = [s for s in site_data["oral_schedule"] if s["day"] == day][0]
+        out = { "day": out["day"],
+                "section":
+                [{"theme": o["theme"],
+                  "papers": [site_data["papers"][id]
+                             for id in o["ids"]]}
+                 for o in out["section"]] }
+        all_days["days"].append(out)
+    print(all_days)
+    return render_template('pages/schedule.html', **all_days)
+
 
 @app.route('/socials.html')
 def socials():

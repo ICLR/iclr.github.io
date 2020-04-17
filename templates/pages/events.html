@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% set page_title = "ICLR 2020 - Events" %}
+  {% include 'pages/head.html' %}
+
+
+  <body>
+    <!-- NAV -->
+    {% set active_page = "Events" %}
+    {% include 'pages/header.html' %}
+
+<div class ="container">
+
+
+    <ul class="nav justify-content-center">
+      <li class="nav-item"><a class="nav-link" href="#workshops">Workshops</a></li>
+      <li class="nav-item"><a class="nav-link" href="#socials">Socials</a></li>
+      <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
+      <li class="nav-item"><a class="nav-link" href="#expos">Expos</a> </li>
+    </ul>
+
+
+
+    <!-- Workshops -->
+    <div class="border-top my-3"></div>
+
+    <div class="row p-4" id="workshops">
+    <div class="col-12 bd-content ">
+      <h2 class="text-center"> Workshops </h2>
+    </div>
+  </div>
+
+  <div class ="container">
+    <div class="cards row">
+    {% for workshop in workshops %}
+    <div class="col-6 p-3" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+      <div class="card" style="display:block; overflow:hidden; width:100%;">
+        <div class="card-header text-center" style="min-height: 150px; width:100%;">
+          <a class="" href="workshops_{{loop.index}}.html">
+          <h5 class="card-title">
+            {{workshop.name}}
+          </h5>
+          </a>
+          <div class="card-subtitle text-muted">
+            {{workshop.organizers}}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+    <!-- Socials -->
+    <div class="border-top my-3"></div>
+    <div class="row p-4" id="socials">
+    <div class="col-12 bd-content ">
+      <h2 class="text-center"> Socials </h2>
+    </div>
+  </div>
+
+ <div class ="container">
+    <div class="cards row">
+    {% for social in socials %}
+    <div class="col-6 p-3" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+      <div class="card" style="display:block; overflow:hidden; width:100%;">
+        <div class="card-header text-center" style="min-height: 150px; width:100%;">
+          <a class="" href="workshops_{{loop.index}}.html">
+          <h5 class="card-title">
+            {{social.name}}
+          </h5>
+          </a>
+          <div class="card-subtitle text-muted">
+            {{social.organizers}}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+
+
+    <!-- Speakers -->
+
+    <div class="border-top my-3"></div>
+      <div class="row p-4" id="speakers">
+    <div class="col-12 bd-content " >
+      <h2 class="text-center"> Speakers </h2>
+    </div>
+  </div>
+
+
+  <div class ="container">
+    {% for speaker in speakers %}
+    <div class="row">
+      <div class="col-12 m-3 ">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-2">
+                <img src="{{speaker.image}}" width="100%">
+              </div>
+
+              <div class="col-10 ">
+
+                <div class="m-3">
+                <span class="card-title h3" >
+                  {{speaker.speaker}}
+                </span>
+                <span>
+                  {{speaker.institution}}
+                </span>
+                </div>
+
+                <div class="m-3">
+                <h3>
+                  {{speaker.title}}
+                </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+</div>
+
+  {% include 'pages/footer.html' %}
+  </body>
