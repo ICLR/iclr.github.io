@@ -6,7 +6,7 @@ function getUrlParameter(name) {
 };
 
 function setQueryStringParameter(name, value) {
-    console.log("name", name, "value", value);
+    // console.log("name", name, "value", value);
     const params = new URLSearchParams(window.location.search);
     params.set(name, value);
     window.history.replaceState({}, "", decodeURIComponent(`${window.location.pathname}?${params}`));

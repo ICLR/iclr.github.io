@@ -43,7 +43,7 @@ const render = () => {
     Object.keys(filters)
       .forEach(k => {filters[k] ? f_test.push([k, filters[k]]) : null})
 
-    console.log(f_test, filters, "--- f_test, filters");
+    // console.log(f_test, filters, "--- f_test, filters");
     if (f_test.length === 0) updateCards(allPapers)
     else {
         const fList = allPapers.filter(
@@ -60,7 +60,7 @@ const render = () => {
               }
               return pass_test;
           });
-        console.log(fList, "--- fList");
+        // console.log(fList, "--- fList");
         updateCards(fList)
     }
 
@@ -110,7 +110,6 @@ const start = () => {
 
         const urlSearch = getUrlParameter("search");
         if ((urlSearch !== '') || updateSession()) {
-            console.log("-hen-- ");
             filters[urlFilter] = urlSearch;
             $('.typeahead_all').val(urlSearch);
             render();
