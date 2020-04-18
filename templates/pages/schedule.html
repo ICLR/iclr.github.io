@@ -1,236 +1,252 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"/ >
 
-    <link rel="stylesheet" href="static/css/typeahead.css">
-    <link rel="stylesheet" href="static/css/schedule.css">
-    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/schedule.css" />
+    <link rel="stylesheet" href="static/css/main.css" />
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+          crossorigin="anonymous" />
+    
+    <script src="https://d3js.org/d3.v5.min.js">
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
             integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+    </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js">
+    </script>
 
     <!--    <script src="static/js/typeahead.bundle.js"></script>-->
     <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/css/bootstrap-select.min.css">
+          href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/css/bootstrap-select.min.css" />
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/js/bootstrap-select.min.js" >
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
             integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
             integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+    </script>
 
 
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+    <title> ICLR 2020: Schedule
+    </title>
+  </head>
 
- 
-    <title> ICLR 2020: Schedule </title>
-</head>
-
-<body>
-<!-- NAV -->
-{% set active_page = "Schedule" %}
-{% include 'pages/header.html' %}
-
-<div class="container" id="container" style="padding-top: 20px;">
+  <body>
+    <!-- NAV -->
+    {% set active_page = "Schedule" %}
+    {% include 'pages/header.html' %}
 
 
+    <div class="container" id="container" style="padding-top: 20px;">
+      <div class="my-4" />
 
-    <div class="my-3"></div>
+      <!-- Header -->
+      <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active text-muted " data-toggle="tab" href="#tab-calendar" role="tab" aria-controls="nav-home" aria-selected="true">Calendar
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted " data-toggle="tab" href="#tab-Monday" role="tab" aria-controls="nav-home" aria-selected="true">Monday
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted"  href="#tab-Tuesday" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">Tuesday
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted" data-toggle="tab" href="#tab-Wednesday" role="tab" aria-controls="nav-home" aria-selected="true">Wednesday
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted" data-toggle="tab" href="#tab-Thursday" role="tab" aria-controls="nav-home" aria-selected="true">Thursday
+          </a>
+        </li>
+      </ul>
 
 
-  <div class="card">
-        <div class="card-header">
-            <div class="row">
+      
+      <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+
+
+        <!-- Calender Tab -->
+        <div class="tab-pane active" id="tab-calendar" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <div class="my-3"></div>
+          <div class="card">
+            <div class="card-header">
+              <div class="row">
+                
                 <div class="form-group">
-                    <label for="tzOptions">Select timezone:</label>
-                    <select id="tzOptions" class="selectpicker"
-                            data-live-search="true">
-                    </select>
+                  <label for="tzOptions">Select timezone:</label>
+                  <select id="tzOptions" class="selectpicker"
+                          data-live-search="true">
+                  </select>
+
+                  <span style="margin-left:auto" class="text-right">
+                    <a href="static/iclr.ics" class="text-muted "> Download Calendar</a>
+                  </span>
                 </div>
-            </div>
-            <!--            <div id="bloodhound">-->
-            <!--                <input class="typeahead" type="text"-->
-            <!--                       placeholder="Time zone">-->
-            <!--            </div>-->
-
-            <!--            <div class="row info" style="font-size: x-small;"></div>-->
-            <div class="row main-table">
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="static/js/schedule.js"></script>
-<script>
-    window.onload = function () {
-        start()
-    }
-</script>
-
-<div class="my-4"></div>
-
-
-
-    <ul class="nav  nav-pills justify-content-center">
-      <li class="nav-item"><a class="nav-link active text-muted " data-toggle="tab" href="#tab-Monday" role="tab" aria-controls="nav-home" aria-selected="true">Monday</a></li>
-      <li class="nav-item"><a class="nav-link text-muted"  href="#tab-Tuesday" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">Tuesday</a></li>
-      <li class="nav-item"><a class="nav-link text-muted" data-toggle="tab" href="#tab-Wednesday" role="tab" aria-controls="nav-home" aria-selected="true">Wednesday</a></li>
-      <li class="nav-item"><a class="nav-link text-muted" data-toggle="tab" href="#tab-Thursday" role="tab" aria-controls="nav-home" aria-selected="true">Thursday</a> </li>
-    </ul>
 
                 
-<!-- Daily  -->
-<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-{% for base in days %}
-
-
-<div class="tab-pane  {% if loop.index == 1%}active {% else %} fade{% endif %}" id="tab-{{base.day}}" role="tabpanel" aria-labelledby="nav-profile-tab">
-  
-<div class="border-top my-4" id="{{base.day}}"></div>
-
-
-<div class="container" >
-  <div class="row p-4">
-    <div class="col-12 bd-content ">
-      <h2 class="text-center"> </h2>
-    </div>
-  </div>
-
-
-  <div class="row p-4">
-    <div class="col-12 bd-content ">
-      <h2 class="text-center"> {{base.day}}</h2>
-    </div>
-  </div>
-
-  <!-- Speakers -->
-
-    <!-- <div class="row p-3"> -->
-    <!--   <h3>Invited Speakers</h3> -->
-    <!-- </div> -->
-
-    {% for speaker in base.speakers %}
-        <div class="row">
-      <div class="col-md-12 m-3 ">
-        <div class="card">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-md-2 col-sm-5">
-                <img src="{{speaker.image}}" width="100%" class="img-thumbnail">
               </div>
-
-              <div class="col-md-10 col-sm-6">
-
-                <div class="m-3 text-muted ">
-                <span class="card-title h3 " >
-                  {{speaker.speaker}}
-                </span> 
-                <span>
-                  {{speaker.institution}}
-                </span>
-                </div>
-                
-                <div class="m-3 text-muted ">
-                <h3>
-                  {{speaker.title}}
-                </h3>
-                </div>
+              <div class="row main-table">
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    {% endfor %}
+        <script src="static/js/schedule.js"></script>
+        <script>
+          window.onload = function () {
+          start()
+          }
+        </script>
+        
 
-  <!-- Session -->
-  {% for s in base.section %}
-  <div class="row p-3">
-
-    <h3><a class="text-muted" href="papers.html?filter=session&search={{base.day}}: {{s.theme}}">Orals/Spotlights: {{s.theme}}</a></h3>
-  </div>
-  <div class ="row my-auto mx-auto">
-    <div id="carouselExample{{base.day}}{{loop.index}}" class="carousel slide d-none d-md-block" data-interval="false">
-        <div class="carousel-inner cards" role="listbox">
-          {% for openreview in s.papers %}
-          {% if loop.index % 3 == 1 %}
-          <div class="carousel-item {% if loop.index == 1%} active{% endif %}">
-            {% endif %}
-          <div class="col-md-4 col-xs-6  fluid">
-            <div class="pp-card">
-              <div class="pp-card-header">
-                <a href="poster_{{openreview.content.iclr_id}}.html"
-                   class="text-muted">
-                  <h5 class="card-title" align="center"> {{openreview.content.title}} </h5></a>
-                <h6 class="card-subtitle text-muted" align="center">
-                  {% for a in openreview.content.authors %}
-                  {{a}},
-                  {% endfor %}
-                </h6>
-                <center><img class="cards_img" src="https://iclr.github.io/iclr-images/{{openreview.content.iclr_id}}.png" width="80%"/></center>
-              </div>
+        
+        <!-- Daily  -->
+        {% for base in days %}
+        <div class="tab-pane fade" id="tab-{{base.day}}" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <div class="border-top my-4" id="{{base.day}}"></div>
+          <div class="row p-4">
+            <div class="col-12 bd-content ">
+              <h2 class="text-center"> </h2>
             </div>
           </div>
-          {% if loop.index % 3 == 0 or loop.index == loop.length %}
+          
+          
+          <div class="row p-4">
+            <div class="col-12 bd-content ">
+              <h2 class="text-center"> {{base.day}}</h2>
+            </div>
           </div>
-          {% endif %}
+          
+          <!-- Speakers -->          
+          <div class="speakers">
+            {% for speaker in base.speakers %}
+            <div class="col-md-12 m-3 ">
+              <div class="card">
+                <div class="card-header">
+                  <div class="row">
+                    <div class="col-md-2 col-sm-5">
+                      <img src="{{speaker.image}}" width="100%" class="img-thumbnail">
+                      </div>
+                      
+                      <div class="col-md-10 col-sm-6">
+                        
+                        <div class="m-3 text-muted ">
+                          <span class="card-title h3 " >
+                            {{speaker.speaker}}
+                          </span> 
+                          <span>
+                            {{speaker.institution}}
+                          </span>
+                        </div>
+                        
+                        <div class="m-3 text-muted ">
+                          <h3>
+                            {{speaker.title}}
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+
+            
+            <!-- Session -->
+            <div class="sessions">
+              {% for s in base.section %}
+              <div class="row p-3">
+                
+                <h3><a class="text-muted" href="papers.html?filter=session&search={{base.day}}: {{s.theme}}">Orals/Spotlights: {{s.theme}}</a></h3>
+              </div>
+              <div class ="row my-auto mx-auto">
+                <div id="carouselExample{{base.day}}{{loop.index}}" class="carousel slide d-none d-md-block" data-interval="false">
+                  <div class="carousel-inner cards" role="listbox">
+                    {% for openreview in s.papers %}
+                    {% if loop.index % 3 == 1 %}
+                    <div class="carousel-item {% if loop.index == 1%} active{% endif %}">
+                      {% endif %}
+                      <div class="col-md-4 col-xs-6  fluid">
+                        <div class="pp-card">
+                          <div class="pp-card-header">
+                            <a href="poster_{{openreview.content.iclr_id}}.html"
+                               class="text-muted">
+                            <h5 class="card-title" align="center"> {{openreview.content.title}} </h5></a>
+                            <h6 class="card-subtitle text-muted" align="center">
+                              {% for a in openreview.content.authors %}
+                              {{a}},
+                              {% endfor %}
+                            </h6>
+                            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/{{openreview.content.iclr_id}}.png" width="80%"/></center>
+                          </div>
+                        </div>
+                      </div>
+                      {% if loop.index % 3 == 0 or loop.index == loop.length %}
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExample{{base.day}}{{loop.index}}" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExample{{base.day}}{{loop.index}}" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                  
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+
+            <!-- Posters -->
+            <div class="posters">
+              <div class="row p-3">
+                <h3> Poster Sessions</h3>
+              </div>
+              
+              {% for i in base.sessions %}
+              <div class="row">
+                <div class="col-12">
+                  <h3 class="">
+                    <a class ="text-muted" href="papers.html?filter=session&search={{base.short}}+Session+{{loop.index}}">Session {{i}}</a>
+                  </h3>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+
+            
+          </div>
           {% endfor %}
         </div>
-      <a class="carousel-control-prev" href="#carouselExample{{base.day}}{{loop.index}}" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExample{{base.day}}{{loop.index}}" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-
       </div>
-    </div>
-    {% endfor %}
+      {% include 'pages/footer.html' %}
+    </body>
 
-
-
-    <div class="row p-3">
-      <h3> Poster Sessions</h3>
-    </div>
-
-    {% for i in base.sessions %}
-    <div class="row">
-      <div class="col-12">
-           <h3 class="text-center">
-             <a class ="text-muted" href="papers.html?filter=session&search={{base.short}}+Session+{{loop.index}}">Session {{i}}</a>
-           </h3>
-    </div>
-    </div>
-    {% endfor %}
-</div>
-</div>
-{% endfor %}
-</div>
-{% include 'pages/footer.html' %}
-
-
-</body>
 
