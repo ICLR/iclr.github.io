@@ -34,33 +34,36 @@
        <a class="card-link"  target="_blank" href="http://www.openreview.net{{openreview.content.pdf}}">
            Paper
        </a>
-       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id={{openreview.forum}}">
-           OpenReview
-       </a>
-
-     <!-- </div> -->
-     
-     <!-- <div class="text-center "> -->
-       <a href="" target="_blank"  class="card-link">
-           Zoom
-       </a>
-
-       <a href="https://iclr.rocket.chat/channel/paper_channel_{{openreview.forum}}" target="_blank"  class="card-link">
-           Chat
-       </a>
-
        {% if openreview.content.code != blank %}
        <a href="{{openreview.content.code}}" target="_blank"  class="card-link">
            Code
        </a>
        {% endif %}
-
-       {% if openreview.content.sildes != blank %}
-       <a href="{{openreview.content.slides}}" target="_blank"  class="card-link">
-           Slides
+       
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id={{openreview.forum}}">
+           Reviews
        </a>
-     </div>
-       {% endif %}
+
+       <!-- {% if openreview.content.slides != blank %} -->
+       <!-- <a href="{{openreview.content.slides}}" target="_blank"  class="card-link"> -->
+       <!--   Slides -->
+       <!-- </a> -->
+       <!-- {% endif %} -->
+
+       <!-- </div> -->
+     
+     <!-- <div class="text-center "> -->
+       <a href="" target="_blank"  class="card-link">
+           Video
+       </a>
+
+       <a href="chat.html?room=channel/paper_channel_{{openreview.forum}}" target="_blank"  class="card-link">
+           Chat
+       </a>
+
+       
+
+
      </div>
    </div>
 

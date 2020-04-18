@@ -29,6 +29,17 @@ body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
       padding-left : 15px;
       padding-right : 15px;
   }
+
+  .pp-mode-list .pp-card-header {
+      height: 125px;
+      border: 1px solid #eee;
+  }
+
+  
+  .pp-mode-list .pp-card-header .card-title {
+      font-size: 17px;
+  }
+
   .cards_img {margin-top: 20px;
               border-radius: 2;
               max-height: 100px;}

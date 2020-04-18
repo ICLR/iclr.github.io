@@ -1,37 +1,43 @@
 <!doctype html>
 <html lang="en">
 
-{% set page_title = "ICLR 2020 - Workshops" %}
-{% include 'pages/head.html' %}
+  {% set page_title = "ICLR 2020 - Workshops" %}
+  {% include 'pages/head.html' %}
 
-<body>
-  <!-- NAV -->
-  {% set active_page = "Workshops" %}
-  {% include 'pages/header.html' %}
+  <body>
+    <!-- NAV -->
+    {% set active_page = "Workshops" %}
+    {% include 'pages/header.html' %}
 
-  <div class="row p-4">
-    <div class="col-12 bd-content ">
-      <h2 class="text-center"> Workshops </h2>
-    </div>
-  </div>
-
-  <div class ="container">
-    <div class="cards row">
-    {% for workshop in workshops %}
-    <div class="col-6 p-3" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
-      <div class="card" style="display:block; overflow:hidden; width:100%;">
-        <div class="card-header text-center" style="min-height: 150px; width:100%;">
-          <a class="" href="workshops_{{loop.index}}.html">
-          <h5 class="card-title">
-            {{workshop.name}}
-          </h5>
-          </a>
-          <div class="card-subtitle text-muted">
-            {{workshop.organizers}}
-          </div>
-        </div>
+    <div class="row p-4">
+      <div class="col-12 bd-content ">
+        <h2 class="text-center"> Workshops </h2>
       </div>
     </div>
-    {% endfor %}
-  </div>
-</body>
+
+    <div class ="container">
+      <div class="cards row">
+
+        {% for workshop in workshops %}
+        <div class="col-md-6 col-sm-12 p-3" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+          <div class="card" style="display:block; overflow:hidden; width:100%;">
+            <div class="card-header text-center" style="min-height: 150px; width:100%;">
+              <a class="text-muted" href="workshops_{{loop.index}}.html">
+                <h3 class="card-title">
+                  {{workshop.name}}
+                </h3>
+              </a>
+              <div class="card-subtitle text-muted">
+                {{workshop.organizers}}
+              </div>
+              <div class="m-4">
+                <img height="100"  src="https://iclr.github.io/iclr-images/workshops/{{workshop.image}}" />
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% include 'pages/footer.html' %}
+  </body>

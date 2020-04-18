@@ -122,17 +122,16 @@ const keyword = kw => `<a href="papers.html?filter=keywords&search=${kw}"
                        class="text-secondary text-decoration-none">${kw.toLowerCase()}</a>`
 //language=HTML
 const card_html = openreview => `
-        <div class="pp-card">
+        <div class="pp-card pp-mode-` + render_mode + ` ">
             <div class="pp-card-header">
                 <a href="poster_${openreview.content.iclr_id}.html"
                    class="text-muted">
                    <h5 class="card-title" align="center"> ${openreview.content.title} </h5></a>
                 <h6 class="card-subtitle text-muted" align="center">
                         ${openreview.content.authors.join(', ')}
-</h6>
-    <center><img class="cards_img" src="https://iclr.github.io/iclr-images/${openreview.content.iclr_id}.png" width="80%"/></center>
+</h6>` + ((render_mode != "list") ? ` <center><img class="cards_img" src="https://iclr.github.io/iclr-images/${openreview.content.iclr_id}.png" width="80%"/></center> </div>`
 
-            </div>`
+: `</div>`)
   + ((render_mode === 'detail') ? `
             <div class="pp-card-header">
                 <p class="card-text"> ${openreview.content.TLDR}</p>
