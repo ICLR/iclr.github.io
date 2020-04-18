@@ -43,7 +43,7 @@
 
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
 
- 
+
     <title> ICLR 2020: Schedule </title>
 </head>
 
@@ -99,14 +99,14 @@
       <li class="nav-item"><a class="nav-link text-muted" data-toggle="tab" href="#tab-Thursday" role="tab" aria-controls="nav-home" aria-selected="true">Thursday</a> </li>
     </ul>
 
-                
+
 <!-- Daily  -->
 <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
 {% for base in days %}
 
 
 <div class="tab-pane  {% if loop.index == 1%}active {% else %} fade{% endif %}" id="tab-{{base.day}}" role="tabpanel" aria-labelledby="nav-profile-tab">
-  
+
 <div class="border-top my-4" id="{{base.day}}"></div>
 
 
@@ -145,12 +145,12 @@
                 <div class="m-3 text-muted ">
                 <span class="card-title h3 " >
                   {{speaker.speaker}}
-                </span> 
+                </span>
                 <span>
                   {{speaker.institution}}
                 </span>
                 </div>
-                
+
                 <div class="m-3 text-muted ">
                 <h3>
                   {{speaker.title}}
@@ -220,7 +220,7 @@
     <div class="row">
       <div class="col-12">
            <h3 class="text-center">
-             <a class ="text-muted" href="papers.html?filter=session&search={{base.short}}+Session+{{loop.index}}">Session {{i}}</a>
+             <a class ="text-muted" href="papers.html?session={{base.short}}+Session+{{loop.index}}">Session {{i}}</a>
            </h3>
     </div>
     </div>

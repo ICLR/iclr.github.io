@@ -37,6 +37,9 @@ function shuffleArray(array) {
 
 const render = () => {
     const f_test = [];
+
+    updateSession();
+
     Object.keys(filters)
       .forEach(k => {filters[k] ? f_test.push([k, filters[k]]) : null})
 
@@ -71,6 +74,19 @@ const updateFilterSelectionBtn = value => {
       })
 }
 
+const updateSession = () =>{
+    const urlSession = getUrlParameter("session");
+    if (urlSession){
+        filters['session'] = urlSession
+        d3.select('#session_name').text(urlSession);
+        d3.select('.session_notice').classed('d-none', null);
+        return true;
+    }else{
+        filters['session'] = null
+        return false;
+    }
+}
+
 /**
  * START here and load JSON.
  */
@@ -78,6 +94,8 @@ const start = () => {
     const urlFilter = getUrlParameter("filter") || 'authors';
     setQueryStringParameter("filter", urlFilter);
     updateFilterSelectionBtn(urlFilter)
+
+
 
     d3.json('papers.json').then(papers => {
         shuffleArray(papers);
@@ -89,9 +107,12 @@ const start = () => {
         updateCards(allPapers)
 
 
-        if (getUrlParameter("search") != null) {
-            filters[getUrlParameter("filter")] = getUrlParameter("search");
-            $('.typeahead_all').val(getUrlParameter("search"));
+
+        const urlSearch = getUrlParameter("search");
+        if ((urlSearch !== '') || updateSession()) {
+            console.log("-hen-- ");
+            filters[urlFilter] = urlSearch;
+            $('.typeahead_all').val(urlSearch);
             render();
         }
 
@@ -113,6 +134,12 @@ d3.selectAll('.filter_option input').on('click', function () {
 
     setTypeAhead(filter_mode, allKeys, filters, render);
     render();
+})
+
+d3.selectAll('.remove_session').on('click', () =>{
+    setQueryStringParameter("session", '');
+    render();
+
 })
 
 d3.selectAll('.render_option input').on('click', function () {

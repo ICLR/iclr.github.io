@@ -24,7 +24,7 @@ function updateTable() {
             .text(d => day_format(day_parse(d.day)))
               .attr('data-name', d => day_parse(d.day));
 
-          
+
           return res;
       })
       .attr('class', d => 'day')
@@ -77,7 +77,7 @@ function updateTable() {
 
               res += `<div  class="time_slot"> ${tf(d.real_times[0])} - ${tf(
                 d.real_times[1])} ${dd!==0 ? '+' + dd + 'd' : ''} </div>`
-              res += `<a href="papers.html?filter=session&search=${day}+Session+${matches[2]}"> <span class="session-title">` +
+              res += `<a href="papers.html?session=${day}+Session+${matches[2]}"> <span class="session-title">` +
                 `Poster Day ${matches[1]} Session ${matches[2]}</span> </a>`
 
           } else if (d.type === 'qa') {
