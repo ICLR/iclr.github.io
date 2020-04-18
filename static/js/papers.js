@@ -129,7 +129,7 @@ const card_html = openreview => `
                    <h5 class="card-title" align="center"> ${openreview.content.title} </h5></a>
                 <h6 class="card-subtitle text-muted" align="center">
                         ${openreview.content.authors.join(', ')}
-</h6>` + ((render_mode != "list") ? ` <center><img class="cards_img" src="https://iclr.github.io/iclr-images/${openreview.content.iclr_id}.png" width="80%"/></center> </div>`
+</h6>` + ((render_mode != "list") ? ` <center><img class="cards_img" src="https://iclr.github.io/iclr-images/small/${openreview.content.iclr_id}.jpg" width="80%"/></center> </div>`
 
 : `</div>`)
   + ((render_mode === 'detail') ? `

@@ -310,8 +310,10 @@ def your_generator_here():
 
     for i in site_data["papers"].keys():
         yield "poster", {"poster": str(i)}
-    for i in range(len(site_data["workshops"]["workshops"])):
+    for i in range(len(site_data["workshops"]["workshops"])+1, 1):
         yield "workshop", {"workshop": str(i)}
+    for i in range(len(site_data["speakers"]["speakers"])+1, 1):
+        yield "speaker", {"speaker": str(i)}
 
 
 # --------------- DRIVER CODE -------------------------->

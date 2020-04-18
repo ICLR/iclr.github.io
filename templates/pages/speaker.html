@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% set page_title = "ICLR 2020" %}
+  {% include 'pages/head.html' %}
+
+  <body>
+    <!-- NAV -->
+    {% set active_page = "Calendar" %}
+    {% include 'pages/header.html' %}
+<div class="container">
+<!-- Title -->
+
+ <div class="pp-card m-3" style="">
+   <div class="card-header">
+     <h2 class="card-title main-title text-center" style="">
+       {{info.title}}
+     </h2>
+
+     <h3 class="card-subtitle mb-2 text-muted text-center">
+       {{info.speaker}} {{info.institution}}
+     </h3>
+
+     <div class="text-center p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+           Bio
+       </a>
+       <a href="" target="_blank"  class="card-link">
+           Video
+       </a>
+       <a href="chat.html?room=channel/speaker_{{id}}" target="_blank"  class="card-link">
+           Chat
+       </a>
+       
+     </div>
+   </div>
+
+   </div>
+
+ <div id="details" class="pp-card m-3 collapse">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Bio:</span>
+         {{info.bio}}
+       </div>
+     </p>
+     <p></p>
+   </div>
+ </div>
+
+</div>
+
+<!-- SlidesLive -->
+
+
+ <div class="container" style="background-color:white; padding: 0px;">
+  <div class="row m-2">
+    <div class="col-md-7 col-xs-12 my-auto p-2" >
+      <div id="presentation-embed-38915748" class="slp my-auto"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true,
+        verticalWhenWidthLte: 2000,
+        allowHiddenControlsWhenPaused: true,
+        hideTitle: true
+        });
+      </script>
+    </div>
+
+    <div class="col-md-5 col-xs-12 p-2">
+        <div id="gitter" class="slp">
+          <center>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/speaker_{{info.id}}?layout=embedded" height="700px" width="100%" ></iframe>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    {% include 'pages/footer.html' %}    
+  </body>
+</html>
