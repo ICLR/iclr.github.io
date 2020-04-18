@@ -6,42 +6,178 @@
 
   <style>
     .back {
-    background: url('static/images/mount.jpg') no-repeat fixed center;
+    background: url('static/images/mount2.jpg') no-repeat fixed center;
     background-size: auto;
+    
     }
-
+    .back h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    }
   </style>
   <body>
     <!-- NAV -->
     {% set active_page = "Home" %}
     {% include 'pages/header.html' %}
 
-    <div class="jumbotron jumbotron-fluid back" >
-      <div class="container">
+    <div class="container " >
+      <div class="container back">
+        <div class="row p-5" >
+        </div>
 
         <div class="row" >
-          <div class="p-2 mx-auto text-center text-white" >
+          <div class="p-5 mx-auto text-center text-white" >
             <img src="static/images/ICLR-logo-white.png"  />
           </div>
         </div>
-        <div class="row header">
+        <div class="row header p-5">
           <div class="p-1 mx-auto text-center text-white col-5" >
-            <h1 class="">
-            EIGHTH
-            INTERNATIONAL
-            CONFERENCE IN
-            LEARNING
-            REPRESENTATIONS
+            <h1 class="" style:"">
+                          EIGHTH
+                          INTERNATIONAL
+                          CONFERENCE IN
+                          LEARNING
+                          REPRESENTATIONS  
             </h1>
 
 
-            <h3 class="p-3" >
+            <h1 class="p-3" >
               26 – 30 April 2020
-            </h3>
+            </h1>
           </div>
         </div>
 
       </div>
+
+    <!-- Getting Started -->
+    <div class="getting_started">
+      <div class="row p-4">
+      </div>
+
+      <div class="row p-4">
+        <div class="col-12 bd-content ">
+          <h2 class="text-center"> Virtual ICLR </h2>
+
+        </div>
+      </div>
+      <div class="row p-4">
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6 col-sm-12">
+          <h3> Introduction</h3>
+          Short set of text that explains briefly how we hope people can use the site
+
+          <ul>
+            <li>
+              
+            </li>
+                        <li>
+              
+            </li>
+            <li>
+              
+            </li>
+
+          </ul>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+          The standard chunk of Lorem Ipsum used since the 1500
+
+          
+        </div>
+        
+      
+        <div class="col-md-6 col-sm-12">
+          <iframe width="100%" height="400px"  src="https://www.youtube.com/embed/Rrf6P9tFxas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
+    <!-- Sponsor -->
+    <div class="sponsors">
+      <div class="border-top my-3"></div>
+
+      <div class="row p-4">
+      </div>
+
+      <!-- <div class="row p-4" id="organizers"> -->
+      <!--   <div class="col-12 bd-content "> -->
+      <!--     <h2 class="text-center"> Sponsors </h2> -->
+      <!--   </div> -->
+      <!-- </div> -->
+      <center>
+      <img src="static/images/sponsors.png" width="100%" />
+      </center>
+<!--       {% for section in sponsors %} -->
+<!--       <div class="row p-3"> -->
+<!--         <div class="col-12 bd-content "> -->
+<!--           <h3 class=""> {{section.tier}} </h2> -->
+<!-- </div> -->
+<!-- </div> -->
+<!--     <div class="row justify-content-start"> -->
+<!--       {% set rowloop = loop.index %} -->
+<!--       {% for sponsor in section.vals %} -->
+<!--       <div class="col-md-4 col-xs-12 p-2" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;"> -->
+<!--         <div class="card "style="display:block; overflow:hidden; width:100%;"> -->
+<!--           <div class="card-header d-flex flex-wrap justify-content-center align-items-center" style="height: 250px; background-color:white;"> -->
+<!--               <a  target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/"><img src="{{sponsor.img_src}}" style="width:{{sponsor.size}};" class="sponsorLogo" alt="{{sponsor.name}}" /></a> -->
+<!--           </div> -->
+<!--         </div> -->
+<!--         </div> -->
+<!--       {% endfor %} -->
+<!--     </div> -->
+<!--     {% endfor %} -->
+    </div>
+    
+
+    <!-- Organizers -->
+    <div class="organizers">
+
+          <div class="row p-4">
+      </div>
+
+      <div class="border-top my-3"></div>
+      <div class="row p-4" id="organizers">
+           <div class="col-12 bd-content ">
+             <h2 class="text-center"> Organizers </h2>
+           </div>
+         </div>
+      <div class="row p-4">
+      </div>
+         
+         <div class="row">
+           {% for org in committee %}
+           <div class="col-md-4 col-xs-6">
+             <div class="pp-card" >
+               <div class="pp-card-header" class="text-muted">
+                 <a href="" class="text-muted">
+                   <h5 class="card-title" align="center">{{org.name}}</h5></a>
+                 
+                 <div>
+                   <h6 class="card-subtitle text-muted m-1" align="center">
+                     {{org.role}}
+                   </h6>
+                 </div>
+                 <div>
+                   <h6 class="card-subtitle text-muted m-1" align="center">
+                     {{org.aff}} / <a class="text-muted" href="http://twitter.com/{{org.tw}}">@{{org.tw}}</a>
+                   </h6>
+                 </div>
+                 
+                 <center>
+                   <img src="{{org.im}}" class="cards_img" style="max-height:1000px" width="50%"/>
+                 </center>
+               </div>
+             </div>
+           </div>
+           {% endfor %}
+         </div>
+      </div>
+
+
+    </div>
+
+    {% include 'pages/footer.html' %}
   </body>
 </html>

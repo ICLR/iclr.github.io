@@ -28,12 +28,14 @@ conference:
       - slot: 2p
         name: Aisha Walcott-Bryant
         type: qa
+        id: 1
       - slot: 5p
         type: poster
         short: P1S4
       - slot: 7p
         type: qa
         name: Leslie Kaebling
+        id: 2
       - slot: 8p
         type: poster
         short: P1S5
@@ -51,11 +53,13 @@ conference:
     - slot: 2p
       name: Ruha Benjamin
       type: qa
+      id: 3
     - slot: 5p
       type: poster
       short: P2S4
     - slot: 7p
       type: qa
+      id: 4
       name: Laurent Dinh
     - slot: 8p
       type: poster
@@ -71,12 +75,14 @@ conference:
     - slot: 11a
       name: Mihaela van der Schaar
       type: qa
+      id: 5
     - slot: 12p
       type: poster
       short: P3S3
     - slot: 4p
       type: qa
       name: Devi Parikh
+      id: 6
     - slot: 5p
       type: poster
       short: P3S4
@@ -97,12 +103,14 @@ conference:
     - slot: 4p
       name: Yoshua Bengio / Yann LeCun
       type: qa
+      id: 7
     - slot: 5p
       type: poster
       short: P4S4
     - slot: 7p
       type: qa
       name: Michael I. Jordan
+      id: 8
     - slot: 8p
       type: poster
       short: P4S5

@@ -47,6 +47,11 @@ def main(site_data_path):
         for v2 in v:
             rec_to.setdefault(v2, [])
             rec_to[v2].append(k)
+
+    nk = list(site_data["papers"].keys())
+    nk.sort()
+    for i, k in enumerate(nk, 1):
+        site_data["papers"][k]["content"]["chat"] = "poster_" + str(i)
     
     for i, (k,n) in enumerate(site_data["papers"].items()):
         n["content"]["iclr_id"] = k
@@ -93,11 +98,14 @@ app.config.from_object(__name__)
 
 @app.route('/')
 def index():
+
+        
     return redirect('/index.html')
 
 @app.route('/index.html')
 def home():
-    return render_template('pages/index.html', **{})
+    site_data["about"]["sponsors"] = site_data["sponsors"]["sponsors"]
+    return render_template('pages/index.html', **site_data["about"])
 
 
 @app.route('/livestream.html')
@@ -229,6 +237,13 @@ def speakers():
 def workshop(workshop):
     return render_template('pages/workshop.html',
                            **{"info":site_data["workshops"]["workshops"][int(workshop) -1 ] })
+
+@app.route('/speaker_<speaker>.html')
+def speaker(speaker):
+    return render_template('pages/speaker.html',
+                           **{"info":site_data["speakers"]["speakers"][int(speaker) -1 ],
+                              "id": int(speaker) -1 
+                           })
 
 
 @app.route('/poster_<poster>.html')

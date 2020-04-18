@@ -137,7 +137,8 @@
           <!-- Speakers -->          
           <div class="speakers">
             {% for speaker in base.speakers %}
-            <div class="col-md-12 m-3 ">
+            <div class="row p-4">
+            <div class="col-md-12">
               <div class="card">
                 <div class="card-header">
                   <div class="row">
@@ -158,13 +159,16 @@
                         
                         <div class="m-3 text-muted ">
                           <h3>
-                            {{speaker.title}}
+                            <a href="speaker_{{speaker.id}}.html" class="text-muted">
+                              {{speaker.title}}
+                            </a>
                           </h3>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
               </div>
               {% endfor %}
             </div>

@@ -82,8 +82,8 @@ function updateTable() {
 
           } else if (d.type === 'qa') {
               res += `<span class="time_slot">${tf(
-                d.real_times[0])} </span><span class="session-title">` +
-                `${d.name} </span>`
+                d.real_times[0])} </span><a href="speaker_${d.id}.html"><span class="session-title">` +
+                `${d.name} </a></span>`
           }
 
           // res+=`<br/><span  class="time_slot"> ${tf(d.time_slot[0])} - ${tf(
