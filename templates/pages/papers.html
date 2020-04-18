@@ -16,8 +16,10 @@
     <div class="row">
       <div class="col-12 col-sm-12 col-lg-4">
         <div class="input-group mb-3">
-          <input type="text" class="form-control typeahead_all"
-                 placeholder="Search">
+<!--          <div class="form-control">-->
+            <input type="text" class="form-control typeahead_all" style="float: none;"
+                   placeholder="Search">
+<!--          </div>-->
           <div class="input-group-append">
             <button class="btn btn-outline-secondary typeahead_all_clear"
                     type="button">&times;
@@ -26,9 +28,8 @@
         </div>
       </div>
       <div class="col-12 col-sm-6 col-lg-4 text-center" style="margin-bottom: 10px;">
-          <div class="btn-group btn-group-toggle filter_option"
-               data-toggle="buttons">
-            <label class="btn btn-outline-secondary active">
+          <div class="btn-group btn-group-toggle filter_option">
+            <label class="btn btn-outline-secondary">
               <input type="radio" name="options" value="authors"
                      autocomplete="off"> author
             </label>

@@ -1,5 +1,3 @@
-
-
 let allPapers = [];
 const allKeys = {
     authors: [],
@@ -65,21 +63,32 @@ const render = () => {
 
 }
 
-let callstox = 0;
+const updateFilterSelectionBtn = value => {
+    d3.selectAll('.filter_option label')
+      .classed('active', function(){
+          const v = d3.select(this).select('input').property('value')
+          return v === value;
+      })
+}
 
 /**
  * START here and load JSON.
  */
 const start = () => {
+    const urlFilter = getUrlParameter("filter") || 'authors';
+    setQueryStringParameter("filter", urlFilter);
+    updateFilterSelectionBtn(urlFilter)
+
     d3.json('papers.json').then(papers => {
         shuffleArray(papers);
 
         allPapers = papers;
         calcAllKeys(allPapers, allKeys);
-        console.log(getUrlParameter("filter") || 'authors');
-        setTypeAhead(getUrlParameter("filter") || 'authors',
-                     allKeys, filters, render);
+        setTypeAhead(urlFilter,
+          allKeys, filters, render);
         updateCards(allPapers)
+
+
         if (getUrlParameter("search") != null) {
             filters[getUrlParameter("filter")] = getUrlParameter("search");
             $('.typeahead_all').val(getUrlParameter("search"));
@@ -98,9 +107,12 @@ d3.selectAll('.filter_option input').on('click', function () {
     const me = d3.select(this)
 
     const filter_mode = me.property('value');
-    setQueryStringParameter("filter", me.property('value'));
+    setQueryStringParameter("filter", filter_mode);
+    setQueryStringParameter("search", '');
+    updateFilterSelectionBtn(filter_mode);
 
     setTypeAhead(filter_mode, allKeys, filters, render);
+    render();
 })
 
 d3.selectAll('.render_option input').on('click', function () {
