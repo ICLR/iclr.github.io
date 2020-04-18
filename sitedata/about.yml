@@ -44,4 +44,5 @@ committee:
     aff : DeepMind
   - role: Web Chair
     name: Hendrik Strobelt
-    aff: MIT-IBM AI Lab
+    aff: MIT-IBM Watson AI Lab
+    tw: hen_str
