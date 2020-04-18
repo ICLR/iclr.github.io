@@ -34,33 +34,36 @@
        <a class="card-link"  target="_blank" href="http://www.openreview.net{{openreview.content.pdf}}">
            Paper
        </a>
-       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id={{openreview.forum}}">
-           OpenReview
-       </a>
-
-     <!-- </div> -->
-     
-     <!-- <div class="text-center "> -->
-       <a href="" target="_blank"  class="card-link">
-           Zoom
-       </a>
-
-       <a href="https://iclr.rocket.chat/channel/paper_channel_{{openreview.forum}}" target="_blank"  class="card-link">
-           Chat
-       </a>
-
        {% if openreview.content.code != blank %}
        <a href="{{openreview.content.code}}" target="_blank"  class="card-link">
            Code
        </a>
        {% endif %}
-
-       {% if openreview.content.sildes != blank %}
-       <a href="{{openreview.content.slides}}" target="_blank"  class="card-link">
-           Slides
+       
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id={{openreview.forum}}">
+           Reviews
        </a>
-     </div>
-       {% endif %}
+
+       <!-- {% if openreview.content.slides != blank %} -->
+       <!-- <a href="{{openreview.content.slides}}" target="_blank"  class="card-link"> -->
+       <!--   Slides -->
+       <!-- </a> -->
+       <!-- {% endif %} -->
+
+       <!-- </div> -->
+     
+     <!-- <div class="text-center "> -->
+       <a href="" target="_blank"  class="card-link">
+           Video
+       </a>
+
+       <a href="chat.html?room=channel/{{openreview.content.chat}}" target="_blank"  class="card-link">
+           Chat
+       </a>
+
+       
+
+
      </div>
    </div>
 
@@ -88,9 +91,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -111,7 +111,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_{{openreview.forum}}?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/{{openreview.content.chat}}?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -145,14 +145,11 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/{{openreview.content.iclr_id}}.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> {{openreview.content.TLDR}}</p> -->
-
           </div>
         </div>
       </div>
       {% endfor %}
   </DIV>
 </DIV>
-
+    {% include 'pages/footer.html' %}
 </body>

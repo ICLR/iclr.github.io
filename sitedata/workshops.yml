@@ -3,10 +3,12 @@ workshops:
       organizers: "Richard Armstrong · Bruce Bassett · Michelle Lochner · Nadeem Oozeer"
       website: https://iclr2020-fsai.github.io/FSAI/
       chat: FSAI
+      image: FSAI.jpeg
     - name: AI for Overcoming Global Disparities in Cancer Care
       organizers: "Thomas Fuchs · Gabriele Campanella · Dig Vijay Kumar Yarlagadda · Christina Virgo · Hassan Muhammad · Johan Lundin · Peter Kingham · Olusegun Isaac Alatise"
       website: https://ai4cc.org/
       chat: ai4cc
+      image: ai4cc.png
     - name: AI for Earth Sciences
       organizers: "Surya Karthik Mukkavilli · Kelly Kochanski · Johanna Hansen · Trooper Sanders · Pierre Gentine · Mary C Hill · Gregory Dudek · Aaron Courville · Vipin Kumar"
       website: https://ai4earthscience.github.io/iclr-2020-workshop/

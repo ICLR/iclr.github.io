@@ -16,7 +16,14 @@
   </div>
 
   <script type="text/javascript">
-    console.log("run out");
+    function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+
+
     $( document ).ready(function() {
     console.log("run");
     var win_height;
@@ -33,7 +40,9 @@
     // Set iframe height
     console.log(frm_height)
     oFrame.attr("height", frm_height + "px");
-    oFrame.attr("src", "https://iclr.rocket.chat/");
+    console.log("https://iclr.rocket.chat/" + getUrlParameter("room"));
+
+    oFrame.attr("src", "https://iclr.rocket.chat/" + getUrlParameter("room"));
     });
   </script>
 

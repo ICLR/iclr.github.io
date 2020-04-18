@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {% set page_title = "Workshop" %}
+  {% set page_title = "ICLR 2020" %}
   {% include 'pages/head.html' %}
 
   <body>
     <!-- NAV -->
-    {% set active_page = "Workshops" %}
+    {% set active_page = "Calendar" %}
     {% include 'pages/header.html' %}
 <div class="container">
 <!-- Title -->
@@ -14,27 +14,23 @@
  <div class="pp-card m-3" style="">
    <div class="card-header">
      <h2 class="card-title main-title text-center" style="">
-       {{info.name}}
+       {{info.title}}
      </h2>
 
      <h3 class="card-subtitle mb-2 text-muted text-center">
-       {{info.organizers}}
+       {{info.speaker}} {{info.institution}}
      </h3>
 
      <div class="text-center p-3">
        <a class="card-link" data-toggle="collapse" role="button" href="#details">
-           Description
+           Bio
        </a>
-       <a href="{{info.website}}" target="_blank"  class="card-link">
-         Site
-       </a>   
        <a href="" target="_blank"  class="card-link">
            Video
        </a>
-       <a href="chat.html?room=channel/workshop_{{info.chat}}" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/speaker_{{id}}" target="_blank"  class="card-link">
            Chat
        </a>
-
        
      </div>
    </div>
@@ -45,12 +41,10 @@
    <div class="card-body">
      <p class="card-text">
        <div id="abstractExample">
-         <span class="font-weight-bold">Description:</span>
-         {{info.description}}
+         <span class="font-weight-bold">Bio:</span>
+         {{info.bio}}
        </div>
-
      </p>
-
      <p></p>
    </div>
  </div>
@@ -80,7 +74,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/workshop_{{info.chat}}?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/speaker_{{info.id}}?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>

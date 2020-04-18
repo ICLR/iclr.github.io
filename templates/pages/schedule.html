@@ -85,9 +85,7 @@
       </ul>
 
 
-
       <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-
 
         <!-- Calender Tab -->
         <div class="tab-pane active" id="tab-calendar" role="tabpanel" aria-labelledby="nav-profile-tab">
@@ -127,11 +125,8 @@
         {% for base in days %}
         <div class="tab-pane fade" id="tab-{{base.day}}" role="tabpanel" aria-labelledby="nav-profile-tab">
           <div class="border-top my-4" id="{{base.day}}"></div>
-          <div class="row p-4">
-            <div class="col-12 bd-content ">
-              <h2 class="text-center"> </h2>
-            </div>
-          </div>
+          
+          
 
 
           <div class="row p-4">
@@ -143,7 +138,8 @@
           <!-- Speakers -->
           <div class="speakers">
             {% for speaker in base.speakers %}
-            <div class="col-md-12 m-3 ">
+            <div class="row p-4">
+            <div class="col-md-12">
               <div class="card">
                 <div class="card-header">
                   <div class="row">
@@ -164,13 +160,16 @@
 
                         <div class="m-3 text-muted ">
                           <h3>
-                            {{speaker.title}}
+                            <a href="speaker_{{speaker.id}}.html" class="text-muted">
+                              {{speaker.title}}
+                            </a>
                           </h3>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
               </div>
               {% endfor %}
             </div>
