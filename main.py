@@ -41,7 +41,7 @@ def main(site_data_path):
                 paper_session.setdefault(poster, [])
                 paper_session[poster].append(key)
 
-            
+
     rec_to = {}
     for k, v in site_data["author_recs"].items():
         for v2 in v:
@@ -52,7 +52,7 @@ def main(site_data_path):
     nk.sort()
     for i, k in enumerate(nk, 1):
         site_data["papers"][k]["content"]["chat"] = "poster_" + str(i)
-    
+
     for i, (k,n) in enumerate(site_data["papers"].items()):
         n["content"]["iclr_id"] = k
         n["content"]["session"] = paper_session[k]
@@ -99,7 +99,7 @@ app.config.from_object(__name__)
 @app.route('/')
 def index():
 
-        
+
     return redirect('/index.html')
 
 @app.route('/index.html')
@@ -130,7 +130,7 @@ def daily(day):
 
     speakers = [s for s in site_data["speakers"]["speakers"]
                 if s["day"] == day]
-        
+
     out = [s for s in site_data["oral_schedule"]
            if s["day"] == day][0]
     out = { "day": out["day"],
@@ -242,7 +242,7 @@ def workshop(workshop):
 def speaker(speaker):
     return render_template('pages/speaker.html',
                            **{"info":site_data["speakers"]["speakers"][int(speaker) -1 ],
-                              "id": int(speaker) -1 
+                              "id": int(speaker) -1
                            })
 
 
@@ -310,9 +310,9 @@ def your_generator_here():
 
     for i in site_data["papers"].keys():
         yield "poster", {"poster": str(i)}
-    for i in range(len(site_data["workshops"]["workshops"])+1, 1):
+    for i in range(1, len(site_data["workshops"]["workshops"])+1):
         yield "workshop", {"workshop": str(i)}
-    for i in range(len(site_data["speakers"]["speakers"])+1, 1):
+    for i in range(1, len(site_data["speakers"]["speakers"])+1):
         yield "speaker", {"speaker": str(i)}
 
 
