@@ -33,22 +33,33 @@
     position: absolute;
     /*background-color: #0097cf;*/
     border-radius: 5px;
+    border: solid 2px;
     /*margin: 3px;*/
     left:2px;
     right:2px;
     padding: 3px;
     /*width: calc(100% - 2px);*/
     /* font-size: small; */
+    cursor: pointer;
+
 }
 
+.event a, .event .time_slot  {
+    pointer-events: none;
+}
 
+.event:hover{
+    border-color: #333333!important;
+}
 .event.poster {
     background-color: #bed972;
+    border-color: #bed972;
 }
 
 .event.qa{
     padding-top: 1px;
      background-color: #4fcaea;
+    border-color: #4fcaea;
 }
 
 .time_slot {

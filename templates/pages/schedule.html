@@ -9,10 +9,8 @@
     <link rel="stylesheet" href="static/css/typeahead.css" />
     <link rel="stylesheet" href="static/css/schedule.css" />
     <link rel="stylesheet" href="static/css/main.css" />
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <script src="https://d3js.org/d3.v5.min.js">
     </script>
@@ -57,7 +55,7 @@
     {% include 'pages/header.html' %}
 
 
-    <div class="container" id="container" style="padding-top: 20px;">
+    <div class="container-lg" id="container" style="padding-top: 20px;">
       <div class="my-4" />
 
       <!-- Header -->
@@ -94,17 +92,15 @@
             <div class="card-header">
               <div class="row">
 
-                <div class="form-group">
+                <div class="form-group col">
                   <label for="tzOptions">Select timezone:</label>
                   <select id="tzOptions" class="selectpicker"
                           data-live-search="true">
                   </select>
-
-                  <span style="margin-left:auto" class="text-right">
-                    <a href="static/iclr.ics" class="text-muted "> Download Calendar</a>
-                  </span>
                 </div>
-
+                <div style="margin-left:auto" class="text-right col">
+                    <a href="static/iclr.ics" class="text-muted "> Download Calendar</a>
+                </div>
 
               </div>
               <div class="row main-table">
@@ -125,8 +121,8 @@
         {% for base in days %}
         <div class="tab-pane fade" id="tab-{{base.day}}" role="tabpanel" aria-labelledby="nav-profile-tab">
           <div class="border-top my-4" id="{{base.day}}"></div>
-          
-          
+
+
 
 
           <div class="row p-4">

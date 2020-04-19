@@ -1,5 +1,5 @@
 const table_height = 800;
-const conf_days = ['---','Mon','Tues','Wed','Thurs','Fri']
+const conf_days = ['---', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri']
 
 let sc = null;
 let min_max_time = [];
@@ -21,9 +21,9 @@ function updateTable() {
       .join(enter => {
           const res = enter.append('div')
           res.append('a')
-              .attr('class', 'day_header')
+            .attr('class', 'day_header')
             .text(d => day_format(day_parse(d.day)))
-              .attr('data-name', d => day_parse(d.day));
+            .attr('data-name', d => day_parse(d.day));
 
 
           return res;
@@ -59,7 +59,7 @@ function updateTable() {
       .style('top', d => scale(d.time_slot[0]) + "px")
       .style('height',
         d => Math.max(20,
-                      (scale(d.time_slot[1]) - scale(d.time_slot[0]) - 2)) + 'px')
+          (scale(d.time_slot[1]) - scale(d.time_slot[0]) - 2)) + 'px')
       .html(d => {
           let res = '';
           if (d.type === 'poster') {
@@ -69,7 +69,7 @@ function updateTable() {
               day = conf_days[dayID]
 
               res += `<div  class="time_slot"> ${tf(d.real_times[0])} - ${tf(
-                d.real_times[1])} ${dd!==0 ? '+' + dd + 'd' : ''} </div>`
+                d.real_times[1])} ${dd !== 0 ? '+' + dd + 'd' : ''} </div>`
               res += `<a href="papers.html?session=${day}+Session+${matches[2]}"> <span class="session-title">` +
                 `Poster Day ${matches[1]} Session ${matches[2]}</span> </a>`
 
@@ -78,12 +78,20 @@ function updateTable() {
                 d.real_times[0])} </span><a href="speaker_${d.id}.html"><span class="session-title">` +
                 `${d.name} </a></span>`
           }
-
-          // res+=`<br/><span  class="time_slot"> ${tf(d.time_slot[0])} - ${tf(
-          //   d.time_slot[1])} </span>`
-
           return res;
       })
+      .on('click', d => {
+          if (d.type === 'poster') {
+              const matches = d.short.match(/P([0-9]+)S([0-9]+)/);
+              const dayID = matches[1];
+              const day = conf_days[dayID]
+              window.open(`papers.html?session=${day}+Session+${matches[2]}`)
+          } else if (d.type === 'qa') {
+              window.open(`speaker_${d.id}.html`)
+          }
+      })
+
+
 }
 
 
