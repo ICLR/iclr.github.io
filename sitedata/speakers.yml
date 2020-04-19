@@ -5,7 +5,7 @@ speakers:
       institution: IBM Research Africa, Nairobi
       day: Monday
       id: 1
-    - speaker: Prof. Leslie Kaebling
+    - speaker: Prof. Leslie Kaelbling
       title: Doing for Our Robots What Nature Did For Us
       image: static/images/Kaelbling-1.jpg
       institution: MIT
@@ -17,6 +17,8 @@ speakers:
       institution: Princeton
       day: Tuesday
       id: 3
+      abstract: "From everyday apps to complex algorithms, technology has the potential to hide, speed, and even deepen discrimination, while appearing neutral and even benevolent when compared to racist practices of a previous era. In this talk, I explore a range of discriminatory designs that encode inequity: by explicitly amplifying racial hierarchies, by ignoring but thereby replicating social divisions, or by aiming to fix racial bias but ultimately doing quite the opposite. This presentation takes us into the world of biased bots, altruistic algorithms, and their many entanglements, and provides conceptual tools to decode tech promises with sociologically informed skepticism. In doing so, it challenges us to question not only the technologies we are sold, but also the ones we manufacture ourselves."
+      bio: "Dr. Ruha Benjamin is Associate Professor of African American Studies at Princeton University, founder of the JUST DATA Lab, and author of People’s Science: Bodies and Rights on the Stem Cell Frontier (2013) and Race After Technology: Abolitionist Tools for the New Jim Code (2019) among other publications. Her work investigates the social dimensions of science, medicine, and technology with a focus on the relationship between innovation and inequity, health and justice, knowledge and power. Professor Benjamin is the recipient of numerous awards and fellowships including from the American Council of Learned Societies, National Science Foundation, Institute for Advanced Study, and the President’s Award for Distinguished Teaching at Princeton. For more info visit www.ruhabenjamin.com"
     - speaker: Dr. Laurent Dinh
       title: Invertible Models and Normalizing Flows
       image: static/images/laurent.jpg
