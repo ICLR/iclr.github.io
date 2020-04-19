@@ -9,11 +9,12 @@ committee:
   - role: Senior Program Chair
     name: Shakir Mohamed
     aff: DeepMind
-    im:
+    im: https://pbs.twimg.com/media/ESmWySUWsAEQZU4.jpg
+    tw: shakir_za
   - role: Program Chair
     name: Martha White
     aff: University of Alberta
-    im:
+    im: https://i.ytimg.com/vi/BcFBqqthN9Q/maxresdefault.jpg
   - role: Program Chair
     name: Kyunghyun Cho
     aff: NYU & FAIR
@@ -22,27 +23,39 @@ committee:
   - role: Program Chair
     name: Dawn Song
     aff: UC Berkeley
+    im: https://miro.medium.com/max/3150/1*frhodW_09eI_xldsIY8Veg.jpeg
+    tw: dawnsongtweets
   - role: Workshop Chair
     name: Gabriel Synnaeve
     aff: Facebook AI Research
+    im: https://pbs.twimg.com/profile_images/559705507355561985/9aR-b1Gq.jpeg
+    tw: syhw
   - role: Workshop Chair
     name: Asja Fischer,
     aff: Ruhr University Bochum
+    im: https://www.ruhr-uni-bochum.de/imperia/md/images/mathematik/folder/Machine_Learning/fischer.png
   - role: D&I Chair
     name: Animashree Anandkumar
     aff: Cal Tech / NVidia
+    tw: AnimaAnandkumar
+    im: https://blogs.nvidia.com/wp-content/uploads/2019/12/Anima-Anandkumar-200x200.jpg
   - role: D&I Chair
     name: Kevin Swersky
     aff: Google AI
+    tw:kswersky
+    im: https://www.utoronto.ca/sites/default/files/kevin-swersky.jpg
   - role: Logistics Chair
     name: Timnit Gebru
     aff: Google Brain
+    im: https://s24071.pcdn.co/wp-content/uploads/2018/12/rac-07-18-timnit-gebru.jpg
+    tw: timnitgebru
   - role: Logistics Chair
     name: Esube Bekele
     aff: In-Q-Tel
   - role: Social Chair
     name: Adam White
     aff : DeepMind
+    im: https://sites.ualberta.ca/~amw8/adamHead.jpg
   - role: Web Chair
     name: Hendrik Strobelt
     aff: MIT-IBM Watson AI Lab
@@ -50,8 +63,8 @@ committee:
   - role: Organizing Team
     name: Andrea Brown
     aff: AICons
-    tw: 
+    tw:
   - role: Organizing Team
     name: Lee Campbell
     aff: Salk
-    tw: 
+    tw:
