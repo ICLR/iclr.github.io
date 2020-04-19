@@ -31,7 +31,7 @@
       {% for sponsor in section.vals %}
       <div class="col-lg-4 col-md-6 col-xs-12 p-2" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
         <div class="card "style="display:block; overflow:hidden; width:100%;">
-          <div class="card-header d-flex flex-wrap justify-content-center align-items-center" style="height: 250px; background-color:white;">
+          <div class="card-header d-flex flex-wrap justify-content-center align-items-center" style="height: {{section.height}}px; background-color:white;">
               <a  target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/"><img src="{{sponsor.img_src}}" style="width:{{sponsor.size}};" class="sponsorLogo" alt="{{sponsor.name}}" /></a>
           </div>
         </div>

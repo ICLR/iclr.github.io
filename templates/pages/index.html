@@ -102,14 +102,14 @@
       <div class="row p-4">
       </div>
 
-      <!-- <div class="row p-4" id="organizers"> -->
-      <!--   <div class="col-12 bd-content "> -->
-      <!--     <h2 class="text-center"> Sponsors </h2> -->
-      <!--   </div> -->
-      <!-- </div> -->
+      <div class="row p-4" id="organizers">
+        <div class="col-12 bd-content ">
+          <h2 class="text-center"> Sponsors </h2>
+        </div>
+      </div>
       <!-- <center> -->
       <!-- <img src="static/images/sponsors.png" width="100%" /> -->
-      </center>
+      <!-- </center> -->
       {% for section in sponsors %}
       <div class="row p-3">
         <div class="col-12 bd-content ">
@@ -118,10 +118,12 @@
 </div>
     <div class="row justify-content-start">
       {% set rowloop = loop.index %}
+
+      
       {% for sponsor in section.vals %}
-      <div class="col-md-4 col-xs-12 p-2" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
-        <div class="card "style="display:block; overflow:hidden; width:100%;">
-          <div class="card-header d-flex flex-wrap justify-content-center align-items-center" style="height: 250px; background-color:white;">
+      <div class="col-md-{{section.size}} col-xs-12 p-2" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box; border:none;">
+        <div class="card "style="display:block; overflow:hidden; width:100%; border:none;">
+          <div class="card-header d-flex flex-wrap justify-content-center align-items-center" style="height: {{section.height}}px; background-color:white; border:none;">
               <a  target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/"><img src="{{sponsor.img_src}}" style="width:{{sponsor.size}};" class="sponsorLogo" alt="{{sponsor.name}}" /></a>
           </div>
         </div>
