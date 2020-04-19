@@ -44,7 +44,6 @@ body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
               border-radius: 2;
               max-height: 100px;}
   body .nav-pills .nav-link.active {
-      
       background-color: #bed972;
   }
   
@@ -62,7 +61,7 @@ body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
   h3.card-subtitle.text-muted  {margin-top: 10px; font-size: 20px;}
   .card-subtitle.text-muted {text-align: center; font-size: 13px;}
 
-  .main-title {font-weight: 700;  color: #2294e0;}
+  .main-title {font-weight: 700;  color: #2294e0; font-family: "Exo";}
 
   .myAccordion {
 

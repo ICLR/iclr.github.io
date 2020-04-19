@@ -59,7 +59,7 @@ function updateTable() {
       .style('top', d => scale(d.time_slot[0]) + "px")
       .style('height',
         d => Math.max(20,
-          (scale(d.time_slot[1]) - scale(d.time_slot[0]) - 2)) + 'px')
+                      (scale(d.time_slot[1]) - scale(d.time_slot[0]) - 2)) + 'px')
       .html(d => {
           let res = '';
           if (d.type === 'poster') {

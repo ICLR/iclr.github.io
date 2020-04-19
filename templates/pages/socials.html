@@ -15,31 +15,30 @@
     </div>
   </div>
 
-  
-  <div class ="container">
-    {% for social in socials %}
-    <div class="row">
-      <div class="col-12 m-3 ">
-        <div class="card">
-          <div class="card-body
-            <div class="container">
-              <div class="row">
-                <div class="col-2  ">
-                  <img src="{{social.image}}" width="100%">
-                </div>
+    <div class ="container">
+      <div class="cards row">
 
-                <div class="col-10">
+        {% for social in socials %}
+        <div class="col-md-6 col-sm-12 p-3" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+          <div class="card" style="display:block; overflow:hidden; width:100%;">
+            <div class="card-header text-center" style="min-height: 150px; width:100%;">
+              <a class="text-muted" href="workshops_{{loop.index}}.html">
+                <h3 class="card-title main-title">
                   {{social.name}}
-
-                  {{social.organizers}}
-
-                </div>
+                </h3>
+              </a>
+              <div class="card-subtitle text-muted">
+                {{social.organizers}}
               </div>
+              <!-- <div class="m-4"> -->
+              <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/{{social.image}}" /> -->
+              <!-- </div> -->
             </div>
+          </div>
         </div>
+        {% endfor %}
       </div>
     </div>
-    {% endfor %}
-  </div>
+
 
 </body>

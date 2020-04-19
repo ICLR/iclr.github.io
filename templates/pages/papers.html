@@ -14,23 +14,26 @@
 
       <!-- Header -->
       <ul class="nav nav-pills justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active text-muted " data-toggle="tab" href="#tab-browse" role="tab" aria-controls="nav-home" aria-selected="true">Browse
+        <li class="nav-item active">
+          <a class="nav-link text-muted active " data-toggle="tab" href="#tab-browse" role="tab" aria-controls="nav-home" aria-selected="true">Browse
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-muted " data-toggle="tab" href="#tab-vis" role="tab" aria-controls="nav-home" aria-selected="true">Visualization
+          <a class="nav-link text-muted" href="paper_vis.html" >Visualization
           </a>
         </li>
       </ul>
+            
+      <div class="row"></div>
+      
   <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
     <div class="tab-pane active" id="tab-browse" role="tabpanel" aria-labelledby="nav-profile-tab">
 
     <div class="row d-none session_notice" >
         <div class="alert alert-warning alert-dismissible fade show col-12"
              role="alert">
-            You are only seeing papers for <span id="session_name" style="font-weight: bold;"></span>.
-            To navigate all papers close this message.
+            Showing papers for <span id="session_name" style="font-weight: bold;"></span>.
+            <!-- To navigate all papers close this message. -->
             <button type="button" class="close remove_session" data-dismiss="alert"
                     aria-label="Close">
                 <span aria-hidden="true">&times;</span>
