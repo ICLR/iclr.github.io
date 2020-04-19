@@ -7,7 +7,7 @@ let currentTimeZone = moment.tz.guess(true);
 let tzNames = moment.tz.names();
 
 function updateTable() {
-    const scale = d3.scaleTime().domain(min_max_time).range([25, table_height])
+    const scale = d3.scaleTime().domain(min_max_time).range([25, table_height-5])
 
     const day_format = d3.utcFormat('%a %m/%e');
     const day_name = d3.utcFormat('%A');
@@ -20,7 +20,7 @@ function updateTable() {
       .selectAll('.day').data(sc.conference)
       .join(enter => {
           const res = enter.append('div')
-          res.append('a')
+          res.append('div')
             .attr('class', 'day_header')
             .text(d => day_format(day_parse(d.day)))
             .attr('data-name', d => day_parse(d.day));

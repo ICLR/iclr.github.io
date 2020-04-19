@@ -9,10 +9,16 @@
     }
 
     .day{
-        border-top: 3px solid #333;
+        border: 3px solid #394852;
         padding-bottom: 5px;
+        margin-bottom: 10px;
     }
 
+    .day .day_header {
+        margin:0!important;
+        /*background: #333333;*/
+        /*color: white;*/
+    }
 }
 
 
@@ -28,6 +34,13 @@
     /*flex-grow: 1.5;*/
 }
 
+.day .day_header {
+    background: #394852;
+        color: #ffffff;
+    margin: 0 2px ;
+    text-align: center;
+    font-weight: bold;
+}
 
 .event {
     position: absolute;
