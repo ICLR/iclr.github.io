@@ -39,7 +39,7 @@ const l_main = plot.append('g');
 const l_fg = plot.append('g');
 
 const brush_start = () => {
-    console.log(currentTippy, "--- currentTippy");
+    // console.log(currentTippy, "--- currentTippy");
     currentTippy.forEach(t => t.disable());
     brushed();
 }
@@ -47,7 +47,7 @@ const brushed = () => {
     let [[x0, y0], [x1, y1]] = d3.event.selection;
     x0 = Math.round(x0), y0 = Math.round(y0);
     x1 = Math.round(x1), y1 = Math.round(y1);
-    console.log(x0, x1, y1, y0, "--- x0,x1,y1,y0");
+    // console.log(x0, x1, y1, y0, "--- x0,x1,y1,y0");
 
     l_main.selectAll('.dot')
       .classed('rect_selected', function () {
@@ -110,7 +110,7 @@ function brush_ended() {
       .on('click',
         d => window.open(`poster_${d.content.iclr_id}.html`, '_blank'))
       .on('mouseenter', d => {
-          console.log(d, "--- d");
+
           l_main.selectAll('.dot').filter(dd => dd.id === d.id)
             .classed('highlight_sel', true)
             .each(function () {

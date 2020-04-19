@@ -13,7 +13,7 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous" />
-    
+
     <script src="https://d3js.org/d3.v5.min.js">
     </script>
 
@@ -85,7 +85,6 @@
       </ul>
 
 
-      
       <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
 
         <!-- Calender Tab -->
@@ -94,7 +93,7 @@
           <div class="card">
             <div class="card-header">
               <div class="row">
-                
+
                 <div class="form-group">
                   <label for="tzOptions">Select timezone:</label>
                   <select id="tzOptions" class="selectpicker"
@@ -106,7 +105,7 @@
                   </span>
                 </div>
 
-                
+
               </div>
               <div class="row main-table">
               </div>
@@ -115,26 +114,28 @@
         </div>
         <script src="static/js/schedule.js"></script>
         <script>
-          window.onload = function () {
-          start()
-          }
+            $(document).ready(function(){
+                start()
+            })
         </script>
-        
 
-        
+
+
         <!-- Daily  -->
         {% for base in days %}
         <div class="tab-pane fade" id="tab-{{base.day}}" role="tabpanel" aria-labelledby="nav-profile-tab">
           <div class="border-top my-4" id="{{base.day}}"></div>
           
           
+
+
           <div class="row p-4">
             <div class="col-12 bd-content ">
               <h2 class="text-center"> {{base.day}}</h2>
             </div>
           </div>
-          
-          <!-- Speakers -->          
+
+          <!-- Speakers -->
           <div class="speakers">
             {% for speaker in base.speakers %}
             <div class="row p-4">
@@ -145,18 +146,18 @@
                     <div class="col-md-2 col-sm-5">
                       <img src="{{speaker.image}}" width="100%" class="img-thumbnail">
                       </div>
-                      
+
                       <div class="col-md-10 col-sm-6">
-                        
+
                         <div class="m-3 text-muted ">
                           <span class="card-title h3 " >
                             {{speaker.speaker}}
-                          </span> 
+                          </span>
                           <span>
                             {{speaker.institution}}
                           </span>
                         </div>
-                        
+
                         <div class="m-3 text-muted ">
                           <h3>
                             <a href="speaker_{{speaker.id}}.html" class="text-muted">
@@ -173,12 +174,12 @@
               {% endfor %}
             </div>
 
-            
+
             <!-- Session -->
             <div class="sessions">
               {% for s in base.section %}
               <div class="row p-3">
-                
+
                 <h3><a class="text-muted" href="papers.html?filter=session&search={{base.day}}: {{s.theme}}">Orals/Spotlights: {{s.theme}}</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
@@ -216,7 +217,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               {% endfor %}
@@ -227,19 +228,19 @@
               <div class="row p-3">
                 <h3> Poster Sessions</h3>
               </div>
-              
+
               {% for i in base.sessions %}
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search={{base.short}}+Session+{{loop.index}}">Session {{i}}</a>
+                    <a class ="text-muted" href="papers.html?session={{base.short}}+Session+{{loop.index}}">Session {{i}}</a>
                   </h3>
                 </div>
               </div>
               {% endfor %}
             </div>
 
-            
+
           </div>
           {% endfor %}
         </div>
