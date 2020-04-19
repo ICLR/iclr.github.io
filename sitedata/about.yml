@@ -42,7 +42,7 @@ committee:
   - role: D&I Chair
     name: Kevin Swersky
     aff: Google AI
-    tw:kswersky
+    tw: kswersky
     im: https://www.utoronto.ca/sites/default/files/kevin-swersky.jpg
   - role: Logistics Chair
     name: Timnit Gebru
