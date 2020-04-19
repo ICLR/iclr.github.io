@@ -17,7 +17,8 @@ committee:
   - role: Program Chair
     name: Kyunghyun Cho
     aff: NYU & FAIR
-    im:
+    im: https://cds.nyu.edu/wp-content/uploads/2015/09/iu-6.jpeg
+    tw: kchonyc
   - role: Program Chair
     name: Dawn Song
     aff: UC Berkeley
