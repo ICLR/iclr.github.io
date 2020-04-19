@@ -2,40 +2,56 @@ socials:
     - name: Open source tools and practices in state-of-the-art DL research
       organizers: "Kamil A. Kaczmarek & Patryk Miziula"
       website:
+      image: Open-source-tools.png
     - name: Generative ML for Generalization
       organizers: "Prabhu Pradhan & Mehdi S. M. Sajjadi"
-      website:
+      website: https://sites.google.com/view/gforg
+      image: Generative-Generalization.jpg      
     - name: Anticipating Risky Research
       organizers: "Rosie Campbell & B Cavello"
       website:
+      image:
     - name: State of the Art Language Research
       organizers: "Angeliki Lazaridou & Amy Wu"
       website:
+      image:
     - name: Internships and opportunities for students at Amazon
       organizers: "Tanisha McOmber"
       website:
+      image:
     - name: WiML Virtual Panel and Mentoring Session
       organizers: "Ovo Ojameruaye & Sinead Williamson"
       website:
+      image:
     - name: LatinX in AI Social
       organizers: "Laura Montoya & Javier Turek"
       website:
+      image:
     - name: What can AI Researchers do to fight against COVID-19?
       organizers: "Elisabeta Gace & Pin-Yu Chen"
       website:
+      image:
     - name: Climate and Sustainability Startups
       organizers: "Eddie Obropta & Hassan Kane"
       website:
+      image:
     - name: Lapsed Physicists Wine and Cheese
       organizers: "Jennifer Hobbs & Sujoy Ganguly"
       website:
+      image:
     - name: QueerInAI Social
       organizers: "C Voelcker & William Agnew"
       website:
+      image:
     - name: BlackInAI Meet-Up
       organizers: "Ignatius Ezeani & Timnit Gebru"
       website:
+      image:
     - name: ML Researchers in/interested in Korea
       organizers: "Alice Oh & Jungwoo Ha"
       website:
-      
+      image:
+    - name: State of the Art Language Research
+      organizers: "Angeliki Lazaridou & Amy Wu"
+      website:      
+      image:      
