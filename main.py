@@ -1,4 +1,6 @@
-from flask import Flask, render_template, render_template_string
+import gzip
+
+from flask import Flask, render_template, render_template_string, make_response
 from flask import jsonify, send_from_directory, redirect
 from flask_frozen import Freezer
 import pickle, json, yaml
@@ -43,7 +45,7 @@ def main(site_data_path):
     paper_session = {}
     session_times = {}
     site_data["poster_schedule"].sort(key = lambda s : s["name"])
-    
+
     for v in site_data["poster_schedule"]:
         for poster in v["posters"]:
             paper_session.setdefault(poster, [])
@@ -279,7 +281,16 @@ def poster(poster):
 @app.route('/papers.json')
 def paper_json():
     paper_list = [value for value in site_data["papers"].values()]
-    return jsonify(paper_list)
+
+    very_long_content = paper_list
+    content = gzip.compress(json.dumps(very_long_content).encode('utf8'), 9)
+    response = make_response(content)
+    response.headers['Content-length'] = len(content)
+    response.headers['Content-Encoding'] = 'gzip'
+    response.headers['Content-Type'] = 'application/json'
+    return response
+
+    # return
 
 
 @app.route('/embeddings_<emb>.json')
