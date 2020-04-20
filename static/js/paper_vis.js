@@ -26,9 +26,16 @@ const sel_papers = d3.select('#sel_papers');
 const plot_size = () => {
     const cont = document.getElementById('container');
     // console.log(window.innerHeight-100, cont.offsetWidth,"--- window.innerWidth, cont.offsetWidth");
-    const wh = Math.max(window.innerHeight - 200, 300)
-    const ww = Math.max(cont.offsetWidth - 210, 300)
-    return [ww, wh]
+    const wh = Math.max(window.innerHeight - 280, 300)
+    let ww = Math.max(cont.offsetWidth - 210, 300)
+    if (cont.offsetWidth<768)  ww = cont.offsetWidth-10.0;
+
+    if ( (wh / ww > 1.3)) {
+        const min = Math.min(wh, ww)
+        return [min, min]
+    } else {
+        return [ww, wh]
+    }
 }
 
 const xS = d3.scaleLinear().range([0, 500]);

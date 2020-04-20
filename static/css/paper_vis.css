@@ -55,3 +55,14 @@
 .sel_paper:hover{
     background: lightgray;
 }
+
+.results{
+    width:200px;
+}
+
+    @media (max-width: 767.98px) {
+        .results{
+            width:90%;
+        }
+    }
+

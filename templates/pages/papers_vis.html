@@ -10,10 +10,8 @@
     <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet" href="static/css/paper_vis.css">
 
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -47,7 +45,7 @@
 <!-- </ul> -->
 
 
-<div class="container" id="container" style="padding-top: 20px;">
+<div class="container-lg" id="container" style="padding-top: 20px;">
       <ul class="nav nav-pills justify-content-center">
         <li class="nav-item">
           <a class="nav-link text-muted " href="papers.html">Browse
@@ -59,7 +57,7 @@
         </li>
       </ul>
 
-      
+
     <div class="row py-3">
 
 
@@ -155,10 +153,12 @@
                          style="display: block; "></svg>
                 </div>
                 <div class="results"
-                     style="display: inline-block; width:200px;vertical-align: top; text-align: left;">
+                     style="display: inline-block; vertical-align: top; text-align: left;">
                     <div style="display: block; overflow-y: auto;"
                          id="table_info">
                         <div id="explain_text_plot">
+                            <p>Each dot represents a paper. They are arranged by a measure of similarity.</p>
+
                             <p>If you <b>hover</b> over a dot, you see the
                                 related
                                 paper.</p>
