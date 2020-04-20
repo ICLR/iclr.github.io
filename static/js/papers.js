@@ -18,11 +18,12 @@ let render_mode = 'compact';
 
 
 const updateCards = (papers) => {
-    const all_mounted_cards = d3.select('.cards').selectAll('.myCard')
+    const all_mounted_cards = d3.select('.cards').selectAll('.myCard', openreview=>openreview.content.iclr_id)
       .data(papers, d => d.number)
       .join('div')
       .attr('class', 'myCard col-xs-6 col-md-4')
       .html(card_html)
+    lazyLoader();
 }
 
 /* Randomize array in-place using Durstenfeld shuffle algorithm */
@@ -115,6 +116,7 @@ const start = () => {
             render();
         }
 
+
     }).catch(e => console.error(e))
 }
 
@@ -167,7 +169,7 @@ const card_html = openreview => `
                    <h5 class="card-title" align="center"> ${openreview.content.title} </h5></a>
                 <h6 class="card-subtitle text-muted" align="center">
                         ${openreview.content.authors.join(', ')}
-</h6>` + ((render_mode != "list") ? ` <center><img class="cards_img" src="https://iclr.github.io/iclr-images/small/${openreview.content.iclr_id}.jpg" width="80%"/></center> </div>`
+</h6>` + ((render_mode != "list") ? ` <center><img class="lazy-load-img cards_img" data-src="https://iclr.github.io/iclr-images/small/${openreview.content.iclr_id}.jpg" width="80%"/></center> </div>`
 
 : `</div>`)
   + ((render_mode === 'detail') ? `
