@@ -27,7 +27,6 @@ const sel_papers = d3.select('#sel_papers');
 
 const plot_size = () => {
     const cont = document.getElementById('container');
-    // console.log(window.innerHeight-100, cont.offsetWidth,"--- window.innerWidth, cont.offsetWidth");
     const wh = Math.max(window.innerHeight - 280, 300)
     let ww = Math.max(cont.offsetWidth - 210, 300)
     if (cont.offsetWidth < 768) ww = cont.offsetWidth - 10.0;
@@ -188,14 +187,16 @@ const updateVis = () => {
     if (!currentTippy) {
         currentTippy = tippy('.dot', {
             content(reference) {
-                // const id = reference.getAttribute('data-template');
-                // const template = document.getElementById(id);
-                // console.log(reference,"--- reference");
-                // console.log(d3.select(reference), "--- d3.select(reference)");
-                return tooltip_template(d3.select(reference).datum());
+                return d3.select(reference).datum().content.title;
+                // return tooltip_template(d3.select(reference).datum());
+            },
+            onShow(instance){
+                const d = d3.select(instance.reference).datum()
+                instance.setContent(tooltip_template(d))
             },
             allowHTML: true
         });
+
     }
 
 }
