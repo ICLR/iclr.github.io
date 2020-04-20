@@ -6,8 +6,8 @@
 
   <style>
     .back {
-    background: url('static/images/mount2.jpg') no-repeat fixed center;
-    background-size: auto;
+    background: url('static/images/mount2.jpg') no-repeat center;
+    background-size: cover;
     
     }
     .back h2 {
@@ -20,18 +20,21 @@
     {% set active_page = "Home" %}
     {% include 'pages/header.html' %}
 
-    <div class="container " >
-      <div class="container back">
+    <div class="  " >
+      <div class="jumbotron jumbotron-fluid back">
         <div class="row p-5" >
         </div>
 
-        <div class="row" >
-          <div class="col-md-5 col-sm-12 p-5 mx-auto text-center text-white" >
+        <div class="row mx-auto text-center" >
+          <!-- <div class="mx-auto text-center text-white" > -->
+          <center class="mx-auto">
             <img src="static/images/ICLR-logo-white.png"  width="100%"/>
-          </div>
+            </center>
+          <!-- </div> -->
         </div>
         
-        <div class=" row header">
+        
+        <div class=" row header p-6 m-5">
           <div class="p-1 mx-auto text-center text-white col-md-9 col-sm-12" >
             <h2 style:"">
                           EIGHTH <br />
@@ -42,14 +45,17 @@
             </h2>
 
 
-            <h2 class="p-3" >
+            <h2 class="p-5" >
               26 – 30 April 2020
             </h2>
+
+           
           </div>
         </div>
 
-      </div>
 
+      </div>
+    <div class="container " >
     <!-- Getting Started -->
     <div class="getting_started">
       <div class="row p-4">
@@ -169,7 +175,7 @@
                  </div>
                  
                  <center>
-                   <img src="{{org.im}}" class="cards_img" style="max-height:1000px" width="50%"/>
+                   <img src="{{org.im}}" class="rounded" style="height:150px" />
                  </center>
                </div>
              </div>
