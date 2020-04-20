@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="static/css/typeahead.css" />
     <link rel="stylesheet" href="static/css/schedule.css" />
     <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <script src="https://d3js.org/d3.v5.min.js">
+    </script>
+    <script src="static/js/lazy_load.js">
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
@@ -102,7 +106,8 @@
         <script src="static/js/schedule.js"></script>
         <script>
             $(document).ready(function(){
-                start()
+              lazyLoader();
+              start();
             })
         </script>
 
@@ -131,7 +136,7 @@
                 <div class="card-header">
                   <div class="row">
                     <div class="col-md-2 col-sm-5">
-                      <img src="{{speaker.image}}" width="100%" class="img-thumbnail">
+                      <img data-src="{{speaker.image}}" width="100%" class="img-thumbnail lazy-load-img">
                       </div>
 
                       <div class="col-md-10 col-sm-6">
@@ -188,7 +193,7 @@
                               {{a}},
                               {% endfor %}
                             </h6>
-                            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/{{openreview.content.iclr_id}}.png" width="80%"/></center>
+                            <center><img class="cards_img lazy-load-img" data-src="https://iclr.github.io/iclr-images/{{openreview.content.iclr_id}}.png" width="80%"/></center>
                           </div>
                         </div>
                       </div>
