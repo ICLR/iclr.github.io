@@ -262,11 +262,22 @@ const start = () => {
  *  EVENTS
  **/
 
-d3.selectAll('.filter_option input').on('click', function () {
-    const me = d3.select(this);
-    const filter_mode = me.property('value');
-    setTypeAhead(filter_mode, allKeys, filters, render);
+const updateFilterSelectionBtn = value => {
+    d3.selectAll('.filter_option label')
+      .classed('active', function(){
+          const v = d3.select(this).select('input').property('value')
+          return v === value;
+      })
+}
 
+d3.selectAll('.filter_option input').on('click', function () {
+    const me = d3.select(this)
+
+    const filter_mode = me.property('value');
+    updateFilterSelectionBtn(filter_mode);
+
+    setTypeAhead(filter_mode, allKeys, filters, render);
+    render();
 })
 
 $(window).on('resize', _.debounce(updateVis, 150));
