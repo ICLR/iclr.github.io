@@ -32,7 +32,7 @@ function updateTable() {
       .classed('today', d => {
           return day_format(today) === day_format(day_parse(d.day))
       })
-      .style('margin-top', "30px")
+      // .style('margin-top', "30px")
       .style('height', `${table_height}px`)
 
     const slots = sc.time_slots;
@@ -100,6 +100,8 @@ const start = () => {
         sc = sch;
         // date conversions for times
         const parseTime = d3.utcParse('%I:%M %p');
+
+
         let all_ts = [];
         Object.keys(sch.time_slots).forEach((k) => {
             const timeSlot = sch.time_slots[k].map(parseTime);
@@ -110,8 +112,8 @@ const start = () => {
         min_max_time = d3.extent(all_ts);
 
 
-        d3.select('.info')
-          .text(`Times are displayed for timezone: ${currentTimeZone}`)
+        // d3.select('.info')
+        //   .text(`Times are displayed for timezone: ${currentTimeZone}`)
 
         updateTable();
     })
@@ -129,5 +131,7 @@ const start = () => {
             currentTimeZone = tzNames[clickedIndex]
             updateTable();
         })
+
+
 
 }
