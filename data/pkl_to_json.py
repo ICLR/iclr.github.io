@@ -4,7 +4,7 @@ import yaml, json
 
 # Converts pkl/cached_or.pkl file to json/cached_or.json
 def convert_cached_or():
-    notes = pickle.load(open("pkl/cached_or.pkl", "rb"))
+    notes = pickle.load(open("pkl/cached_or2.pkl", "rb"))
 
     cached_or_dict = {}
     keys = list(notes.keys())
