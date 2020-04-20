@@ -52,6 +52,7 @@ committee:
   - role: Logistics Chair
     name: Esube Bekele
     aff: In-Q-Tel
+    im: http://research.vuse.vanderbilt.edu/rasl/wp-content/uploads/LAB.MEMBERS/EB.jpg
   - role: Social Chair
     name: Adam White
     aff : DeepMind
@@ -64,7 +65,7 @@ committee:
   - role: Organizing Team
     name: Andrea Brown
     aff: AICons
-    tw:
+    im:
   - role: Organizing Team
     name: Lee Campbell
     aff: Salk
