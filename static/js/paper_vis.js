@@ -11,6 +11,8 @@ const filters = {
     title: null
 };
 
+const summaryBy = 'keywords' // or: "abstract"
+
 let currentTippy = null;
 let brush = null;
 
@@ -28,9 +30,9 @@ const plot_size = () => {
     // console.log(window.innerHeight-100, cont.offsetWidth,"--- window.innerWidth, cont.offsetWidth");
     const wh = Math.max(window.innerHeight - 280, 300)
     let ww = Math.max(cont.offsetWidth - 210, 300)
-    if (cont.offsetWidth<768)  ww = cont.offsetWidth-10.0;
+    if (cont.offsetWidth < 768) ww = cont.offsetWidth - 10.0;
 
-    if ( (wh / ww > 1.3)) {
+    if ((wh / ww > 1.3)) {
         const min = Math.min(wh, ww)
         return [min, min]
     } else {
@@ -78,19 +80,29 @@ function brush_ended() {
     let parts = null;
     let count = 0;
     all_sel.forEach(paper => {
-        parts = paper.content.abstract.split(/[.]?\s+/)
-        parts.forEach(p => {
-            if (p.length < 3) return;
-            p = p.toLowerCase();
-            count = words_abstract.get(p) | 0;
-            count += 1;
-            words_abstract.set(p, count);
-        })
+        if (summaryBy === 'keywords') {
+            paper.content.keywords.forEach(kw => {
+                count = words_abstract.get(kw) | 0;
+                count += 1;
+                words_abstract.set(kw, count);
+            })
+        } else {
+            parts = paper.content.abstract.split(/[.]?\s+/)
+            parts.forEach(p => {
+                if (p.length < 3) return;
+                p = p.toLowerCase();
+                count = words_abstract.get(p) | 0;
+                count += 1;
+                words_abstract.set(p, count);
+            })
+        }
+
+
     })
     stopwords.forEach(sw => words_abstract.delete(sw));
     const abstract_words = [...words_abstract.entries()]
       .sort((a, b) => -a[1] + b[1])
-      .slice(0, 20);
+      .slice(0, 15);
 
     if (abstract_words.length > 0) {
         explain_text_plot.style('display', 'none');
@@ -264,7 +276,7 @@ const start = () => {
 
 const updateFilterSelectionBtn = value => {
     d3.selectAll('.filter_option label')
-      .classed('active', function(){
+      .classed('active', function () {
           const v = d3.select(this).select('input').property('value')
           return v === value;
       })
