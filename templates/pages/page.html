@@ -26,6 +26,8 @@
        {% endfor %}
      </h3>
 
+
+     
      <div class="text-center p-3">
        <a class="card-link" data-toggle="collapse" role="button" href="#details">
            Abstract
@@ -53,9 +55,6 @@
        <!-- </div> -->
      
      <!-- <div class="text-center "> -->
-       <a href="" target="_blank"  class="card-link">
-           Video
-       </a>
 
        <a href="chat.html?room=channel/{{openreview.content.chat}}" target="_blank"  class="card-link">
            Chat
@@ -65,6 +64,14 @@
 
 
      </div>
+
+     <div class=" text-center text-muted text-monospace">
+       {% for session in openreview.content.session %}
+       <div> {{session}} {% if openreview.content.session_times[loop.index - 1] != None%} {{openreview.content.session_times[loop.index - 1]}} [<a href="" target="_blank"  class="card-link">Video Chat</a>] {% endif %}
+       </div>
+       {% endfor %}
+     </div>
+
    </div>
 
    </div>

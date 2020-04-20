@@ -12,6 +12,18 @@ titles = {}
 keywords = {}
 
 
+times = ["1 - (05:00-07:00 GMT)",
+         "2 - (08:00-10:00 GMT)",
+         "3 - (12:00-14:00 GMT)",
+         "4 - (17:00-19:00 GMT)",
+         "5 - (20:00-22:00 GMT)"]
+times2 = ["(05:00-07:00 GMT)",
+         "(08:00-10:00 GMT)",
+         "(12:00-14:00 GMT)",
+         "(17:00-19:00 GMT)",
+         "(20:00-22:00 GMT)"]
+
+
 # Loads up the necessary data
 def main(site_data_path):
     global site_data
@@ -29,10 +41,16 @@ def main(site_data_path):
 
 
     paper_session = {}
+    session_times = {}
+    site_data["poster_schedule"].sort(key = lambda s : s["name"])
+    
     for v in site_data["poster_schedule"]:
         for poster in v["posters"]:
             paper_session.setdefault(poster, [])
-            paper_session[poster].append( v["name"])
+            session_times.setdefault(poster, [])
+            t = times2[int(v["name"].split()[-1]) -1]
+            paper_session[poster].append(v["name"])
+            session_times[poster].append(t)
     for s in site_data["oral_schedule"]:
         day = s["day"]
         for section in s["section"]:
@@ -40,7 +58,8 @@ def main(site_data_path):
             for poster in section["ids"]:
                 paper_session.setdefault(poster, [])
                 paper_session[poster].append(key)
-
+                session_times.setdefault(poster, [])
+                session_times[poster].append(None)
 
     rec_to = {}
     for k, v in site_data["author_recs"].items():
@@ -56,6 +75,7 @@ def main(site_data_path):
     for i, (k,n) in enumerate(site_data["papers"].items()):
         n["content"]["iclr_id"] = k
         n["content"]["session"] = paper_session[k]
+        n["content"]["session_times"] = session_times[k]
         n["content"]["recs"] = rec_to[k] + [site_data["papers"][t]["content"]["title"]
                                             for t in site_data["paper_recs"][k]]
         titles[n["content"]["title"]] = k
