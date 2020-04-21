@@ -1,6 +1,6 @@
 {% set navigation_bar = [
     ('index.html', 'Home'),
-('calendar.html', 'Schedule'),
+    ('calendar.html', 'Schedule'),
     ('workshops.html', 'Workshops'),
     ('papers.html', 'Papers'),
     ('https://iclr.6connex.com/event/VirtualEvent/', 'Sponsor Hall'),
@@ -36,9 +36,12 @@
     <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         {% for href, id in navigation_bar %}
-        <li class="nav-item {% if id == active_page %}active{% endif
-              %}">
-          <a class="nav-link" {% if id == "Sponsor Hall"%}target="_blank"{% endif %}   href="{{href}}">{{id}}</a>
+        <li class="nav-item {% if id == active_page %}active{% endif %}">
+          {% if id == "Sponsor Hall" %}
+          <a class="nav-link" target="_blank" href="{{href}}"><nobr>{% include 'misc/out-link.html' %} {{id}}</nobr></a>
+          {% else %}
+          <a class="nav-link" href="{{href}}">{{id}}</a>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>
