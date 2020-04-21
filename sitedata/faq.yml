@@ -14,10 +14,10 @@ FAQ:
       QA:
         - Question: What tools and logins do I need?
           Answer: "The website uses three external tools, Rocket.Chat, Zoom and 6Connex. Logins for rocket.chat were created on registration. For other tools you can create them the first time you use the tool. For more details on specific tools, see answers to related questions below. You will not need to download any special software other than a web browser."
-          - Question: How do I use Zoom in the browser instead of the App?
-            Answer: "Zoom is used for all video sessions, which you can watch using the Zoom app or within the browser. Clicking on the link will ask you to open the video in the Zoom app. If you want to use Zoom in the browser, simply wait a few seconds after clicking the Video link and it will open a browser-based session."
-          - Question: Visiting with Sponsor Hall and booths on 6Connex.
-            Answer: "Clicking the Sponsor Hall menu opens a new tab to our sponsor area using a provider called 6connex, which will provide a better experience with which to engage with sponsors. When you click on the Sponsor Hall menu, you will first need to register your email address to access the sponsor site - you only need to provide an email, and do this once. Once in the sponsor site, you can click any of the logos of the sponsors and then visit their virtual booths that have information about their work and find other details about live interaction with them."
+        - Question: How do I use Zoom in the browser instead of the App?
+          Answer: "Zoom is used for all video sessions, which you can watch using the Zoom app or within the browser. Clicking on the link will ask you to open the video in the Zoom app. If you want to use Zoom in the browser, simply wait a few seconds after clicking the Video link and it will open a browser-based session."
+        - Question: Visiting with Sponsor Hall and booths on 6Connex.
+          Answer: "Clicking the Sponsor Hall menu opens a new tab to our sponsor area using a provider called 6connex, which will provide a better experience with which to engage with sponsors. When you click on the Sponsor Hall menu, you will first need to register your email address to access the sponsor site - you only need to provide an email, and do this once. Once in the sponsor site, you can click any of the logos of the sponsors and then visit their virtual booths that have information about their work and find other details about live interaction with them."
         - Question: What tools and systems requirements are needed?
           Answer: "To access the site you will need a modern browser. This site has been tested with Chrome 80.0+, Brave 1.4.95, Firefox 73.0, and browsers built on Chromium 80.0+."
 
