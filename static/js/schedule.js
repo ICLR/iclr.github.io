@@ -7,7 +7,8 @@ let currentTimeZone = moment.tz.guess(true);
 let tzNames = moment.tz.names();
 
 function updateTable() {
-    const scale = d3.scaleTime().domain(min_max_time).range([25, table_height-5])
+    const scale = d3.scaleTime().domain(min_max_time)
+      .range([25, table_height - 5])
 
     const day_format = d3.utcFormat('%a %m/%e');
     const day_name = d3.utcFormat('%A');
@@ -45,7 +46,7 @@ function updateTable() {
     // const tf_moment_GMT = date => moment(date).tz('GMT').format('hh:mm A')
     const day_diff = date => {
         const m = moment(date)
-        return m.tz(currentTimeZone).date() - m.utc().date();
+        return m.tz(currentTimeZone).dayOfYear() - m.utc().dayOfYear();
     }
 
     days.selectAll('.event').data(d => d.events.map(event => {
@@ -69,13 +70,14 @@ function updateTable() {
               day = conf_days[dayID]
 
               res += `<div  class="time_slot"> ${tf(d.real_times[0])} - ${tf(
-                d.real_times[1])} ${dd !== 0 ? '+' + dd + 'd' : ''} </div>`
+                d.real_times[1])} ${(dd > 0 ? '+' + dd + 'd' : (dd < 0 ? dd +'d': ''))} </div>`
               res += `<a href="papers.html?session=${day}+Session+${matches[2]}"> <span class="session-title">` +
                 `Poster Day ${matches[1]} Session ${matches[2]}</span> </a>`
 
           } else if (d.type === 'qa') {
+               const dd = day_diff(d.real_times[1]);
               res += `<span class="time_slot">${tf(
-                d.real_times[0])} </span><a href="speaker_${d.id}.html"><span class="session-title">` +
+                d.real_times[0])}  ${(dd > 0 ? '+' + dd + 'd' : (dd < 0 ? dd +'d' : ''))}</span> <a href="speaker_${d.id}.html"><span class="session-title">` +
                 `${d.name} </a></span>`
           }
           return res;
@@ -131,7 +133,6 @@ const start = () => {
             currentTimeZone = tzNames[clickedIndex]
             updateTable();
         })
-
 
 
 }
