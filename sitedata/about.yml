@@ -52,10 +52,10 @@ committee:
   - role: Logistics Chair
     name: Esube Bekele
     aff: In-Q-Tel
-    im: http://research.vuse.vanderbilt.edu/rasl/wp-content/uploads/LAB.MEMBERS/EB.jpg
+    im: https://research.vuse.vanderbilt.edu/rasl/wp-content/uploads/LAB.MEMBERS/EB.jpg
   - role: Social Chair
     name: Adam White
-    aff : DeepMind
+    aff : DeepMind / University of Alberta
     im: https://iclr.github.io/iclr-images/people/adam.jpg
   - role: Web Chair
     name: Hendrik Strobelt
@@ -65,8 +65,9 @@ committee:
   - role: Organizing Team
     name: Andrea Brown
     aff: AICons
-    im:
+    im: https://media.neurips.cc/Conferences/ICLR2020/ABrown.png
   - role: Organizing Team
     name: Lee Campbell
     aff: Salk
+    im: https://media.neurips.cc/Conferences/ICLR2020/LCampbell.png
     tw:
