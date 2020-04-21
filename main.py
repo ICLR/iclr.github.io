@@ -290,6 +290,7 @@ def paper_json():
                         "iclr_id": v["content"]["iclr_id"],
                         "keywords": v["content"]["keywords"],
                         "abstract": " ",
+                        "TLDR": v["content"]["TLDR"],
                         "recs": [],
                         "session": v["content"]["session"],
             }})
