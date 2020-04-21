@@ -61,11 +61,18 @@
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 text-center"
                      style="margin-bottom: 10px;">
                     <div class="btn-group btn-group-toggle filter_option">
+                            <label class="btn btn-outline-secondary"
+                                   data-tippy-content="Search for papers titles">
+                                <input type="radio" name="options"
+                                       value="titles"
+                                       autocomplete="off" checked> title
+                            </label>
+
                       <label class="btn btn-outline-secondary"
                              data-tippy-content="Search for papers with specific keywords">
                         <input type="radio" name="options"
                                value="keywords"
-                               autocomplete="off" checked> keyword
+                               autocomplete="off" > keyword
                       </label>
                       <label class="btn btn-outline-secondary active"
                                    data-tippy-content="Search for papers from specific authors">
@@ -75,12 +82,6 @@
                                autocomplete="off" > author
                       </label>
 
-                            <label class="btn btn-outline-secondary"
-                                   data-tippy-content="Search for papers titles">
-                                <input type="radio" name="options"
-                                       value="titles"
-                                       autocomplete="off"> title
-                            </label>
                             <label class="btn btn-outline-secondary"
                                    data-tippy-content="Search for papers closest related to authors or other papers">
                                 <input type="radio" name="options" value="recs"

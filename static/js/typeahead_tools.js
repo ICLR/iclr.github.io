@@ -18,6 +18,7 @@ const initTypeAhead = (list, css_sel, name, callback) => {
         datumTokenizer: Bloodhound.tokenizers.whitespace,
         queryTokenizer: Bloodhound.tokenizers.whitespace,
         local: list,
+        sufficient: 20,
         identify: function(obj) { return obj; },
 
     });
@@ -42,13 +43,15 @@ const initTypeAhead = (list, css_sel, name, callback) => {
     $(css_sel).typeahead({
           hint: true,
           highlight: true, /* Enable substring highlighting */
-          minLength: 0 /* Specify minimum characters required for showing suggestions */
+        minLength: 0, /* Specify minimum characters required for showing suggestions */
+        limit:20
       },
       {name, source: bhDefaults})
       .on('keydown', function (e) {
           if (e.which === 13) {
-              e.preventDefault();
+              // e.preventDefault();
               callback(e, e.target.value);
+              $(css_sel).typeahead('close');
           }
       })
       .on('typeahead:selected', function (evt, item) {
