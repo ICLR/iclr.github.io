@@ -262,7 +262,7 @@ def workshop(workshop):
 def speaker(speaker):
     return render_template('pages/speaker.html',
                            **{"info":site_data["speakers"]["speakers"][int(speaker) -1 ],
-                              "id": int(speaker) -1
+                              "id": int(speaker)
                            })
 
 

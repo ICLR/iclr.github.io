@@ -31,7 +31,7 @@ body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
   }
 
   .pp-mode-list .pp-card-header {
-      height: 125px;
+      height: 175px;
       border: 1px solid #eee;
   }
 
@@ -166,3 +166,7 @@ div.anchor {
 #absShow:not(.collapsed):after {
   content: '- Show Less';
 }
+body .carousel-control-next, body .carousel-control-prev {
+    width: 5%;
+}
+

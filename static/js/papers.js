@@ -49,13 +49,15 @@ const render = () => {
     else {
         const fList = allPapers.filter(
           d => {
+              
               let i = 0, pass_test = true;
               while (i < f_test.length && pass_test) {
                   if (f_test[i][0] === 'titles') {
-                      pass_test &= d.content['title'] === f_test[i][1];
+                      pass_test &= d.content['title'].toLowerCase().indexOf(f_test[i][1].toLowerCase()) > -1;
+
                   } else {
                       pass_test &= d.content[f_test[i][0]].indexOf(
-                        f_test[i][1]) > -1
+                          f_test[i][1]) > -1
                   }
                   i++;
               }
