@@ -109,7 +109,7 @@
 
         <div class="col-md-1"></div>
         <div class="col-md-5 col-sm-12">
-          <iframe width="90%" height="400px"  src="https://www.youtube.com/embed/Rrf6P9tFxas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!-- <iframe width="90%" height="400px"  src="https://www.youtube.com/embed/Rrf6P9tFxas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         </div>
       </div>
     </div>
@@ -181,7 +181,7 @@
                  </div>
                  <div>
                    <h6 class="card-subtitle text-muted m-1" align="center">
-                     {{org.aff}} / <a class="text-muted" href="http://twitter.com/{{org.tw}}">@{{org.tw}}</a>
+                     {{org.aff}}{% if org.tw %} / <a class="text-muted" href="http://twitter.com/{{org.tw}}">@{{org.tw}}</a>{% endif %}
                    </h6>
                  </div>
 
