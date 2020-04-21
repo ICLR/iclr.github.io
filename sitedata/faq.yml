@@ -2,14 +2,62 @@
 FAQ:
     - Section: Getting Started
       QA:
-        - Question: "What is the recommended way of using this site and navigatings the conference?"
-          Answer: ""
-        - Question: What tools and systems requirements are needed?
-          Answer: "To access the site you will need a modern browser. This site has been tested with Chrome 80.0, Brave 1.4.95, Firefox , 73.0, and browsers built on Chromium 80.0."
+        - Question: What is the recommended way of using this site and navigating the conference?
+          Answer: "All of ICLR 2020 will be accessed through the main webpage. You can access all parts of the conference using the top menu bar. New content is released daily, so check the Schedule for new videos that are released, and when the live sessions for speaker Q&A and posters are taking place. You can navigate all the papers in the Papers section: you can search for keywords and authors, looking through all papers by  skimming titles, or using the visualization tab at the top. We encourage everyone to visit the sponsor hall just like you would at the physical conference and then to participate in as many socials and using the chat tool. If you need any help you can ask one of the on-call helpers on the chat channel."
 
-        - Question: How can I best plan my time?
-          Answer: ""
+        - Question: How can I best plan my time and engage with the conference?
+          Answer: "There is a calendar (ics file) that you can import into your calendar tool that will tell you when live sessions are being held each day. You should explore the papers using the Schedule or Papers tab. We think the easiest approach is to create a set of bookmarks of the webpages for papers you want to watch the video of and discuss live during one of the sessions. Another option is the simple text file: create a document consisting of links, organized under the dates and times. In the future, we hope to have a better strategy to organize you engagement; the short notice for going virtual means we need to opt for some simpler strategies."
+        - Question: What if I have a problem?
+          Answer: "If you have any technical difficulties, please contact #tech-support. If you have a problem with inappropriate conduct, please see the below about Accessibility and Safety."
+
     - Section: Website Navigation
       QA:
-        - Question: "Zoom, Slido, Rocket, and Other tools"
-          Answer: This website integrates several different tools.
+        - Question: What tools and logins do I need?
+          Answer: "The website uses three external tools, Rocket.Chat, Zoom and 6Connex. Logins for rocket.chat were created on registration. For other tools you can create them the first time you use the tool. For more details on specific tools, see answers to related questions below. You will not need to download any special software other than a web browser."
+          - Question: How do I use Zoom in the browser instead of the App?
+            Answer: "Zoom is used for all video sessions, which you can watch using the Zoom app or within the browser. Clicking on the link will ask you to open the video in the Zoom app. If you want to use Zoom in the browser, simply wait a few seconds after clicking the Video link and it will open a browser-based session."
+          - Question: Visiting with Sponsor Hall and booths on 6Connex.
+            Answer: "Clicking the Sponsor Hall menu opens a new tab to our sponsor area using a provider called 6connex, which will provide a better experience with which to engage with sponsors. When you click on the Sponsor Hall menu, you will first need to register your email address to access the sponsor site - you only need to provide an email, and do this once. Once in the sponsor site, you can click any of the logos of the sponsors and then visit their virtual booths that have information about their work and find other details about live interaction with them."
+        - Question: What tools and systems requirements are needed?
+          Answer: "To access the site you will need a modern browser. This site has been tested with Chrome 80.0+, Brave 1.4.95, Firefox 73.0, and browsers built on Chromium 80.0+."
+
+    - Section: Website Navigation
+      QA:
+        - Question: What parts of ICLR are live?
+          Answer: "The Poster Sessions, Q&A with Invited Speakers, Virtual Socials, and Sponsors Booth are live. These live sessions occur at specific times, so make sure you look at the Calendar to see what is live right now (see Schedule in menu). You can also use this Calendar to add sessions that you are interested in, to your own personal calendar."
+        - Question: How do I talk to an author at a poster?
+          Answer: "Each paper will appear in two different poster sessions. Each paper has two associated Zoom links, one for each poster session. You can only talk to the authors during these live poster sessions. On the page for that paper, you can click the Zoom link for the currently active poster session, and you will join the Zoom session. Please `Raise Your Hand’ to indicate that you would like to ask the author questions. This will put you in a queue, so that the author can keep track of who wants to ask a question next. We also recommend that you watch the video for the poster first, which replaces the typical poster spiel. We want to remind you to be respectful during these conversations (see https://iclr.cc/public/CodeOfConduct)."
+        - Question: How do I ask questions of the invited speakers, offline before their live Q&A?
+          Answer: "Each invited speaker has a RocketChat channel. Questions for the invited speaker can be posted there. Other participants that are also interested in the question can Thumbs Up the post, to increase the visibility of particular questions."
+        - Question: Can I ask questions of the invited speakers live on Zoom?
+          Answer: "The live Q&As will allow for 300 participants. The Zoom webinar allows for questions to be typed. In most cases, especially if there are many questions, the session chair will simply read out the question, for simplicity. However, this is up to the session chair, and in some cases they will allow you to ask a question."
+        - Question: What kinds of Virtual Socials will there be?
+          Answer: "There will be a wide variety of Socials this year including: mini-topic focused meetings with invited talks, informal debates, events promoting diversity and inclusion, meetings about challenges faced by the ML and AI community, social get-togethers for like minded people, and many more."
+
+    - Section: Accessibility and Safety
+      QA:
+        - Question: How do you ensure safe online engagement?
+          Answer: "All participants are bound and expected to uphold the conference’s Code of Conduct, which  can be found online at https://iclr.cc/public/CodeOfConduct. We have taken several steps to safeguard against `Zoom Bombing` by changing the permissions, types of calls we use, and having  moderators with ability to evict participants, amongst others. For text chat, the authors, Workshop organisers, or Social organisers are leaders of their chat and can take steps to prevent trolling, and ensure meaningful conversation. Individual chat entries can be reported as well within the Rocket.Chat tool."
+        - Question: How do I report disrespectful engagement, trolling, or other breaches of the code of conduct?
+          Answer: "Please contact iclrhotline -at - gmail.com, where your report will be addressed by our independent consultant who will handle it in an unbiased manner. The conference’s Code of Conduct, which can be found online at https://iclr.cc/public/CodeOfConduct. "
+        - Question: Which countries is ICLR accessible from?
+          Answers: "We have selected technologies we rely on to run the fully virtual ICLR carefully in order to maximize its reachability. More specifically, we have used our large pool of volunteers from all over the world to check the accessibility of all four services, including Zoom, Slideslive, Rocket.Chat and ICLR Web Portal. From these tests, we have confirmed that these services largely work from any country across the globe, but as we are too well aware, the service status in each country may change overnight. If you have having difficulty accessing any of these services, please report it to us at #tech-support channel."
+        - Question:  General data protection
+          Answer: "This site records a very limited amount of data. Data as text in Rocket.Chat is accessible only to registered conference attendees and will be removed two weeks after the conference. Zoom sessions for Poster Sessions and Virtual Socials will not be recorded (other than Q&A sessions with keynote speakers). Videos are hosted by our video partner SlidesLive; more details on Licensing is available from SlidesLive (https://slideslive.com/). 6connex will keep all interaction with sponsors private in line with ICLRs privacy policy. You you can find terms for 6connex here (https://www.6connex.com/legal/) and ICLR's Privacy Policy here (https://iclr.cc/public/PrivacyPolicy)."
+
+    - Section: For Authors
+      QA:
+        - Question: I’m an author and think my paper has been accidentally left out of the program, but I can’t find my paper. What should I do?
+          Answer: "If you can’t find your paper because of difficulty navigating the website, please contact the help desk at #tech-support on Rocket.Chat (go to Help menu).  If you still can’t find a resolution, then the likely issue is that your email address for you paper on OpenReview is not associated with your ICLR account. Contact the organisers at iclr2020-virtual -at - googlegroups.com"
+        - Question: What is ICLR doing to mitigate Zoom bombing?
+          Answer: "All conference content is restricted to conference attendees are not meant to be shared.  We have changed all the defaults for Zoom to prevent disruption to video sessions.This involves changing several settings for greater control, including host-only screen sharing, disabling joining a session before a host, disabling file transfer, and disallowing removed participants to rejoin a video call. Also see answer to question on `How do you ensure safe online engagement?’"
+
+    - Section: General
+      QA:
+        - Question: “Other Questions?”
+          Answer: "Contact the volunteers on the #tech-support channel on Rocket.chat"
+
+
+
+
+
