@@ -56,7 +56,7 @@ committee:
   - role: Social Chair
     name: Adam White
     aff : DeepMind
-    im: https://sites.ualberta.ca/~amw8/adamHead.jpg
+    im: https://iclr.github.io/iclr-images/people/adam.jpg
   - role: Web Chair
     name: Hendrik Strobelt
     aff: MIT-IBM Watson AI Lab

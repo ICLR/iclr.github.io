@@ -21,7 +21,7 @@
         {% for social in socials %}
         <div class="col-md-6 col-sm-12 p-3" style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
           <div class="card" style="display:block; overflow:hidden; width:100%;">
-            <div class="card-header text-center" style="min-height: 150px; width:100%;">
+            <div class="card-header text-center" style="min-height: 400px; width:100%;">
               <a class="text-muted" href="#">
                 <h3 class="card-title main-title">
                   {{social.name}}
@@ -30,11 +30,17 @@
               <div class="card-subtitle text-muted">
                 {{social.organizers}}
               </div>
+
               <!-- <div class="m-4"> -->
               <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/{{social.image}}" /> -->
               <!-- </div> -->
+              <div class="p-3 text-left card-subtitle text-muted">
+                {{social.description}}
+              </div>
+          
             </div>
-          </div>
+
+          </div>                        
         </div>
         {% endfor %}
       </div>
