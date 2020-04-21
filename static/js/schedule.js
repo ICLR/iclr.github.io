@@ -70,13 +70,14 @@ function updateTable() {
               day = conf_days[dayID]
 
               res += `<div  class="time_slot"> ${tf(d.real_times[0])} - ${tf(
-                d.real_times[1])} ${(dd > 0 ? '+' + dd + 'd' : (dd < 0 ? dd : ''))} </div>`
+                d.real_times[1])} ${(dd > 0 ? '+' + dd + 'd' : (dd < 0 ? dd +'d': ''))} </div>`
               res += `<a href="papers.html?session=${day}+Session+${matches[2]}"> <span class="session-title">` +
                 `Poster Day ${matches[1]} Session ${matches[2]}</span> </a>`
 
           } else if (d.type === 'qa') {
+               const dd = day_diff(d.real_times[1]);
               res += `<span class="time_slot">${tf(
-                d.real_times[0])} </span><a href="speaker_${d.id}.html"><span class="session-title">` +
+                d.real_times[0])}  ${(dd > 0 ? '+' + dd + 'd' : (dd < 0 ? dd +'d' : ''))}</span> <a href="speaker_${d.id}.html"><span class="session-title">` +
                 `${d.name} </a></span>`
           }
           return res;
