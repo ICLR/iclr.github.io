@@ -27,23 +27,23 @@
      </h3>
 
 
-     
+
      <div class="text-center p-3">
        <a class="card-link" data-toggle="collapse" role="button" href="#details">
            Abstract
        </a>
 
        <a class="card-link"  target="_blank" href="http://www.openreview.net{{openreview.content.pdf}}">
-          <nobr>{% include 'misc/out-link.html' %} Paper</nobr>
+           Paper
        </a>
        {% if openreview.content.code != blank %}
        <a href="{{openreview.content.code}}" target="_blank"  class="card-link">
-          <nobr>{% include 'misc/out-link.html' %} Code</nobr>
+           Code
        </a>
        {% endif %}
-       
+
        <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id={{openreview.forum}}">
-          <nobr>{% include 'misc/out-link.html' %} Reviews</nobr>
+           Reviews
        </a>
 
        <!-- {% if openreview.content.slides != blank %} -->
@@ -53,21 +53,21 @@
        <!-- {% endif %} -->
 
        <!-- </div> -->
-     
+
      <!-- <div class="text-center "> -->
 
        <a href="chat.html?room=channel/{{openreview.content.chat}}" target="_blank"  class="card-link">
-          <nobr>{% include 'misc/out-link.html' %} Chat</nobr>
+           Chat
        </a>
 
-       
+
 
 
      </div>
 
      <div class=" text-center text-muted text-monospace">
        {% for session in openreview.content.session %}
-       <div> {{session}} {% if openreview.content.session_times[loop.index - 1] != None%} {{openreview.content.session_times[loop.index - 1]}} [<a href="" target="_blank"  class="card-link"><nobr>{% include 'misc/out-link.html' %} Video Chat</nobr></a>] {% endif %}
+       <div> {{session}} {% if openreview.content.session_times[loop.index - 1] != None%} {{openreview.content.session_times[loop.index - 1]}} [<a href="" target="_blank"  class="card-link">Video Chat</a>] {% endif %}
        </div>
        {% endfor %}
      </div>
