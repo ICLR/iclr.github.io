@@ -81,7 +81,12 @@
             {#
             <div class="float-right">#}
                 <div class="btn-group btn-group-toggle filter_option">
-                    <label class="btn btn-outline-secondary active" data-tippy-content="Search for papers from specific authors">
+                    <label class="btn btn-outline-secondary" data-tippy-content="Search for papers titles">
+                        <input type="radio" name="options" value="titles"
+                               autocomplete="off"> title
+                    </label>
+
+                  <label class="btn btn-outline-secondary active" data-tippy-content="Search for papers from specific authors">
                         <input type="radio" name="options" value="authors"
 
                                autocomplete="off" checked> author
@@ -90,14 +95,11 @@
                         <input type="radio" name="options" value="keywords"
                                autocomplete="off"> keyword
                     </label>
-                    <label class="btn btn-outline-secondary" data-tippy-content="Search for papers titles">
-                        <input type="radio" name="options" value="titles"
-                               autocomplete="off"> title
-                    </label>
-                    <label class="btn btn-outline-secondary" data-tippy-content="Search for papers closest related to authors or other papers">
-                        <input type="radio" name="options" value="recs"
-                               autocomplete="off"> similar
-                    </label>
+
+                    <!-- <label class="btn btn-outline-secondary" data-tippy-content="Search for papers closest related to authors or other papers"> -->
+                    <!--     <input type="radio" name="options" value="recs" -->
+                    <!--            autocomplete="off"> similar -->
+                    <!-- </label> -->
                     {#
                 </div>
                 #}
