@@ -1,9 +1,9 @@
 committee:
 
 
-  - role: General Chair
+  - role: General Chair / Web Coder
     name: Alexander Rush
-    aff: Cornell Tech
+    aff: Cornell Tech / Hugging Face
     im: https://avatars0.githubusercontent.com/u/35882?s=400&u=8f382f638b31f13a4754656140256241121c5916&v=4
     tw: srush_nlp
   - role: Senior Program Chair
@@ -52,7 +52,7 @@ committee:
   - role: Logistics Chair
     name: Esube Bekele
     aff: In-Q-Tel
-    im: https://research.vuse.vanderbilt.edu/rasl/wp-content/uploads/LAB.MEMBERS/EB.jpg
+    im: https://media.neurips.cc/Conferences/ICLR2020/EB.jpg
   - role: Social Chair
     name: Adam White
     aff : DeepMind / University of Alberta
