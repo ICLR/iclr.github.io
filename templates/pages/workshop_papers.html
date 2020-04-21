@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+{% set page_title = "Workshop" %}
+{% include 'pages/head.html' %}
+
+<body>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <!-- NAV -->
+  {% set active_page = "Workshops" %}
+  {% include 'pages/header.html' %}
+
+  <div class="container">
+
+    <div class="row"></div>
+
+    
+    <div class="cards row">
+      {% for paper in papers %}
+      <div class="myCard col-xs-6 col-md-4">
+        <div class="pp-card pp-mode-list">
+          <div class="pp-card-header">
+            <a href="poster_${openreview.content.iclr_id}.html"
+            class="text-muted">
+            <h5 class="card-title" align="center"> {{paper.title}} </h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              {{paper.authors}}
+            </h6>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+  <script src="static/js/typeahead_tools.js"></script>
+  <script src="static/js/papers.js"></script>
+
+  {% include 'pages/footer.html' %}
+</body>

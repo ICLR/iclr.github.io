@@ -256,7 +256,12 @@ def speakers():
 @app.route('/workshops_<workshop>.html')
 def workshop(workshop):
     return render_template('pages/workshop.html',
-                           **{"info":site_data["workshops"]["workshops"][int(workshop) -1 ] })
+                           **{"info":site_data["workshops"]["workshops"][int(workshop) -1 ]})
+
+@app.route('/workshop_papers_<workshop>.html')
+def workshop_papers(workshop):
+	return render_template('pages/workshop_papers.html',
+							**{"papers":site_data["workshop_papers"]["workshop_papers"][workshop]})
 
 @app.route('/speaker_<speaker>.html')
 def speaker(speaker):

@@ -1,0 +1,50 @@
+workshop_papers:
+  FSAI:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+    - title: Paper2
+      authors: "Author 1, Author 2"
+    - title: Paper3
+      authors: "Author 1, Author 2"
+  ai4cc:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+  ai4earthscience:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+  BAICS:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+  deepdiffeq:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+  trustworthy:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+  climatechange:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+  MLIRL:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+  NAS:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+  AfricaNLP:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+  ai4ah:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+  betrrl:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+  CV4A:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+  causallearning:
+    - title: Paper1
+      authors: "Author 1, Author 2"
+  pml4dc:
+    - title: Paper1
+      authors: "Author 1, Author 2"
