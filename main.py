@@ -279,7 +279,20 @@ def poster(poster):
 @app.route('/papers.json')
 def paper_json():
     paper_list = [value for value in site_data["papers"].values()]
-    return jsonify(paper_list)
+
+    json = []
+    for k, v in site_data["papers"].items():
+        json.append( {
+            "id": v["id"],
+            "forum": v["forum"],
+            "content": {"title": v["content"]["title"],
+                        "authors": v["content"]["authors"],
+                        "iclr_id": v["content"]["iclr_id"],
+                        "keywords": v["content"]["keywords"],
+                        "recs": [],
+                        "session": v["content"]["session"],
+            }})
+    return jsonify(json)
 
 
 @app.route('/embeddings_<emb>.json')
