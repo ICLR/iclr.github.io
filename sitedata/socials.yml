@@ -22,7 +22,7 @@ socials:
     - name: WiML Virtual Panel and Mentoring Session
       organizers: "Ovo Ojameruaye & Sinead Williamson"
       website:
-      image:
+      image: WiML.png
     - name: LatinX in AI Social
       organizers: "Laura Montoya & Javier Turek"
       website:
@@ -38,7 +38,7 @@ socials:
     - name: Lapsed Physicists Wine and Cheese
       organizers: "Jennifer Hobbs & Sujoy Ganguly"
       website:
-      image:
+      image: LPWnC.png
     - name: QueerInAI Social
       organizers: "C Voelcker & William Agnew"
       website:
