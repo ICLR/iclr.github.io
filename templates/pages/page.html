@@ -67,7 +67,7 @@
 
      <div class=" text-center text-muted text-monospace">
        {% for session in openreview.content.session %}
-       <div> {{session}} {% if openreview.content.session_times[loop.index - 1] != None%} {{openreview.content.session_times[loop.index - 1]}} [<a href="" target="_blank"  class="card-link">Video Chat</a>] {% endif %}
+       <div> {{session}} {% if openreview.content.session_times[loop.index - 1] != None%} {{openreview.content.session_times[loop.index - 1]}} [<a href="" target="_blank"  class="card-link">Zoom Meeting</a>] {% endif %}
        </div>
        {% endfor %}
      </div>
