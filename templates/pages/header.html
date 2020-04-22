@@ -15,30 +15,28 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
-            integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
-            crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
-            integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
-            crossorigin="anonymous">
-    </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+  integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
+  integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
+  crossorigin="anonymous"></script>
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="index.html">
-      <img class="logo" style='visibility: {% if active_page == 'Home_old' %}hidden;{% endif %}' src="static/images/ICLR-logo.png"  width="180px" />
-
+    <img class="logo" style='visibility: {% if active_page == 'Home_old' %}hidden;{% endif %}' src="static/images/ICLR-logo.png"  width="180px" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         {% for href, id in navigation_bar %}
         <li class="nav-item {% if id == active_page %}active{% endif %}">
           {% if id == "Sponsor Hall" %}
-          <a class="nav-link" target="_blank" href="{{href}}"><nobr>{% include 'misc/out-link.html' %} {{id}}</nobr></a>
+          <a class="nav-link" target="_blank" href="{{href}}">
+            <nobr>{% include 'misc/out-link.html' %} {{id}}</nobr>
+          </a>
           {% else %}
           <a class="nav-link" href="{{href}}">{{id}}</a>
           {% endif %}

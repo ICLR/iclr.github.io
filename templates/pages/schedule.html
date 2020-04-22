@@ -4,175 +4,136 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"/ >
-
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"/ >
     <link rel="stylesheet" href="static/css/typeahead.css" />
     <link rel="stylesheet" href="static/css/schedule.css" />
     <link rel="stylesheet" href="static/css/main.css" />
     <link rel="stylesheet" href="static/css/lazy_load.css" />
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <script src="https://d3js.org/d3.v5.min.js">
-    </script>
-    <script src="static/js/lazy_load.js">
-    </script>
-
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="static/js/lazy_load.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
-            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
-            crossorigin="anonymous">
-    </script>
-
+      integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+      crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous">
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js">
-    </script>
-
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     <!--    <script src="static/js/typeahead.bundle.js"></script>-->
     <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/css/bootstrap-select.min.css" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/css/bootstrap-select.min.css" />
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/js/bootstrap-select.min.js" >
-    </script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/js/bootstrap-select.min.js" ></script>
     <title> ICLR 2020: Schedule
     </title>
   </head>
-
   <body>
     <!-- NAV -->
     {% set active_page = "Schedule" %}
     {% include 'pages/header.html' %}
-
-
     <div class="container-lg" id="container" style="padding-top: 20px;">
       <div class="my-4" />
-
-      <!-- Header -->
-      <ul class="nav nav-pills justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active text-muted " data-toggle="tab" href="#tab-calendar" role="tab" aria-controls="nav-home" aria-selected="true">Calendar
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-muted " data-toggle="tab" href="#tab-Monday" role="tab" aria-controls="nav-home" aria-selected="true">Monday
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-muted"  href="#tab-Tuesday" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">Tuesday
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-muted" data-toggle="tab" href="#tab-Wednesday" role="tab" aria-controls="nav-home" aria-selected="true">Wednesday
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-muted" data-toggle="tab" href="#tab-Thursday" role="tab" aria-controls="nav-home" aria-selected="true">Thursday
-          </a>
-        </li>
-      </ul>
-
-
-      <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-
-        <!-- Calender Tab -->
-        <div class="tab-pane active" id="tab-calendar" role="tabpanel" aria-labelledby="nav-profile-tab">
-          <div class="my-3"></div>
-          <div class="card">
-            <div class="card-header">
-              <div class="row">
-
-                <div class="form-group col">
-                  <label for="tzOptions">Select timezone:</label>
-                  <select id="tzOptions" class="selectpicker"
-                          data-live-search="true">
-                  </select>
-                </div>
-                <div style="margin-left:auto" class="text-right col">
+        <!-- Header -->
+        <ul class="nav nav-pills justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active text-muted " data-toggle="tab" href="#tab-calendar" role="tab" aria-controls="nav-home" aria-selected="true">Calendar
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted " data-toggle="tab" href="#tab-Monday" role="tab" aria-controls="nav-home" aria-selected="true">Monday
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted"  href="#tab-Tuesday" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">Tuesday
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted" data-toggle="tab" href="#tab-Wednesday" role="tab" aria-controls="nav-home" aria-selected="true">Wednesday
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted" data-toggle="tab" href="#tab-Thursday" role="tab" aria-controls="nav-home" aria-selected="true">Thursday
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+          <!-- Calender Tab -->
+          <div class="tab-pane active" id="tab-calendar" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="my-3"></div>
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="form-group col">
+                    <label for="tzOptions">Select timezone:</label>
+                    <select id="tzOptions" class="selectpicker"
+                      data-live-search="true">
+                    </select>
+                  </div>
+                  <div style="margin-left:auto" class="text-right col">
                     <a href="static/iclr.ics" class="text-muted "> Download Calendar</a>
+                  </div>
                 </div>
-
-              </div>
-              <div class="row main-table">
+                <div class="row main-table">
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <script src="static/js/schedule.js"></script>
-        <script>
+          <script src="static/js/schedule.js"></script>
+          <script>
             $(document).ready(function(){
               lazyLoader();
               start();
             })
-        </script>
-
-
-
-        <!-- Daily  -->
-        {% for base in days %}
-        <div class="tab-pane fade" id="tab-{{base.day}}" role="tabpanel" aria-labelledby="nav-profile-tab">
-          <div class="border-top my-4" id="{{base.day}}"></div>
-
-
-
-
-          <div class="row p-4">
-            <div class="col-12 bd-content ">
-              <h2 class="text-center"> {{base.day}}</h2>
-            </div>
-          </div>
-
-          <!-- Speakers -->
-          <div class="speakers">
-            {% for speaker in base.speakers %}
+          </script>
+          <!-- Daily  -->
+          {% for base in days %}
+          <div class="tab-pane fade" id="tab-{{base.day}}" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="border-top my-4" id="{{base.day}}"></div>
             <div class="row p-4">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header">
-                  <div class="row">
-                    <div class="col-md-2 col-sm-5">
-                      <img data-src="{{speaker.image}}" width="100%" class="img-thumbnail lazy-load-img">
-                      </div>
-
-                      <div class="col-md-10 col-sm-6">
-                        <div class="m-3 text-muted ">
-                          <h3>
-                            <a href="speaker_{{speaker.id}}.html" class="main-title">
+              <div class="col-12 bd-content ">
+                <h2 class="text-center"> {{base.day}}</h2>
+              </div>
+            </div>
+            <!-- Speakers -->
+            <div class="speakers">
+              {% for speaker in base.speakers %}
+              <div class="row p-4">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="row">
+                        <div class="col-md-2 col-sm-5">
+                          <img data-src="{{speaker.image}}" width="100%" class="img-thumbnail lazy-load-img">
+                        </div>
+                        <div class="col-md-10 col-sm-6">
+                          <div class="m-3 text-muted ">
+                            <h3>
+                              <a href="speaker_{{speaker.id}}.html" class="main-title">
                               {{speaker.title}}
-                            </a>
-                          </h3>
-                        </div>
-
-                        <div class="m-3 text-muted ">
-                          <span class="card-title h3 " >
+                              </a>
+                            </h3>
+                          </div>
+                          <div class="m-3 text-muted ">
+                            <span class="card-title h3 " >
                             {{speaker.speaker}}  /  {{speaker.institution}}
-                          </span>
-                        </div>
-                        <div class="m-3 ">
+                            </span>
+                          </div>
+                          <div class="m-3 ">
                             {{speaker.abstract}}
+                          </div>
                         </div>
-
-
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              </div>
               {% endfor %}
             </div>
-
-
             <!-- Session -->
             <div class="sessions">
               {% for s in base.section %}
               <div class="row p-3">
-
                 <h3><a class="text-muted" href="papers.html?session={{base.day}}: {{s.theme}}">Orals/Spotlights: {{s.theme}}</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
@@ -186,8 +147,9 @@
                         <div class="pp-card">
                           <div class="pp-card-header">
                             <a href="poster_{{openreview.content.iclr_id}}.html"
-                               class="text-muted">
-                            <h5 class="card-title" align="center"> {{openreview.content.title}} </h5></a>
+                              class="text-muted">
+                              <h5 class="card-title" align="center"> {{openreview.content.title}} </h5>
+                            </a>
                             <h6 class="card-subtitle text-muted" align="center">
                               {% for a in openreview.content.authors %}
                               {{a}},
@@ -203,25 +165,22 @@
                     {% endfor %}
                   </div>
                   <a class="carousel-control-prev" href="#carouselExample{{base.day}}{{loop.index}}" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
                   </a>
                   <a class="carousel-control-next" href="#carouselExample{{base.day}}{{loop.index}}" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
                   </a>
-
                 </div>
               </div>
               {% endfor %}
             </div>
-
             <!-- Posters -->
             <div class="posters">
               <div class="row p-3">
                 <h3> Poster Sessions</h3>
               </div>
-
               {% for i in base.sessions %}
               <div class="row">
                 <div class="col-12">
@@ -232,13 +191,11 @@
               </div>
               {% endfor %}
             </div>
-
-
           </div>
           {% endfor %}
         </div>
       </div>
-      {% include 'pages/footer.html' %}
-    </body>
-
-
+    </div>
+    {% include 'pages/footer.html' %}
+  </body>
+</html>

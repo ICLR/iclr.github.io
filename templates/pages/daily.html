@@ -2,143 +2,121 @@
 <html lang="en">
   {% set page_title = "ICLR"  %}
   {% include 'pages/head.html' %}
-
-
-<body>
-
-  <!-- NAV -->
-  {% include 'pages/header.html' %}
-
-
-<<<<<<< HEAD
-  <div class="container">
-    <div class="row p-4">
-      <div class="col-12 bd-content ">
-        <h2 class="text-center">  {{day}} Schedule </h2>
+  <body>
+    <!-- NAV -->
+    {% include 'pages/header.html' %}
+    <<<<<<< HEAD
+    <div class="container">
+      <div class="row p-4">
+        <div class="col-12 bd-content ">
+          <h2 class="text-center">  {{day}} Schedule </h2>
+        </div>
       </div>
-    </div>
-=======
->>>>>>> 806b130d80985e017020a17a08ac3465c224f601
-
-    <div class="row p-3">
-      <h3>Invited Speakers</h3>
-    </div>
-
-    {% for speaker in speakers %}
-        <div class="row">
-      <div class="col-12 m-3 ">
-        <div class="card">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-2">
-                <img src="{{speaker.image}}" width="100%">
-              </div>
-
-              <div class="col-10 ">
-
-                <div class="m-3">
-                <span class="card-title h3" >
-                  {{speaker.speaker}}
-                </span> 
-                <span>
-                  {{speaker.institution}}
-                </span>
+      <div class="row p-3">
+        <h3>Invited Speakers</h3>
+      </div>
+      {% for speaker in speakers %}
+      <div class="row">
+        <div class="col-12 m-3 ">
+          <div class="card">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-2">
+                  <img src="{{speaker.image}}" width="100%">
                 </div>
-                
-                <div class="m-3">
-                <h3>
-                  {{speaker.title}}
-                </h3>
+                <div class="col-10 ">
+                  <div class="m-3">
+                    <span class="card-title h3" >
+                    {{speaker.speaker}}
+                    </span> 
+                    <span>
+                    {{speaker.institution}}
+                    </span>
+                  </div>
+                  <div class="m-3">
+                    <h3>
+                      {{speaker.title}}
+                    </h3>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    {% endfor %}
-
-<<<<<<< HEAD
-    {% for s in section %}
-    <div class="row p-3">
-      <h3>Oral Session: {{s.theme}}</h3>
-    </div>
-    <div class ="row my-auto mx-auto">
-      <div id="carouselExample{{loop.index}}" class="carousel slide" data-interval="false">
-        <div class="carousel-inner cards" role="listbox">
-          {% for openreview in s.papers %}
-          {% if loop.index % 3 == 1 %}
-          <div class="carousel-item {% if loop.index == 1%} active{% endif %}">
+      {% endfor %}
+      <<<<<<< HEAD
+      {% for s in section %}
+      <div class="row p-3">
+        <h3>Oral Session: {{s.theme}}</h3>
+      </div>
+      <div class ="row my-auto mx-auto">
+        <div id="carouselExample{{loop.index}}" class="carousel slide" data-interval="false">
+          <div class="carousel-inner cards" role="listbox">
+            {% for openreview in s.papers %}
+            {% if loop.index % 3 == 1 %}
+            <div class="carousel-item {% if loop.index == 1%} active{% endif %}">
+              {% endif %}
+              <div class="col-md-4 col-xs-6  fluid">
+                <div class="pp-card">
+                  <div class="pp-card-header">
+                    <a href="poster_{{openreview.content.iclr_id}}.html"
+                      class="text-muted">
+                      <h5 class="card-title" align="center"> {{openreview.content.title}} </h5>
+                    </a>
+                    <h6 class="card-subtitle text-muted" align="center">
+                      {% for a in openreview.content.authors %}
+                      {{a}},
+                      {% endfor %}
+                    </h6>
+                    <center><img class="cards_img" src="https://iclr.github.io/iclr-images/{{openreview.content.iclr_id}}.png" width="80%"/></center>
+                  </div>
+                </div>
+              </div>
+              {% if loop.index % 3 == 0 or loop.index == loop.length%}
+            </div>
             {% endif %}
-          <div class="col-md-4 col-xs-6  fluid">
-            <div class="pp-card">
-              <div class="pp-card-header">
-                <a href="poster_{{openreview.content.iclr_id}}.html"
-                   class="text-muted">
-                  <h5 class="card-title" align="center"> {{openreview.content.title}} </h5></a>
-                <h6 class="card-subtitle text-muted" align="center">
-                  {% for a in openreview.content.authors %}
-                  {{a}},
-                  {% endfor %}
-                </h6>
-                <center><img class="cards_img" src="https://iclr.github.io/iclr-images/{{openreview.content.iclr_id}}.png" width="80%"/></center>
-              </div>
-            </div>
+            {% endfor %}
           </div>
-          {% if loop.index % 3 == 0 or loop.index == loop.length%}
-          </div>
-          {% endif %}
-          {% endfor %}
+          <a class="carousel-control-prev" href="#carouselExample{{loop.index}}" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExample{{loop.index}}" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+          </a>
         </div>
-      <a class="carousel-control-prev" href="#carouselExample{{loop.index}}" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExample{{loop.index}}" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-
       </div>
+      {% endfor %}
+      <div class="row p-3">
+        <h3> Poster Sessions</h3>
+      </div>
+      {% for i in sessions %}
+      <div class="row">
+        <div class="col-12">
+          <h3 class="text-center">
+            <a class ="text-muted" href="papers.html?filter=session&search={{short}}+Session+{{i}}">Session {{i}}</a>
+          </h3>
+        </div>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-
-    <div class="row p-3">
-      <h3> Poster Sessions</h3>
-    </div>
-
-    {% for i in sessions %}
-    <div class="row">
-      <div class="col-12">
-           <h3 class="text-center">
-             <a class ="text-muted" href="papers.html?filter=session&search={{short}}+Session+{{i}}">Session {{i}}</a>
-           </h3>
-    </div>
-    </div>
-    {% endfor %}
-
-    
-  </div>
-
-<!--   <script > -->
-<!--     $('.carousel .carousel-item').each(function(){ -->
-<!--     var next = $(this).next(); -->
-
-<!--     if (!next.length) { -->
-<!--     next = $(this).siblings(':first'); -->
-<!--     } -->
-<!--     next.children(':first-child').clone().appendTo($(this)); -->
-
-<!--     for (var i=0;i<2;i++) { -->
-<!--         next=next.next(); -->
-<!--         if (!next.length) { -->
-<!--         	next = $(this).siblings(':first'); -->
-<!--       	} -->
-<!--         next.children(':first-child').clone().appendTo($(this)); -->
-<!--       } -->
-<!-- }); -->
-<!--     </script> -->
-
-=======
->>>>>>> 806b130d80985e017020a17a08ac3465c224f601
-</body>
+    <!--   <script > -->
+    <!--     $('.carousel .carousel-item').each(function(){ -->
+    <!--     var next = $(this).next(); -->
+    <!--     if (!next.length) { -->
+    <!--     next = $(this).siblings(':first'); -->
+    <!--     } -->
+    <!--     next.children(':first-child').clone().appendTo($(this)); -->
+    <!--     for (var i=0;i<2;i++) { -->
+    <!--         next=next.next(); -->
+    <!--         if (!next.length) { -->
+    <!--          next = $(this).siblings(':first'); -->
+    <!--        } -->
+    <!--         next.children(':first-child').clone().appendTo($(this)); -->
+    <!--       } -->
+    <!-- }); -->
+    <!--     </script> -->
+  </body>
+</html>
