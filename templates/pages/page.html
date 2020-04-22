@@ -22,10 +22,15 @@
 
      <h3 class="card-subtitle mb-2 text-muted text-center">
        {% for author in openreview.content.authors %}
-       {{author}}{{ "," if not loop.last }}
+       <a href="papers.html?filter=authors&search={{author}}" class="text-muted">{{author}}</a>{{ "," if not loop.last }}
        {% endfor %}
      </h3>
 
+     <p class="card-text text-center"><span class="">Keywords:</span>
+       {% for keyword in openreview.content.keywords %}
+       <a href="papers.html?filter=keywords&search={{keyword}}" class="text-secondary text-decoration-none">{{keyword}}</a>{{ "," if not loop.last }}
+       {% endfor %}
+     </p>
 
 
      <div class="text-center p-3">
@@ -88,11 +93,6 @@
      </p>
 
      <p></p>
-     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-       {% for keyword in openreview.content.keywords %}
-       <a href="papers.html?filter=keywords&search={{keyword}}" class="text-secondary text-decoration-none">{{keyword}}</a>{{ "," if not loop.last }}
-       {% endfor %}
-     </p>
    </div>
  </div>
 

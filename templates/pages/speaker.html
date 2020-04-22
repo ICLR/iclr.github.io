@@ -18,15 +18,12 @@
      </h2>
 
      <h3 class="card-subtitle mb-2 text-muted text-center">
-       {{info.speaker}} {{info.institution}}
+       {{info.speaker}} / {{info.institution}}
      </h3>
 
      <div class="text-center p-3">
        <a class="card-link" data-toggle="collapse" role="button" href="#details">
            Bio
-       </a>
-       <a href="" target="_blank"  class="card-link">
-           Video
        </a>
        <a href="chat.html?room=channel/speaker_{{id}}" target="_blank"  class="card-link">
            Chat
@@ -34,7 +31,9 @@
 
      </div>
      <div class=" text-center text-muted text-monospace">
-       <div> {{info.day}} {{info.time}} </div>
+       <div> {{info.day}} {{info.time}} <a href="" target="_blank"  class="card-link">
+           Live QA       </a>
+       </div>
      </div>
    </div>
 
