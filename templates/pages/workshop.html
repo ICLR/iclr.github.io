@@ -30,6 +30,9 @@
             Chat
             </a>
           </div>
+          <div class="text-center text-muted">
+            (Note: Workshop posters and instructions are on the workshop site.)
+          </div>
         </div>
       </div>
       <div id="details" class="pp-card m-3 collapse">
@@ -46,30 +49,47 @@
     </div>
     <!-- SlidesLive -->
     <div class="container" style="background-color:white; padding: 0px;">
-      <div class="row m-2">
-        <div class="col-md-7 col-xs-12 my-auto p-2" >
-          <div id="presentation-embed-38915748" class="slp my-auto"></div>
-          <script src='https://slideslive.com/embed_presentation.js'></script>
-          <script>
-            embed = new SlidesLiveEmbed('presentation-embed-38915748', {
-            presentationId: '38915748',
-            autoPlay: false, // change to true to autoplay the embedded presentation
-            verticalEnabled: true,
-            verticalWhenWidthLte: 2000,
-            allowHiddenControlsWhenPaused: true,
-            hideTitle: true
-            });
-          </script>
-        </div>
-        <div class="col-md-5 col-xs-12 p-2">
-          <div id="gitter" class="slp">
-            <center>
-              <iframe frameborder="0" src="https://iclr.rocket.chat/channel/workshop_{{info.chat}}?layout=embedded" height="700px" width="100%" ></iframe>
-            </center>
+    <div class="row m-2">
+      <div class="col-md-7 col-xs-12 my-auto p-2" >
+        <div id="presentation-embed-38915748" class="slp my-auto"></div>
+        <script src='https://slideslive.com/embed_presentation.js'></script>
+        <script>
+          embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+          presentationId: '38915748',
+          autoPlay: false, // change to true to autoplay the embedded presentation
+          verticalEnabled: true,
+          verticalWhenWidthLte: 2000,
+          allowHiddenControlsWhenPaused: true,
+          hideTitle: true
+          });
+        </script>
+      </div>
+      <!-- SlidesLive -->
+      <div class="container" style="background-color:white; padding: 0px;">
+        <div class="row m-2">
+          <div class="col-md-7 col-xs-12 my-auto p-2" >
+            <div id="presentation-embed-38915748" class="slp my-auto"></div>
+            <script src='https://slideslive.com/embed_presentation.js'></script>
+            <script>
+              embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+              presentationId: '38915748',
+              autoPlay: false, // change to true to autoplay the embedded presentation
+              verticalEnabled: true,
+              verticalWhenWidthLte: 2000,
+              allowHiddenControlsWhenPaused: true,
+              hideTitle: true
+              });
+            </script>
+          </div>
+          <div class="col-md-5 col-xs-12 p-2">
+            <div id="gitter" class="slp">
+              <center>
+                <iframe frameborder="0" src="https://iclr.rocket.chat/channel/workshop_{{info.chat}}?layout=embedded" height="700px" width="100%" ></iframe>
+              </center>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
     {% include 'pages/footer.html' %}
   </body>

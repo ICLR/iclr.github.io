@@ -14,9 +14,14 @@
           </h2>
           <h3 class="card-subtitle mb-2 text-muted text-center">
             {% for author in openreview.content.authors %}
-            {{author}}{{ "," if not loop.last }}
+            <a href="papers.html?filter=authors&search={{author}}" class="text-muted">{{author}}</a>{{ "," if not loop.last }}
             {% endfor %}
           </h3>
+          <p class="card-text text-center"><span class="">Keywords:</span>
+            {% for keyword in openreview.content.keywords %}
+            <a href="papers.html?filter=keywords&search={{keyword}}" class="text-secondary text-decoration-none">{{keyword}}</a>{{ "," if not loop.last }}
+            {% endfor %}
+          </p>
           <div class="text-center p-3">
             <a class="card-link" data-toggle="collapse" role="button" href="#details">
             Abstract
@@ -61,40 +66,52 @@
           </div>
           </p>
           <p></p>
-          <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-            {% for keyword in openreview.content.keywords %}
-            <a href="papers.html?filter=keywords&search={{keyword}}" class="text-secondary text-decoration-none">{{keyword}}</a>{{ "," if not loop.last }}
-            {% endfor %}
-          </p>
         </div>
       </div>
     </div>
     <!-- SlidesLive -->
     <div class="container" style="background-color:white; padding: 0px;">
-      <div class="row m-2">
-        <div class="col-md-7 col-xs-12 my-auto p-2" >
-          <div id="presentation-embed-38915748" class="slp my-auto"></div>
-          <script src='https://slideslive.com/embed_presentation.js'></script>
-          <script>
-            embed = new SlidesLiveEmbed('presentation-embed-38915748', {
-            presentationId: '38915748',
-            autoPlay: false, // change to true to autoplay the embedded presentation
-            verticalEnabled: true,
-            verticalWhenWidthLte: 2000,
-            allowHiddenControlsWhenPaused: true,
-            hideTitle: true
-            });
-          </script>
-        </div>
-        <div class="col-md-5 col-xs-12 p-2">
-          <div id="gitter" class="slp">
-            <center>
-              <iframe frameborder="0" src="https://iclr.rocket.chat/channel/{{openreview.content.chat}}?layout=embedded" height="700px" width="100%" ></iframe>
-            </center>
+    <div class="row m-2">
+      <div class="col-md-7 col-xs-12 my-auto p-2" >
+        <div id="presentation-embed-38915748" class="slp my-auto"></div>
+        <script src='https://slideslive.com/embed_presentation.js'></script>
+        <script>
+          embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+          presentationId: '38915748',
+          autoPlay: false, // change to true to autoplay the embedded presentation
+          verticalEnabled: true,
+          verticalWhenWidthLte: 2000,
+          allowHiddenControlsWhenPaused: true,
+          hideTitle: true
+          });
+        </script>
+      </div>
+      <!-- SlidesLive -->
+      <div class="container" style="background-color:white; padding: 0px;">
+        <div class="row m-2">
+          <div class="col-md-7 col-xs-12 my-auto p-2" >
+            <div id="presentation-embed-38915748" class="slp my-auto"></div>
+            <script src='https://slideslive.com/embed_presentation.js'></script>
+            <script>
+              embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+              presentationId: '38915748',
+              autoPlay: false, // change to true to autoplay the embedded presentation
+              verticalEnabled: true,
+              verticalWhenWidthLte: 2000,
+              allowHiddenControlsWhenPaused: true,
+              hideTitle: true
+              });
+            </script>
+          </div>
+          <div class="col-md-5 col-xs-12 p-2">
+            <div id="gitter" class="slp">
+              <center>
+                <iframe frameborder="0" src="https://iclr.rocket.chat/channel/{{openreview.content.chat}}?layout=embedded" height="700px" width="100%" ></iframe>
+              </center>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
     <!-- Recs -->
     <p></p>
