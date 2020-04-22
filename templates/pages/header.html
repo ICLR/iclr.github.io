@@ -35,7 +35,7 @@
         <li class="nav-item {% if id == active_page %}active{% endif %}">
           {% if id == "Sponsor Hall" %}
           <a class="nav-link" target="_blank" href="{{href}}">
-            <nobr>{% include 'misc/out-link.html' %} {{id}}</nobr>
+            <nobr>{{id}} {% include 'misc/out-link.html' %}</nobr>
           </a>
           {% else %}
           <a class="nav-link" href="{{href}}">{{id}}</a>
