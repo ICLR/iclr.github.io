@@ -10,7 +10,7 @@ sponsors:
     - name: Facebook
       url: https://iclr.6connex.com/event/VirtualEvent/
       img_url: https://ai.facebook.com/
-      img_src: https://iclr.cc/static/admin/img/sponsor_logos/facebook.png
+      img_src: static/images/Facebook.jpg
     - name: Google
       img_url: https://research.google
       url: https://iclr.6connex.com/event/VirtualEvent/
@@ -48,11 +48,6 @@ sponsors:
   size: 3
   height: 150
   vals:
-    - name: Alibaba Group
-      img_url: https://www.alibabagroup.com/en/about/overview
-      url: https://iclr.6connex.com/event/VirtualEvent/
-      img_src: https://iclr.cc/static/admin/img/sponsor_logos/alibaba.png
-      size: 100%
     - name: Apple
       img_url: https://www.apple.com/jobs/us/teams/machine-learning-and-ai.html
       img_src: https://iclr.cc/static/admin/img/sponsor_logos/apple-nips-2019.png
