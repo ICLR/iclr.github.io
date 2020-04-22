@@ -75,7 +75,7 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
       image: MLiK.jpg
       description: "We invite everyone who is part of and/or interested in the ML research scene in Korea. Participants can introduce their own ML research, especially if it's part of ICLR 2020. They can also introduce ICLR 2020 papers that they find interesting and discuss them with other participants. Other possible discussion topics include (but are not limited to): Korean NLP, computer vision and datasets, ML research for COVID-19 and other healthcare problems, and career options in academia/industry in Korea. We welcome everyone from anywhere in the world, as long as you can keep awake if our event falls in the middle of the night for you."
 
-    - name: State of the Art Language Research
+    - name: Topics in Language Research
       organizers: "Angeliki Lazaridou & Amy Wu"
       website:
       description: "Language is very important for human-centric machine learning applications. We want to bring researchers together to share views on what the state-of-the-art and next frontier will look like."
