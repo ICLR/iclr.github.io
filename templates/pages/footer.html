@@ -1,11 +1,10 @@
 <script type="text/javascript">
-
   $(document).ready(function () {
-
+  
   if (location.hash !== '') {
   $('a[href="' + location.hash + '"]').tab('show');
   }
-
+  
   $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
   var hash = $(e.target).attr("href");
   if (hash.substr(0,1) == "#") {
@@ -14,12 +13,11 @@
   $(window).scrollTop(position);
   }
   });
-
+  
   });
-
+  
   <!-- Global site tag (gtag.js) - Google Analytics -->
 </script>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -28,3 +26,9 @@
   
   gtag('config', 'UA-163955028-1');
 </script>
+<footer class="footer bg-light p-4">
+  <div class="container">
+    <p class="float-right"><a href="#">Back to Top</a></p>
+    <p class="text-center">© 2020 International Conference on Learning Representations</p>
+  </div>
+</footer>

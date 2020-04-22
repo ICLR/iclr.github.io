@@ -1,54 +1,47 @@
 <!doctype html>
 <html lang="en">
-
-{% set page_title = "ICLR 2020 - Speakers" %}
-{% include 'pages/head.html' %}
-
-<body>
-  <!-- NAV -->
-  {% set active_page = "Speakers" %}
-  {% include 'pages/header.html' %}
-
-  <div class="row p-4">
-    <div class="col-12 bd-content ">
-      <h2 class="text-center"> Speakers </h2>
+  {% set page_title = "ICLR 2020 - Speakers" %}
+  {% include 'pages/head.html' %}
+  <body>
+    <!-- NAV -->
+    {% set active_page = "Speakers" %}
+    {% include 'pages/header.html' %}
+    <div class="row p-4">
+      <div class="col-12 bd-content ">
+        <h2 class="text-center"> Speakers </h2>
+      </div>
     </div>
-  </div>
-
-  
-  <div class ="container">
-    {% for speaker in speakers %}
-    <div class="row">
-      <div class="col-12 m-3 ">
-        <div class="card">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-2">
-                <img src="{{speaker.image}}" width="100%">
-              </div>
-
-              <div class="col-10 ">
-
-                <div class="m-3">
-                <span class="card-title h3" >
-                  {{speaker.speaker}}
-                </span> 
-                <span>
-                  {{speaker.institution}}
-                </span>
+    <div class ="container">
+      {% for speaker in speakers %}
+      <div class="row">
+        <div class="col-12 m-3 ">
+          <div class="card">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-2">
+                  <img src="{{speaker.image}}" width="100%">
                 </div>
-                
-                <div class="m-3">
-                <h3>
-                  {{speaker.title}}
-                </h3>
+                <div class="col-10 ">
+                  <div class="m-3">
+                    <span class="card-title h3" >
+                    {{speaker.speaker}}
+                    </span> 
+                    <span>
+                    {{speaker.institution}}
+                    </span>
+                  </div>
+                  <div class="m-3">
+                    <h3>
+                      {{speaker.title}}
+                    </h3>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
-</body>
+  </body>
+</html>

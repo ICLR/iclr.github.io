@@ -1,53 +1,45 @@
 <!doctype html>
 <html lang="en">
-
-{% set page_title = "ICLR 2020 - Socials" %}
-{% include 'pages/head.html' %}
-
-<body>
-<!-- NAV -->
-{% set active_page = "Socials" %}
-{% include 'pages/header.html' %}
-
-
-<div class="container">
-    <div class="row p-4">
+  {% set page_title = "ICLR 2020 - Socials" %}
+  {% include 'pages/head.html' %}
+  <body>
+    <!-- NAV -->
+    {% set active_page = "Socials" %}
+    {% include 'pages/header.html' %}
+    <div class="container">
+      <div class="row p-4">
         <div class="col-12 bd-content ">
-            <h2 class="text-center"> Socials </h2>
+          <h2 class="text-center"> Socials </h2>
         </div>
-    </div>
-    <div class="cards row">
-
+      </div>
+      <div class="cards row">
         {% for social in socials %}
         <div class="col-md-6 col-sm-12 p-3"
-             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
-            <div class="card"
-                 style="display:block; overflow:hidden; width:100%;">
-                <div class="card-header text-center"
-                     style="min-height: 400px; width:100%;">
-                    <a class="text-muted" href="#">
-                        <h3 class="card-title main-title">
-                            {{social.name}}
-                        </h3>
-                    </a>
-                    <div class="card-subtitle text-muted">
-                        {{social.organizers}}
-                    </div>
-
-                    <!-- <div class="m-4"> -->
-                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/{{social.image}}" /> -->
-                    <!-- </div> -->
-                    <div class="p-3 text-left card-subtitle text-muted">
-                        {{social.description|safe}}
-                    </div>
-
-                </div>
-
+          style="box-sizing: border-box;">
+          <div class="card"
+            style="display:block; overflow:hidden; width:100%;">
+            <div class="card-header text-center"
+              style="min-height: 400px; width:100%;">
+              <a class="text-muted" href="#">
+                <h3 class="card-title main-title">
+                  {{social.name}}
+                </h3>
+              </a>
+              <div class="card-subtitle text-muted">
+                {{social.organizers}}
+              </div>
+              <!-- <div class="m-4"> -->
+              <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/{{social.image}}" /> -->
+              <!-- </div> -->
+              <div class="p-3 text-left card-subtitle text-muted">
+                {{social.description|safe}}
+              </div>
             </div>
+          </div>
         </div>
         {% endfor %}
+      </div>
     </div>
-</div>
-
-
-</body>
+    {% include 'pages/footer.html' %}
+  </body>
+</html>

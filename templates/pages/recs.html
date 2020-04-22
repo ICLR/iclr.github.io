@@ -4,20 +4,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <link rel="stylesheet" href="static/css/examples.css"/>
     <title> ICLR Recommendations </title>
-</head>
-
+  </head>
   <body >
     {% include 'pages/header.html' %}
-
-
-    
-
-
     <div class="container">
       <div class="row">
         <div class="col-md">
@@ -33,7 +25,6 @@
           </div>
         </div>
       </div>
-      
       <div class="row">
         <div class="col-lg">
           <h3> By Title</h3>
@@ -43,14 +34,9 @@
         </div>
       </div>
     </div>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="static/js/typeahead.bundle.js"></script>
-
-    
     <script>
       $(document).ready(function(){
       // Defining the local dataset
@@ -59,14 +45,14 @@
       "{{author}}",
       {% endfor %}
       ];
-
+      
       // Constructing the suggestion engine
       var authors = new Bloodhound({
       datumTokenizer: Bloodhound.tokenizers.whitespace,
       queryTokenizer: Bloodhound.tokenizers.whitespace,
       local: authors
       });
-
+      
       // Initializing the typeahead
       $('.typeahead_author').typeahead({
       hint: true,
@@ -81,7 +67,7 @@
       $('.typeahead_author').on('typeahead:selected', function(evt, item) {
       location.href = "recs_" + item + ".html";
       })
-
+      
       $(document).ready(function(){
       // Defining the local dataset
       var keywords = [
@@ -89,14 +75,14 @@
       "{{keyword}}",
       {% endfor %}
       ];
-
+      
       // Constructing the suggestion engine
       var keywords = new Bloodhound({
       datumTokenizer: Bloodhound.tokenizers.whitespace,
       queryTokenizer: Bloodhound.tokenizers.whitespace,
       local: keywords
       });
-
+      
       // Initializing the typeahead
       $('.typeahead_keyword').typeahead({
       hint: true,
@@ -111,8 +97,8 @@
       $('.typeahead_keyword').on('typeahead:selected', function(evt, item) {
       location.href = "keyword_" + item + ".html";
       })
-
-
+      
+      
       $(document).ready(function(){
       // Defining the local dataset
       var titles = [
@@ -120,14 +106,14 @@
       "{{title}}",
       {% endfor %}
       ];
-
+      
       // Constructing the suggestion engine
       var titles = new Bloodhound({
       datumTokenizer: Bloodhound.tokenizers.whitespace,
       queryTokenizer: Bloodhound.tokenizers.whitespace,
       local: titles
       });
-
+      
       // Initializing the typeahead
       $('.typeahead_title').typeahead({
       hint: true,
@@ -142,9 +128,7 @@
       $('.typeahead_title').on('typeahead:selected', function(evt, item) {
       location.href = "title_" + item + ".html";
       })
-
+      
     </script>
-
-
-
   </body>
+</html>
