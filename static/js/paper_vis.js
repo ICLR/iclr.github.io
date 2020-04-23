@@ -190,7 +190,7 @@ const updateVis = () => {
                 return d3.select(reference).datum().content.title;
                 // return tooltip_template(d3.select(reference).datum());
             },
-            onShow(instance){
+            onShow(instance) {
                 const d = d3.select(instance.reference).datum()
                 instance.setContent(tooltip_template(d))
             },
@@ -246,15 +246,21 @@ const start = () => {
     ]).then(([papers, proj]) => {
         // all_proj = proj;
 
-        proj.forEach((pos, i) => papers[i].pos = pos)
+        const projMap = new Map()
+        proj.forEach(p => projMap.set(p.id, p.pos))
+
+        papers.forEach(p => {
+            p.pos = projMap.get(p.id)
+        })
+
         all_papers = papers;
 
         calcAllKeys(all_papers, allKeys);
         setTypeAhead('authors', allKeys, filters, render);
 
 
-        xS.domain(d3.extent(proj.map(p => p[0])));
-        yS.domain(d3.extent(proj.map(p => p[1])));
+        xS.domain(d3.extent(proj.map(p => p.pos[0])));
+        yS.domain(d3.extent(proj.map(p => p.pos[1])));
 
         updateVis();
     })

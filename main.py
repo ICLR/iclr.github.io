@@ -309,7 +309,7 @@ def paper_json():
 @app.route('/embeddings_<emb>.json')
 def embeddings(emb):
     try:
-        return send_from_directory('static', 'embeddings_' + emb + '.json')
+        return send_from_directory('static', 'embeddings_' + emb + '_2.json')
     except FileNotFoundError:
         return ""
 
