@@ -25,7 +25,7 @@
             </a>
           </div>
           <div class=" text-center text-muted text-monospace">
-            <div> {{info.day}} {{info.time}} <a href="" target="_blank"  class="card-link">
+            <div> {{info.day}} <span class="session_times">({{info.time}})</span> <a href="" target="_blank"  class="card-link">
               Live QA       </a>
             </div>
           </div>
@@ -71,5 +71,12 @@
       </div>
     </div>
     {% include 'pages/footer.html' %}
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
+
   </body>
 </html>

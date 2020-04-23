@@ -185,7 +185,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?session={{base.short}}+Session+{{loop.index}}">Session {{i}}</a>
+                    <a class ="text-muted" href="papers.html?session={{base.short}}+Session+{{loop.index}}">Session {{loop.index}} <span class="session_times">{{i}}</span></a>
                   </h3>
                 </div>
               </div>
@@ -197,5 +197,12 @@
       </div>
     </div>
     {% include 'pages/footer.html' %}
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
+
   </body>
 </html>
