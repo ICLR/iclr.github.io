@@ -50,7 +50,7 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             {% for session in openreview.content.session %}
-            <div> {{session}} {% if openreview.content.session_times[loop.index - 1] != None%} {{openreview.content.session_times[loop.index - 1]}} 
+            <div> {{session}} {% if openreview.content.session_times[loop.index - 1] != None%} <span class="session_times">{{openreview.content.session_times[loop.index - 1]}}</span>
               [<a href="{{openreview.content.session_links[loop.index - 1]}}" target="_blank"  class="card-link">Live</a>] {% endif %}
             </div>
             {% endfor %}
@@ -74,7 +74,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -129,4 +129,10 @@
     </div>
     {% include 'pages/footer.html' %}
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>
