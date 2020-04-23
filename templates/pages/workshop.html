@@ -42,10 +42,96 @@
             <span class="font-weight-bold">Description:</span>
             {{info.description|safe}}
           </div>
-          </p>
-          <p></p>
+          <script src="https://momentjs.com/downloads/moment.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js" integrity="sha256-GBryZPfVv8G3K1Lu2QwcqQXAO4Szv4xlY4B/ftvyoMI=" crossorigin="anonymous"></script>
+          <script type='text/javascript' src='static/js/ical.js'></script>
+            <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/google-calendar/main.min.js'></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.js" integrity="sha256-q57s73NpMCTQ4ZXqb1X5bIywrICySeB6WvYxFGfz/PA=" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/moment/main.min.js" integrity="sha256-iCYfw93enxd8O5zz/jL4UamQ8bgrUfidO4C5500RSd4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/moment-timezone/main.min.js" integrity="sha256-dKFu7AO+UtXuSvj3RwvCOovdKT3ScgGqzOcZ77QNwbg=" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/bootstrap/main.min.css" integrity="sha256-auNBxJ+1OpvUJfYRsPihqLzJFUM9D3gpb8nOh5v0LiM=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css" integrity="sha256-Lfe6+s5LEek8iiZ31nXhcSez0nmOxP+3ssquHMR3Alo=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.css" integrity="sha256-saO3mkZVAcyqsfgsGMrmE7Cs/TLN1RgVykZ5dnnJKug=" crossorigin="anonymous" />
+
         </div>
       </div>
+        <div id="calendar">            
+        </div>
+        
+        <script type='text/javascript'>
+          
+          $.get("static/iclr.ics").then(function (data) {
+              // parse the ics data
+              var jcalData = ICAL.parse(data.trim());
+              var comp = new ICAL.Component(jcalData);
+              var eventComps = comp.getAllSubcomponents("vevent");
+              // map them to FullCalendar events
+              var events = $.map(eventComps, function (item) {
+
+              if (item.getFirstPropertyValue("class") == "PRIVATE") {
+              return null;
+              }
+              else  {
+              var toreturn = {
+              "title": item.getFirstPropertyValue("summary"),
+              "location": item.getFirstPropertyValue("location"),
+              };
+              var rrule=item.getFirstPropertyValue("rrule");
+              if(rrule!= null){ //event recurs
+              toreturn.rrule={};
+              if(rrule.freq) toreturn.rrule.freq=rrule.freq;
+              if(rrule.parts.BYDAY) toreturn.rrule.byweekday=rrule.parts.BYDAY;
+              if(rrule.until) toreturn.rrule.until=rrule.until.toString();
+              if(rrule.until) toreturn.rrule.until=rrule.until.toString();
+              if(rrule.interval) toreturn.rrule.interval=rrule.interval;
+              var dtstart=item.getFirstPropertyValue("dtstart").toString();
+              var dtend=item.getFirstPropertyValue("dtend").toString();
+              toreturn.rrule.dtstart=dtstart;
+              //count duration ms
+              var startdate=new Date(dtstart);
+              var enddate=new Date(dtend);
+              toreturn.duration = enddate - startdate;
+              }else{
+              toreturn.start=item.getFirstPropertyValue("dtstart").toString();
+              toreturn.end=item.getFirstPropertyValue("dtend").toString();
+              }
+              return toreturn;
+              }});
+              
+              var calEl = document.getElementById('calendar');
+              var cal = new FullCalendar.Calendar(calEl,
+              {googleCalendarApiKey: 'AIzaSyABWg1735hpCZHe2h-oeW0SA6Dl2dcUULc',
+              
+              events: {
+              googleCalendarId: 'tdk0etqidi6c0401ndrfa6gu84@group.calendar.google.com'
+              },
+              plugins: [ 'list', 'googleCalendar' ],
+          defaultView: 'listWeek',
+          views: {
+          listDay: { buttonText: 'list day' }
+          },
+          header :{left:'', center:'', right: ''},
+          
+              events: events,
+              eventRender: function (info) {
+              // console.log(info.event);
+              // append location
+              if (info.event.extendedProps.location != null && info.event.extendedProps.location != "") {
+              info.el.append(info.event.extendedProps.location );
+              }},
+              });
+              
+              cal.gotoDate("2020-04-26");
+              cal.render();
+              });
+              </script>
+
+          </p>
+          <p></p>
+
+
     </div>
     <!-- SlidesLive -->
     <div class="container" style="background-color:white; padding: 0px;">
