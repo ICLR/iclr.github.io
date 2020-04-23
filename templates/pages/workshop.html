@@ -62,7 +62,7 @@
         
         <script type='text/javascript'>
           
-          $.get("static/{{info.cal}}.ics").then(function (data) {
+          $.get("static/workshop_{{info.chat}}.ics").then(function (data) {
               // parse the ics data
               var jcalData = ICAL.parse(data.trim());
               var comp = new ICAL.Component(jcalData);
