@@ -1,0 +1,373 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:IDNMDE
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+DTSTART:20200426T140000Z
+DTEND:20200426T143000Z
+DTSTAMP:20200424T011316Z
+UID:04avgfkh08c53ro6idhnglr7id@google.com
+CREATED:20200423T234227Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235100Z
+LOCATION:
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Welcome and Opening Remark
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T141000Z
+DTEND:20200426T144000Z
+DTSTAMP:20200424T011316Z
+UID:4sdcjh8eimak4uo61rqd2ifh4a@google.com
+CREATED:20200423T234350Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235122Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Invited Talk 1: Image Processing\, Differential Equations\,
+  and Graph Neural Nets
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T144000Z
+DTEND:20200426T150000Z
+DTSTAMP:20200424T011316Z
+UID:0smvvmp0m107prrpk4cs6ufbpl@google.com
+CREATED:20200423T234420Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235127Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Contributed Talk 1: Solving ODE with Universal Flows: Appro
+ ximation Theory for Flow-Based Models
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T150000Z
+DTEND:20200426T153000Z
+DTSTAMP:20200424T011316Z
+UID:4l97apriqh7v6ondi4aj96p2gn@google.com
+CREATED:20200423T234435Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235133Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Invited Talk 2: Correcting the Bias in Laplacian Learning a
+ t Low Label Rates
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T153000Z
+DTEND:20200426T155000Z
+DTSTAMP:20200424T011316Z
+UID:7t4b7udu7vbtb9lc0bugpf7elj@google.com
+CREATED:20200423T234453Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235139Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Contributed Talk 2: Neural Operator: Graph Kernel Network f
+ or Partial Differential Equations
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T155000Z
+DTEND:20200426T160000Z
+DTSTAMP:20200424T011316Z
+UID:6opcdmhgqumq4ui77ov4o878ta@google.com
+CREATED:20200423T234521Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235152Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Coffee Break
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T160000Z
+DTEND:20200426T165000Z
+DTSTAMP:20200424T011316Z
+UID:02evei8k5iq3gkobdfelm41d9v@google.com
+CREATED:20200423T234546Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235158Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Plenary Talk 1
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T165000Z
+DTEND:20200426T171000Z
+DTSTAMP:20200424T011316Z
+UID:0ldotisiausf6a2qjj5hvuufl1@google.com
+CREATED:20200423T234614Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235203Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Contributed Talk 3: A Mean-field Analysis of Deep ResNet an
+ d Beyond:Towards Provable Optimization Via Overparameterization From Depth
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T183500Z
+DTEND:20200426T193500Z
+DTSTAMP:20200424T011316Z
+UID:4vinuhobje17rj2ehdbkclh2ba@google.com
+CREATED:20200423T234700Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235213Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Live Panel Discussion
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T193500Z
+DTEND:20200426T210000Z
+DTSTAMP:20200424T011316Z
+UID:4pb9k03lr7fsg4mglftdqquqaa@google.com
+CREATED:20200423T234744Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235218Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Lunch Break
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T210000Z
+DTEND:20200426T215000Z
+DTSTAMP:20200424T011316Z
+UID:6k8gtihqnslf25om11qlfv8k52@google.com
+CREATED:20200423T234833Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235229Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Plenary Talk 2
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T221000Z
+DTEND:20200426T224000Z
+DTSTAMP:20200424T011316Z
+UID:3qb413le9l0hap22860eigtup7@google.com
+CREATED:20200423T234934Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235239Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Invited Talk 3
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T215000Z
+DTEND:20200426T221000Z
+DTSTAMP:20200424T011316Z
+UID:0i9alp4f3agf7cdm3m2kba2njc@google.com
+CREATED:20200423T234910Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235244Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Contributed Talk 4: A Free-Energy Principle for Representat
+ ion Learning
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T224000Z
+DTEND:20200426T225000Z
+DTSTAMP:20200424T011316Z
+UID:6qo8ivukmsav9s8ehn9jia8vgv@google.com
+CREATED:20200423T235001Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235250Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Coffee Break
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T225000Z
+DTEND:20200426T232000Z
+DTSTAMP:20200424T011316Z
+UID:4tcsuni5so1rjgc3bqdbjj7b2h@google.com
+CREATED:20200423T235024Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235255Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Invited Talk 4
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T232000Z
+DTEND:20200426T234000Z
+DTSTAMP:20200424T011316Z
+UID:4pa4vp72ph892dp8kp662a7i31@google.com
+CREATED:20200423T235329Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235542Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Contributed Talk 5: Amortized Finite Element Analysis for F
+ ast PDE-Constrained Optimization
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T234000Z
+DTEND:20200427T000000Z
+DTSTAMP:20200424T011316Z
+UID:14kt22jo6rr3rmna4267302rkm@google.com
+CREATED:20200423T235401Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235550Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Contributed Talk 6: Nano-Material Configuration Design with
+  Deep Surrogate Langevin Dynamics
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200427T012500Z
+DTEND:20200427T013500Z
+DTSTAMP:20200424T011316Z
+UID:2vq5hnho2arke13ojcag09n23t@google.com
+CREATED:20200423T235450Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235559Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Closing Remarks
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200427T013500Z
+DTEND:20200427T033500Z
+DTSTAMP:20200424T011316Z
+UID:6eedcfeetas5m1ce405nl9iah1@google.com
+CREATED:20200423T235509Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T235602Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Live Poster Q&A Session
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T171000Z
+DTEND:20200426T183500Z
+DTSTAMP:20200424T011316Z
+UID:5ltfi5v64bknl1g2jvip6rfa74@google.com
+CREATED:20200423T234641Z
+DESCRIPTION:<ul><li><em>Nonlinear Differential Equations with External Forc
+ ing</em>. Paul Pukite.</li><li><em>On the space-time expressivity of ResNet
+ s</em>. Johannes Christoph Müller.</li><li><em>Enforcing Physical Constrain
+ ts in CNNs through Differentiable PDE Layer</em>. Chiyu “Max” Jiang\, Karth
+ ik Kashinath\, Prabhat\, Philip Marcus.</li><li><em>Deep Ritz revisited</em
+ >. Johannes Müller\, Marius Zeinhofer.</li><li><em>Differential Equations a
+ s Model Prior for DeepLearning and Applications to Robotics</em>. Michael L
+ utter\, Jan Peters.</li><li><em>Differentiable Physics Simulation</em>. Jun
+ bang Liang\, Ming C. Lin.</li><li><em>Comparing recurrent and convolutional
+  neural networks for predicting wave propagation</em>. Stathi Fotiadis\, Ed
+ uardo Pignatelli\, Mario Lino Valencia\, Chris Cantwell\, Amos Storkey\, An
+ il A. Bharath.</li><li><em>Time Dependence in Non-Autonomous Neural ODEs</e
+ m>. Jared Quincy Davis\, Krzysztof Choromanski\, Vikas Sindhwani\, Jake Var
+ ley\, Honglak Lee\, Jean-Jacques Slotine\, Valerii Likhosterov\, Adrian Wel
+ ler\, Ameesh Makadia.</li><li><em>Learning To Solve Differential Equations 
+ Across Initial Conditions</em>. Shehryar Malik\, Usman Anwar\, Ali Ahmed\, 
+ Alireza Aghasi.</li><li>H<em>ow Chaotic Are Recurrent Neural Networks?</em>
+ . Pourya Vakilipourtakalou\, Lili Mou.</li><li><em>Learning-Based Strong So
+ lutions to Forward and Inverse Problems in PDEs</em>. Leah Bar\, Nir Sochen
+ .</li><li><em>Embedding Hard Physical Constraints in Convolutional Neural N
+ etworks for 3D Turbulence</em>. Arvind T. Mohan\, Nicholas Lubbers\, Daniel
+  Livescu\, Michael Chertkov.</li><li>W<em>avelet-Powered Neural Networks fo
+ r Turbulence</em>. Arvind T. Mohan\, Daniel Livescu\, Michael Chertkov.</li
+ ><li><em>Can auto-encoders help with filling missing data?</em>. Marek Śmie
+ ja\, Maciej Kołomycki\, Łukasz Struski\, Mateusz Juda\, Mário A. T. Figueir
+ edo.</li><li><em>Neural Differential Equations for Single Image Super-Resol
+ ution</em>. Teven Le Scao.</li><li>U<em>nderstanding and Improving Transfor
+ mer From a Multi-Particle Dynamic System Point of View</em>. Yiping Lu\, Zh
+ uohan Li\, Di He\, Zhiqing Sun\, Bin Dong\, Tao Qin\, Liwei Wang\, Tie-yan 
+ Liu.</li><li><em>Neural Dynamical Systems</em>. Viraj Mehta\, Ian Char\, Wi
+ llie Neiswanger\, Youngseog Chung\, Andrew Oakleigh Nelson\, Mark D Boyer\,
+  Jeff Schneider.</li></ul>
+LAST-MODIFIED:20200424T000021Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Poster Lighting Talks 1
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200427T000000Z
+DTEND:20200427T012500Z
+DTSTAMP:20200424T011316Z
+UID:4np5l5fh4kpdaratj84eigc5n4@google.com
+CREATED:20200423T235416Z
+DESCRIPTION:<ul><li><em>Progressive Growing of Neural ODEs</em>. Hammad A. 
+ Ayyubi\, Yi Yao\, Ajay Divakaran.</li><li><em>Fast Convergence for Langevin
+  with Matrix Manifold Structure</em>. Ankur Moitra\, Andrej Risteski.</li><
+ li><em>Bringing PDEs to JAX with forward and reverse modes automatic differ
+ entiation</em>. Ivan Yashchuk</li><li><em>Urban air pollution forecasts gen
+ erated from latent space representation</em>. Cesar Quilodran Casas\, Rosse
+ lla Arcucci\, Yike Guo.</li><li><em>Dissipative SymODEN: Encoding Hamiltoni
+ an Dynamics with Dissipation and Control into Deep Learning</em>. Yaofeng D
+ esmond Zhong\, Biswadip Dey\, Amit Chakraborty.</li><li><em>Neural Ordinary
+  Differential Equation Value Networks for Parametrized Action Spaces</em>. 
+ Michael Poli\, Stefano Massaroli\, Sanzhar Bakhtiyarov\, Atsushi Yamashita\
+ , Hajime Asama\, Jinkyoo Park.</li><li><em>Stochasticity in Neural ODEs: An
+  Empirical Study</em>. Alexandra Volokhova\, Viktor Oganesyan\, Dmitry Vetr
+ ov.</li><li><em>Generating Control Policies for Autonomous Vehicles Using N
+ eural ODEs</em>. Houston Lucas\, Richard Kelley.</li><li><em>Generative ODE
+  Modeling with Known Unknowns</em>. Ori Linial\, Uri Shalit.</li><li><em>En
+ coder-decoder neural network for solving the nonlinear Fokker-Planck-Landau
+  collision operator in XGC</em>. Marco Andres Miller\, Randy Michael Church
+ ill\, Choong-Seock Chang\, Robert Hager.</li><li><em>Differentiable Molecul
+ ar Simulations for Control and Learning</em>. Wujie Wang\, Simon Axelrod\, 
+ Rafael Gómez-Bombarelli.</li><li><em>Port-Hamiltonian Gradient Flows</em>. 
+ Michael Poli\, Stefano Massaroli\, Atsushi Yamashita\, Hajime Asama\, Jinky
+ oo Park.</li><li><em>Lagrangian Neural Networks</em>. Miles Cranmer\, Sam G
+ reydanus\, Stephan Hoyer\, Peter Battaglia\, David Spergel\, Shirley Ho.</l
+ i><li><em>Constrained Neural Ordinary Differential Equations with Stability
+  Guarantees</em>. Aaron Tuor\, Jan Drgona\, Draguna Vrabie.</li><li><em>Sto
+ chastic gradient algorithms from ODE splitting perspective</em>. Daniil Mer
+ kulov\, Ivan Oseledets.</li><li><em>The equivalence between Stein variation
+ al gradient descent and black-box variational inference</em>. Casey Chu\, K
+ entaro Minami\, Kenji Fukumizu.</li><li><em>Towards Understanding Normaliza
+ tion in Neural Ordinary Differential Equations</em>. Julia Gusak\, Larisa M
+ arkeeva\, Talgat Daulbaev\, Alexander Katrutsa\, Andrzej Cichocki\, Ivan Os
+ eledets.</li></ul>
+LAST-MODIFIED:20200424T000309Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDNMDE: Poster Lighting Talks 2
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
