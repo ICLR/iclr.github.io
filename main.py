@@ -1,8 +1,9 @@
-from flask import Flask, render_template, render_template_string
+from flask import Flask, render_template, render_template_string, make_response
 from flask import jsonify, send_from_directory, redirect
 from flask_frozen import Freezer
 import pickle, json, yaml
 import os, sys, argparse
+import dateparser, datetime
 import glob
 
 
@@ -286,10 +287,46 @@ def poster(poster):
     note_id = poster
     data = {"openreview": site_data["papers"][note_id], "id": note_id,
             "paper_recs": [site_data["papers"][n] for n in site_data["paper_recs"][note_id]][1:]}
-
+    
     return render_template('pages/page.html', **data)
 
-# DATA FILES
+@app.route('/poster_<poster>.<session>.ics')
+def poster_ics(poster, session):
+    note_id = poster
+    session = int(session)
+    start = site_data["papers"][note_id]["content"]["session"][session].split()[0] + " "+\
+            site_data["papers"][note_id]["content"]["session_times"][session].split("-")[0][1:]
+    dt = dateparser.parse(start.replace("Mon", "Monday").replace("Tues", "Tuesday").replace("Wed", "Wednesday").replace("Thurs", "Thursday"),
+                          settings={"RELATIVE_BASE":dateparser.parse("april 30")})
+
+    data = {"openreview": site_data["papers"][note_id],
+            "starttime" : dt.strftime('%Y%m%dT%H%M%SZ'),
+            "endtime" : (dt + datetime.timedelta(hours=2)).strftime('%Y%m%dT%H%M%SZ'),
+
+            "id": note_id}
+
+    
+    from icalendar import Calendar, Event
+    cal = Calendar()
+
+    cal.add('prodid', '-//ICLR//mxm.dk//')
+    cal.add('version', '2.0')
+    cal["X-WR-TIMEZONE"] = "Etc/GMT"
+    cal["X-WR-CALNAME"]  = "ICLR: " + site_data["papers"][note_id]["content"]["title"]
+    event = Event()
+    link = '<a href="http://iclr.cc/virtual/poster_%s.html">Poster Page</a>'%(site_data["papers"][note_id]["forum"])
+    event.add('summary', site_data["papers"][note_id]["content"]["title"])
+    event.add('description', link)
+
+    event.add('dtstart', dt)
+    event.add('dtend', dt + datetime.timedelta(hours=2))
+    event.add('dtstamp', dt)    
+    # event['uid'] = '20050115T101010/27346262376@mxm.dk'
+    cal.add_component(event)
+    response = make_response(cal.to_ical())
+    response.mimetype = "text/calendar"
+    response.headers["Content-Disposition"] = "attachment; filename=poster_"+poster+"."+str(session)+".ics"
+    return response
 
 @app.route('/papers.json')
 def paper_json():
@@ -360,6 +397,10 @@ def your_generator_here():
 
     for i in site_data["papers"].keys():
         yield "poster", {"poster": str(i)}
+    for i in site_data["papers"].keys():
+        for j in range(2):
+            yield "poster_ics", {"poster": str(i), "session":str(j)}
+
     for i in range(1, len(site_data["workshops"]["workshops"])+1):
         yield "workshop", {"workshop": str(i)}
     for i in range(1, len(site_data["speakers"]["speakers"])+1):
