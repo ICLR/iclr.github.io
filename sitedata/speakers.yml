@@ -1,5 +1,6 @@
 speakers:
     - speaker: Dr. Aisha Walcott-Bryant
+      slides_link: 38926698
       title:  "AI + Africa = Global Innovation"
       image: static/images/aisha.jpg
       institution: IBM Research Africa, Nairobi
@@ -11,6 +12,7 @@ speakers:
     - speaker: Prof. Leslie Kaelbling
       title: Doing for Our Robots What Nature Did For Us
       image: static/images/Kaelbling-1.jpg
+      slides_link: 38926697
       institution: MIT
       day: Monday
       time: 19:00-20:00 GMT
@@ -22,6 +24,7 @@ speakers:
       image: static/images/ruha.jpeg
       institution: Princeton
       day: Tuesday
+      slides_link: 38926699
       id: 3
       time: 14:00-15:00 GMT
       abstract: "From everyday apps to complex algorithms, technology has the potential to hide, speed, and even deepen discrimination, while appearing neutral and even benevolent when compared to racist practices of a previous era. In this talk, I explore a range of discriminatory designs that encode inequity: by explicitly amplifying racial hierarchies, by ignoring but thereby replicating social divisions, or by aiming to fix racial bias but ultimately doing quite the opposite. This presentation takes us into the world of biased bots, altruistic algorithms, and their many entanglements, and provides conceptual tools to decode tech promises with sociologically informed skepticism. In doing so, it challenges us to question not only the technologies we are sold, but also the ones we manufacture ourselves."
@@ -29,6 +32,7 @@ speakers:
     - speaker: Dr. Laurent Dinh
       title: Invertible Models and Normalizing Flows
       image: static/images/laurent.jpg
+      slides_link: 38926700
       institution: Google AI
       day: Tuesday
       id: 4
@@ -40,6 +44,7 @@ speakers:
       image: static/images/Mihaela_photo_new.jpg
       institution: University of Cambridge, The Alan Turing Institute, UCLA
       day: Wednesday
+      slides_link: 38926701
       time: 11:00-12:00 GMT
       id: 5
       bio: "Professor van der Schaar is John Humphrey Plummer Professor of Machine Learning, Artificial Intelligence and Medicine at the University of Cambridge and a Turing Faculty Fellow at The Alan Turing Institute in London, where she leads the effort on data science and machine learning for personalized medicine. She is also a Chancellor's Professor at UCLA. She was elected IEEE Fellow in 2009. She has received numerous awards, including the Oon Prize on Preventative Medicine from the University of Cambridge (2018), an NSF Career Award (2004), 3 IBM Faculty Awards, the IBM Exploratory Stream Analytics Innovation Award, the Philips Make a Difference Award and several best paper awards, including the IEEE Darlington Award. She holds 35 granted USA patents.  In 2019, she was identified by National Endowment for Science, Technology and the Arts as the female researcher based in the UK with the most publications in the field of AI. She was also elected as a 2019 'Star in Computer Networking and Communications'. Her research expertise spans signal and image processing, communication networks, network science, multimedia, game theory, distributed systems and machine learning. Her current research focus is on machine learning, AI and operations research for healthcare and medicine.  For more details, see her website: http://www.vanderschaar-lab.com"
@@ -48,6 +53,7 @@ speakers:
       image: static/images/devi.png
       institution: Georgia Tech and Facebook AI Research
       day: Wednesday
+      slides_link: 38926702
       time: 16:00-17:00 GMT
       id: 6
       abstract: "I will talk about AI systems at the intersection of computer vision and natural language processing. I will give an overview of why problems at the intersection of vision and language are exciting, what capabilities today's AI systems have, and what challenges remain."
@@ -60,6 +66,7 @@ She is a recipient of an IJCAI Computers and Thought award, a Sloan Research Fel
       institution: Facebook AI + NYU / MILA
       day: Thursday
       id: 7
+      slides_link: 38926703
       time: 16:00-17:00 GMT
       bio: "Yoshua Bengio is recognized as one of the world’s artificial intelligence leaders and a pioneer of deep learning. Professor since 1993 at the Université de Montréal, he received the A.M. Turing Award 2018, considered like the Nobel prize for computing, with Geoff Hinton and Yann LeCun. Holder of the Canada Research Chair in Statistical Learning Algorithms, he is also the founder and scientific director of Mila, the Quebec Institute of AI–the world’s biggest university-based research group in deep learning. In 2018, he collected the largest number of new citations in the world for a computer scientist and earned the prestigious Killam Prize from the Canada Council for the Arts. Concerned about the social impact of AI, he actively contributed to the Montreal Declaration for the Responsible Development of Artificial Intelligence.
 
@@ -70,6 +77,7 @@ Yann LeCun is VP and Chief AI Scientist at Facebook and Silver Professor at NYU 
       institution: University of California, Berkeley
       image: static/images/jordan.jpg
       day: Thursday
+      slides_link: 38926705
       time: 19:00-20:00 GMT
       id: 8
       bio: "Michael I. Jordan is the Pehong Chen Distinguished Professor in the Department of Electrical Engineering and Computer Science and the Department of Statistics at the University of California, Berkeley. His research interests bridge the computational, statistical, cognitive and biological sciences. Professor Jordan is a member of the National Academy of Sciences and a member of the National Academy of Engineering. He has been named a Neyman Lecturer and a Medallion Lecturer by the Institute of Mathematical Statistics. He received the IJCAI Research Excellence Award in 2016, the David E. Rumelhart Prize in 2015 and the ACM/AAAI Allen Newell Award in 2009."

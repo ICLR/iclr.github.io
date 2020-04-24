@@ -78,10 +78,21 @@
             </dl>
           </div>
           <div class="col-md-1"></div>
-          <div class="col-md-5 col-sm-12 slp embed-responsive embed-responsive-16by9">
+          <div id="presentation-embed" class="col-md-5 col-sm-12 slp embed-responsive embed-responsive-16by9">
             
-            <iframe class="embed-responsive-item" style="height:90%" src="https://www.youtube.com/embed/OS9cyTBlztA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
+          <script src='https://slideslive.com/embed_presentation.js'></script>
+          <script>
+            embed = new SlidesLiveEmbed('presentation-embed', {
+            presentationId: '38926792',
+            autoPlay: false, // change to true to autoplay the embedded presentation
+            verticalEnabled: true,
+            verticalWhenWidthLte: 2000,
+            allowHiddenControlsWhenPaused: true,
+            hideTitle: true
+            });
+          </script>
+
         </div>
       </div>
       <!-- Sponsor -->

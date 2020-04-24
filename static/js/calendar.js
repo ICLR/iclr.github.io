@@ -52,7 +52,7 @@ function make_cal(name) {
                                                     listDay: { buttonText: 'list day' }
                                                 },
                                                 header :{left:'', center:'', right: ''},
-                                                
+                                               
                                                 events: events,
                                                 eventClick: function(info) {
                                                     $(window).scrollTop($("#" +info.event.title.split(" ").join("_")).position().top - 100);

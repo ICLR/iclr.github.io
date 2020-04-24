@@ -44,7 +44,12 @@ def main(site_data_path):
     session_times = {}
     session_links = {}
     site_data["poster_schedule"].sort(key = lambda s : s["name"])
-    
+
+    slide_link = {}
+    for p in site_data["poster_slides"]["slides"]:
+        slide_link[p["uid"]] = p["slides_id"]
+
+        
     for v in site_data["poster_schedule"]:
         for poster_info in v["posters"]:
             poster = poster_info["id"]
@@ -68,11 +73,11 @@ def main(site_data_path):
                 session_times[poster].append(None)
                 session_links[poster].append(None)
 
-    rec_to = {}
-    for k, v in site_data["author_recs"].items():
-        for v2 in v:
-            rec_to.setdefault(v2, [])
-            rec_to[v2].append(k)
+    # rec_to = {}
+    # for k, v in site_data["author_recs"].items():
+    #     for v2 in v:
+    #         rec_to.setdefault(v2, [])
+    #         rec_to[v2].append(k)
 
     nk = list(site_data["papers"].keys())
     nk.sort()
@@ -81,12 +86,13 @@ def main(site_data_path):
 
     for i, (k,n) in enumerate(site_data["papers"].items()):
         n["content"]["iclr_id"] = k
+        n["content"]["slides"] = slide_link[k]
         n["content"]["authors"] = [a.replace("*", "") for a in n["content"]["authors"]]
         n["content"]["session"] = paper_session[k]
         n["content"]["session_times"] = session_times[k]
         n["content"]["session_links"] = session_links[k]
-        n["content"]["recs"] = rec_to[k] + [site_data["papers"][t]["content"]["title"]
-                                            for t in site_data["paper_recs"][k]]
+        # n["content"]["recs"] = rec_to[k] + [site_data["papers"][t]["content"]["title"]
+        #                                     for t in site_data["paper_recs"][k]]
         titles[n["content"]["title"]] = k
 
         if "TL;DR" in n["content"]:
