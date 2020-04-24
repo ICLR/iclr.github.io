@@ -1,0 +1,375 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BAICS
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+DTSTART:20200426T130000Z
+DTEND:20200426T133000Z
+DTSTAMP:20200424T010900Z
+UID:510h20jja1hlnp7rl61s20b26p@google.com
+CREATED:20200423T223227Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T223227Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Meet and Greet
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T133000Z
+DTEND:20200426T140000Z
+DTSTAMP:20200424T010900Z
+UID:0291ug669bfd8ihq72d354cd3m@google.com
+CREATED:20200423T223400Z
+DESCRIPTION:<ul><li>Eugene Kharitonov: Entropy Minimization In Emergent Lan
+ guages</li><li>Guy Ben-Yosef: What can human minimal videos tell us about d
+ ynamic recognition models?</li><li>Adam Marblestone: Product Kanerva Machin
+ es: Factorized Bayesian Memory</li><li>Simon Segert: Relaxed Graph Matching
+  for Analogical Reasoning</li><li>Jessica Hamrick: Levels of Analysis for M
+ achine Learning</li><li>Colin Conwell: Model Zoology and Neural Taskonomy f
+ or Better Characterizing Mouse Visual Cortex</li><li>Yevgen Matusevych: Ana
+ lyzing acoustic word embeddings</li><li>Ronen Tamari: Ecological Semantics:
+  Programming Environments for Situated Language Understanding</li><li>Otili
+ a Stretcu: Coarse-to-Fine Curriculum Learning for Classification</li><li>Du
+ ng Nguyen: Theory of Mind with Guilt Aversion Facilitates Cooperative Reinf
+ orcement Learning</li><li>Antonio Loquercio: Global-Local Network for Learn
+ ing Depth Via Interaction</li><li>Jesse Geerts: Probabilistic Successor Fea
+ tures Allow for Flexible Behaviour</li><li>Konstantinos Mitsopoulos: Cognit
+ ive Architectures for Introspecting Deep Reinforcement Learning Agents</li>
+ <li>Alexander Tschantz: Reinforcement Learning through Active Inference</li
+ ><li>Owen Lewis: Mental models for neural models</li><li>Nick Haber: Toward
+ s modeling the developmental variability of human attention</li></ul>
+LAST-MODIFIED:20200423T223452Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Paper Spotlights
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T140000Z
+DTEND:20200426T150000Z
+DTSTAMP:20200424T010900Z
+UID:2e1q0ioqvdseavgq69sa1v83nu@google.com
+CREATED:20200423T223838Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T223838Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Poster Session #1
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T151500Z
+DTEND:20200426T153000Z
+DTSTAMP:20200424T010900Z
+UID:63qd6ph89cjnabpg393ke0ef6r@google.com
+CREATED:20200423T224046Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T224046Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Opening Remarks
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T153000Z
+DTEND:20200426T160000Z
+DTSTAMP:20200424T010900Z
+UID:4lnr08flcmpfnisbtjbro5hld4@google.com
+CREATED:20200423T224116Z
+DESCRIPTION:<table><tbody><tr><td><b>Not playing by the rules: Play\, probl
+ ems\, and human cognition</b><br><br>Please note that this will be a <b>**l
+ ive**</b> presentation.<br><br><a href="http://eccl.mit.edu/people.htm" tar
+ get="_blank">Laura Schulz</a> is a Professor of Cognitive Science MIT\, whe
+ re she is the Principal Investigator of the Early Childhood Cognition Lab. 
+ She studies how our commonsense understanding of the physical and social wo
+ rld is constructed during early childhood by investigating 1) how children 
+ infer the concepts and causal relations that enable them to engage in accur
+ ate prediction\, explanation\, and intervention\; 2) the factors that suppo
+ rt curiosity and exploration\, allowing children to engage in effective dis
+ covery and 3) how these abilities inform and interact with social cognition
+  to support intuitive theories of the self and others.</td></tr></tbody></t
+ able>
+LAST-MODIFIED:20200423T224116Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Invited Speaker - Laura Schulz [LIVE]
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T160000Z
+DTEND:20200426T170000Z
+DTSTAMP:20200424T010900Z
+UID:161cegq67qfqcikealuhk6sgve@google.com
+CREATED:20200423T224143Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T224143Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Live Panel and Q&A
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T170000Z
+DTEND:20200426T173000Z
+DTSTAMP:20200424T010900Z
+UID:465nc548pq5nt195d932e8d71a@google.com
+CREATED:20200423T224207Z
+DESCRIPTION:<table><tbody><tr><td><b>Representation Learning in the Hippoca
+ mpal-Entorhinal circuit<br><br><a href="https://neurokim.com/" target="_bla
+ nk">Kimberly Stachenfeld</a></b> is a neuroscientist at DeepMind studying c
+ omputational neuroscience and machine learning. Her research focuses on (1)
+  the neural mechanisms for learning relational structure in service of effi
+ cient reinforcement learning and (2) how to get machines to do something si
+ milar.</td></tr></tbody></table>
+LAST-MODIFIED:20200423T224207Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Invited Speaker - Kim Stachenfeld
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T173000Z
+DTEND:20200426T174500Z
+DTSTAMP:20200424T010900Z
+UID:31qe5m4gcrulta540f9so6vabg@google.com
+CREATED:20200423T224230Z
+DESCRIPTION:<i>Gido M van de Ven\, Hava Siegelmann\, and Andreas Tolias</i>
+ <br><br>Artificial neural networks suffer from catastrophic forgetting. Unl
+ ike humans\,when these networks are trained on something new\, they rapidly
+  forget what waslearned before. In the brain\, a mechanism thought to be im
+ portant for protectingmemories is the replay of neuronal activity patterns 
+ representing those memories.In artificial neural networks\, such memory rep
+ lay has been implemented in theform of ‘generative replay’\, which can succ
+ essfully prevent catastrophic forgetting in a range of toy examples. Scalin
+ g up generative replay to problems withmore complex inputs\, however\, turn
+ s out to be challenging. We propose a new\,more brain-like variant of repla
+ y in which internal or hidden representations arereplayed that are generate
+ d by the network’s own\, context-modulated feedbackconnections. In contrast
+  to established continual learning methods\, our methodachieves acceptable 
+ performance on the challenging problem of class-incrementallearning on natu
+ ral images without relying on stored data.
+LAST-MODIFIED:20200423T224230Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Contributed Talk - Brain-like replay for continual learning w
+ ith artificial neural networks
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T174500Z
+DTEND:20200426T181500Z
+DTSTAMP:20200424T010900Z
+UID:48r444ok1pe9rtcf3eshs9bt8b@google.com
+CREATED:20200423T224304Z
+DESCRIPTION:<table><tbody><tr><td><b>Bridging intelligent robotics and cogn
+ itive science<br><br><a href="https://people.csail.mit.edu/lpk/" target="_b
+ lank">Leslie Kaelbling</a></b> is a Professor at MIT. She has an undergradu
+ ate degree in Philosophy and a PhD in Computer Science from Stanford\, and 
+ was previously on the faculty at Brown University. She was the founding edi
+ tor-in-chief of the Journal of Machine Learning Research. Her research agen
+ da is to make intelligent robots using methods including estimation\, learn
+ ing\, planning\, and reasoning. She is not a robot.</td></tr></tbody></tabl
+ e>
+LAST-MODIFIED:20200423T224304Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Invited Speaker - Leslie Kaelbling
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T181500Z
+DTEND:20200426T183000Z
+DTSTAMP:20200424T010900Z
+UID:0evorscq6v31in22to3mabvtpu@google.com
+CREATED:20200423T224320Z
+DESCRIPTION:<i>Eliza Kosoy\, Jasmine Collins\, David Chan\, Jessica Hamrick
+ \, Sandy H Huang\, John F Canny\, and Alison Gopnik<br></i><br>Research in 
+ developmental psychology consistently shows that children explorethe world 
+ thoroughly and efficiently and that this exploration allows them to learn.I
+ n turn\, this early learning supports more robust generalization and intell
+ igent behavior later in life. While much work has gone into developing meth
+ ods for exploration in machine learning\, artificial agents have not yet re
+ ached the high standardset by their human counterparts. In this work we pro
+ pose using DeepMind Lab(Beattie et al.\, 2016) as a platform to directly co
+ mpare child and agent behaviorsand to develop new exploration techniques. W
+ e outline two ongoing experimentsto demonstrate the effectiveness of a dire
+ ct comparison\, and outline a number ofopen research questions that we beli
+ eve can be tested using this methodology.
+LAST-MODIFIED:20200423T224320Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Contributed Talk - Exploring Exploration: Comparing Children 
+ with RL agents in Unified Environments
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T183000Z
+DTEND:20200426T190000Z
+DTSTAMP:20200424T010900Z
+UID:6000jf4l4mql7oq3376jl4t7e6@google.com
+CREATED:20200423T224333Z
+DESCRIPTION:<table><tbody><tr><td><b>Autism-Inspired AI for Visuospatial an
+ d Social Reasoning<br><br><a href="https://my.vanderbilt.edu/mkunda/" targe
+ t="_blank">Maithilee Kunda</a></b> is an Assistant Professor of Computer Sc
+ ience and Computer Engineering at Vanderbilt University. Her work in artifi
+ cial intelligence\, in the area of cognitive systems\, looks at how visual 
+ thinking contributes to learning and intelligent behavior\, with a focus on
+  applications for individuals on the autism spectrum.</td></tr></tbody></ta
+ ble>
+LAST-MODIFIED:20200423T224333Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Invited Speaker - Maithilee Kunda
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T190000Z
+DTEND:20200426T191500Z
+DTSTAMP:20200424T010900Z
+UID:45je0hpjiog06vq6fqqana4fvi@google.com
+CREATED:20200423T224425Z
+DESCRIPTION:<i>Angela Radulescu\, Bas van Opheusden\, Frederick Callaway\, 
+ Thomas Griffiths\, and James Hillis</i><br><br>Effective use of limited com
+ putational resources is a hallmark of intelligent systems. Here we explore 
+ how people make use of limited perceptual resources ina naturalistic visual
+  search task. We hypothesize that people optimally trade offperformance aga
+ inst the cost of sampling information. To formalize this hypothesis\, we fr
+ ame the problem of attention allocation in visual search as a meta-levelMar
+ kov decision process (meta-MDP) and show that a classic Bayesian model ofvi
+ sual search can be interpreted as a heuristic policy for this meta-MDP. We 
+ testthe heuristic policy against gaze data from 21 human participants in a 
+ virtual reality (VR) visual search study\, finding that human gaze trajecto
+ ries share qualitativestructure with trajectories simulated from the model.
+LAST-MODIFIED:20200423T224425Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Contributed Talk - From heuristic to optimal models in natura
+ listic visual search
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T191500Z
+DTEND:20200426T194500Z
+DTSTAMP:20200424T010900Z
+UID:7shvpd1kf9ucrgmpasbauho4go@google.com
+CREATED:20200423T224433Z
+DESCRIPTION:<table><tbody><tr><td><b>Cognitive technologies for making the 
+ invisible visible<br><br><a href="https://cogtoolslab.github.io/about.html"
+  target="_blank">Judy Fan</a></b> is an Assistant Professor of Psychology a
+ t the University of California\, San Diego. The goal of her research is to 
+ reverse engineer the human cognitive toolkit\, especially how people use ph
+ ysical representations of thought to learn\, communicate\, and create. Towa
+ rds this end\, her lab employs converging approaches from cognitive science
+ \, computational neuroscience\, and artificial intelligence.</td></tr></tbo
+ dy></table>
+LAST-MODIFIED:20200423T224433Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Invited Speaker - Judy Fan
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T194500Z
+DTEND:20200426T200000Z
+DTSTAMP:20200424T010900Z
+UID:14ed6jdk2qfn3fn8euud19lcaa@google.com
+CREATED:20200423T224452Z
+DESCRIPTION:<i>Hyunwoo Kim\, Byeongchang Kim\, and Gunhee Kim</i><br><br>Al
+ though consistency has been a long-standing issue in dialogue agents\, we s
+ howbest-performing persona-conditioned generative models still suffer from 
+ high insensitivity to contradiction. Current approaches for improving consi
+ stency rely onsupervised external models and labels which are demanding. In
+ spired by socialcognition and pragmatics\, we model public self-consciousne
+ ss in dialogue agentsthrough an imaginary listener to improve consistency. 
+ Our approach\, based on theRational Speech Acts framework (Frank &amp\; Goo
+ dman\, 2012)\, attempts to maintainconsistency in an unsupervised manner re
+ quiring neither additional annotationsnor pretrained external models. We fu
+ rther extend the framework by learningthe distractor supply for the first t
+ ime. Experimental results show that our approach effectively reduces contra
+ diction and improves consistency on DialogueNLI (Welleck et al.\, 2019) and
+  PersonaChat (Zhang et al.\, 2018).
+LAST-MODIFIED:20200423T224452Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Contributed Talk - Self-consciousness for Endowing Consistent
+  Persona to Dialogue Agents
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T200000Z
+DTEND:20200426T203000Z
+DTSTAMP:20200424T010900Z
+UID:0345ltf7q8vf1dghlp78fvkuso@google.com
+CREATED:20200423T224513Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T224513Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Meet and Greet
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T203000Z
+DTEND:20200426T210000Z
+DTSTAMP:20200424T010900Z
+UID:0tl5goh2jsn5msrc1nr1oknh1r@google.com
+CREATED:20200423T224548Z
+DESCRIPTION:<ul><li>Eugene Kharitonov: Entropy Minimization In Emergent Lan
+ guages</li><li>Guy Ben-Yosef: What can human minimal videos tell us about d
+ ynamic recognition models?</li><li>Adam Marblestone: Product Kanerva Machin
+ es: Factorized Bayesian Memory</li><li>Simon Segert: Relaxed Graph Matching
+  for Analogical Reasoning</li><li>Jessica Hamrick: Levels of Analysis for M
+ achine Learning</li><li>Colin Conwell: Model Zoology and Neural Taskonomy f
+ or Better Characterizing Mouse Visual Cortex</li><li>Yevgen Matusevych: Ana
+ lyzing acoustic word embeddings</li><li>Ronen Tamari: Ecological Semantics:
+  Programming Environments for Situated Language Understanding</li><li>Otili
+ a Stretcu: Coarse-to-Fine Curriculum Learning for Classification</li><li>Du
+ ng Nguyen: Theory of Mind with Guilt Aversion Facilitates Cooperative Reinf
+ orcement Learning</li><li>Antonio Loquercio: Global-Local Network for Learn
+ ing Depth Via Interaction</li><li>Jesse Geerts: Probabilistic Successor Fea
+ tures Allow for Flexible Behaviour</li><li>Konstantinos Mitsopoulos: Cognit
+ ive Architectures for Introspecting Deep Reinforcement Learning Agents</li>
+ <li>Alexander Tschantz: Reinforcement Learning through Active Inference</li
+ ><li>Owen Lewis: Mental models for neural models</li><li>Nick Haber: Toward
+ s modeling the developmental variability of human attention</li></ul>
+LAST-MODIFIED:20200423T224555Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Paper Spotlights
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T210000Z
+DTEND:20200426T220000Z
+DTSTAMP:20200424T010900Z
+UID:7odj1n1suuq0vlnqd3siud77gm@google.com
+CREATED:20200423T224652Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T224652Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BAICS Poster Session #2
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
