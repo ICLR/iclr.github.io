@@ -1508,8 +1508,6 @@
     join_link: https://us02web.zoom.us/j/88982700819?pwd=TjEydFpGWTExR1F5YTBYcFFBS0lNUT09
   - id: HyebplHYwB
     join_link: https://us02web.zoom.us/j/82606096962?pwd=c2ttM2FNdlZGZncxemsrZkhFazF5Zz09
-  - id: BJgMFxrYPB
-    join_link: https://us02web.zoom.us/j/88497615030?pwd=WDV1Z05ZZ2ZlSisrV0JJWEdtMHZXQT09
   - id: rygjmpVFvB
     join_link: https://us02web.zoom.us/j/85792382814?pwd=YU1KcVZKVXk1R1RzZENpWXlQRzloUT09
   - id: rke7geHtwH
@@ -1536,6 +1534,8 @@
     join_link: https://us02web.zoom.us/j/86451656026?pwd=dmE5SjJmdkhvOVJSVTZTVDVlblFrQT09
 - name: Wed Session 5
   posters:
+  - id: BJgMFxrYPB
+    join_link: https://us02web.zoom.us/j/88497615030?pwd=WDV1Z05ZZ2ZlSisrV0JJWEdtMHZXQT09  
   - id: H1ldzA4tPr
     join_link: https://us02web.zoom.us/j/87473413110?pwd=ZnFiSWFEQkJFUnZWZ1UyMEJTSTltZz09
   - id: HklRwaEKwB
