@@ -1,0 +1,125 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:AI4AH
+X-WR-TIMEZONE:Africa/Nairobi
+BEGIN:VEVENT
+DTSTART:20200426T090000Z
+DTEND:20200426T091000Z
+DTSTAMP:20200424T011654Z
+UID:0p41qdu9kfcj2615g2tvp2j30b@google.com
+CREATED:20200423T214405Z
+DESCRIPTION:Introduction to Webinar 1
+LAST-MODIFIED:20200423T234530Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:AI4AH Webinar1
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T170000Z
+DTEND:20200426T202000Z
+DTSTAMP:20200424T011654Z
+UID:1mnqo33ll2v9esc7sej4e47ilm@google.com
+CREATED:20200423T214405Z
+DESCRIPTION:Contributed papers:<br><table> <colgroup><col> </colgroup><tbod
+ y><tr>  <td><ul><li>An Overview and  Case Study of the Clinical AI Model De
+ velopment Life Cycle for Healthcare  Systems</li></ul></td> </tr> <tr>  <td
+ ><ul><li>Towards Fully-Automated Carotid Plaque  Risk Prediction Using 3-D 
+ Freehand Ultrasound</li></ul></td> </tr> <tr>  <td><ul><li>IROF: a low reso
+ urce evaluation metric  for explanation methods</li></ul></td> </tr> <tr>  
+ <td><ul><li>Optimizing Medical Treatment for Sepsis  in Intensive Care: fro
+ m Learning to Pre-Trial</li></ul></td> </tr> <tr>  <td><ul><li>Predicting U
+ nplanned Readmissions with  Highly Unstructured Data</li></ul></td> </tr> <
+ tr>  <td><ul><li>Assessing Robustness to Noise: Low-Cost  Head CT Triage</l
+ i></ul></td> </tr> <tr>  <td><ul><li>Towards a robust and affordable approa
+ ch  for automated malaria diagnosis from microscopy images</li></ul></td> <
+ /tr> <tr>  <td><ul><li>Towards a predictive spatio-temporal  representation
+  of brain data</li></ul></td> </tr> <tr>  <td><ul><li>XGMix: Local-Ancestry
+  Inference with  Stacked XGBoost</li></ul></td> </tr> <tr>  <td><ul><li>Tea
+ cher-Student Domain Adaptation for  Biosensor Models</li></ul></td> </tr> <
+ tr>  <td><ul><li>Stereo Endoscopic Image Super-Resolution  Using Disparity-
+ Constrained Parallel Attention</li></ul></td> </tr> <tr>  <td><ul><li>Image
+  Quality Transfer Enhances the  Contrast and Resolution of Low-Field MRI in
+  African Paediatric Epilepsy  Patients</li></ul></td> </tr> <tr>  <td><ul><
+ li>Teacher-student chain for efficient  semi-supervised histology image cla
+ ssification</li></ul></td> </tr> <tr>  <td><ul><li>Understanding the robust
+ ness of deep  neural network classifiers for breast cancer screening</li></
+ ul></td> </tr> <tr>  <td><ul><li>Uncertainty Estimation in Cancer  Survival
+  Prediction</li></ul></td> </tr> <tr>  <td><ul><li>Heterogeneity loss to ha
+ ndle  intersubject and intrasubject variability</li></ul></td> </tr> <tr>  
+ <td><ul><li>Breast Cancer Detection Using  Convolutional Neural Networks</l
+ i></ul></td> </tr> <tr>  <td><ul><li>Train\, Learn\, Expand\, Repeat.</li><
+ /ul></td> </tr> <tr>  <td><ul><li>Improve robustness of DNN for ECG signal 
+  classification: a noise-to-signal ratio perspective</li></ul></td> </tr> <
+ tr>  <td><ul><li>Weakly Supervised Context Encoder using  DICOM metadata in
+  Ultrasound Imaging</li></ul></td> </tr> <tr>  <td><ul><li>Fully Automated 
+ Hand Hygiene Monitoring  in Operating Room using 3D Convolutional Neural Ne
+ twork</li></ul></td> </tr></tbody></table>
+LAST-MODIFIED:20200423T234530Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:AI4AH Webinar2
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T091000Z
+DTEND:20200426T095000Z
+DTSTAMP:20200424T011654Z
+UID:1t7vrkjh3es0fmgts9r34ob308@google.com
+CREATED:20200423T214405Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T234530Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:AI4AH Invited Talks 1: Chris Paton 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T095000Z
+DTEND:20200426T103000Z
+DTSTAMP:20200424T011654Z
+UID:2uqg235pfblpdau9qo4slu7kci@google.com
+CREATED:20200423T214405Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T234530Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:AI4AH Invited Talk2: Edward Choi 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T111000Z
+DTEND:20200426T120000Z
+DTSTAMP:20200424T011654Z
+UID:7ee6rvt6pocuvp5nmvrk1gvcu6@google.com
+CREATED:20200423T214405Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T234530Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:AI4AH Q&A and Panel discussion 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T103000Z
+DTEND:20200426T111000Z
+DTSTAMP:20200424T011654Z
+UID:7ia7dhpi1nld9cgdkc072279t6@google.com
+CREATED:20200423T214405Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T234530Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:AI4AH Invited Talk3: Sotirios A Tsaftaris 
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
