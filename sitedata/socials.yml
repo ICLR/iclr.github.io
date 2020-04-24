@@ -94,13 +94,13 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
       website:
       day: Wednesday          
       description: "A sequence of randomly formed small group discussions centered around Reinforcement Learning. After the success of the NeurIPS RL social we hope to bring a similar event to ICLR, where participants will get opportunities to discuss a wide variety of topics with new people. This will be accomplished through the zoom breakout room feature, with 20 minutes per group discussion. Each group can create and discuss their own topic, or choose a topic from our curated list sourced from the ICLR conference goers! "
-      image:      
+      image: rls.png      
     - name: The Bitter Lesson for AI
       organizers: "Richard Sutton & Warren Johnston"
       website:
       day: Tuesday          
       description: "The purpose of this social is do discuss The Bitter Lesson (http://www.incompleteideas.net/IncIdeas/BitterLesson.html) and its potential implications for artificial intelligence research."
-      image:  
+      image: BL.png  
     - name: Embodied Intelligence Agora
       organizers: "Tom Erez & Francesco Nori"
       website:
