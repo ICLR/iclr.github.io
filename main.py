@@ -187,6 +187,14 @@ def paperVis():
     return render_template('pages/papers_vis.html')
 
 
+@app.route('/paper_like.html')
+def paperLike():
+    data = {"keyword": "all",
+            "page": "papers",
+            "openreviews": site_data["papers"].values()}
+    return render_template('pages/paper_like.html', **data)
+
+
 @app.route('/recs.html')
 def recommendations():
     data = {"choices": site_data["author_recs"].keys(),

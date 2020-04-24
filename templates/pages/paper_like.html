@@ -6,15 +6,13 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <!-- NAV -->
-    {% set active_page = "Papers" %}
+    {% set active_page = "I&hearts;CLR" %}
     {% include 'pages/header.html' %}
     <div class="container">
       <!-- Header -->
       <ul class="nav nav-pills justify-content-center">
-        <li class="nav-item active">
-          <a class="nav-link text-muted active " data-toggle="tab"
-            href="#tab-browse" role="tab" aria-controls="nav-home"
-            aria-selected="true">Browse
+        <li class="nav-item">
+          <a class="nav-link text-muted" href="papers.html">Browse
           </a>
         </li>
         <li class="nav-item">
@@ -22,8 +20,10 @@
           </a>
         </li>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-muted" href="paper_like.html">I&hearts;CLR
+        <li class="nav-item active">
+          <a class="nav-link text-muted active " data-toggle="tab"
+            href="#tab-browse" role="tab" aria-controls="nav-home"
+            aria-selected="true">I&hearts;CLR
           </a>
         </li>
       </ul>
