@@ -59,6 +59,7 @@ function make_cal(name) {
                                                     hour12: false,
                                                     timeZoneName: "long"
                                                 },
+                                                height: 350, 
                                                 events: events,
                                                 eventClick: function(info) {
                                                     $(window).scrollTop($("#" +info.event.title.split(" ").join("_")).position().top - 100);
