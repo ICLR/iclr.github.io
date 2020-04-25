@@ -13,7 +13,7 @@ function make_cal(name) {
         else  {
             var toreturn = {
                 "title": item.getFirstPropertyValue("summary"),
-                "location": item.getFirstPropertyValue("location"),
+                "location": "",
             };
             if (toreturn["title"].indexOf("Live Q&A") > -1 ) {
                 return null;
