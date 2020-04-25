@@ -36,7 +36,7 @@ speakers:
       institution: Google AI
       day: Tuesday
       id: 4
-      time: 20:00-21:00 GMT
+      time: 19:00-20:00 GMT
       abstract: "Normalizing flows provide a tool to build an expressive and tractable family of probability distributions. In the last few years, research in this field has successfully harnessed some of the latest advances in deep learning to design flexible invertible models. Recently, these methods have seen wider adoption in the machine learning community for applications such as probabilistic inference, density estimation, and classification. In this talk, I will reflect on the recent progress made by the community on using, expanding, and repurposing this toolset, and describe my perspective on challenges and opportunities in this direction."
       bio: "Laurent Dinh is a research scientist at Google Brain Montréal. His research focus has been on deep generative models, probabilistic modeling, and generalization in deep learning. He's best known for his contribution in normalizing flows generative models, such as NICE and Real NVP, and in generalization in deep learning.He obtained his PhD in deep learning at Mila, under the supervision of Yoshua Bengio, during which he visited Google Brain and DeepMind. Before that, he graduated from École Centrale Paris in Applied Mathematics and from École Normale Supérieure de Cachan in machine learning and computer vision."
     - speaker: Prof. Mihaela van der Schaar
