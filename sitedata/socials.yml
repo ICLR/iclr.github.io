@@ -117,7 +117,7 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
     - name: Embodied Intelligence Agora
       organizers: "Tom Erez & Francesco Nori"
       website:
-      day:
+      day: Wednesday
       description: "We will discuss the role of embodiment for developing generalizable representations.  This social will be composed of multiple breakout rooms, each hosted by a senior researcher in the field who will moderate the conversation and share their thoughts.  The discussion topic in each room will be dynamically determined by the participants, and may change along with the conversation.  Conversation topics in the breakout rooms may include questions like When should we learn on a real robot?, How to evaluate Model-Based RL methods?, How do we learn third-person imitation and movement analogies?, What can we learn about learning from motor development?, How should we represent tactile information?. This social will be an opportunity to engage with members of the community who care about robotics and embodied intelligence.  We aim to create an inclusive space to share early ideas, with the hope of inspiring novel research and fostering new collaborations."
       image:
       id: Embody
