@@ -17,6 +17,8 @@ FAQ:
         Answer: "The website uses three external tools, Rocket.Chat, Zoom and 6Connex. Logins for rocket.chat were created on registration. For other tools you can create them the first time you use the tool. For more details on specific tools, see answers to related questions below. You will not need to download any special software other than a web browser."
       - Question: How do I register for Rocket.Chat?
         Answer: "You will need an account for Rocket.Chat, which is the text-chat tool that is embedded throughout the site. This would have been created for you on registration. If you registered after this was done, you can request a new one, which will be approved as soon as we can. You can also use this backup invite link https://iclr.rocket.chat/register/J5aqNDEumaRLKP67d to self-register using the web version of Rocket.Chat. Please use the email address you used to register for the conference."
+      - Qudstion: If you're using the web browser Brave ...
+        Answer: "Please turn down Shields for iclr.cc, since they interfere with the Rocket.Chat integration."
       - Question: How do I use Zoom in the browser instead of the App?
         Answer: "Zoom is used for all video sessions, which you can watch using the Zoom app or within the browser. Clicking on the link will ask you to open the video in the Zoom app. If you want to use Zoom in the browser, simply wait a few seconds after clicking the Video link and it will open a browser-based session."
       - Question: Visiting with Sponsor Hall and booths on 6Connex.
