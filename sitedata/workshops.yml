@@ -47,6 +47,17 @@ workshops:
       website: http://iclr2020deepdiffeq.rice.edu/
       chat: deepdiffeq
       cal: deepdiffeq
+      content: "Detailed schedule of our workshop can be found in the Google Sheet below: <br>
+
+        <a href='https://docs.google.com/spreadsheets/d/1-mIrSHpWaUL-MqdGFZljPXpefulQtAB6NpPTZorO4A8/edit?usp=sharing'>Detailed Schedule</a> <br>
+        
+        We are going to hold a panel discussion on how researchers from applied math and machine learning communities can join forces to solve challenging problems in both fields. You can participate in our panel discussion by entering your questions into the following GDOC: <br>
+          
+          <a href='https://docs.google.com/document/d/1ll7I19_d3OxcqBY977wgIcyAbdl2V69QOF7nu2yEd6o/edit?usp=sharing'>Questions for Panelists</a> <br>
+          
+          All accepted papers are posted on our OpenReview site: <br>
+            
+            <a href='https://openreview.net/group?id=ICLR.cc/2020/Workshop/DeepDiffEq#accept-poster'>Accepted Papers</a> <br>" 
       description: "Differential equations and neural networks are not only closely related to each other but also offer complementary strengths: the modelling power and interpretability of differential equations, and the approximation and generalization power of deep neural networks. The great leap forward in machine learning empowered by deep neural networks has been primarily relying on the increasing amounts of data coupled with modern abstractions of distributed computing. When the models and problems grow larger and more complex, the need for ever larger datasets becomes a bottleneck. <br><br>Differential equations have been the principled way to encode prior structural assumptions into nonlinear models such as deep neural networks, reducing their need for data while maintaining the modelling power. These advantages allow the models to scale up to bigger problems with better robustness and safety guarantee in practical settings.<br><br>While progress has been made on combining differential equations and deep neural networks, most existing work has been disjointed, and a coherent picture has yet to emerge. Substantive progress will require a principled approach that integrates ideas from the disparate lens, including differential equations, machine learning, numerical analysis, optimization, and physics.<br><br>The goal of this workshop is to provide a forum where theoretical and experimental researchers of all stripes can come together not only to share reports on their progress but also to find new ways to join forces towards the goal of coherent integration of deep neural networks and differential equations. Topics to be discussed include, but are not limited to:<br>- Deep learning for high dimensional PDE problems<br>- PDE and stochastic analysis for deep learning<br>- PDE and analysis for new architectures<br>- Differential equations interpretations of first order optimization methods<br>- Inverse problems approaches to learning theory<br>- Numerical tools to interface deep learning models and ODE/PDE solver<br>"
     - name: "Towards Trustworthy ML: Rethinking Security and Privacy for ML"
       short: Bring together experts from a variety of communities (ML, computer security, data privacy, fairness, & ethics) to work on promising ideas and research directions.
