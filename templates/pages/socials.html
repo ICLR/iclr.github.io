@@ -64,11 +64,11 @@
                  style="display:block; overflow:hidden; width:100%;">
                 <div class="card-header text-center"
                      style="min-height: 400px; width:100%;">
-                    <a class="text-muted" href="#">
-                        <h3 class="card-title main-title">
+<!--                    <a class="text-muted" href="#">-->
+                        <h3 class="card-title">
                             {{social.name}}
                         </h3>
-                    </a>
+<!--                    </a>-->
                     <div class="card-subtitle text-muted">
                         {{social.organizers}}
                     </div>
@@ -91,6 +91,16 @@
                             <p>{{social.day[loop.index-1]}}  <span class="session_times"> ({{s}})</span></p>
                             {% endfor %}
                         </div>
+
+                        <p class="text-center text-muted card-title">
+                            <a href="https://iclr.rocket.chat/channel/social_{{social.id}}" target="_blank"> Chat </a>
+                            {% if social.website %}
+                            | <a href="{{social.website}}" target="_blank"> Website </a>
+                            {% endif %}
+
+
+                        </p>
+
                     </div>
 
                 </div>
