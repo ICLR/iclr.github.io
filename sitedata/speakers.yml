@@ -7,11 +7,13 @@ speakers:
       day: Monday
       time: 14:00-15:00 GMT
       id: 1
+      zoom: https://us02web.zoom.us/j/85760413917?pwd=THRuSFZzM0FNcUIyWFhvVkpTNWYyUT09
       abstract: "Artificial Intelligence (AI) has for some time stoked the creative fires of computer scientists and researchers world-wide -- even before the so-called AI winter. After emerging from the winter, with much improved compute, vast amounts of data, and new techniques, AI has ignited our collective imaginations. We have been captivated by its promise while wary of its possible misuse in applications. AI has certainly demonstrated its enormous potential especially in fields such as healthcare. There, it has been used to support radiologists and to further precision medicine; conversely it has been used to generate photorealistic videos which distort our concept of what is real.  Hence, we must thoughtfully harness AI to address the myriad of scientific and societal challenges; and open pathways to opportunities in governance, policy, and management. In this talk, I will share innovative solutions which leverage AI for global health with a focus on Africa. I will present a vision for the collaborations in hopes to inspire our community to join on this journey to transform Africa and impact the world."
       bio: "Dr. Aisha Walcott-Bryant is a research scientist and manager of the AI Science and Engineering team at IBM Research, Africa. She is passionate about healthcare, interactive systems, and on addressing Africa's diverse challenges.In addition, Dr. Walcott-Bryant leads a team of researchers and engineers who are working on transformational innovations in global health and development while advancing the state of the art in AI, Blockchain, and other technologies.She and her team are engaged in projects in Maternal Newborn Child Health (MNCH), Family Planning (FP), disease intervention planning, and water access and management.  Her team's recent healthcare work on “Enabling Care Continuity Using a Digital Health Wallet” was awarded Honorable Mention at the International Conference on Health Informatics, ICHI2019.Prior to her career at IBM Research Africa, Dr. Walcott-Bryant worked in Spain. There, she took on projects in the area of Smarter Cities at Barcelona Digital and Telefonica with a focus on physical systems for social media engagement, and multi-modal trip planning and recommending. Dr. Walcott-Bryant earned her PhD in Electrical Engineering and Computer Science at MIT where she conducted research on mobile robot navigation in dynamic environments at their Computer Science and Artificial Intelligence Lab (CSAIL)."
     - speaker: Prof. Leslie Kaelbling
       title: Doing for Our Robots What Nature Did For Us
       image: static/images/Kaelbling-1.jpg
+      zoom: https://us02web.zoom.us/j/84236486211?pwd=a1RYbWJvOWFsQ09EVkdieldLV1pOZz09
       slides_link: 38926697
       institution: MIT
       day: Monday
@@ -23,6 +25,7 @@ speakers:
       title: "2020 Vision: Reimagining the Default Settings of Technology & Society"
       image: static/images/ruha.jpeg
       institution: Princeton
+      zoom: https://us02web.zoom.us/j/84412565544?pwd=S2JSMTducGJNdUNDWDJDN3Via3lhZz09
       day: Tuesday
       slides_link: 38926699
       id: 3
@@ -35,6 +38,7 @@ speakers:
       slides_link: 38926700
       institution: Google AI
       day: Tuesday
+      zoom: https://us02web.zoom.us/j/81113669821?pwd=Vzc4V2tZcXJzWDg5TDNFRVVMbHBDdz09
       id: 4
       time: 19:00-20:00 GMT
       abstract: "Normalizing flows provide a tool to build an expressive and tractable family of probability distributions. In the last few years, research in this field has successfully harnessed some of the latest advances in deep learning to design flexible invertible models. Recently, these methods have seen wider adoption in the machine learning community for applications such as probabilistic inference, density estimation, and classification. In this talk, I will reflect on the recent progress made by the community on using, expanding, and repurposing this toolset, and describe my perspective on challenges and opportunities in this direction."
@@ -45,6 +49,7 @@ speakers:
       institution: University of Cambridge, The Alan Turing Institute, UCLA
       day: Wednesday
       slides_link: 38926701
+      zoom: https://us02web.zoom.us/j/84801666334?pwd=b3RzY1dqRHZ4OFBhaWZ6Q28zZUhlUT09
       time: 11:00-12:00 GMT
       id: 5
       bio: "Professor van der Schaar is John Humphrey Plummer Professor of Machine Learning, Artificial Intelligence and Medicine at the University of Cambridge and a Turing Faculty Fellow at The Alan Turing Institute in London, where she leads the effort on data science and machine learning for personalized medicine. She is also a Chancellor's Professor at UCLA. She was elected IEEE Fellow in 2009. She has received numerous awards, including the Oon Prize on Preventative Medicine from the University of Cambridge (2018), an NSF Career Award (2004), 3 IBM Faculty Awards, the IBM Exploratory Stream Analytics Innovation Award, the Philips Make a Difference Award and several best paper awards, including the IEEE Darlington Award. She holds 35 granted USA patents.  In 2019, she was identified by National Endowment for Science, Technology and the Arts as the female researcher based in the UK with the most publications in the field of AI. She was also elected as a 2019 'Star in Computer Networking and Communications'. Her research expertise spans signal and image processing, communication networks, network science, multimedia, game theory, distributed systems and machine learning. Her current research focus is on machine learning, AI and operations research for healthcare and medicine.  For more details, see her website: http://www.vanderschaar-lab.com"
@@ -53,6 +58,7 @@ speakers:
       image: static/images/devi.png
       institution: Georgia Tech and Facebook AI Research
       day: Wednesday
+      zoom: https://us02web.zoom.us/j/87410344494?pwd=MnhZVjI1V0NuRzN0U3VQdjdIckpNQT09
       slides_link: 38926702
       time: 16:00-17:00 GMT
       id: 6
@@ -68,6 +74,7 @@ She is a recipient of an IJCAI Computers and Thought award, a Sloan Research Fel
       id: 7
       slides_link: 38926703
       time: 16:00-17:00 GMT
+      zoom: https://us02web.zoom.us/j/89307958147?pwd=RkF3aHF2MXBtOVRMOEQyVThSbnkwZz09
       bio: "Yoshua Bengio is recognized as one of the world’s artificial intelligence leaders and a pioneer of deep learning. Professor since 1993 at the Université de Montréal, he received the A.M. Turing Award 2018, considered like the Nobel prize for computing, with Geoff Hinton and Yann LeCun. Holder of the Canada Research Chair in Statistical Learning Algorithms, he is also the founder and scientific director of Mila, the Quebec Institute of AI–the world’s biggest university-based research group in deep learning. In 2018, he collected the largest number of new citations in the world for a computer scientist and earned the prestigious Killam Prize from the Canada Council for the Arts. Concerned about the social impact of AI, he actively contributed to the Montreal Declaration for the Responsible Development of Artificial Intelligence.
 
 Yann LeCun is VP and Chief AI Scientist at Facebook and Silver Professor at NYU affiliated with the Courant Institute and the Center for Data Science. He was the founding Director of Facebook AI Research and of the NYU Center for Data Science. He received an EE Diploma from ESIEE (Paris) in 1983, a PhD in Computer Science from Université Pierre et Marie Curie (Paris) in 1987. After a postdoc at the University of Toronto, he joined AT&T Bell Laboratories. He became head of the Image Processing Research Department at AT&T Labs-Research in 1996, and joined NYU in 2003 after a short tenure at the NEC Research Institute. In late 2013, LeCun became Director of AI Research at Facebook, while remaining on the NYU Faculty part-time. He was visiting professor at Collège de France in 2016. His research interests include machine learning and artificial intelligence, with applications to computer vision, natural language understanding, robotics, and computational neuroscience. He is best known for his work in deep learning and the invention of the convolutional network method which is widely used for image, video and speech recognition. He is a member of the US National Academy of Engineering, a Chevalier de la Légion d’Honneur, a fellow of AAAI, the recipient of the 2014 IEEE Neural Network Pioneer Award, the 2015 IEEE Pattern Analysis and Machine Intelligence Distinguished Researcher Award, the 2016 Lovie Award for Lifetime Achievement, the University of Pennsylvania Pender Award, and honorary doctorates from IPN, Mexico and EPFL. He is the recipient of the 2018 ACM Turing Award (with Geoffrey Hinton and Yoshua Bengio) for “conceptual and engineering breakthroughs that have made deep neural networks a critical component of computing.”
@@ -80,5 +87,7 @@ Yann LeCun is VP and Chief AI Scientist at Facebook and Silver Professor at NYU 
       slides_link: 38926705
       time: 19:00-20:00 GMT
       id: 8
+      zoom: https://us02web.zoom.us/j/87415189812?pwd=QlFweWhPWmxlOW5sYmh2YTBSZXZlUT09
       bio: "Michael I. Jordan is the Pehong Chen Distinguished Professor in the Department of Electrical Engineering and Computer Science and the Department of Statistics at the University of California, Berkeley. His research interests bridge the computational, statistical, cognitive and biological sciences. Professor Jordan is a member of the National Academy of Sciences and a member of the National Academy of Engineering. He has been named a Neyman Lecturer and a Medallion Lecturer by the Institute of Mathematical Statistics. He received the IJCAI Research Excellence Award in 2016, the David E. Rumelhart Prize in 2015 and the ACM/AAAI Allen Newell Award in 2009."
       abstract: "While there has been significant progress at the interface of statistics and computer science in recent years, many fundamental challenges remain. Some are mathematical and algorithmic in nature, such as the challenges associated with optimization and sampling in high-dimensional spaces. Some are statistical, including the challenges associated with multiple decision-making. Others are economic in nature, including the need to cope with scarcity and provide incentives in learning-based two-way markets. I will present recent progress on each of these fronts."
+      
