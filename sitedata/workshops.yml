@@ -141,8 +141,7 @@ workshops:
     - name: Workshop on Causal Learning For Decision Making
       short: Investigate how much progress is possible by framing the learning problem beyond learning correlations, that is, by uncovering and leveraging causal relations.
       organizers: "Nan Rosemary Ke · Anirudh Goyal Alias Parth Goyal · Jane Wang · Silvia Chiappa · Jovana Mitrovic · Theophane Weber · Danilo Jimenez Rezende · Stefan Bauer"
-      website: https://sites.google.com/view/causal-learning-icrl2020/home
-      
+      website: https://causalrlworkshop.github.io/
       chat: causallearning
       cal: causallearning
       slides_live: "38926830"
