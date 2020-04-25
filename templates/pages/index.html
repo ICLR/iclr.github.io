@@ -169,7 +169,14 @@
             </div>
           </div>
           {% endfor %}
+          <p class="text-muted">
+          The ICLR organizers would like to acknowledge the following volunteers and contributors who provided valuable additional service to the conference: 
+          {% for vol in volunteers %}
+          {{vol}}{{"," if not loop.last }}
+          {% endfor %}
+          </p>
         </div>
+
       </div>
     </div>
     {% include 'pages/footer.html' %}

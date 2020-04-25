@@ -141,6 +141,7 @@ def index():
 @app.route('/index.html')
 def home():
     site_data["about"]["sponsors"] = site_data["sponsors"]["sponsors"]
+    site_data["about"]["volunteers"] = site_data["volunteers"]
     return render_template('pages/index.html', **site_data["about"])
 
 
