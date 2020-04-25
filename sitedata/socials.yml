@@ -51,11 +51,11 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
       image: lxai.png
       id: LatinX
     - name: What can AI Researchers do to fight against COVID-19?
-      organizers: "Elisabeta Gace & hendrik strobelt"
+      organizers: "Elisabeta Gace & Hendrik Strobelt"
       day: Monday, Thursday
-      description: "The COVID-19 coronavirus presents an unprecedented, global challenge. When citizens are doing their part by social distancing, healthcare workers and first responders are taking care of many of us, and our governments are mobilizing resources to respond to this crisis, we’ve asked ourselves what can we do at IBM, and more generally, what can the AI community contribute? In this social event, we will provide an overview of the AI tools IBM offered to help the research community fight against COVID-19 (see our response at <a href='https://www.ibm.com/thought-leadership/covid19/'>https://www.ibm.com/thought-leadership/covid19/</a>). We will open the floor and use this opportunity to brainstorm novel together with ICLR participants"
+      description: "The COVID-19 coronavirus presents an unprecedented, global challenge. When citizens are doing their part by social distancing, healthcare workers and first responders are taking care of many of us, and our governments are mobilizing resources to respond to this crisis, we’ve asked ourselves what can we do at IBM, and more generally, what can the AI community contribute? In this social event, we will provide an overview of the AI tools IBM offered to help the research community fight against COVID-19 (see our response at <a href='https://www.ibm.com/thought-leadership/covid19/'>https://www.ibm.com/thought-leadership/covid19/</a>). We will open the floor and use this opportunity to brainstorm novel ideas together with ICLR participants. There will be two sessions with focus on molecules (Monday) and on deep search (Thursday)."
       website:
-      image:
+      image: Covid.png
       id: Covid
     - name: Climate and Sustainability Startups
       organizers: "Eddie Obropta & Hassan Kane"
