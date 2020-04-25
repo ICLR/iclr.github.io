@@ -46,7 +46,7 @@
               Calendar
             </a>
             
-            <a href="" target="_blank"  class="card-link">
+            <a href="{{info.zoom_live}}" target="_blank"  class="card-link">
             Live
             </a>
             <a href="chat.html?room=channel/workshop_{{info.chat}}" target="_blank"  class="card-link">
@@ -54,7 +54,9 @@
             </a>
           </div>
           <div class="text-center text-muted">
-            (Note: Workshop posters and instructions are on the workshop site.)
+            {{info.content|safe}}
+            <br>
+            (Note: Workshop posters and instructions are on the workshop site. This page will go live during the times below.)
           </div>
         </div>
       </div>
@@ -87,12 +89,11 @@
     <div class="container" style="background-color:white; padding: 0px;">
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
-          (Note: This video is a temporary placeholder.)
-          <div id="presentation-embed-38915748" class="slp my-auto"></div>
+          <div id="presentation-embed-{{info.slides_live}}" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
-            embed = new SlidesLiveEmbed('presentation-embed-38915748', {
-            presentationId: '38915748',
+            embed = new SlidesLiveEmbed('presentation-embed-{{info.slides_live}}', {
+            presentationId: '{{info.slides_live}}',
             autoPlay: false, // change to true to autoplay the embedded presentation
             verticalEnabled: true,
             verticalWhenWidthLte: 2000,
@@ -101,7 +102,6 @@
             });
           </script>
         </div>
-        <!-- SlidesLive -->
         <div class="col-md-5 col-xs-12 p-2">
           <div id="gitter" class="slp">
             <center>

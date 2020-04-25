@@ -51,8 +51,8 @@
           <div class=" text-center text-muted text-monospace">
             {% for session in openreview.content.session %}
             <div> {{session}} {% if openreview.content.session_times[loop.index - 1] != None%} <span class="session_times">{{openreview.content.session_times[loop.index - 1]}}</span>
-              [<a href="{{openreview.content.session_links[loop.index - 1]}}" target="_blank"  class="card-link">Live</a>
-              <a target="_blank" href="webcal://iclr.github.io/iclr-images/calendars/poster_{{openreview.forum}}.{{loop.index-1}}.ics">Cal</a>] {% endif %}
+              [<a href="{{openreview.content.session_links[loop.index - 1]}}" target="_blank"  class="card-link">Live</a>]
+              [<a target="_blank" href="webcal://iclr.github.io/iclr-images/calendars/poster_{{openreview.forum}}.{{loop.index-1}}.ics">Cal</a>] {% endif %}
             </div>
             {% endfor %}
           </div>
@@ -74,7 +74,6 @@
     <div class="container" style="background-color:white; padding: 0px;">
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
-          (Note: This video is a temporary placeholder.)
 
           <div id="presentation-embed-{{openreview.content.slides}}" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>

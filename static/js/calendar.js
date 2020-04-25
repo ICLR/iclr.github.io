@@ -37,6 +37,11 @@ function make_cal(name) {
                 var enddate=new Date(dtend);
                 toreturn.duration = enddate - startdate;
             }else{
+                if (item.getFirstPropertyValue("dtstart") == null)
+                    return null;
+                if (item.getFirstPropertyValue("dtend") == null)
+                    return null;
+                
                 toreturn.start=item.getFirstPropertyValue("dtstart").toString();
                 toreturn.end=item.getFirstPropertyValue("dtend").toString();
             }
