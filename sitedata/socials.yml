@@ -45,7 +45,7 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
       day: Monday
       description: "Virtual gathering of LatinX in AI Members with an hour of invited talks from members of our community whom we are recognizing for their efforts in response to the COVID-19 Pandemic. See our webpage: <a href='http://www.latinxinai.org/iclr-2020'>www.latinxinai.org/iclr-2020</a>"
       website:
-      image:
+      image: lxai.png
     - name: What can AI Researchers do to fight against COVID-19?
       organizers: "Elisabeta Gace & hendrik strobelt"
       day: Monday, Thursday
