@@ -71,7 +71,6 @@ workshops:
       website: https://www.climatechange.ai/ICLR2020_workshop.html
       chat: climatechange
       slides_live: "38926837"
-      zoom_live: "https://us02web.zoom.us/j/82518895062?pwd=eW5QdlVYZHgvYWp4cGYwcUd0bjRaQT09"
       cal: climatechange
       description: "Climate change is one of the greatest problems society has ever faced, with increasingly severe consequences for humanity as natural disasters multiply, sea levels rise, and ecosystems falter. Since climate change is a complex issue, action takes many forms, from designing smart electric grids to tracking greenhouse gas emissions through satellite imagery. While no silver bullet, machine learning can be an invaluable tool in fighting climate change via a wide array of applications and techniques. These applications require algorithmic innovations in machine learning and close collaboration with diverse fields and practitioners. This workshop is intended as a forum for those in the machine learning community who wish to help tackle climate change."
     - name: "ML-IRL: Machine Learning in Real Life"
