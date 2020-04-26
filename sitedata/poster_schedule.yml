@@ -1660,8 +1660,6 @@
   posters:
   - id: B1eWOJHKvB
     join_link: https://us02web.zoom.us/j/83328774134?pwd=bC9kTTNaQ1hHQ0x6ZHR3TDEyNkJYUT09
-  - id: B1esx6EYvr
-    join_link: https://us02web.zoom.us/j/88993502749?pwd=V21CT0gxY1JRQVlKRWNyZWFGd1RpUT09
   - id: B1gF56VYPH
     join_link: https://us02web.zoom.us/j/86037870172?pwd=U2tPNUZsOUpnS21pZCtUVzFpRFFoZz09
   - id: B1gHokBKwS
@@ -1798,8 +1796,6 @@
     join_link: https://us02web.zoom.us/j/81949553235?pwd=M1ExZjA5dHZoRGw5cnZyc05vK01NZz09
   - id: B1eY_pVYvB
     join_link: https://us02web.zoom.us/j/81464007314?pwd=d2hUR0Q2MEFIWjQ0OG14Z1YvNW4ydz09
-  - id: B1esx6EYvr
-    join_link: https://us02web.zoom.us/j/87350948094?pwd=eEsyZWExL0FuZUVQZTNaa3laeUJnZz09
   - id: B1gHokBKwS
     join_link: https://us02web.zoom.us/j/81648135538?pwd=R1IrOFB3MDE1c2N3V05GeSswK2NiZz09
   - id: B1gskyStwr
@@ -2346,6 +2342,8 @@
     join_link: https://us02web.zoom.us/j/88908708905?pwd=cGdKaklObVpHUDVDUG1SK2FzQkFiQT09
 - name: Wed Session 3
   posters:
+  - id: B1esx6EYvr
+    join_link: https://us02web.zoom.us/j/88993502749?pwd=V21CT0gxY1JRQVlKRWNyZWFGd1RpUT09
   - id: B1eyO1BFPr
     join_link: https://us02web.zoom.us/j/83512941646?pwd=L1pkajZET1VMcTRyYnlEQXdjMDV2dz09
   - id: BJewlyStDr
@@ -2472,6 +2470,8 @@
     join_link: https://us02web.zoom.us/j/83516537185?pwd=STJkVmRyeGNkdkg1SGQ0NU1sZzBEUT09
   - id: BJgZGeHFPH
     join_link: https://us02web.zoom.us/j/86492696976?pwd=U0tzc3B5TjN3TGZ0U0VUdXBOeE8vQT09
+  - id: B1esx6EYvr
+    join_link: https://us02web.zoom.us/j/87350948094?pwd=eEsyZWExL0FuZUVQZTNaa3laeUJnZz09
   - id: BJlQtJSKDB
     join_link: https://us02web.zoom.us/j/82728346091?pwd=Z1lkb3UzVmhQM3Blck1aM0V3M21VQT09
   - id: BJxG_0EtDS
