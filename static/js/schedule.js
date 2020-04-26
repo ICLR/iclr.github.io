@@ -4,7 +4,7 @@ const conf_days = ['---', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri']
 let sc = null;
 let min_max_time = [];
 let currentTimeZone = moment.tz.guess(true);
-let tzNames = moment.tz.names();
+let tzNames = [...moment.tz.names(), 'Star Date (TNG)'];
 
 function updateTable() {
     const scale = d3.scaleTime().domain(min_max_time)
@@ -42,9 +42,16 @@ function updateTable() {
 
     // const tf = d3.timeFormat('%I:%M %p')
 
-    const tf = date => moment(date).tz(currentTimeZone).format('hh:mm A')
+    const tf = date => {
+        if (currentTimeZone.startsWith('Star')) {
+            return calendarDateToStardateTng(new Date(date))
+        } else {
+            return moment(date).tz(currentTimeZone).format('hh:mm A')
+        }
+    }
     // const tf_moment_GMT = date => moment(date).tz('GMT').format('hh:mm A')
     const day_diff = date => {
+        if (currentTimeZone.startsWith('Star')) return 0;
         const m = moment(date)
         return m.tz(currentTimeZone).dayOfYear() - m.utc().dayOfYear();
     }
@@ -70,14 +77,14 @@ function updateTable() {
               day = conf_days[dayID]
 
               res += `<div  class="time_slot"> ${tf(d.real_times[0])} - ${tf(
-                d.real_times[1])} ${(dd > 0 ? '+' + dd + 'd' : (dd < 0 ? dd +'d': ''))} </div>`
+                d.real_times[1])} ${(dd > 0 ? '+' + dd + 'd' : (dd < 0 ? dd + 'd' : ''))} </div>`
               res += `<a href="papers.html?session=${day}+Session+${matches[2]}"> <span class="session-title">` +
                 `Poster Day ${matches[1]} Session ${matches[2]}</span> </a>`
 
           } else if (d.type === 'qa') {
-               const dd = day_diff(d.real_times[1]);
+              const dd = day_diff(d.real_times[1]);
               res += `<span class="time_slot">${tf(
-                d.real_times[0])}  ${(dd > 0 ? '+' + dd + 'd' : (dd < 0 ? dd +'d' : ''))}</span> <a href="speaker_${d.id}.html"><span class="session-title">` +
+                d.real_times[0])}  ${(dd > 0 ? '+' + dd + 'd' : (dd < 0 ? dd + 'd' : ''))}</span> <a href="speaker_${d.id}.html"><span class="session-title">` +
                 `${d.name} </a></span>`
           }
           return res;
@@ -136,3 +143,19 @@ const start = () => {
 
 
 }
+
+// credits to https://github.com/sumghai/StarTrek_StardateCalc/blob/master/stardateTNG.js
+
+const starDateOrigin = new Date("July 5, 2318 12:00:00");
+
+function calendarDateToStardateTng(calendarInput) {
+    calendarInput.setSeconds(0);
+
+    const millisecondsSinceStardateOrigin = calendarInput.getTime() - starDateOrigin.getTime();
+
+    const stardateOut = millisecondsSinceStardateOrigin / 34367056.4;
+
+    return stardateOut.toFixed(1);
+}
+
+
