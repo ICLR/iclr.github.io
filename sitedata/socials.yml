@@ -64,6 +64,8 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
         - Wednesday
       times:
         - 16:00-18:00 GMT
+      links:
+        - ""
       description: This hall provides students, professors and anyone interested to learn more about internships and opportunities for students at Amazon. Learn how to build our your research skill set through internships and engagements with Amazon.
       website: https://iclr.6connex.com/event/VirtualEvent/
       image:
@@ -76,6 +78,8 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
         - Thursday
       times:
         - 16:00-18:00 GMT
+      links:
+        - ""
       description: "The WiML Virtual Social will be a session on Navigating Covid-19 (Our New Realities). The novel COVID-19 virus has impacted our lives in several ways: from how we work, what we do, how we live, to how we communicate with friends and family. This interactive session will look at the ways in which we have adapted and how we carry out our work in the face of this new reality. It will also showcase some of the research and innovations being developed around the coronavirus."
       id: WIML
     - name: LatinX in AI Social
@@ -84,6 +88,8 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
         - Monday
       times:
         - 20:00-22:00 GMT
+      links:
+        - ""
       website: http://www.latinxinai.org/iclr-2020
       description: "Virtual gathering of LatinX in AI Members with an hour of invited talks from members of our community whom we are recognizing for their efforts in response to the COVID-19 Pandemic. See our webpage: <a href='http://www.latinxinai.org/iclr-2020'>www.latinxinai.org/iclr-2020</a>"
       image: lxai.png
@@ -96,6 +102,9 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
       times:
         - 16:00-17:00 GMT
         - 11:00-12:00 GMT
+      links:
+        - ""
+        - ""
       description: "The COVID-19 coronavirus presents an unprecedented, global challenge. When citizens are doing their part by social distancing, healthcare workers and first responders are taking care of many of us, and our governments are mobilizing resources to respond to this crisis, we’ve asked ourselves what can we do at IBM, and more generally, what can the AI community contribute? In this social event, we will provide an overview of the AI tools IBM offered to help the research community fight against COVID-19. We will open the floor and use this opportunity to brainstorm novel ideas together with ICLR participants. There will be two sessions with focus on molecules (Monday) and on deep search (Thursday)."
       website: https://www.ibm.com/thought-leadership/covid19/
       image: Covid.png
@@ -107,6 +116,8 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
         - Wednesday
       times:
         - 19:00-21:00 GMT
+      links:
+        - ""
       description: "An informal and fun discussion about climate/sustainability startups using ML. Join in to bounce around new ideas, discuss initiatives that are getting traction in the world, or even chat about your favorite climate podcast (like My Climate Journey!)."
       image: css.png
       id: Climate
@@ -117,6 +128,9 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
       times:
         - 16:00-18:00 GMT
         - 23:00-01:00 GMT
+      links:
+        - ""
+        - ""
       description: "'Lapsed' (aka. Former) Physicists are plentiful in the machine learning community.  Inspired by Wine and Cheese seminars at many institutions, this BYOWC (Bring Your Own Wine and Cheese) event is an informal opportunity to connect with members of the community.  Hear how others made the transition between fields. Discuss how your physics training prepared you to switch fields, what synergies between physics and machine learning excite you the most. Share your favorite physics jokes your computer science colleagues don't get, and just meet other cool people. Open to everyone, not only physicists; you'll just have to tolerate our humor.  Wine and Cheese encouraged, but not required."
       organizers: "Jennifer Hobbs & Sujoy Ganguly"
       website:
@@ -132,6 +146,9 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
       times:
         - 18:00-20:00 GMT
         - 10:00-12:00 GMT
+      links:
+        - ""
+        - ""
       description: "Relaxed virtual social to meet new people, exchange experiences and research concerning queer scientists in AI/ML, and to promote the visibility and perspective of queer people in the context of AI/ML research and applications. queerinai.org"
       id: QueerInAI
     - name: BlackInAI Meet-Up
@@ -142,6 +159,9 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
       times:
         - 17:00-19:00 GMT
         - 17:00-19:00 GMT
+      links:
+        - ""
+        - ""
       description: "Black in AI is a place for sharing ideas, fostering collaborations and discussing initiatives to increase the presence of Black people in the field of Artificial Intelligence.
 If you are in AI and either self-identify as Black or an ally, let's meet-up at the ICLR'20 and discuss interests, challenges, opportunities, collaborations and other related issues."
       organizers: "Ignatius Ezeani & Timnit Gebru"
@@ -155,6 +175,9 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
         - Friday/Thursday
       times:
         - 01:00-03:00 GMT
+      links:
+        - ""
+
       description: "We invite everyone who is part of and/or interested in the ML research scene in Korea. Participants can introduce their own ML research, especially if it's part of ICLR 2020. They can also introduce ICLR 2020 papers that they find interesting and discuss them with other participants. Other possible discussion topics include (but are not limited to): Korean NLP, computer vision and datasets, ML research for COVID-19 and other healthcare problems, and career options in academia/industry in Korea. We welcome everyone from anywhere in the world, as long as you can keep awake if our event falls in the middle of the night for you."
       id: Korea
     - name: Topics in Language Research
@@ -164,6 +187,9 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
         - Thursday
       times:
         - 16:00-18:00 GMT
+      links:
+        - ""
+
       description: "Language is very important for human-centric machine learning applications. We want to bring researchers together to share views on what the state-of-the-art and next frontier will look like."
       image: SOTAlr.png
       id: Language
@@ -174,6 +200,9 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
         - Wednesday
       times:
         - 18:00-20:00 GMT
+      links:
+        - ""
+
       description: "A sequence of randomly formed small group discussions centered around Reinforcement Learning. After the success of the NeurIPS RL social we hope to bring a similar event to ICLR, where participants will get opportunities to discuss a wide variety of topics with new people. This will be accomplished through the zoom breakout room feature, with 20 minutes per group discussion. Each group can create and discuss their own topic, or choose a topic from our curated list sourced from the ICLR conference goers! "
       image: rls.png
       id: RL
@@ -184,6 +213,9 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
         - Tuesday
       times:
         - 21:00-23:00 GMT
+      links:
+        - ""
+
       description: "The purpose of this social is to discuss The Bitter Lesson (http://www.incompleteideas.net/IncIdeas/BitterLesson.html) and its potential implications for artificial intelligence research."
       image: BL.png
       id: Bitter
@@ -194,6 +226,9 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
         - Wednesday
       times:
         - 15:00-17:00 GMT
+      links:
+        - ""
+
       description: "We will discuss the role of embodiment for developing generalizable representations.  This social will be composed of multiple breakout rooms, each hosted by a senior researcher in the field who will moderate the conversation and share their thoughts.  The discussion topic in each room will be dynamically determined by the participants, and may change along with the conversation.  Conversation topics in the breakout rooms may include questions like When should we learn on a real robot?, How to evaluate Model-Based RL methods?, How do we learn third-person imitation and movement analogies?, What can we learn about learning from motor development?, How should we represent tactile information?. This social will be an opportunity to engage with members of the community who care about robotics and embodied intelligence.  We aim to create an inclusive space to share early ideas, with the hope of inspiring novel research and fostering new collaborations."
       image:
       id: Embody
@@ -204,6 +239,8 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
         - Thursday
       times:
         - 18:00-20:00 GMT
+      links:
+        - ""
       description: "A chance to meet and engage with Alberta Machine Intelligence Institute (Amii) Fellows in conversations relevant to their research areas and experience. See full list of Amii Fellows at: amii.ca/our-team."
       image:
       id: Amii

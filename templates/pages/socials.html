@@ -88,7 +88,7 @@
                         <div class="text-center text-muted text-monospace">
                             {% for s in social.times %}
 
-                            <p>{{social.day[loop.index-1]}}  <span class="session_times"> ({{s}})</span></p>
+                            <p>{{social.day[loop.index-1]}}  <span class="session_times"> ({{s}})</span> [<a href="{{social.links[loop.index-1]}}">Live</a>] </p>
                             {% endfor %}
                         </div>
 
