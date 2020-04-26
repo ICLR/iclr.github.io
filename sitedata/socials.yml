@@ -2,7 +2,7 @@
 socials:
     - name: Open source tools and practices in state-of-the-art DL research
       organizers: "Kamil A. Kaczmarek & Patryk Miziula"
-      website:
+      website: https://neptune.ai/landings/iclr-virtual-social
       image: Open-source-tools.png
       day:
         - Tuesday
@@ -50,8 +50,8 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
         - Wednesday
         - Thursday
       times:
-        - 23:59-02:00 GMT
-        - 17:30-19:30 GMT      
+        - 23:00-01:00 GMT
+        - 17:30-19:30 GMT
       links:
         - ""
         - ""
@@ -225,7 +225,7 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
       day:
         - Wednesday
       times:
-        - 15:00-17:00 GMT
+        - 14:00-16:00 GMT
       links:
         - ""
 
