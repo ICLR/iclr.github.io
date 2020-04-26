@@ -10,6 +10,9 @@ socials:
       times:
         - 16:00-18:00 GMT
         - 17:00-19:00 GMT
+      links:
+        - ""
+        - ""
       description: "Appropriate tooling is an inevitable part of the SOTA deep learning research. Recent advancements in the field resulted in the proliferation of large frameworks’ ecosystems (TensorFlow, PyTorch, MXNet) as well as smaller targeted tools that serve specific needs. This social event is centered around all the tools and practices, big and small, that are relevant to the ICLR community. Participants are encouraged to show their own open source tools that they build, regardless of their size and proliferation level. It can be a single CLI command that you find useful or an entire framework. Main goal for the participants is to introduce them to the wide range of tools and practices that may result in faster research progression and standardization."
       id: OSS
     - name: Generative ML for Generalization
@@ -18,6 +21,8 @@ socials:
         - Tuesday
       times:
         - 16:00-18:00 GMT
+      links:
+        - ""
       description: "Deep Generative Models (DGM) have become spectacularly popular even outside the research circles. Despite their success, we do not see deeper insights on their usage as a tool for generalization (i.e. better representations via data enhancement, augmentation etc).
 Since ICLR does not have a workshop on DGM, this event will provide a platform for the enthusiast community."
       website: https://sites.google.com/view/gforg
@@ -25,7 +30,6 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
       id: Generative
     - name: Anticipating Risky Research
       organizers: "Rosie Campbell & B Cavello"
-      website:
       image: arr.jpg
       day:
         - Tuesday
@@ -33,8 +37,12 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
       times:
         - 23:00-01:00 GMT
         - 16:00-18:00 GMT
-      description: "In 2019, OpenAI adopted a staged release approach for their advanced language model GPT-2, citing concerns around potential misuses of the model. Earlier this year, NeurIPS announced a submission requirement for authors to include a broader impact statement about possible consequences of their research. As ML becomes increasingly advanced and ubiquitous, we are challenged with anticipating the consequences of our research and mitigating risks of malicious use, harmful applications, unintended consequences, and accidents. But while ML researchers may experts in their own domain, how can they accurately predict the economic, political, and sociological impacts of their work, especially when they might be second or third order effects? Should risk screening be the researcher's responsibility? If not theirs, whose? What structural incentives are at play that affect our ability to publish responsibly? How can we improve publication practices in the field to maximize the benefits of research while mitigating risks? Join us for a discussion on these questions and more, hosted by the Partnership on AI. All levels of familiarity/experience welcome! To read more on this topic, see <a href='https://www.partnershiponai.org/publication-norms'>www.partnershiponai.org/publication-norms</a>"
+      links:
+        - ""
+        - ""
+      description: "In 2019, OpenAI adopted a staged release approach for their advanced language model GPT-2, citing concerns around potential misuses of the model. Earlier this year, NeurIPS announced a submission requirement for authors to include a broader impact statement about possible consequences of their research. As ML becomes increasingly advanced and ubiquitous, we are challenged with anticipating the consequences of our research and mitigating risks of malicious use, harmful applications, unintended consequences, and accidents. But while ML researchers may experts in their own domain, how can they accurately predict the economic, political, and sociological impacts of their work, especially when they might be second or third order effects? Should risk screening be the researcher's responsibility? If not theirs, whose? What structural incentives are at play that affect our ability to publish responsibly? How can we improve publication practices in the field to maximize the benefits of research while mitigating risks? Join us for a discussion on these questions and more, hosted by the Partnership on AI. All levels of familiarity/experience welcome! "
       id: Risky
+      website: "https://www.partnershiponai.org/publication-norms"
     - name: Learning Representation for Cybersecurity
       organizers: "Abhishek Sharma"
       website:
@@ -43,7 +51,10 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
         - Thursday
       times:
         - 23:59-02:00 GMT
-        - 17:30-19:30 GMT
+        - 17:30-19:30 GMT      
+      links:
+        - ""
+        - ""
       description: "Four broad applications of ML in Cybersecurity are related to Malware Detection, Anomaly Detection, User Behavior Modeling, and Adversarial ML. The ICLR research community continues to produce exciting work that can be of relevance to both researchers and practitioners in Cybersecurity. E.g., ideas from Network Representation Learning can be applied to Cyber Terrain graphs, that capture complex relationship between connected devices, to develop robust approaches for detecting insider threat and compromised assets. Similarly, learning low dimensional representations of the large volume and variety of data generated by executing different types of malware in a sandbox experiment can lead to better malware detection algorithms. It is also worth probing how to adapt the Adversarial ML work done in the domain of Computer Vision for Cybersecurity problems. "
       image:
       id: Cybersecurity
@@ -54,12 +65,12 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
       times:
         - 16:00-18:00 GMT
       description: This hall provides students, professors and anyone interested to learn more about internships and opportunities for students at Amazon. Learn how to build our your research skill set through internships and engagements with Amazon.
-      website:
+      website: https://iclr.6connex.com/event/VirtualEvent/
       image:
       id: Amazon
     - name: WiML Virtual Panel and Mentoring Session
       organizers: "Ovo Ojameruaye & Sinead Williamson"
-      website:
+      website: https://wimlworkshop.org
       image: WiML.png
       day:
         - Thursday
@@ -73,8 +84,8 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
         - Monday
       times:
         - 20:00-22:00 GMT
+      website: http://www.latinxinai.org/iclr-2020
       description: "Virtual gathering of LatinX in AI Members with an hour of invited talks from members of our community whom we are recognizing for their efforts in response to the COVID-19 Pandemic. See our webpage: <a href='http://www.latinxinai.org/iclr-2020'>www.latinxinai.org/iclr-2020</a>"
-      website:
       image: lxai.png
       id: LatinX
     - name: What can AI Researchers do to fight against COVID-19?
@@ -85,8 +96,8 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
       times:
         - 16:00-17:00 GMT
         - 11:00-12:00 GMT
-      description: "The COVID-19 coronavirus presents an unprecedented, global challenge. When citizens are doing their part by social distancing, healthcare workers and first responders are taking care of many of us, and our governments are mobilizing resources to respond to this crisis, we’ve asked ourselves what can we do at IBM, and more generally, what can the AI community contribute? In this social event, we will provide an overview of the AI tools IBM offered to help the research community fight against COVID-19 (see our response at <a href='https://www.ibm.com/thought-leadership/covid19/'>https://www.ibm.com/thought-leadership/covid19/</a>). We will open the floor and use this opportunity to brainstorm novel ideas together with ICLR participants. There will be two sessions with focus on molecules (Monday) and on deep search (Thursday)."
-      website:
+      description: "The COVID-19 coronavirus presents an unprecedented, global challenge. When citizens are doing their part by social distancing, healthcare workers and first responders are taking care of many of us, and our governments are mobilizing resources to respond to this crisis, we’ve asked ourselves what can we do at IBM, and more generally, what can the AI community contribute? In this social event, we will provide an overview of the AI tools IBM offered to help the research community fight against COVID-19. We will open the floor and use this opportunity to brainstorm novel ideas together with ICLR participants. There will be two sessions with focus on molecules (Monday) and on deep search (Thursday)."
+      website: https://www.ibm.com/thought-leadership/covid19/
       image: Covid.png
       id: Covid
     - name: Climate and Sustainability Startups
@@ -113,7 +124,7 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
       id: Physicists
     - name: QueerInAI Social
       organizers: "C Voelcker & William Agnew"
-      website:
+      website: https://sites.google.com/view/queer-in-ai/
       image: qai.png
       day:
         - Monday
@@ -124,6 +135,7 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
       description: "Relaxed virtual social to meet new people, exchange experiences and research concerning queer scientists in AI/ML, and to promote the visibility and perspective of queer people in the context of AI/ML research and applications. queerinai.org"
       id: QueerInAI
     - name: BlackInAI Meet-Up
+      website: https://blackinai.github.io
       day:
         - Wednesday
         - Thursday
@@ -133,7 +145,6 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
       description: "Black in AI is a place for sharing ideas, fostering collaborations and discussing initiatives to increase the presence of Black people in the field of Artificial Intelligence.
 If you are in AI and either self-identify as Black or an ally, let's meet-up at the ICLR'20 and discuss interests, challenges, opportunities, collaborations and other related issues."
       organizers: "Ignatius Ezeani & Timnit Gebru"
-      website:
       image: bai.jpg
       id: BlackInAI
     - name: ML Researchers in/interested in Korea
@@ -168,12 +179,12 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
       id: RL
     - name: The Bitter Lesson for AI
       organizers: "Richard Sutton & Warren Johnston"
-      website:
+      website: http://www.incompleteideas.net/IncIdeas/BitterLesson.html
       day:
         - Tuesday
       times:
         - 21:00-23:00 GMT
-      description: "The purpose of this social is do discuss The Bitter Lesson (http://www.incompleteideas.net/IncIdeas/BitterLesson.html) and its potential implications for artificial intelligence research."
+      description: "The purpose of this social is to discuss The Bitter Lesson (http://www.incompleteideas.net/IncIdeas/BitterLesson.html) and its potential implications for artificial intelligence research."
       image: BL.png
       id: Bitter
     - name: Embodied Intelligence Agora
@@ -188,7 +199,7 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
       id: Embody
     - name: Amii Fellows – Meet & Greet
       organizers: "Zvonimir Rac & Warren Johnston"
-      website:
+      website: http://amii.ca/our-team
       day:
         - Thursday
       times:
