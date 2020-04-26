@@ -309,16 +309,16 @@ def poster_ics(poster, session):
     
     from icalendar import Calendar, Event
     cal = Calendar()
-
+    import pytz
     cal.add('prodid', '-//ICLR//mxm.dk//')
     cal.add('version', '2.0')
-    cal["X-WR-TIMEZONE"] = "Etc/GMT"
+    cal["X-WR-TIMEZONE"] = "GMT"
     cal["X-WR-CALNAME"]  = "ICLR: " + site_data["papers"][note_id]["content"]["title"]
     event = Event()
     link = '<a href="http://iclr.cc/virtual/poster_%s.html">Poster Page</a>'%(site_data["papers"][note_id]["forum"])
     event.add('summary', site_data["papers"][note_id]["content"]["title"])
     event.add('description', link)
-
+    dt = dt.replace(tzinfo=pytz.utc)
     event.add('dtstart', dt)
     event.add('dtend', dt + datetime.timedelta(hours=2))
     event.add('dtstamp', dt)    
