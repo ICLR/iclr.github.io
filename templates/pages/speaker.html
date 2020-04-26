@@ -18,7 +18,7 @@
           </h3>
           <div class="text-center p-3">
             <a class="card-link" data-toggle="collapse" role="button" href="#details">
-            Bio
+            Abstract & Bio
             </a>
             <a href="chat.html?room=channel/speaker_{{id}}" target="_blank"  class="card-link">
             Chat
@@ -35,6 +35,9 @@
         <div class="card-body">
           <p class="card-text">
           <div id="abstractExample">
+            <span class="font-weight-bold">Abstract:</span>
+            {{info.abstract}} <br><br>
+
             <span class="font-weight-bold">Bio:</span>
             {{info.bio}}
           </div>
