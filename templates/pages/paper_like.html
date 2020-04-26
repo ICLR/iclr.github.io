@@ -5,28 +5,31 @@
   <body>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="static/css/ilike.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <!-- NAV -->
-    {% set active_page = "I&hearts;CLR" %}
-    {% include 'pages/header.html' %}
+    {% set active_page = "IlikeCLR" %}
+
+    {% if standalone %}
+      {% include 'pages/header_like.html' %}
+    {% else %}
+      {% include 'pages/header.html' %}
+    {% endif %}
     <div class="container">
+
+          <div id="loading" class="overlay">
+              <div id="loading-indicator">
+              <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+              </div>
+          </div>
       <!-- Header -->
-      <ul class="nav nav-pills justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link text-muted" href="papers.html">Browse
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-muted" href="paper_vis.html">Visualization
-          </a>
-        </li>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link text-muted active " data-toggle="tab"
-            href="#tab-browse" role="tab" aria-controls="nav-home"
-            aria-selected="true">I&hearts;CLR
-          </a>
-        </li>
-      </ul>
+      {% if not standalone %}
+      {% set active_paper_tab_id = "IlikeCLR" %}
+      {% include 'misc/paper_tabs.html' %}
+      {% endif %}
       <div class="row"></div>
       <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
         <div class="tab-pane active" id="tab-browse" role="tabpanel"
@@ -56,7 +59,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4 text-center"
+            <!-- <div class="col-12 col-sm-6 col-md-6 col-lg-4 text-center"
               style="margin-bottom: 10px;">
               <div class="btn-group btn-group-toggle filter_option">
                 <label class="btn btn-outline-secondary"
@@ -77,14 +80,9 @@
                   value="authors"
                   autocomplete="off" > author
                 </label>
-                <!-- <label class="btn btn-outline-secondary" -->
-                <!--        data-tippy-content="Search for papers closest related to authors or other papers"> -->
-                <!--     <input type="radio" name="options" value="recs" -->
-                <!--            autocomplete="off"> similar -->
-                <!-- </label> -->
               </div>
-            </div>
-            <div class="col-12 col-lg-4">
+            </div> -->
+            <!-- <div class="col-12 col-lg-4">
               <button class="btn btn-outline-secondary reshuffle"> shuffle
               </button>
               <div class="float-right">
@@ -97,18 +95,40 @@
                   <label class="btn btn-outline-secondary active">
                   <input type="radio" name="options"
                     value="compact"
-                    autocomplete="off" checked> compact
+                    autocomplete="off"> compact
                   </label>
                   <label class="btn btn-outline-secondary">
                   <input type="radio" name="options"
                     value="detail"
-                    autocomplete="off"> detail
+                    autocomplete="off" checked> detail
+                  </label>
+                </div>
+              </div>
+            </div> -->
+            <div class="col-12 col-lg-4">
+              <label class="btn text-muted">Order by</label>
+              <div class="float-right">
+                <div class="btn-group btn-group-toggle order_by"
+                  data-toggle="buttons">
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="options" value="random"
+                    autocomplete="off"> random
+                  </label>
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="options"
+                    value="search"
+                    autocomplete="off"> search
+                  </label>
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="options"
+                    value="likelihood"
+                    autocomplete="off"> <i class="fa fa-thumbs-up likon"></i>-lihood
                   </label>
                 </div>
               </div>
             </div>
           </div>
-          <div class="cards row">
+          <div class="cards row grid">
           </div>
         </div>
         <div class="tab-pane fade" id="tab-vis" role="tabpanel"
@@ -249,8 +269,10 @@
     </div>
     </div>
     <script src="static/js/typeahead_tools.js"></script>
-    <script src="static/js/papers.js"></script>
+    <script src="static/js/paper_like.js"></script>
     <script>
+      const SITE_ROOT = "{{siteroot}}";
+      const LIKE_API = null; // disabled
       $(document).ready(function () {
           tippy('[data-tippy-content]', {trigger: 'mouseenter focus'});
           start();

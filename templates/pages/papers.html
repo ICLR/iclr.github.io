@@ -10,23 +10,8 @@
     {% include 'pages/header.html' %}
     <div class="container">
       <!-- Header -->
-      <ul class="nav nav-pills justify-content-center">
-        <li class="nav-item active">
-          <a class="nav-link text-muted active " data-toggle="tab"
-            href="#tab-browse" role="tab" aria-controls="nav-home"
-            aria-selected="true">Browse
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-muted" href="paper_vis.html">Visualization
-          </a>
-        </li>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-muted" href="paper_like.html">I&hearts;CLR
-          </a>
-        </li>
-      </ul>
+      {% set active_paper_tab_id = "Browse" %}
+      {% include 'misc/paper_tabs.html' %}
       <div class="row"></div>
       <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
         <div class="tab-pane active" id="tab-browse" role="tabpanel"

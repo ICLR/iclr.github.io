@@ -188,11 +188,24 @@ def paperVis():
 
 
 @app.route('/paper_like.html')
-def paperLike():
+def paperLike(standalone=False):
     data = {"keyword": "all",
             "page": "papers",
-            "openreviews": site_data["papers"].values()}
+            "openreviews": site_data["papers"].values(), 
+            "standalone": standalone,
+            "siteroot": "https://iclr.cc/virtual/" if standalone else ""}
     return render_template('pages/paper_like.html', **data)
+
+
+@app.route('/paper_like_standalone.html')
+def paperLikeStandalone():
+    return paperLike(True)
+    # data = {"keyword": "all",
+    #         "page": "papers",
+    #         "openreviews": site_data["papers"].values(), 
+    #         "standalone": True,
+    #         "siteroot": "https://iclr.cc/virtual/"}
+    # return render_template('pages/paper_like.html', **data)
 
 
 @app.route('/recs.html')
@@ -345,6 +358,8 @@ def your_generator_here():
     yield "sponsors", {}
     yield "workshops", {}
     yield "paperVis", {}
+    yield "paperLike", {}
+    yield "paperLikeStandalone", {}
     yield "papers", {}
     yield "paper_json", {}
     yield "index", {}
