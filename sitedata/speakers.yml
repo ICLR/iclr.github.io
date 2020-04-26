@@ -5,7 +5,7 @@ speakers:
       image: static/images/aisha.jpg
       institution: IBM Research Africa, Nairobi
       day: Monday
-      time: 14:00-15:00 GMT
+      time: 14:00-14:30 GMT
       id: 1
       zoom: https://us02web.zoom.us/j/85760413917?pwd=THRuSFZzM0FNcUIyWFhvVkpTNWYyUT09
       abstract: "Artificial Intelligence (AI) has for some time stoked the creative fires of computer scientists and researchers world-wide -- even before the so-called AI winter. After emerging from the winter, with much improved compute, vast amounts of data, and new techniques, AI has ignited our collective imaginations. We have been captivated by its promise while wary of its possible misuse in applications. AI has certainly demonstrated its enormous potential especially in fields such as healthcare. There, it has been used to support radiologists and to further precision medicine; conversely it has been used to generate photorealistic videos which distort our concept of what is real.  Hence, we must thoughtfully harness AI to address the myriad of scientific and societal challenges; and open pathways to opportunities in governance, policy, and management. In this talk, I will share innovative solutions which leverage AI for global health with a focus on Africa. I will present a vision for the collaborations in hopes to inspire our community to join on this journey to transform Africa and impact the world."
@@ -17,7 +17,7 @@ speakers:
       slides_link: 38926697
       institution: MIT
       day: Monday
-      time: 19:00-20:00 GMT
+      time: 19:00-19:30 GMT
       id: 2
       abstract: "We, as robot engineers, have to think hard about our role in the design of robots and how it interacts with learning, both in 'the factory' (that is, at engineering time) and in 'the wild' (that is, when the robot is delivered to a customer). I will share some general thoughts about the strategies for robot design and then talk in detail about some work I have been involved in, both in the design of an overall architecture for an intelligent robot and in strategies for learning to integrate new skills into the repertoire of an already competent robot."
       bio: "Leslie Pack Kaelbling is the Panasonic Professor of Computer Science and Engineering at the Computer Science and Artificial Intelligence Laboratory (CSAIL) at the Massachusetts Institute of Technology. She has made research contributions to decision-making under uncertainty, learning, and sensing with applications to robotics, with a particular focus on reinforcement learning and planning in partially observable domains. She holds an A.B in Philosophy and a Ph.D. in Computer Science from Stanford University, and has had research positions at SRI International and Teleos Research and a faculty position at Brown University. She is the recipient of the US National Science Foundation Presidential Faculty Fellowship, the IJCAI Computers and Thought Award, and several teaching prizes; she has been elected a fellow of the AAAI. She was the founder and editor-in-chief of the Journal of Machine Learning Research."
@@ -29,7 +29,7 @@ speakers:
       day: Tuesday
       slides_link: 38926699
       id: 3
-      time: 14:00-15:00 GMT
+      time: 14:00-14:30 GMT
       abstract: "From everyday apps to complex algorithms, technology has the potential to hide, speed, and even deepen discrimination, while appearing neutral and even benevolent when compared to racist practices of a previous era. In this talk, I explore a range of discriminatory designs that encode inequity: by explicitly amplifying racial hierarchies, by ignoring but thereby replicating social divisions, or by aiming to fix racial bias but ultimately doing quite the opposite. This presentation takes us into the world of biased bots, altruistic algorithms, and their many entanglements, and provides conceptual tools to decode tech promises with sociologically informed skepticism. In doing so, it challenges us to question not only the technologies we are sold, but also the ones we manufacture ourselves."
       bio: "Dr. Ruha Benjamin is Associate Professor of African American Studies at Princeton University, founder of the JUST DATA Lab, and author of People’s Science: Bodies and Rights on the Stem Cell Frontier (2013) and Race After Technology: Abolitionist Tools for the New Jim Code (2019) among other publications. Her work investigates the social dimensions of science, medicine, and technology with a focus on the relationship between innovation and inequity, health and justice, knowledge and power. Professor Benjamin is the recipient of numerous awards and fellowships including from the American Council of Learned Societies, National Science Foundation, Institute for Advanced Study, and the President’s Award for Distinguished Teaching at Princeton. For more info visit www.ruhabenjamin.com"
     - speaker: Dr. Laurent Dinh
@@ -40,7 +40,7 @@ speakers:
       day: Tuesday
       zoom: https://us02web.zoom.us/j/81113669821?pwd=Vzc4V2tZcXJzWDg5TDNFRVVMbHBDdz09
       id: 4
-      time: 19:00-20:00 GMT
+      time: 19:00-19:30 GMT
       abstract: "Normalizing flows provide a tool to build an expressive and tractable family of probability distributions. In the last few years, research in this field has successfully harnessed some of the latest advances in deep learning to design flexible invertible models. Recently, these methods have seen wider adoption in the machine learning community for applications such as probabilistic inference, density estimation, and classification. In this talk, I will reflect on the recent progress made by the community on using, expanding, and repurposing this toolset, and describe my perspective on challenges and opportunities in this direction."
       bio: "Laurent Dinh is a research scientist at Google Brain Montréal. His research focus has been on deep generative models, probabilistic modeling, and generalization in deep learning. He's best known for his contribution in normalizing flows generative models, such as NICE and Real NVP, and in generalization in deep learning.He obtained his PhD in deep learning at Mila, under the supervision of Yoshua Bengio, during which he visited Google Brain and DeepMind. Before that, he graduated from École Centrale Paris in Applied Mathematics and from École Normale Supérieure de Cachan in machine learning and computer vision."
     - speaker: Prof. Mihaela van der Schaar
@@ -50,7 +50,7 @@ speakers:
       day: Wednesday
       slides_link: 38926701
       zoom: https://us02web.zoom.us/j/84801666334?pwd=b3RzY1dqRHZ4OFBhaWZ6Q28zZUhlUT09
-      time: 11:00-12:00 GMT
+      time: 11:00-11:30 GMT
       id: 5
       bio: "Professor van der Schaar is John Humphrey Plummer Professor of Machine Learning, Artificial Intelligence and Medicine at the University of Cambridge and a Turing Faculty Fellow at The Alan Turing Institute in London, where she leads the effort on data science and machine learning for personalized medicine. She is also a Chancellor's Professor at UCLA. She was elected IEEE Fellow in 2009. She has received numerous awards, including the Oon Prize on Preventative Medicine from the University of Cambridge (2018), an NSF Career Award (2004), 3 IBM Faculty Awards, the IBM Exploratory Stream Analytics Innovation Award, the Philips Make a Difference Award and several best paper awards, including the IEEE Darlington Award. She holds 35 granted USA patents.  In 2019, she was identified by National Endowment for Science, Technology and the Arts as the female researcher based in the UK with the most publications in the field of AI. She was also elected as a 2019 'Star in Computer Networking and Communications'. Her research expertise spans signal and image processing, communication networks, network science, multimedia, game theory, distributed systems and machine learning. Her current research focus is on machine learning, AI and operations research for healthcare and medicine.  For more details, see her website: http://www.vanderschaar-lab.com"
     - speaker: Prof. Devi Parikh
@@ -60,7 +60,7 @@ speakers:
       day: Wednesday
       zoom: https://us02web.zoom.us/j/87410344494?pwd=MnhZVjI1V0NuRzN0U3VQdjdIckpNQT09
       slides_link: 38926702
-      time: 16:00-17:00 GMT
+      time: 16:00-16:30 GMT
       id: 6
       abstract: "I will talk about AI systems at the intersection of computer vision and natural language processing. I will give an overview of why problems at the intersection of vision and language are exciting, what capabilities today's AI systems have, and what challenges remain."
       bio: "Devi Parikh is a Research Scientist at Facebook AI Research (FAIR) and an Associate Professor in the School of Interactive Computing at Georgia Tech. Her research interests are in computer vision, natural language processing, embodied AI, human-AI collaboration, and AI for creativity.
@@ -73,7 +73,7 @@ She is a recipient of an IJCAI Computers and Thought award, a Sloan Research Fel
       day: Thursday
       id: 7
       slides_link: 38926703
-      time: 16:00-17:00 GMT
+      time: 16:00-16:30 GMT
       zoom: https://us02web.zoom.us/j/89307958147?pwd=RkF3aHF2MXBtOVRMOEQyVThSbnkwZz09
       bio: "Yoshua Bengio is recognized as one of the world’s artificial intelligence leaders and a pioneer of deep learning. Professor since 1993 at the Université de Montréal, he received the A.M. Turing Award 2018, considered like the Nobel prize for computing, with Geoff Hinton and Yann LeCun. Holder of the Canada Research Chair in Statistical Learning Algorithms, he is also the founder and scientific director of Mila, the Quebec Institute of AI–the world’s biggest university-based research group in deep learning. In 2018, he collected the largest number of new citations in the world for a computer scientist and earned the prestigious Killam Prize from the Canada Council for the Arts. Concerned about the social impact of AI, he actively contributed to the Montreal Declaration for the Responsible Development of Artificial Intelligence.
 
@@ -85,7 +85,7 @@ Yann LeCun is VP and Chief AI Scientist at Facebook and Silver Professor at NYU 
       image: static/images/jordan.jpg
       day: Thursday
       slides_link: 38926705
-      time: 19:00-20:00 GMT
+      time: 19:00-19:30 GMT
       id: 8
       zoom: https://us02web.zoom.us/j/87415189812?pwd=QlFweWhPWmxlOW5sYmh2YTBSZXZlUT09
       bio: "Michael I. Jordan is the Pehong Chen Distinguished Professor in the Department of Electrical Engineering and Computer Science and the Department of Statistics at the University of California, Berkeley. His research interests bridge the computational, statistical, cognitive and biological sciences. Professor Jordan is a member of the National Academy of Sciences and a member of the National Academy of Engineering. He has been named a Neyman Lecturer and a Medallion Lecturer by the Institute of Mathematical Statistics. He received the IJCAI Research Excellence Award in 2016, the David E. Rumelhart Prize in 2015 and the ACM/AAAI Allen Newell Award in 2009."
