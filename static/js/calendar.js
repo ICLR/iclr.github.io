@@ -6,7 +6,7 @@ function make_cal(name) {
     var eventComps = comp.getAllSubcomponents("vevent");
     // map them to FullCalendar events
     var events = $.map(eventComps, function (item) {
-        
+
         if (item.getFirstPropertyValue("class") == "PRIVATE") {
             return null;
         }
@@ -41,13 +41,13 @@ function make_cal(name) {
                     return null;
                 if (item.getFirstPropertyValue("dtend") == null)
                     return null;
-                
+
                 toreturn.start=item.getFirstPropertyValue("dtstart").toString();
                 toreturn.end=item.getFirstPropertyValue("dtend").toString();
             }
             return toreturn;
         }});
-        
+
         var calEl = document.getElementById('calendar');
         var cal = new FullCalendar.Calendar(calEl,
                                             {
@@ -64,10 +64,10 @@ function make_cal(name) {
                                                     hour12: false,
                                                     timeZoneName: "long"
                                                 },
-                                                height: 350, 
+                                                height: 350,
                                                 events: events,
                                                 eventClick: function(info) {
-                                                    $(window).scrollTop($("#" +info.event.title.split(" ").join("_")).position().top - 100);
+                                                    $(window).scrollTop($("#" +info.event.title.split(" ").join("_").replace('?','')).position().top - 100);
                                                 },
                                                 eventRender: function (info) {
                                                     // console.log(info.event);
@@ -76,9 +76,9 @@ function make_cal(name) {
                                                         info.el.append(info.event.extendedProps.location );
                                                     }},
                                             });
-        
+
         cal.gotoDate("2020-04-26");
         cal.render();
     });
-    
+
 }
