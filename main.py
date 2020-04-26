@@ -50,7 +50,7 @@ def main(site_data_path):
     for p in site_data["poster_slides"]["slides"]:
         slide_link[p["uid"]] = p["slides_id"]
 
-        
+
     for v in site_data["poster_schedule"]:
         for poster_info in v["posters"]:
             poster = poster_info["id"]
@@ -288,7 +288,7 @@ def poster(poster):
     note_id = poster
     data = {"openreview": site_data["papers"][note_id], "id": note_id,
             "paper_recs": [site_data["papers"][n] for n in site_data["paper_recs"][note_id]][1:]}
-    
+
     return render_template('pages/page.html', **data)
 
 @app.route('/poster_<poster>.<session>.ics')
@@ -306,7 +306,7 @@ def poster_ics(poster, session):
 
             "id": note_id}
 
-    
+
     from icalendar import Calendar, Event
     cal = Calendar()
     import pytz
@@ -321,7 +321,7 @@ def poster_ics(poster, session):
     dt = dt.replace(tzinfo=pytz.utc)
     event.add('dtstart', dt)
     event.add('dtend', dt + datetime.timedelta(hours=2))
-    event.add('dtstamp', dt)    
+    event.add('dtstamp', dt)
     # event['uid'] = '20050115T101010/27346262376@mxm.dk'
     cal.add_component(event)
     response = make_response(cal.to_ical())
@@ -346,6 +346,8 @@ def paper_json():
                         "TLDR": v["content"]["TLDR"],
                         "recs": [],
                         "session": v["content"]["session"],
+                        "session_times": v["content"]["session_times"],
+                        "session_links": v["content"]["session_links"]
             }})
     return jsonify(json)
 
