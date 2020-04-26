@@ -175,3 +175,12 @@ body .carousel-control-next, body .carousel-control-prev {
     width: 5%;
 }
 
+.icon_video, .icon_cal {
+    fill: #6c757d;
+}
+
+.icon_video:hover, .icon_cal:hover {
+    fill: #000000;
+}
+
+
