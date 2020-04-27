@@ -1,0 +1,29 @@
+- paper: "SJxSDxrKDr"
+  keywords:
+    - "adversarial"
+- paper: "H1gNOeHKPS"
+  keywords:
+    - "generalization"
+    - "inductive bias"
+    - "interpretability"
+    - "adversarial"  
+- paper: "S1xWh1rYwB"
+  keywords: 
+    - "interpretability"
+    - "information bottleneck"
+    - "information theory"
+- paper: "SkeuexBtDr"
+  keywords:
+    - denoising
+    - noisy labels
+    - nlp
+    - weakly supervised learning
+    - semi supervised learning
+    - text classification   
+- paper: "rkg6sJHYDr"
+  keywords:
+    - "exploration"
+    - "object discovery"
+    - "autoencoder"
+    - "sample efficiency"
+    - "intrinsic motivation"

@@ -85,6 +85,7 @@ def main(site_data_path):
     for i, k in enumerate(nk, 1):
         site_data["papers"][k]["content"]["chat"] = "poster_" + str(i)
 
+    extra_kw = {d["paper"] : d["keywords"] for d in site_data["keywords"]}
     for i, (k,n) in enumerate(site_data["papers"].items()):
         n["content"]["iclr_id"] = k
         n["content"]["slides"] = slide_link[k]
@@ -103,6 +104,9 @@ def main(site_data_path):
         for k in n["content"]["keywords"]:
             keywords.setdefault(k.lower(), [])
             keywords[k.lower()].append(n)
+
+        if k in extra_kw:
+            n["content"]["keywords"] += extra_kw[k]
     print("Data Successfully Loaded")
 
 
