@@ -110,6 +110,19 @@
   display: none;
 }
 
+.match {
+    background-color: lightgray;
+    height: 8px;
+    margin: 2px;
+    display: none;
+}
+
+.match .matchperc {
+    height: 100%;
+    background-color: #F3BB00;
+    width: 50%;
+}
+
 .pp-mode-ilike:hover {
 	/*width: 500px;
 	height: 500px;
@@ -126,6 +139,10 @@
 	margin-right: -25%;
 	z-index: 1;
 	background-color: rgba(255,255,255,0.8);
+}
+
+.pp-mode-ilike:hover .match {
+	display: inherit;
 }
 
 .myCard:hover {

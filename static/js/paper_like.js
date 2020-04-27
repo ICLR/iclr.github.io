@@ -20,20 +20,13 @@ let $grid = null;
 let allProj = [];
 
 // From https://stackoverflow.com/questions/7128675/from-green-to-red-color-depend-on-percentage
-
-//var percentColors = [
-//    { pct: 0.0, color: { r: 0xff, g: 0x00, b: 0 } },
-//    { pct: 0.5, color: { r: 0xff, g: 0xff, b: 0 } },
-//    { pct: 1.0, color: { r: 0x00, g: 0xff, b: 0 } }
-//];
-
-var percentColors = [
-    { pct: 0.0, color: { r: 205, g: 92, b: 92 } }, // { pct: 0.0, color: { r: 236, g: 0, b: 0 } },
+const percentColors = [
+    { pct: 0.0, color: { r: 205, g: 92, b: 92 } },
     { pct: 0.5, color: { r: 243, g: 187, b: 0 } },
     { pct: 1.0, color: { r: 0, g: 176, b: 13 } }
 ];
 
-var getColorForPercentage = function(pct) {
+const getColorForPercentage = function(pct) {
     for (var i = 1; i < percentColors.length - 1; i++) {
         if (pct < percentColors[i].pct) {
             break;
@@ -51,12 +44,11 @@ var getColorForPercentage = function(pct) {
         b: Math.floor(lower.color.b * pctLower + upper.color.b * pctUpper)
     };
     return 'rgb(' + [color.r, color.g, color.b].join(',') + ')';
-    // or output as hex if preferred
 }
 
-var scoreToPercentage = function(score){
+const scoreToPercentage = function(score){
     var scale = 0.9;
-    return Math.max(Math.min((score * scale - 1) * -0.5, 1), 0);
+    return Math.max(Math.min((score * scale + 1) * 0.5, 1), 0);
 }
 
 const updateCards = (papers) => {
@@ -193,10 +185,24 @@ const doSearch = it => {
     }
 };
 
+const setScore = (card, score) => {
+  card.attr('data-score', score);
+
+  const likes = parseInt(card.attr('data-likes'))
+  const perc = likes > 0 ? 1. : (likes < 0 ? -1. : scoreToPercentage(score));
+  
+  $matchperc = card.find('.matchperc');
+  $matchperc.width(Math.round(perc * 100) + "%");
+  var color = getColorForPercentage(perc);
+  $matchperc.css("background-color", color);
+}
+
 function computeLikelihood(){
 
     jQuery('#loading').show();
 
+
+    // Use kriging.js, see https://oeo4b.github.io/
     var t = [ /* Target variable */ ];
     var x = [ /* X-axis coordinates */ ];
     var y = [ /* Y-axis coordinates */ ];
@@ -210,7 +216,7 @@ function computeLikelihood(){
     if (t.length > 1){
       // var model = "exponential";
       var model = "gaussian";
-      var sigma2 = 0.3, alpha = 10;
+      var sigma2 = 0.3, alpha = 1;
       var variogram = kriging.train(t, x, y, model, sigma2, alpha);
       console.log("trained model")
 
@@ -218,11 +224,11 @@ function computeLikelihood(){
         el = jQuery(el)
         let emb = proj_dict[jQuery(el).attr('data-id')];
         let score = kriging.predict(emb[0], emb[1], variogram)
-        jQuery(el).attr('data-score', score)
+        setScore(el, score)
       })
     } else {
       jQuery('.myCard').each( (i, el) => { 
-        jQuery(el).attr('data-score', 0)
+        setScore(jQuery(el), 0)
       })
     }
     jQuery('#loading').hide();
@@ -388,6 +394,9 @@ const card_html = openreview => `
                     <div class="like">
                         <i class="fas fa-thumbs-up fa-stack-1x"></i>
                     </div>
+                  </div>
+                  <div class="match">
+                      <div class="matchperc"></div>
                   </div>
                 </div>
                 
