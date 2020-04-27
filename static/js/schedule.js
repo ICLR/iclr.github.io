@@ -1,4 +1,4 @@
-const table_height = 850;
+const table_height = 900;
 const conf_days = ['---', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri']
 
 let sc = null;
