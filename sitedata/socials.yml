@@ -68,7 +68,7 @@ Since ICLR does not have a workshop on DGM, this event will provide a platform f
         - "https://us02web.zoom.us/j/86804690990?pwd=dUErb3o5NHN6ZzlWR1doUnBDWHd6UT09"
       description: This hall provides students, professors and anyone interested to learn more about internships and opportunities for students at Amazon. Learn how to build our your research skill set through internships and engagements with Amazon.
       website: https://iclr.6connex.com/event/VirtualEvent/
-      image:
+      image: amazon.png
       id: Amazon
     - name: WiML Virtual Panel and Mentoring Session
       organizers: "Ovo Ojameruaye & Sinead Williamson"
@@ -242,5 +242,5 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
       links:
         - "https://us02web.zoom.us/j/89693339009?pwd=SThoNjZlbnNCdUlSY0ExM0dvb242UT09"
       description: "A chance to meet and engage with Alberta Machine Intelligence Institute (Amii) Fellows in conversations relevant to their research areas and experience. See full list of Amii Fellows at: amii.ca/our-team."
-      image:
+      image: amii.png
       id: Amii
