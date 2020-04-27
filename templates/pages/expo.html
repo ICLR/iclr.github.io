@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% set page_title = "Workshop" %}
+  {% include 'pages/head.html' %}
+
+
+
+  <body>
+          <script src="https://momentjs.com/downloads/moment.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js" integrity="sha256-GBryZPfVv8G3K1Lu2QwcqQXAO4Szv4xlY4B/ftvyoMI=" crossorigin="anonymous"></script>
+          <script type='text/javascript' src='static/js/ical.js'></script>
+          <script type='text/javascript' src='static/js/calendar.js'></script>
+          <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/google-calendar/main.min.js'></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.js" integrity="sha256-q57s73NpMCTQ4ZXqb1X5bIywrICySeB6WvYxFGfz/PA=" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/moment/main.min.js" integrity="sha256-iCYfw93enxd8O5zz/jL4UamQ8bgrUfidO4C5500RSd4=" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/moment-timezone/main.min.js" integrity="sha256-dKFu7AO+UtXuSvj3RwvCOovdKT3ScgGqzOcZ77QNwbg=" crossorigin="anonymous"></script>
+          
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/bootstrap/main.min.css" integrity="sha256-auNBxJ+1OpvUJfYRsPihqLzJFUM9D3gpb8nOh5v0LiM=" crossorigin="anonymous" />
+          
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css" integrity="sha256-Lfe6+s5LEek8iiZ31nXhcSez0nmOxP+3ssquHMR3Alo=" crossorigin="anonymous" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.css" integrity="sha256-saO3mkZVAcyqsfgsGMrmE7Cs/TLN1RgVykZ5dnnJKug=" crossorigin="anonymous" />
+
+
+    <!-- NAV -->
+    {% set active_page = "Workshops" %}
+    {% include 'pages/header.html' %}
+    <div class="container">
+      <!-- Title -->
+      <div class="pp-card m-3" style="">
+        <div class="card-header">
+          <h2 class="card-title main-title text-center" style="">
+            {{info.name}}: {{info.title}}
+          </h2>
+          <h3 class="card-subtitle mb-2 text-muted text-center">
+            {{info.speaker}}
+          </h3>
+          <div class="text-center p-3">
+            <a href="https://iclr.6connex.com/event/VirtualEvent/" target="_blank"  class="card-link">
+            Site
+            </a>            
+          </div>
+          <div class=" text-center text-muted">
+            <div> {{info.day}} <span class="session_times">({{info.time}})</span> <a href="{{info.zoom}}" target="_blank"  class="card-link">
+                Live QA       </a>
+            </div>
+
+          <div class="text-center text-muted">
+            {{info.content|safe}}
+            <br>
+          </div>
+        </div>
+      </div>
+      <div id="details" class="pp-card m-3 collapse">
+        <div class="card-body">
+          <p class="card-text">
+          <div id="abstractExample">
+            <span class="font-weight-bold">Description:</span>
+            {{info.description|safe}}
+          </div>
+        </div>
+      </div>
+        
+          </p>
+          <p></p>
+
+
+    </div>
+    <!-- SlidesLive -->
+    <div class="container" style="background-color:white; padding: 0px;">
+      <div class="row m-2">
+        <div class="col-md-7 col-xs-12 my-auto p-2" >
+          <div id="presentation-embed-{{info.slides_live}}" class="slp my-auto"></div>
+          <script src='https://slideslive.com/embed_presentation.js'></script>
+          <script>
+            embed = new SlidesLiveEmbed('presentation-embed-{{info.slides_live}}', {
+            presentationId: '{{info.slides_live}}',
+            autoPlay: false, // change to true to autoplay the embedded presentation
+            verticalEnabled: true,
+            verticalWhenWidthLte: 2000,
+            allowHiddenControlsWhenPaused: true,
+            hideTitle: true
+            });
+          </script>
+        </div>
+        <!-- <div class="col-md-5 col-xs-12 p-2"> -->
+        <!--   <div id="gitter" class="slp"> -->
+        <!--     <center> -->
+        <!--       <iframe frameborder="0" src="https://iclr.rocket.chat/channel/workshop_{{info.chat}}?layout=embedded" height="700px" width="100%" ></iframe> -->
+        <!--     </center> -->
+        <!--   </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+    {% include 'pages/footer.html' %}
+
+      <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
+
+  </body>
+</html>
