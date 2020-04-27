@@ -47,7 +47,7 @@ body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
 
   .cards_img {margin-top: 20px;
               border-radius: 2px;
-              max-height: 140px;
+              max-height: 130px;
               object-fit: scale-down;}
   body .nav-pills .nav-link.active {
       background-color: #bed972;
@@ -187,5 +187,3 @@ body .carousel-control-next, body .carousel-control-prev {
 .icon_video:hover, .icon_cal:hover {
     fill: #000000;
 }
-
-
