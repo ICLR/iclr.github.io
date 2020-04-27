@@ -2,6 +2,17 @@
 <html lang="en">
   {% set page_title = "ICLR: " + openreview.content.title %}
   {% include 'pages/head.html' %}
+  <meta name="citation_title" content="{{openreview.content.title}}" />
+  {% for author in openreview.content.authors %}
+  <meta name="citation_author" content="{{author}}" />
+  {% endfor %}
+  <meta name="citation_publication_date" content="2020/04"/>
+  <meta name="citation_conference_title" content="Eighth International Conference on Learning Representations" />
+  <meta name="citation_abstract" content="{{openreview.content.abstract}}" />
+  <meta name="citation_pdf_url" content="http://www.openreview.net/pdf?id={{openreview.forum}}" />
+  {% for keyword in openreview.content.keywords %}
+  <meta name="citation_keywords" content="{{keyword}}" />
+  {% endfor %}
   <body >
     <!-- NAV -->
     {% include 'pages/header.html' %}
