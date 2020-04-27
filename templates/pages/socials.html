@@ -88,7 +88,7 @@
                         <div class="text-center text-muted text-monospace">
                             {% for s in social.times %}
 
-                            <p>{{social.day[loop.index-1]}}  <span class="session_times"> ({{s}})</span> [<a href="{{social.links[loop.index-1]}}">Live</a>] </p>
+                            <p>{{social.day[loop.index-1]}}  <span class="session_times"> ({{s}})</span> [<a href="{{social.links[loop.index-1]}}" target="_blank">Live</a>] </p>
                             {% endfor %}
                         </div>
 
@@ -97,6 +97,11 @@
                             {% if social.website %}
                             | <a href="{{social.website}}" target="_blank"> Website </a>
                             {% endif %}
+<!--                            {% if social.links %}-->
+<!--                            {% for l in social.links %}-->
+<!--                            | <a href="{{l}}" target="_blank"> Live ({{social.day[loop.index-1]}}) </a>-->
+<!--                            {% endfor %}-->
+<!--                            {% endif %}-->
 
 
                         </p>
