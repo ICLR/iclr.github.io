@@ -18,23 +18,32 @@
           </h3>
           <div class="text-center p-3">
             <a class="card-link" data-toggle="collapse" role="button" href="#details">
-            Bio
+            Abstract & Bio
             </a>
             <a href="chat.html?room=channel/speaker_{{id}}" target="_blank"  class="card-link">
             Chat
             </a>
           </div>
-          <div class=" text-center text-muted text-monospace">
-            <div> {{info.day}} <span class="session_times">({{info.time}})</span> <a href="" target="_blank"  class="card-link">
+          <div class=" text-center text-muted">
+            <div> {{info.day}} <span class="session_times">({{info.time}})</span> <a href="{{info.zoom}}" target="_blank"  class="card-link">
               Live QA       </a>
             </div>
+
+            <div class="m-2">
+              (Please watch the talk and post questions to chat before the Live QA.)
+            </div>
+            
           </div>
+          
         </div>
       </div>
       <div id="details" class="pp-card m-3 collapse">
         <div class="card-body">
           <p class="card-text">
           <div id="abstractExample">
+            <span class="font-weight-bold">Abstract:</span>
+            {{info.abstract}} <br><br>
+
             <span class="font-weight-bold">Bio:</span>
             {{info.bio}}
           </div>
@@ -47,12 +56,11 @@
     <div class="container" style="background-color:white; padding: 0px;">
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
-          (Note: This video is a temporary placeholder.)
-          <div id="presentation-embed-38915748" class="slp my-auto"></div>
+          <div id="presentation-embed-{{info.slides_link}}" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
-            embed = new SlidesLiveEmbed('presentation-embed-38915748', {
-            presentationId: '38915748',
+            embed = new SlidesLiveEmbed('presentation-embed-{{info.slides_link}}', {
+            presentationId: '{{info.slides_link}}',
             autoPlay: false, // change to true to autoplay the embedded presentation
             verticalEnabled: true,
             verticalWhenWidthLte: 2000,

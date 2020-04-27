@@ -1,8 +1,9 @@
-from flask import Flask, render_template, render_template_string
+from flask import Flask, render_template, render_template_string, make_response
 from flask import jsonify, send_from_directory, redirect
 from flask_frozen import Freezer
 import pickle, json, yaml
 import os, sys, argparse
+import dateparser, datetime
 import glob
 
 
@@ -44,7 +45,12 @@ def main(site_data_path):
     session_times = {}
     session_links = {}
     site_data["poster_schedule"].sort(key = lambda s : s["name"])
-    
+
+    slide_link = {}
+    for p in site_data["poster_slides"]["slides"]:
+        slide_link[p["uid"]] = p["slides_id"]
+
+
     for v in site_data["poster_schedule"]:
         for poster_info in v["posters"]:
             poster = poster_info["id"]
@@ -68,11 +74,11 @@ def main(site_data_path):
                 session_times[poster].append(None)
                 session_links[poster].append(None)
 
-    rec_to = {}
-    for k, v in site_data["author_recs"].items():
-        for v2 in v:
-            rec_to.setdefault(v2, [])
-            rec_to[v2].append(k)
+    # rec_to = {}
+    # for k, v in site_data["author_recs"].items():
+    #     for v2 in v:
+    #         rec_to.setdefault(v2, [])
+    #         rec_to[v2].append(k)
 
     nk = list(site_data["papers"].keys())
     nk.sort()
@@ -81,12 +87,13 @@ def main(site_data_path):
 
     for i, (k,n) in enumerate(site_data["papers"].items()):
         n["content"]["iclr_id"] = k
+        n["content"]["slides"] = slide_link[k]
         n["content"]["authors"] = [a.replace("*", "") for a in n["content"]["authors"]]
         n["content"]["session"] = paper_session[k]
         n["content"]["session_times"] = session_times[k]
         n["content"]["session_links"] = session_links[k]
-        n["content"]["recs"] = rec_to[k] + [site_data["papers"][t]["content"]["title"]
-                                            for t in site_data["paper_recs"][k]]
+        # n["content"]["recs"] = rec_to[k] + [site_data["papers"][t]["content"]["title"]
+        #                                     for t in site_data["paper_recs"][k]]
         titles[n["content"]["title"]] = k
 
         if "TL;DR" in n["content"]:
@@ -134,6 +141,7 @@ def index():
 @app.route('/index.html')
 def home():
     site_data["about"]["sponsors"] = site_data["sponsors"]["sponsors"]
+    site_data["about"]["volunteers"] = site_data["volunteers"]
     return render_template('pages/index.html', **site_data["about"])
 
 
@@ -304,7 +312,43 @@ def poster(poster):
 
     return render_template('pages/page.html', **data)
 
-# DATA FILES
+@app.route('/poster_<poster>.<session>.ics')
+def poster_ics(poster, session):
+    note_id = poster
+    session = int(session)
+    start = site_data["papers"][note_id]["content"]["session"][session].split()[0] + " "+\
+            site_data["papers"][note_id]["content"]["session_times"][session].split("-")[0][1:]
+    dt = dateparser.parse(start.replace("Mon", "Monday").replace("Tues", "Tuesday").replace("Wed", "Wednesday").replace("Thurs", "Thursday"),
+                          settings={"RELATIVE_BASE":dateparser.parse("april 30")})
+
+    data = {"openreview": site_data["papers"][note_id],
+            "starttime" : dt.strftime('%Y%m%dT%H%M%SZ'),
+            "endtime" : (dt + datetime.timedelta(hours=2)).strftime('%Y%m%dT%H%M%SZ'),
+
+            "id": note_id}
+
+
+    from icalendar import Calendar, Event
+    cal = Calendar()
+    import pytz
+    cal.add('prodid', '-//ICLR//mxm.dk//')
+    cal.add('version', '2.0')
+    cal["X-WR-TIMEZONE"] = "GMT"
+    cal["X-WR-CALNAME"]  = "ICLR: " + site_data["papers"][note_id]["content"]["title"]
+    event = Event()
+    link = '<a href="http://iclr.cc/virtual/poster_%s.html">Poster Page</a>'%(site_data["papers"][note_id]["forum"])
+    event.add('summary', site_data["papers"][note_id]["content"]["title"])
+    event.add('description', link)
+    dt = dt.replace(tzinfo=pytz.utc)
+    event.add('dtstart', dt)
+    event.add('dtend', dt + datetime.timedelta(hours=2))
+    event.add('dtstamp', dt)
+    # event['uid'] = '20050115T101010/27346262376@mxm.dk'
+    cal.add_component(event)
+    response = make_response(cal.to_ical())
+    response.mimetype = "text/calendar"
+    response.headers["Content-Disposition"] = "attachment; filename=poster_"+poster+"."+str(session)+".ics"
+    return response
 
 @app.route('/papers.json')
 def paper_json():
@@ -323,6 +367,8 @@ def paper_json():
                         "TLDR": v["content"]["TLDR"],
                         "recs": [],
                         "session": v["content"]["session"],
+                        "session_times": v["content"]["session_times"],
+                        "session_links": v["content"]["session_links"]
             }})
     return jsonify(json)
 
@@ -377,6 +423,10 @@ def your_generator_here():
 
     for i in site_data["papers"].keys():
         yield "poster", {"poster": str(i)}
+    for i in site_data["papers"].keys():
+        for j in range(2):
+            yield "poster_ics", {"poster": str(i), "session":str(j)}
+
     for i in range(1, len(site_data["workshops"]["workshops"])+1):
         yield "workshop", {"workshop": str(i)}
     for i in range(1, len(site_data["speakers"]["speakers"])+1):

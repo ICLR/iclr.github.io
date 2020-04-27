@@ -41,15 +41,22 @@
             <a href="{{info.website}}" target="_blank"  class="card-link">
             Site
             </a>
-            <a href="" target="_blank"  class="card-link">
-            Video
+
+            <a class="card-link" href="webcal://iclr.github.io/iclr-images/calendars/workshop_{{info.cal}}_webcal.ics">
+              Calendar
+            </a>
+            
+            <a href="{{info.zoom_live}}" target="_blank"  class="card-link">
+            Live
             </a>
             <a href="chat.html?room=channel/workshop_{{info.chat}}" target="_blank"  class="card-link">
             Chat
             </a>
           </div>
           <div class="text-center text-muted">
-            (Note: Workshop posters and instructions are on the workshop site.)
+            {{info.content|safe}}
+            <br>
+            (Note: Workshop posters and instructions are on the workshop site. Password for the zoom link is: seaslug .)
           </div>
         </div>
       </div>
@@ -65,11 +72,12 @@
 
         </div>
       </div>
+        
         <div id="calendar">            
         </div>
         
         <script type='text/javascript'>
-          make_cal("static/workshop_{{info.chat}}.ics")
+          make_cal("static/workshop_{{info.cal}}.ics")
         </script>
 
           </p>
@@ -81,11 +89,11 @@
     <div class="container" style="background-color:white; padding: 0px;">
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
-          <div id="presentation-embed-38915748" class="slp my-auto"></div>
+          <div id="presentation-embed-{{info.slides_live}}" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
-            embed = new SlidesLiveEmbed('presentation-embed-38915748', {
-            presentationId: '38915748',
+            embed = new SlidesLiveEmbed('presentation-embed-{{info.slides_live}}', {
+            presentationId: '{{info.slides_live}}',
             autoPlay: false, // change to true to autoplay the embedded presentation
             verticalEnabled: true,
             verticalWhenWidthLte: 2000,
@@ -94,7 +102,6 @@
             });
           </script>
         </div>
-        <!-- SlidesLive -->
         <div class="col-md-5 col-xs-12 p-2">
           <div id="gitter" class="slp">
             <center>

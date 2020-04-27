@@ -1,0 +1,278 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ML-IRL
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+DTSTART:20200426T120000Z
+DTEND:20200426T123000Z
+DTSTAMP:20200424T013048Z
+UID:03j4npke5fvjknamn1v1arht41@google.com
+CREATED:20200423T231424Z
+DESCRIPTION:<p>Dr. Saria is the John C. Malone Assistant Professor at Johns
+  Hopkins University. Her work enables new classes of diagnostic and treatme
+ nt planning tools for healthcare—tools that use statistical machine learnin
+ g to tease out subtle information from “messy” observational datasets\, and
+  provide reliable inferences for individualizing care decisions. She has re
+ ceived many awards including the DARPA Young Faculty Award (2016)\, MIT Tec
+ hnology Review’s ‘35 Innovators under 35’ (2017)\, the Sloan Research Fello
+ wship in CS (2018)\, the World Economic Forum Young Global Leader (2018)\, 
+ and the National Academies of Medicine Emerging Leader in Health and Medici
+ ne (2018).</p>
+LAST-MODIFIED:20200423T231424Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ML-IRL: Invited Talk - Suchi Saria
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T123000Z
+DTEND:20200426T130000Z
+DTSTAMP:20200424T013048Z
+UID:76rgcm7i04dru5laljjigoeag2@google.com
+CREATED:20200423T231437Z
+DESCRIPTION:<p>Dr. Murphy is Professor of Statistics at Harvard University\
+ , Radcliffe Alumnae Professor at the Radcliffe Institute\, Harvard Universi
+ ty\, and Professor of Computer Science at the Harvard John A. Paulson Schoo
+ l of Engineering and Applied Sciences. Her research focuses on improving se
+ quential\, individualized\, decision making in health\, in particular on cl
+ inical trial design and data analysis to inform the development of mobile h
+ ealth interventions. She is a MacArthur Fellow\, a member of the US Nationa
+ l Academy of Sciences and US National Academy of Medicine\, and President o
+ f the Institute of Mathematical Statistics. <br></p>
+LAST-MODIFIED:20200423T231437Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ML-IRL: Invited Talk - Susan Murphy
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T130000Z
+DTEND:20200426T133000Z
+DTSTAMP:20200424T013048Z
+UID:4no0fslaronuujb0k3oh1vm92s@google.com
+CREATED:20200423T231448Z
+DESCRIPTION:<p>Ms. Moorosi is a Software Engineer and Researcher at Google 
+ AI in Accra\, Ghana. She focuses on ML research and applications with inter
+ ests mainly in computer vision and fairness.  Before Google\, she was a sen
+ ior Data Science researcher at South Africa’s national science lab\, Counci
+ l for Scientific and Industrial Research\, working on projects with real-wo
+ rld impact including rhino poaching prevention with park rangers. She is an
+  active member of Women in Machine Learning\, Black in Artificial Intellige
+ nce\, and a co-organizer of the Deep Learning Indaba.</p>
+LAST-MODIFIED:20200423T231448Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ML-IRL: Invited Talk - Nyalleng Moorosi
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T133000Z
+DTEND:20200426T143000Z
+DTSTAMP:20200424T013048Z
+UID:47ulfnbh0n8m711nh4b9042g6m@google.com
+CREATED:20200423T231514Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T231514Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ML-IRL: Live Panel and Q+A with invited speakers
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T143000Z
+DTEND:20200426T150000Z
+DTSTAMP:20200424T013048Z
+UID:5jadqrufgef1e48ksl1sk2o4t5@google.com
+CREATED:20200423T231528Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T231528Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ML-IRL: Break
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T170000Z
+DTEND:20200426T173000Z
+DTSTAMP:20200424T013048Z
+UID:53gi3esu9rsga5chotvmo0tefc@google.com
+CREATED:20200423T231729Z
+DESCRIPTION:<p>Dr. Gros is a member of the Facebook’s Spatial Computing Tea
+ m and has a background in complex systems. Born in Ethiopia and studying in
+  Germany and the US\, Dr. Gros brings a global perspective to problems such
+  as creating spatial maps with very detailed building and population inform
+ ation based on satellite data. His work is being used by several non-govern
+ mental and academic organizations. He also works on spatial demographic que
+ stions and as a postdoc at the New England Complex Systems Institute\, he w
+ orked on spatial socio-economic systems\, including ethnic violence. <br></
+ p>
+LAST-MODIFIED:20200423T231729Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ML-IRL: Invited talk - Andreas Gros
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T150000Z
+DTEND:20200426T161500Z
+DTSTAMP:20200424T013048Z
+UID:0kgoingmtg7c7ed7rgp9bc2sbm@google.com
+CREATED:20200423T231548Z
+DESCRIPTION:<ul><li><span>Attention-Based Prototypical Learning </span><spa
+ n>Sercan O. Arik (Google)\; Tomas Pfister (Google)</span> <br></li><li><spa
+ n>Participatory Problem Formulation for Fairer Machine Learning Through Com
+ munity Based System Dynamics Approach </span><span>Donald Martin\, Jr. (Goo
+ gle)\; Vinodkumar Prabhakaran (Google)\; Jill &nbsp\;Kuhlberg (Univ of Nort
+ h Carolina - Chapel Hill)\; Andrew Smart (Google Inc.)\; William Isaac (Dee
+ pMind)</span><br></li><li><span>Using Simulated Data to Generate Images of 
+ Climate Change</span> <span>Mélisande Teng (Mila\, Université de Montréal)\
+ ; Gautier Cosne (Mila\, Université de Montréal)\; Adrien Juraver (Mila\, Un
+ iversité de Montréal)\; Victor Schmidt (Mila\, Université de Montréal)\; Va
+ he Vardanyan (Mila\, Université de Montréal)\; Sasha Luccioni (Mila)\; Yosh
+ ua Bengio (Mila)</span> <br></li><li><span>Getting a CLUE: A Method for Exp
+ laining Uncertainty Estimates&nbsp\;Javier Antoran (University of Cambridge
+ )\; Umang Bhatt (University of Cambridge)\; Tameem Adel (University of Camb
+ ridge)\; Adrian Weller (University of Cambridge)\; Jose Miguel Hernandez-Lo
+ bato (University of Cambridge)&nbsp\;</span></li><li><span>DEEP LEARNING MO
+ BILE APPLICATION TOWARDS MALARIA DIAGNOSIS </span><span>Emilian A Ngatunga 
+ (University of Dodoma)\; Saidi Mmaka (University of Dodoma)</span></li></ul
+ >
+LAST-MODIFIED:20200423T231838Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ML-IRL: Contributed talks
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T173000Z
+DTEND:20200426T184500Z
+DTSTAMP:20200424T013048Z
+UID:2l5jlvc03nibchunedkgc720mt@google.com
+CREATED:20200423T232020Z
+DESCRIPTION:A series of 5 minute talks for each poster.<br><br><ul><li><spa
+ n>Population Mapping in Informal Settlements with High-Resolution Satellite
+  Imagery and Equitable Ground-Truth </span><span>Konstantin Klemmer (Univer
+ sity of Warwick)\;   Godwin Yeboah (University of Warwick)\; João Porto de 
+ Albuquerque (University of Warwick)\; Stephen Jarvis (University of Warwick
+ ) </span>[<a href="https://drive.google.com/open?id=183JC6QN_UnA4pp7gw3oHaQ
+ TQdsewEtML" target="_blank">pdf</a>]</li><li><span>Counterfactual Accuracie
+ s of Alternative Models </span><span>Umang Bhatt (University of Cambridge)\
+ ; Adrian Weller (University of Cambridge)\; Muhammad Bilal Zafar (Bosch Cen
+ ter for Artificial Intelligence)\; Krishna Gummadi (MPI-SWS)</span> [<a hre
+ f="https://drive.google.com/open?id=1zqtr1xV7MSMtU9j83N6kq1mYkgF3sN20" targ
+ et="_blank">pdf</a>]</li><li><span>Machine Learning for Digital Try-On </sp
+ an><span>Junbang Liang (University of Maryland\, College Park)\; Ming Lin (
+ UMD-CP &amp\; UNC-CH)</span> [<a href="https://drive.google.com/open?id=1L9
+ u8PXGDfgVXiA7FMexTc0MgJumrZB7Y" target="_blank">pdf</a>]</li><li><span>RL A
+ GENTS IMPLICITLY LEARNING HUMAN PREFERENCES </span><span>Nevan Wichers (Goo
+ gle)</span> [<a href="https://drive.google.com/open?id=1atoEiuxLUenK5Ecc7Vt
+ Yf7A2ivjOmggN" target="_blank">pdf</a>]</li><li><span>Using competency ques
+ tions to select optimal clustering structures for residential energy consum
+ ption patterns </span><span>Wiebke Toussaint (University of Cape Town)\; De
+ shendran Moodley (University of Cape Town)</span> <br></li><li><span>LEVERA
+ GING NATIONWIDE DATA AND DOMAIN EXPERTISE TO INFER CAUSAL EFFECT OF CESAREA
+ N SECTION BIRTH ON LONG TERM PEDIATRIC HEALTH </span><span>Ayya Keshet (Wei
+ zmann Institute of Science)</span> <br></li><li><span>Training Self-Driving
+  Vehicles Using Transfer Learning and Simulated Accidents </span><span>Shiv
+ am Akhauri (University of Maryland College Park)\; Laura Zheng ( University
+  of Maryland College Park)\; Ming Lin (UMD-CP &amp\; UNC-CH)</span> <br></l
+ i><li><span>Autonomous Driving in Dense Urban Scenarios: Recent Progress an
+ d Challenges </span><span>Rohan Chandra (University of Maryland)\; Uttaran 
+ Bhattacharya (University of Maryland\, College Park)\; Trisha Mittal (Unive
+ rsity of Maryland)\; Aniket Bera (University of Maryland\, College Park)\; 
+ Dinesh Manocha (UMD)</span> <br></li><li><span>TOWARDS CLASSIFICATION PARIT
+ Y ACROSS COHORTS </span><span>Aarsh Patel (University of Massachusetts Amhe
+ rst)\; Rahul Gupta (Amazon)\; Mukund Sridhar (Amazon)\; Satyapriya Krishna 
+ (Amazon.com)\; Alok Aman (Amazon)\; Peng Liu (Amazon)</span> <br></li><li><
+ span>Identifying Interpretable Word Vector Subspaces with PCA </span><span>
+ Jessica Zhao (Harvard University)\; Bill  Zhang (Harvard University) </span
+ ></li><li><span>Active Learning for Efficient Construction of Diverse Bioba
+ nks </span><span>Daniel Mas Montserrat (Purdue University)\; Carlos Bustama
+ nte (Stanford University)\; Alexander Ioannidis (Stanford University)</span
+ > <br></li><li><span>Adaptive Prediction Timing for Electronic Health Recor
+ ds </span><span>Jacob T Deasy (University of Cambridge)</span> <br></li><li
+ ><span>Egoshots\, an ego-vision life-logging dataset and semantic fidelity 
+ metric to evaluate diversity in image captioning models </span><span>Pranav
+  Agarwal (INRIA RITS)\; Betancourt Alejandro (Eindhoven University of Techn
+ ology)\; Vana  Panagiotou (Philips Research)\; Natalia Diaz Rodriguez (ENST
+ A Paris and INRIA Flowers)</span> <br></li><li><span>Real world application
+ s of machine learning require new strategies for anticipating out of distri
+ bution data </span><span>Bernease R Herman (University of Washington)</span
+ > <br></li><li><span>Concrete Problems in AI Safety\, Revisited </span><spa
+ n>Deborah I Raji (University of Toronto)\; Roel Dobbe (AI Now Insitute\, Ne
+ w York University)  </span></li></ul>
+LAST-MODIFIED:20200423T232020Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ML-IRL: Poster spotlights (5 minute talks)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T184500Z
+DTEND:20200426T190000Z
+DTSTAMP:20200424T013048Z
+UID:17ek5qa4ll9jgsjn8t6ofcg5s3@google.com
+CREATED:20200423T232036Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T232036Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ML-IRL: Introduction to breakout sessions
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T190000Z
+DTEND:20200426T200000Z
+DTSTAMP:20200424T013048Z
+UID:7dpbq2j5sfg4u1444kog63udf3@google.com
+CREATED:20200423T232106Z
+DESCRIPTION:We have three breakout sessions to help bring people together a
+ round three topics: methods\, applications\, and implications of ML.
+LAST-MODIFIED:20200423T232106Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ML-IRL: Breakout sessions (live)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T200000Z
+DTEND:20200426T200500Z
+DTSTAMP:20200424T013048Z
+UID:7nkg89cgdq2lqs8c473b4t6eh5@google.com
+CREATED:20200423T232122Z
+DESCRIPTION:
+LAST-MODIFIED:20200423T232122Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ML-IRL: Closing remarks
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200426T115000Z
+DTEND:20200426T120000Z
+DTSTAMP:20200424T013048Z
+UID:18bqqf70qek68jqq60q59tbttl@google.com
+CREATED:20200423T231405Z
+DESCRIPTION:
+LAST-MODIFIED:20200424T012937Z
+LOCATION:
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:ML-IRL: Opening remarks (live)
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
