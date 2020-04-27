@@ -48,10 +48,10 @@
             Chat
             </a>
           </div>
-          <div class=" text-center text-muted text-monospace">
+          <div class=" text-center text-muted text-monospace ">
             {% for session in openreview.content.session %}
             <div> {{session}} {% if openreview.content.session_times[loop.index - 1] != None%} <span class="session_times">{{openreview.content.session_times[loop.index - 1]}}</span>
-              [<a href="{{openreview.content.session_links[loop.index - 1]}}" target="_blank"  class="card-link">Live</a>]
+              [<a href="{{openreview.content.session_links[loop.index - 1]}}" target="_blank"  class="card-link">Live QA</a>]
               [<a target="_blank" href="webcal://iclr.github.io/iclr-images/calendars/poster_{{openreview.forum}}.{{loop.index-1}}.ics">Cal</a>] {% endif %}
             </div>
             {% endfor %}

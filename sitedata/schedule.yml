@@ -26,7 +26,7 @@ conference:
         type: poster
         short: P1S3
       - slot: 2p
-        name: Aisha Walcott-Bryant
+        name: "Live QA: Aisha Walcott-Bryant"
         type: qa
         id: 1
       - slot: 5p
@@ -34,7 +34,7 @@ conference:
         short: P1S4
       - slot: 7p
         type: qa
-        name: Leslie Kaebling
+        name: "Live QA: Leslie Kaebling"
         id: 2
       - slot: 8p
         type: poster
@@ -51,7 +51,7 @@ conference:
       type: poster
       short: P2S3
     - slot: 2p
-      name: Ruha Benjamin
+      name: "Live QA: Ruha Benjamin"
       type: qa
       id: 3
     - slot: 5p
@@ -60,7 +60,7 @@ conference:
     - slot: 7p
       type: qa
       id: 4
-      name: Laurent Dinh
+      name: "Live QA: Laurent Dinh"
     - slot: 8p
       type: poster
       short: P2S5
@@ -73,7 +73,7 @@ conference:
       type: poster
       short: P3S2
     - slot: 11a
-      name: Mihaela van der Schaar
+      name: "Live QA: Mihaela van der Schaar"
       type: qa
       id: 5
     - slot: 12p
@@ -81,7 +81,7 @@ conference:
       short: P3S3
     - slot: 4p
       type: qa
-      name: Devi Parikh
+      name: "Live QA: Devi Parikh"
       id: 6
     - slot: 5p
       type: poster
@@ -101,7 +101,7 @@ conference:
       type: poster
       short: P4S3
     - slot: 4p
-      name: Yoshua Bengio / Yann LeCun
+      name: "Live QA: Yoshua Bengio / Yann LeCun"
       type: qa
       id: 7
     - slot: 5p
@@ -109,7 +109,7 @@ conference:
       short: P4S4
     - slot: 7p
       type: qa
-      name: Michael I. Jordan
+      name: "Live QA: Michael I. Jordan"
       id: 8
     - slot: 8p
       type: poster

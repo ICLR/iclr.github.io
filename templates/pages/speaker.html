@@ -18,23 +18,32 @@
           </h3>
           <div class="text-center p-3">
             <a class="card-link" data-toggle="collapse" role="button" href="#details">
-            Bio
+            Abstract & Bio
             </a>
             <a href="chat.html?room=channel/speaker_{{id}}" target="_blank"  class="card-link">
             Chat
             </a>
           </div>
-          <div class=" text-center text-muted text-monospace">
+          <div class=" text-center text-muted">
             <div> {{info.day}} <span class="session_times">({{info.time}})</span> <a href="{{info.zoom}}" target="_blank"  class="card-link">
               Live QA       </a>
             </div>
+
+            <div class="m-2">
+              (Please watch the talk and post questions to chat before the Live QA.)
+            </div>
+            
           </div>
+          
         </div>
       </div>
       <div id="details" class="pp-card m-3 collapse">
         <div class="card-body">
           <p class="card-text">
           <div id="abstractExample">
+            <span class="font-weight-bold">Abstract:</span>
+            {{info.abstract}} <br><br>
+
             <span class="font-weight-bold">Bio:</span>
             {{info.bio}}
           </div>
