@@ -123,6 +123,44 @@
     width: 50%;
 }
 
+.countLabel {
+	font-size: 70%;
+}
+
+.session-selector .float-right .btn {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.session-selector .float-right .btn input {
+	margin-top: -10px;
+	margin-bottom: -10px;
+}
+
+.session-selector .float-right {
+	/*margin-top: -4px;
+	margin-bottom: -4px;*/
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.session-selector .session_day .btn {
+	/*margin-top: -16px;*/
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.session-selector .session_number .btn {
+	/*margin-top: -16px;*/
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.session-selector .input {
+	/*margin: -40px;*/
+	/*margin-top: -16px;*/
+}
+
 .pp-mode-ilike:hover {
 	/*width: 500px;
 	height: 500px;

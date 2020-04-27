@@ -6,17 +6,13 @@ const allKeys = {
     titles: [],
     recs: [],
 }
-const filters = {
-    authors: null,
-    keywords: null,
-    session: null,
-    title: null,
-    recs: null,
-};
 
 let order_by = null;
+let session_day = null;
+let session_number = null;
 let likelihood_outdated = false;
 let $grid = null;
+var iso = null;
 let allProj = [];
 
 // From https://stackoverflow.com/questions/7128675/from-green-to-red-color-depend-on-percentage
@@ -126,6 +122,45 @@ const setLikesFromStr = (likestr) => {
   
 }
 
+const filterGrid = () => {
+  $grid.isotope({ filter: function() {
+    $this = jQuery(this)
+    let matchSession = true
+    if ((session_day != 'all') || (session_number != 'all')){
+      matchSession = $this.find('.card-session').toArray().some(el => {
+        let sessArr = jQuery(el).text().split(" ");
+        return (
+          ((session_day == 'all') || sessArr[0].toLowerCase().startsWith(session_day)) && 
+          ((session_number == 'all') || parseInt(sessArr[1]) == session_number)
+        )
+      });
+    }
+    return matchSession && (parseFloat($this.attr('data-search-match')) > 0);
+  } })
+  jQuery('.filterCount').text( iso.filteredItems.length );
+}
+
+const setSessionFromStr = (sessStr) => {
+  const sessArr = sessStr.split(" ");
+  const sessDay = sessArr[0].toLowerCase(); // Bit hacky fixed length
+  const sessDayMatches = jQuery('.btn-group.session_day input').filter((i, el) => {return sessDay.startsWith(jQuery(el).attr('value'))});
+  const sessNum = parseInt(sessArr[1]);
+  const sessNumMatches = jQuery('.btn-group.session_number input[value="' + sessNum + '"]')
+  return setSession(
+    sessDayMatches.length > 0 ? sessDayMatches.attr('value') : 'all', 
+    sessNumMatches.length > 0 ? sessNumMatches.attr('value') : 'all',
+  )
+}
+
+const setSession = (day, num) => {
+  if (day != session_day){
+    jQuery('.btn-group.session_day input[value="' + day + '"]').click()
+  }
+  if (num != session_number){
+    jQuery('.btn-group.session_number input[value="' + num + '"]').click()
+  }
+}
+
 const doSearch = it => {
 
     $('.typeahead_all').val(it);
@@ -154,7 +189,7 @@ const doSearch = it => {
 
         const score = (
           compute_match(el.find('.card-title').text()) * 4 + 
-          compute_match(el.find('.card-subtitle').text()) * 2 + 
+          compute_match(el.find('.card-authors').text()) * 2 + 
           compute_match(el.find('.keywords').text()) * 2 + 
           compute_match(el.find('.tldr').text()) * 1
         ) 
@@ -164,9 +199,7 @@ const doSearch = it => {
       gridItems.attr('data-search-match', 1)
     }
 
-    $grid.isotope({ filter: function() {
-      return parseFloat(jQuery(this).attr('data-search-match')) > 0;
-    } })
+    filterGrid();
 
     if (it.length > 0){
       // Sort descending by filter score
@@ -218,7 +251,6 @@ function computeLikelihood(){
       var model = "gaussian";
       var sigma2 = 0.3, alpha = 1;
       var variogram = kriging.train(t, x, y, model, sigma2, alpha);
-      console.log("trained model")
 
       jQuery('.myCard').each( (i, el) => { 
         el = jQuery(el)
@@ -270,12 +302,18 @@ const start = () => {
           el = jQuery(el)
           el.attr('data-id', el.find('.pp-card').attr('data-id'))
           el.attr('data-likes', 0)
+          el.attr('data-search-match', 1)
         })
 
 
 
         jQuery('.pp-card .keywords').on('click', 'a', function(){ 
           doSearch(jQuery(this).text());
+          return false; 
+        });
+
+        jQuery('.pp-card .card-session').on('click', function(){ 
+          setSessionFromStr(jQuery(this).text());
           return false; 
         });
 
@@ -294,6 +332,7 @@ const start = () => {
             like: '[data-likes] parseInt',
           }
         });
+        iso = $grid.data('isotope');
 
         $grid.on( 'click', '.grid-item .feedback .like', function() {
           addLike(jQuery(this.closest('.pp-card')), 1)
@@ -303,12 +342,20 @@ const start = () => {
           addLike(jQuery(this.closest('.pp-card')), -1)
         });
 
+        if (getUrlParameter("noinfo")){
+          jQuery('.remove_alert').click()
+        }
         const urlSearch = decodeURIComponent(getUrlParameter("search"));
         const likestr = decodeURIComponent(getUrlParameter("likes"));
-        const orderBy = decodeURIComponent(getUrlParameter("order_by")) || "likelihood";
+        const orderBy = decodeURIComponent(getUrlParameter("order_by")) || 'likelihood';
+        const sessionDay = decodeURIComponent(getUrlParameter("session_day")) || 'all';
+        const sessionNumber = decodeURIComponent(getUrlParameter("session_number")) || 'all';
+        setSession(sessionDay, sessionNumber);
         if (urlSearch !== '') {
           doSearch(urlSearch)
         }
+        // setSessionDay(sessionDay)
+        // setSessionNumber(sessionNumber)
 
         // Set the likes
         setLikesFromStr(likestr);
@@ -350,12 +397,70 @@ jQuery('.btn-group.order_by').on( 'click', 'input', function() {
   }
 });
 
+jQuery('.btn-group.session_day').on( 'click', 'input', function() {
+  session_day = jQuery(this).attr('value');
+  setQueryStringParameter("session_day", encodeURIComponent(session_day));
+  filterGrid();
+});
+
+jQuery('.btn-group.session_number').on( 'click', 'input', function() {
+  session_number = jQuery(this).attr('value');
+  session_number = (session_number == 'all') ? 'all' : parseInt(session_number)
+  setQueryStringParameter("session_number", encodeURIComponent(session_number));
+  filterGrid();
+});
+
+jQuery('.remove_alert').on('click', function() {
+  setQueryStringParameter("noinfo", 1)
+})
+
 /**
  * CARDS
  */
 
-const keyword = kw => `<a href="papers.html?filter=keywords&search=${kw}"
+const keyword = kw => `<a href="#"
                        class="text-secondary text-decoration-none">${kw.toLowerCase()}</a>`
+
+// const card_time_small = (openreview, show) => {
+//     const cnt = openreview.content;
+//     return show ? (!SITE_ROOT ? `
+// <!--    <div class="pp-card-footer">-->
+//     <div class="text-center" style="margin-top: 10px;">
+//     ${cnt.session.filter(s => s.match(/.*[0-9]/g)).map(
+//       (s,i) => `<a class="card-subtitle card-session text-muted" href="?session=${encodeURIComponent(
+//         s)}">${s.replace('Session ','')}</a> ${card_live(cnt.session_links[i])} ${card_cal(openreview, i)} `).join(', ')}
+//     </div>
+// <!--    </div>-->
+//     ` : `
+// <!--    <div class="pp-card-footer">-->
+//     <div class="text-center" style="margin-top: 10px;">
+//     ${cnt.session.filter(s => s.match(/.*[0-9]/g)).map(
+//       (s,i) => `<a class="card-subtitle card-session text-muted" href="?session=${encodeURIComponent(
+//         s)}">${s.replace('Session ','')}</a>`).join(', ')}
+//     </div>
+// <!--    </div>-->
+//     `) : '';
+// }
+
+const card_time_small = (openreview, show) => {
+    const cnt = openreview.content;
+    return show ? `
+<!--    <div class="pp-card-footer">-->
+    <div class="text-center" style="margin-top: 10px;">
+    ${cnt.session.filter(s => s.match(/.*[0-9]/g)).map(
+      (s,i) => `<a class="card-subtitle text-muted card-session" href="#">${s.replace('Session ','')}</a> ${card_live(cnt.session_links[i])} ${card_cal(openreview, i)} `).join(', ')}
+    </div>
+<!--    </div>-->
+    ` : '';
+}
+
+const card_icon_video = icon_video(16);
+const card_icon_cal = icon_cal(16);
+
+const card_live = (link)=> SITE_ROOT ? '' : `<a class="text-muted card-session-link" href="${link}">${card_icon_video}</a>`
+const card_cal = (openreview, i)=>  `<a class="text-muted card-session-cal" href="webcal://iclr.github.io/iclr-images/calendars/poster_${openreview.forum}.${i}.ics">${card_icon_cal}</a>`
+
+
 //language=HTML
 const card_html = openreview => `
       <div class="myCard col-xs-6 col-md-4 grid-item">
@@ -379,7 +484,7 @@ const card_html = openreview => `
                      class="text-muted">
                       <h5 class="card-title" align="center"> ${openreview.content.title} </h5>
                     </a>
-                    <h6 class="card-subtitle text-muted" align="center">
+                    <h6 class="card-subtitle card-authors text-muted" align="center">
                         ${openreview.content.authors.join(', ')}
                     </h6>
                   </div><!--
@@ -399,7 +504,7 @@ const card_html = openreview => `
                       <div class="matchperc"></div>
                   </div>
                 </div>
-                
+                ${card_time_small(openreview, true)}  
                 <center>
                   <img class="lazy-load-img cards_img" data-src="https://iclr.github.io/iclr-images/small/${openreview.content.iclr_id}.jpg" width="80%"/>
                 </center>
