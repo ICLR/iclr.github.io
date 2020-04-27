@@ -47,7 +47,8 @@ body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
 
   .cards_img {margin-top: 20px;
               border-radius: 2px;
-              max-height: 100px;}
+              max-height: 140px;
+              object-fit: scale-down;}
   body .nav-pills .nav-link.active {
       background-color: #bed972;
   }
