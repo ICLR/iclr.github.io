@@ -245,7 +245,7 @@ def schedule():
              for o in out["section"]] }
 
         all_days["days"].append(out)
-
+    all_days["expos"] = site_data["expos"]["expos"]
     return render_template('pages/schedule.html', **all_days)
 
 
@@ -280,6 +280,13 @@ def speaker(speaker):
     return render_template('pages/speaker.html',
                            **{"info":site_data["speakers"]["speakers"][int(speaker) -1 ],
                               "id": int(speaker)
+                           })
+
+@app.route('/expo_<expo>.html')
+def expo(expo):
+    return render_template('pages/expo.html',
+                           **{"info":site_data["expos"]["expos"][int(expo) -1 ],
+                              "id": int(expo)
                            })
 
 

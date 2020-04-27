@@ -1,17 +1,29 @@
-
-socials:
-    - name: Open source tools and practices in state-of-the-art DL research
-      organizers: "Kamil A. Kaczmarek & Patryk Miziula"
-      website: https://neptune.ai/landings/iclr-virtual-social
-      image: Open-source-tools.png
-      day:
-        - Tuesday
-        - Thursday
-      times:
-        - 16:00-18:00 GMT
-        - 17:00-19:00 GMT
-      links:
-        - ""
-        - ""
-      description: "Appropriate tooling is an inevitable part of the SOTA deep learning research. Recent advancements in the field resulted in the proliferation of large frameworks’ ecosystems (TensorFlow, PyTorch, MXNet) as well as smaller targeted tools that serve specific needs. This social event is centered around all the tools and practices, big and small, that are relevant to the ICLR community. Participants are encouraged to show their own open source tools that they build, regardless of their size and proliferation level. It can be a single CLI command that you find useful or an entire framework. Main goal for the participants is to introduce them to the wide range of tools and practices that may result in faster research progression and standardization."
-      id: OSS
+expos:
+    - name: ByteDance
+      slides_live: 
+      title: Learning Deep Latent Models for Text Sequences
+      speaker: Lei Li
+      zoom: https://us02web.zoom.us/j/86714113459?pwd=STBCN0ttRU5GdGJrY0p2S3lCU1F6QT09
+      day: Wed
+      time:  "19:00-20:00 GMT"
+    - name: IBM
+      slides_live: 
+      title: Neurosymbolic Hybrid AI
+      speaker: David Cox, Claire Jobe
+      zoom: https://us02web.zoom.us/j/86563430819?pwd=TlpJWGNhMG0vd1lRZk84ZGo0ZG5HQT09
+      day: Tues
+      time:  "16:00-17:00 GMT"
+    - name: Element AI
+      slides_live: 
+      speaker: Harm de Vries, Valerie Becaert
+      title: Towards Ecologically Valid Research on Natural Language Interfaces
+      zoom: https://us02web.zoom.us/j/83457902079?pwd=bmsvWGFNYXJHc2FWL2FwaVZRVUVldz09
+      day: Wed 
+      time: "15:00-16:00 GMT"
+    - name: Amazon
+      slides_live: 
+      title: Reinforcement Learning @ Amazon
+      zoom: https://us02web.zoom.us/j/83414828480?pwd=Nk5FMmlzRkhOV1ZtZlVNQWRuczFrUT09
+      speaker: Britt Allen, Rui Song
+      day: Thurs 
+      time: "15:00-16:00 GMT"

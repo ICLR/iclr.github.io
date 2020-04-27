@@ -75,8 +75,6 @@
             </div>
 
           <div class="tab-pane active" id="tab-calendar" role="tabpanel" aria-labelledby="nav-profile-tab">
-
-
             <div class="my-3"></div>
             <div class="card">
               <div class="card-header">
@@ -214,12 +212,48 @@
             <div class="border-top my-4"></div>
             <div class="row p-4">
               <div class="col-12 bd-content ">
-                <h2 class="text-center"> Expo</h2>
+                <h2 class="text-center"> Expos</h2>
               </div>
             </div>
-            
-            <p><span>Stay tuned for four scheduled Expo talks!</span></p>
 
+            <div id="calendar">            
+            </div>
+            
+            <script type='text/javascript'>
+              make_cal("static/expo.ics")
+            </script>
+            <div class="row">
+            {% for expo in expos %}
+            <div class="col-md-6 col-sm-12 p-3"
+                 style="box-sizing: border-box;">
+              <div class="card"
+                   style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 150px; width:100%;">
+                  <a class="text-muted" href="expo_{{loop.index}}.html">
+                    <h3 class="card-title main-title">
+                      <div>
+                        {{expo.name}}</div>
+                      <div>
+                      {{expo.title}}</div>
+                    </h3>
+                  </a>                    
+
+
+                  <div class="card-subtitle text-muted">
+                    {{expo.speaker}}
+
+                    <div>
+                      {{expo.day}} <span class="session_times">({{expo.time}})</span>
+                    </div>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+            </div>
           </div>
           
           <div class="tab-pane fade" id="tab-coc" role="tabpanel" aria-labelledby="nav-profile-tab">
