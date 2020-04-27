@@ -1,5 +1,12 @@
+body a {
+    color: #2294e0;
+}
+body a:hover {
+    color: #2294e0;
+    text-decoration: none;
+}
 
- h2,  h3 {
+h2,  h3 {
     font-family: 'Lato';
 }
 label:text-muted, .nav-link {
