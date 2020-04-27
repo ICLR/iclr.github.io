@@ -86,7 +86,7 @@
                     </select>
                   </div>
                   <div style="margin-left:auto" class="text-right col">
-                    <a href="webcal://iclr.github.io/iclr-images/calendars/iclr.ics" class="text-muted "> Download Calendar</a>
+                    <a href="webcal://iclr.github.io/iclr-images/calendars/basic.ics" class="text-muted "> Download Calendar</a>
                   </div>
                 </div>
                 <div class="row main-table">
@@ -135,7 +135,7 @@
                             </span>
                           </div>
                           <div class="m-3 ">
-                            {{speaker.abstract}}
+                            {{speaker.abstract|safe}}
                           </div>
                         </div>
                       </div>
@@ -149,7 +149,7 @@
             <div class="sessions">
               {% for s in base.section %}
               <div class="row p-3">
-                <h3><a class="text-muted" href="papers.html?session={{base.day}}: {{s.theme}}">Orals/Spotlights: {{s.theme}}</a></h3>
+                <h3><a  href="papers.html?session={{base.day}}: {{s.theme}}">Orals/Spotlights: {{s.theme}}</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExample{{base.day}}{{loop.index}}" class="carousel slide d-none d-md-block" data-interval="false">
@@ -159,7 +159,7 @@
                     <div class="carousel-item {% if loop.index == 1%} active{% endif %}">
                       {% endif %}
                       <div class="col-md-4 col-xs-6  fluid">
-                        <div class="pp-card">
+                       j <div class="pp-card">
                           <div class="pp-card-header">
                             <a href="poster_{{openreview.content.iclr_id}}.html"
                               class="text-muted">
@@ -200,7 +200,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?session={{base.short}}+Session+{{loop.index}}">Session {{loop.index}} <span class="session_times">{{i}}</span></a>
+                    <a  href="papers.html?session={{base.short}}+Session+{{loop.index}}">Session {{loop.index}} <span class="session_times">{{i}}</span></a>
                   </h3>
                 </div>
               </div>

@@ -415,6 +415,8 @@ def your_generator_here():
         yield "workshop", {"workshop": str(i)}
     for i in range(1, len(site_data["speakers"]["speakers"])+1):
         yield "speaker", {"speaker": str(i)}
+    for i in range(1, 5):
+        yield "expo", {"expo": str(i)}
 
 
 # --------------- DRIVER CODE -------------------------->

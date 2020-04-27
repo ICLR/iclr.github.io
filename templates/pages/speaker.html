@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% set page_title = "ICLR 2020" %}
+  {% set page_title = "ICLR: " + info.title %}
   {% include 'pages/head.html' %}
   <body>
     <!-- NAV -->
@@ -25,8 +25,8 @@
             </a>
           </div>
           <div class=" text-center text-muted">
-            <div> {{info.day}} <span class="session_times">({{info.time}})</span> <a href="{{info.zoom}}" target="_blank"  class="card-link">
-              Live QA       </a>
+            <div> {{info.day}} <span class="session_times">({{info.time}})</span> Live QA<br>
+              <a href="{{info.zoom}}" target="_blank"  class="card-link">Live Call</a> | <a href="#stream">Stream<a/>
             </div>
 
             <div class="m-2">
@@ -42,7 +42,7 @@
           <p class="card-text">
           <div id="abstractExample">
             <span class="font-weight-bold">Abstract:</span>
-            {{info.abstract}} <br><br>
+            {{info.abstract|safe}} <br><br>
 
             <span class="font-weight-bold">Bio:</span>
             {{info.bio}}
@@ -76,7 +76,53 @@
             </center>
           </div>
         </div>
+
+    <div  id="stream" class="container" style="padding-bottom: 30px; padding-top:30px">
+      
+        <center>
+          <h2>
+
+            Question and Answer Session
+          </h2>
+
+          (This section will be visible during and after the Live QA.)
+        </center>
+
+
+        
+        </div>
+        <div class="col-md-12 col-xs-12 my-auto p-2" >
+          <div id="presentation-embed-{{info.qa_link}}" class="slp my-auto"></div>
+          <script src='https://slideslive.com/embed_presentation.js'></script>
+          <script>
+            embed = new SlidesLiveEmbed('presentation-embed-{{info.qa_link}}', {
+            presentationId: '{{info.qa_link}}',
+            autoPlay: false, // change to true to autoplay the embedded presentation
+            verticalEnabled: true,
+            <!-- verticalWhenWidthLte: 2000, -->
+            allowHiddenControlsWhenPaused: true,
+            hideTitle: true
+            });
+          </script>
+        </div>
+
+        <!-- <div class="col-md-7 col-xs-12 my-auto p-2" > -->
+        <!--   <div id="presentation-embed-{{info.qa_link}}" class="slp my-auto"></div> -->
+        <!--   <script src='https://slideslive.com/embed_presentation.js'></script> -->
+        <!--   <script> -->
+        <!--     embed = new SlidesLiveEmbed('presentation-embed-{{info.qa_link}}', { -->
+        <!--     presentationId: '{{info.qa_link}}', -->
+        <!--     autoPlay: false, // change to true to autoplay the embedded presentation -->
+        <!--     verticalEnabled: true, -->
+        <!--     verticalWhenWidthLte: 2000, -->
+        <!--     allowHiddenControlsWhenPaused: true, -->
+        <!--     hideTitle: true -->
+        <!--     }); -->
+        <!--   </script> -->
+        <!-- </div> -->
       </div>
+
+      
     </div>
     {% include 'pages/footer.html' %}
   <script src="static/js/time-extend.js"></script>

@@ -148,6 +148,10 @@ div.anchor {
 
   box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
   }
+tr.fc-list-item {
+    cursor: pointer;
+}
+
 .details {
     font-family: 'Lato', sans-serif;
 }
