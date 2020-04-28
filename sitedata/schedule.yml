@@ -127,3 +127,7 @@ conference:
       type: expo
       link: "expo_4.html"
       name: "Expo Amazon: Britt Allen, Rui Song"
+    - slot: 2p
+      type: expo
+      link: "expo_1.html"
+      name: "Expo IBM: David Cox"
