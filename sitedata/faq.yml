@@ -67,7 +67,9 @@ FAQ:
           
   - Section: General
     QA:
-      - Question: “Other Questions?”
+      - Question: "What happens to the recorded talks and QA sessions after the conference?"
+        Answer: "All the recordings of the talks and live QA sessions, pending the speakers' consent, will be made publicly viewable via Slideslive and ICLR Web Portal after the conference."
+      - Question: "Other Questions?"
         Answer: "Contact the volunteers on the #helpdesk channel on Rocket.chat"
         
 
