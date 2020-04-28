@@ -75,6 +75,12 @@
     border-color: #4fcaea;
 }
 
+.event.expo{
+    padding-top: 1px;
+    background-color: rgb(204, 204, 204);
+    border-color: rgb(204, 204, 204);
+}
+
 .time_slot {
     font-weight: bold;
 }

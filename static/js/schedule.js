@@ -81,11 +81,11 @@ function updateTable() {
               res += `<a href="papers.html?session=${day}+Session+${matches[2]}"> <span class="session-title">` +
                 `Poster Day ${matches[1]} Session ${matches[2]}</span> </a>`
 
-          } else if (d.type === 'qa') {
+          } else if (d.type === 'qa' || d.type=== 'expo') {
               const dd = day_diff(d.real_times[1]);
               res += `<span class="time_slot">${tf(
-                d.real_times[0])}  ${(dd > 0 ? '+' + dd + 'd' : (dd < 0 ? dd + 'd' : ''))}</span> <a href="speaker_${d.id}.html"><span class="session-title">` +
-                `${d.name} </a></span>`
+                d.real_times[0])}  ${(dd > 0 ? '+' + dd + 'd' : (dd < 0 ? dd + 'd' : ''))}</span> <span class="session-title">` +
+                `${d.name} </span>`
           }
           return res;
       })
@@ -97,6 +97,8 @@ function updateTable() {
               window.open(`papers.html?session=${day}+Session+${matches[2]}`)
           } else if (d.type === 'qa') {
               window.open(`speaker_${d.id}.html`)
+          } else {
+              window.open(d.link)
           }
       })
 

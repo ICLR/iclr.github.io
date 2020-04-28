@@ -6,6 +6,7 @@ time_slots:
   11a: [11:00 AM, 12:00 PM]
   12p: [12:00 PM, 2:00 PM]
   2p: [2:00 PM, 3:00 PM]
+  3p: [3:00 PM, 4:00 PM]
   4p: [4:00 PM, 5:00 PM]
   5p: [5:00 PM, 7:00 PM]
   7p: [7:00 PM, 8:00 PM]
@@ -14,7 +15,7 @@ time_slots:
 
 conference:
   - day: "2020-04-27"
-    
+
     events:
       - slot: 5a
         type: poster
@@ -89,6 +90,14 @@ conference:
     - slot: 8p
       type: poster
       short: P3S5
+    - slot: 7p
+      type: expo
+      link: "expo_2.html"
+      name: "Expo ByteDance: Lei Li"
+    - slot: 3p
+      type: expo
+      link: "expo_3.html"
+      name: "Expo ElementAI: Harm de Vries"
   - day: "2020-04-30"
     events:
     - slot: 5a
@@ -114,3 +123,7 @@ conference:
     - slot: 8p
       type: poster
       short: P4S5
+    - slot: 3p
+      type: expo
+      link: "expo_4.html"
+      name: "Expo Amazon: Britt Allen, Rui Song"
