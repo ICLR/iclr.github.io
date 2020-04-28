@@ -1,4 +1,13 @@
 expos:
+    - name: IBM
+      slides_live: 
+      title: Neurosymbolic Hybrid AI
+      speaker: David Cox
+      zoom: https://us02web.zoom.us/j/86563430819?pwd=TlpJWGNhMG0vd1lRZk84ZGo0ZG5HQT09
+      day: Tues
+      time:  "16:00-17:00 GMT"
+      slides_live_qa: 38926911
+      slides_live: 38926921
     - name: ByteDance
       slides_live: 
       title: Learning Deep Latent Models for Text Sequences
@@ -6,23 +15,26 @@ expos:
       zoom: https://us02web.zoom.us/j/86714113459?pwd=STBCN0ttRU5GdGJrY0p2S3lCU1F6QT09
       day: Wed
       time:  "19:00-20:00 GMT"
-    - name: IBM
-      slides_live: 
-      title: Neurosymbolic Hybrid AI
-      speaker: David Cox, Claire Jobe
-      zoom: https://us02web.zoom.us/j/86563430819?pwd=TlpJWGNhMG0vd1lRZk84ZGo0ZG5HQT09
-      day: Tues
-      time:  "16:00-17:00 GMT"
+      slides_live: 38926916
+      slides_live_qa: 38926923
+        
     - name: Element AI
       slides_live: 
-      speaker: Harm de Vries, Valerie Becaert
+      speaker: Harm de Vries
       title: Towards Ecologically Valid Research on Natural Language Interfaces
+      slides_live_qa: 38926914
+      slides_live: 38926922
+      
+      
+
       zoom: https://us02web.zoom.us/j/83457902079?pwd=bmsvWGFNYXJHc2FWL2FwaVZRVUVldz09
       day: Wed 
       time: "15:00-16:00 GMT"
     - name: Amazon
       slides_live: 
       title: Reinforcement Learning @ Amazon
+      slides_live_qa: 38926918
+      slides_live: 38926924
       zoom: https://us02web.zoom.us/j/83414828480?pwd=Nk5FMmlzRkhOV1ZtZlVNQWRuczFrUT09
       speaker: Britt Allen, Rui Song
       day: Thurs 

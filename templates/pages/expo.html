@@ -40,8 +40,10 @@
             </a>            
           </div>
           <div class=" text-center text-muted">
-            <div> {{info.day}} <span class="session_times">({{info.time}})</span> <a href="{{info.zoom}}" target="_blank"  class="card-link">
-                Live QA       </a>
+            <div> {{info.day}} <span class="session_times">({{info.time}})</span> Live QA <br>
+
+              <a href="{{info.zoom}}" target="_blank"  class="card-link">
+                Live Call       </a>
             </div>
 
           <div class="text-center text-muted">
@@ -50,25 +52,11 @@
           </div>
         </div>
       </div>
-      <div id="details" class="pp-card m-3 collapse">
-        <div class="card-body">
-          <p class="card-text">
-          <div id="abstractExample">
-            <span class="font-weight-bold">Description:</span>
-            {{info.description|safe}}
-          </div>
-        </div>
-      </div>
-        
-          </p>
-          <p></p>
-
-
     </div>
     <!-- SlidesLive -->
     <div class="container" style="background-color:white; padding: 0px;">
       <div class="row m-2">
-        <div class="col-md-7 col-xs-12 my-auto p-2" >
+        <div class="col-md-12 col-xs-12 my-auto p-2" >
           <div id="presentation-embed-{{info.slides_live}}" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -76,20 +64,29 @@
             presentationId: '{{info.slides_live}}',
             autoPlay: false, // change to true to autoplay the embedded presentation
             verticalEnabled: true,
-            verticalWhenWidthLte: 2000,
             allowHiddenControlsWhenPaused: true,
             hideTitle: true
             });
           </script>
         </div>
-        <!-- <div class="col-md-5 col-xs-12 p-2"> -->
-        <!--   <div id="gitter" class="slp"> -->
-        <!--     <center> -->
-        <!--       <iframe frameborder="0" src="https://iclr.rocket.chat/channel/workshop_{{info.chat}}?layout=embedded" height="700px" width="100%" ></iframe> -->
-        <!--     </center> -->
-        <!--   </div> -->
-        <!-- </div> -->
+
+        <div class="col-md-12 col-xs-12 my-auto p-2" >
+          <div id="presentation-embed-{{info.slides_live_qa}}" class="slp my-auto"></div>
+          <script src='https://slideslive.com/embed_presentation.js'></script>
+          <script>
+            embed = new SlidesLiveEmbed('presentation-embed-{{info.slides_live_qa}}', {
+            presentationId: '{{info.slides_live_qa}}',
+            autoPlay: false, // change to true to autoplay the embedded presentation
+            verticalEnabled: true,
+            allowHiddenControlsWhenPaused: true,
+            hideTitle: true
+            });
+          </script>
+        </div>
+
+
       </div>
+      
     </div>
     {% include 'pages/footer.html' %}
 
