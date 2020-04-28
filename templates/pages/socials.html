@@ -50,9 +50,9 @@
     <div id="calendar">
     </div>
 
-    <script type='text/javascript'>
-        make_cal("static/basic.ics")
-    </script>
+<!--    <script type='text/javascript'>-->
+<!--        make_cal("static/basic.ics")-->
+<!--    </script>-->
 
 
     <div class="cards row">
@@ -116,7 +116,10 @@
 </div>
 <script>
     $(document).ready(() => {
+         make_cal("static/basic.ics");
+
         add_local_tz('.session_times');
+
     })
 </script>
 

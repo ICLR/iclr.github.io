@@ -74,11 +74,17 @@ function make_cal(name) {
                                                     // append location
                                                     if (info.event.extendedProps.location != null && info.event.extendedProps.location != "") {
                                                         info.el.append(info.event.extendedProps.location );
-                                                    }},
+                                                    }}
                                             });
 
         cal.gotoDate("2020-04-26");
         cal.render();
+
+        const  days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const today = new Date()
+        const dayOfWeek = days[today.getUTCDay()];
+        $(".fc-scroller").scrollTop($(`.fc-widget-header:contains('${dayOfWeek}')`).position().top);
+
     });
 
 }
