@@ -4,6 +4,7 @@ expos:
       title: Neurosymbolic Hybrid AI
       speaker: David Cox
       zoom: https://us02web.zoom.us/j/86563430819?pwd=TlpJWGNhMG0vd1lRZk84ZGo0ZG5HQT09
+      chat: IBM
       day: Tues
       time:  "16:00-17:00 GMT"
       slides_live_qa: 38926911
@@ -14,6 +15,7 @@ expos:
       speaker: Lei Li
       zoom: https://us02web.zoom.us/j/86714113459?pwd=STBCN0ttRU5GdGJrY0p2S3lCU1F6QT09
       day: Wed
+      chat: ByteDance
       time:  "19:00-20:00 GMT"
       slides_live: 38926916
       slides_live_qa: 38926923
@@ -24,13 +26,13 @@ expos:
       title: Towards Ecologically Valid Research on Natural Language Interfaces
       slides_live_qa: 38926914
       slides_live: 38926922
-      
-      
-
+      chat: ElementAI
+     
       zoom: https://us02web.zoom.us/j/83457902079?pwd=bmsvWGFNYXJHc2FWL2FwaVZRVUVldz09
       day: Wed 
       time: "15:00-16:00 GMT"
     - name: Amazon
+      chat: Amazon
       slides_live: 
       title: Reinforcement Learning @ Amazon
       slides_live_qa: 38926918

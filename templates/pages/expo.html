@@ -56,7 +56,7 @@
     <!-- SlidesLive -->
     <div class="container" style="background-color:white; padding: 0px;">
       <div class="row m-2">
-        <div class="col-md-12 col-xs-12 my-auto p-2" >
+        <div class="col-md-7 col-xs-12 my-auto p-2" >
           <div id="presentation-embed-{{info.slides_live}}" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -64,11 +64,28 @@
             presentationId: '{{info.slides_live}}',
             autoPlay: false, // change to true to autoplay the embedded presentation
             verticalEnabled: true,
+            verticalWhenWidthLte: 2000,
             allowHiddenControlsWhenPaused: true,
             hideTitle: true
             });
           </script>
         </div>
+        <div class="col-md-5 col-xs-12 p-2">
+          <div id="gitter" class="slp">
+            <center>
+              <iframe frameborder="0" src="https://iclr.rocket.chat/channel/expo_{{info.chat}}?layout=embedded" height="700px" width="100%" ></iframe>
+            </center>
+          </div>
+        </div>
+
+        <center>
+          <h2>
+
+            Question and Answer Session
+          </h2>
+
+          (This section will be visible during and after the Live QA.)
+        </center>
 
         <div class="col-md-12 col-xs-12 my-auto p-2" >
           <div id="presentation-embed-{{info.slides_live_qa}}" class="slp my-auto"></div>
