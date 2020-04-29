@@ -17,8 +17,8 @@ expos:
       day: Wed
       chat: ByteDance
       time:  "19:00-20:00 GMT"
-      slides_live: 38926916
-      slides_live_qa: 38926923
+      slides_live_qa: 38926916
+      slides_live: 38926923
 
     - name: Element AI
       slides_live:
