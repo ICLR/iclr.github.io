@@ -244,6 +244,19 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
       description: "A chance to meet and engage with Alberta Machine Intelligence Institute (Amii) Fellows in conversations relevant to their research areas and experience. See full list of Amii Fellows at: amii.ca/our-team."
       image: amii.png
       id: Amii
+    - name:  Research with 🤗  Transformers
+      organizers: Sam Bowman, Clem from Hugging Face
+      description:
+          "Many academic groups are building wrapper software on top of Transformers to run experiments, for example jiant.info, but it's still very much a work in progress. This social is about collaborating and reworking our goals to better fit with the open-source ecosystem. More broadly, though, we're also just interested in what general techniques/ideas/tools people find useful."
+      day:
+        - Thursday
+      times:
+        - 20:00-22:00 GMT
+      links:
+        - https://us02web.zoom.us/j/4181216599
+      chat: huggingface-ama
+      image: huggingface.png
+      id: huggingface
     - name: ICLR Town
       organizers: "Khurram Javed, Adam White, & Sasha Rush"
       website: https://town.siempre.io
