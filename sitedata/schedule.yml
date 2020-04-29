@@ -65,6 +65,10 @@ conference:
     - slot: 8p
       type: poster
       short: P2S5
+    - slot: 2p
+      type: expo
+      link: "expo_1.html"
+      name: "Expo IBM: David Cox"
   - day: "2020-04-29"
     events:
     - slot: 5a
@@ -127,7 +131,4 @@ conference:
       type: expo
       link: "expo_4.html"
       name: "Expo Amazon: Britt Allen, Rui Song"
-    - slot: 2p
-      type: expo
-      link: "expo_1.html"
-      name: "Expo IBM: David Cox"
+
