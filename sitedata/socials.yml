@@ -254,7 +254,8 @@ If you are in AI and either self-identify as Black or an ally, let's meet-up at 
         - 20:00-22:00 GMT
       links:
         - https://us02web.zoom.us/j/4181216599
-      chat: huggingface-ama
+      chat: huggingface
+      website: https://huggingface.co
       image: huggingface.png
       id: huggingface
     - name: ICLR Town
