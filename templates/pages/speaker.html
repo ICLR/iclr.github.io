@@ -45,7 +45,7 @@
             {{info.abstract|safe}} <br><br>
 
             <span class="font-weight-bold">Bio:</span>
-            {{info.bio}}
+            {{info.bio|safe}}
           </div>
           </p>
           <p></p>
@@ -63,6 +63,7 @@
             presentationId: '{{info.slides_link}}',
             autoPlay: false, // change to true to autoplay the embedded presentation
             verticalEnabled: true,
+            zoomRatio: 1,
             verticalWhenWidthLte: 2000,
             allowHiddenControlsWhenPaused: true,
             hideTitle: true
@@ -99,6 +100,7 @@
             presentationId: '{{info.qa_link}}',
             autoPlay: false, // change to true to autoplay the embedded presentation
             verticalEnabled: true,
+            zoomRatio: 1,
             <!-- verticalWhenWidthLte: 2000, -->
             allowHiddenControlsWhenPaused: true,
             hideTitle: true
