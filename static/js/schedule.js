@@ -78,8 +78,8 @@ function updateTable() {
 
               res += `<div  class="time_slot"> ${tf(d.real_times[0])} - ${tf(
                 d.real_times[1])} ${(dd > 0 ? '+' + dd + 'd' : (dd < 0 ? dd + 'd' : ''))} </div>`
-              res += `<a href="papers.html?session=${day}+Session+${matches[2]}"> <span class="session-title">` +
-                `Poster Day ${matches[1]} Session ${matches[2]}</span> </a>`
+              res += ` <span class="session-title">` +
+                `Poster Day ${matches[1]} Session ${matches[2]}</span>`
 
           } else if (d.type === 'qa' || d.type=== 'expo') {
               const dd = day_diff(d.real_times[1]);
