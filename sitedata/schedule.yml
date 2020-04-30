@@ -7,6 +7,7 @@ time_slots:
   12p: [12:00 PM, 2:00 PM]
   2p: [2:00 PM, 3:00 PM]
   3p: [3:00 PM, 4:00 PM]
+  330p: [3:30 PM, 4:00 PM]
   4p: [4:00 PM, 5:00 PM]
   5p: [5:00 PM, 7:00 PM]
   7p: [7:00 PM, 8:00 PM]
@@ -127,8 +128,8 @@ conference:
     - slot: 8p
       type: poster
       short: P4S5
-    - slot: 3p
+    - slot: 330p
       type: expo
       link: "expo_4.html"
-      name: "Expo Amazon: Britt Allen, Rui Song"
+      name: "Expo Amazon"
 
