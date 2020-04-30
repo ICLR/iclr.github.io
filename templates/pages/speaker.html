@@ -20,21 +20,7 @@
             <a class="card-link" data-toggle="collapse" role="button" href="#details">
             Abstract & Bio
             </a>
-            <a href="chat.html?room=channel/speaker_{{id}}" target="_blank"  class="card-link">
-            Chat
-            </a>
-          </div>
-          <div class=" text-center text-muted">
-            <div> {{info.day}} <span class="session_times">({{info.time}})</span> Live QA<br>
-              <a href="{{info.zoom}}" target="_blank"  class="card-link">Live Call</a> | <a href="#stream">Stream<a/>
-            </div>
-
-            <div class="m-2">
-              (Please watch the talk and post questions to chat before the Live QA.)
-            </div>
-            
-          </div>
-          
+          </div>          
         </div>
       </div>
       <div id="details" class="pp-card m-3 collapse">
@@ -55,7 +41,7 @@
     <!-- SlidesLive -->
     <div class="container" style="background-color:white; padding: 0px;">
       <div class="row m-2">
-        <div class="col-md-7 col-xs-12 my-auto p-2" >
+        <div class="col-md-12 col-xs-12 my-auto p-2" >
           <div id="presentation-embed-{{info.slides_link}}" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -63,18 +49,10 @@
             presentationId: '{{info.slides_link}}',
             autoPlay: false, // change to true to autoplay the embedded presentation
             verticalEnabled: true,
-            verticalWhenWidthLte: 2000,
             allowHiddenControlsWhenPaused: true,
             hideTitle: true
             });
           </script>
-        </div>
-        <div class="col-md-5 col-xs-12 p-2">
-          <div id="gitter" class="slp">
-            <center>
-              <iframe frameborder="0" src="https://iclr.rocket.chat/channel/speaker_{{info.id}}?layout=embedded" height="700px" width="100%" ></iframe>
-            </center>
-          </div>
         </div>
 
     <div  id="stream" class="container" style="padding-bottom: 30px; padding-top:30px">
@@ -85,7 +63,6 @@
             Question and Answer Session
           </h2>
 
-          (This section will be visible during and after the Live QA.)
         </center>
 
 

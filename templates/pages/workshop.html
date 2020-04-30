@@ -46,17 +46,10 @@
               Calendar
             </a>
             
-            <a href="{{info.zoom_live}}" target="_blank"  class="card-link">
-            Live
-            </a>
-            <a href="chat.html?room=channel/workshop_{{info.chat}}" target="_blank"  class="card-link">
-            Chat
-            </a>
           </div>
           <div class="text-center text-muted">
             {{info.content|safe}}
             <br>
-            (Note: Workshop posters and instructions are on the workshop site. Password for the zoom link is: seaslug .)
           </div>
         </div>
       </div>
@@ -67,9 +60,6 @@
             <span class="font-weight-bold">Description:</span>
             {{info.description|safe}}
           </div>
-
-
-
         </div>
       </div>
         
@@ -88,7 +78,7 @@
     <!-- SlidesLive -->
     <div class="container" style="background-color:white; padding: 0px;">
       <div class="row m-2">
-        <div class="col-md-7 col-xs-12 my-auto p-2" >
+        <div class="col-md-12 col-xs-12 my-auto p-2" >
           <div id="presentation-embed-{{info.slides_live}}" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -96,18 +86,10 @@
             presentationId: '{{info.slides_live}}',
             autoPlay: false, // change to true to autoplay the embedded presentation
             verticalEnabled: true,
-            verticalWhenWidthLte: 2000,
             allowHiddenControlsWhenPaused: true,
             hideTitle: true
             });
           </script>
-        </div>
-        <div class="col-md-5 col-xs-12 p-2">
-          <div id="gitter" class="slp">
-            <center>
-              <iframe frameborder="0" src="https://iclr.rocket.chat/channel/workshop_{{info.chat}}?layout=embedded" height="700px" width="100%" ></iframe>
-            </center>
-          </div>
         </div>
       </div>
     </div>

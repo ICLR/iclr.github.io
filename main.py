@@ -44,24 +44,12 @@ def main(site_data_path):
     paper_session = {}
     session_times = {}
     session_links = {}
-    site_data["poster_schedule"].sort(key = lambda s : s["name"])
 
     slide_link = {}
     for p in site_data["poster_slides"]["slides"]:
         slide_link[p["uid"]] = p["slides_id"]
 
 
-    for v in site_data["poster_schedule"]:
-        for poster_info in v["posters"]:
-            poster = poster_info["id"]
-            join_link = poster_info["join_link"]
-            paper_session.setdefault(poster, [])
-            session_times.setdefault(poster, [])
-            session_links.setdefault(poster, [])
-            t = times2[int(v["name"].split()[-1]) -1]
-            paper_session[poster].append(v["name"])
-            session_times[poster].append(t)
-            session_links[poster].append(join_link)
     for s in site_data["oral_schedule"]:
         day = s["day"]
         for section in s["section"]:
@@ -91,11 +79,10 @@ def main(site_data_path):
         n["content"]["iclr_id"] = k
         n["content"]["slides"] = slide_link[k]
         n["content"]["authors"] = [a.replace("*", "") for a in n["content"]["authors"]]
-        n["content"]["session"] = paper_session[k]
-        n["content"]["session_times"] = session_times[k]
-        n["content"]["session_links"] = session_links[k]
-        # n["content"]["recs"] = rec_to[k] + [site_data["papers"][t]["content"]["title"]
-        #                                     for t in site_data["paper_recs"][k]]
+        if k in paper_session:
+            n["content"]["session"] = paper_session[k]
+            n["content"]["session_times"] = session_times[k]
+            n["content"]["session_links"] = session_links[k]
         titles[n["content"]["title"]] = k
 
         if "TL;DR" in n["content"]:
@@ -360,9 +347,9 @@ def paper_json():
                         "abstract": " ",
                         "TLDR": v["content"]["TLDR"],
                         "recs": [],
-                        "session": v["content"]["session"],
-                        "session_times": v["content"]["session_times"],
-                        "session_links": v["content"]["session_links"]
+                        "session": v["content"].get("session", []),
+                        "session_times": v["content"].get("session_times", []),
+                        "session_links": v["content"].get("session_links", [])
             }})
     return jsonify(json)
 
@@ -415,9 +402,9 @@ def your_generator_here():
 
     for i in site_data["papers"].keys():
         yield "poster", {"poster": str(i)}
-    for i in site_data["papers"].keys():
-        for j in range(2):
-            yield "poster_ics", {"poster": str(i), "session":str(j)}
+    # for i in site_data["papers"].keys():
+    #     for j in range(2):
+    #         yield "poster_ics", {"poster": str(i), "session":str(j)}
 
     for i in range(1, len(site_data["workshops"]["workshops"])+1):
         yield "workshop", {"workshop": str(i)}

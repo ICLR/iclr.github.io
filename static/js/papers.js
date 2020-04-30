@@ -225,7 +225,6 @@ const card_html = openreview => `
                 <h6 class="card-subtitle text-muted" align="center">
                         ${openreview.content.authors.join(', ')}
                 </h6>
-                ${card_time_small(openreview, render_mode !== 'list')}  
                 ${card_image(openreview, render_mode !== 'list')}
                 
             </div>
