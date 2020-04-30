@@ -94,7 +94,7 @@ function updateTable() {
               const matches = d.short.match(/P([0-9]+)S([0-9]+)/);
               const dayID = matches[1];
               const day = conf_days[dayID]
-              window.open(`papers.html?session=${day}+Session+${matches[2]}`)
+              // window.open(`papers.html?session=${day}+Session+${matches[2]}`)
           } else if (d.type === 'qa') {
               window.open(`speaker_${d.id}.html`)
           } else {
