@@ -27,7 +27,7 @@ const lazyLoader = () => {
     }, config);
 
     const imgs = document.querySelectorAll('.lazy-load-img');
-    console.log(imgs,"--- imgs");
+    // console.log(imgs,"--- imgs");
     imgs.forEach(img => {
         // console.log(img,"--- img");
         lazy_active_observer.observe(img);
