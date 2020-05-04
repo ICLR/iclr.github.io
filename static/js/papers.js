@@ -137,6 +137,10 @@ d3.selectAll('.filter_option input').on('click', function () {
     setQueryStringParameter("search", '');
     updateFilterSelectionBtn(filter_mode);
 
+    if (ga) {
+        ga('send', 'event', 'Papers', 'filtermode', filter_mode);
+    }
+
     setTypeAhead(filter_mode, allKeys, filters, render);
     render();
 })
@@ -150,11 +154,20 @@ d3.selectAll('.remove_session').on('click', () => {
 d3.selectAll('.render_option input').on('click', function () {
     const me = d3.select(this);
     render_mode = me.property('value');
+    if (ga) {
+        ga('send', 'event', 'Papers', 'render_mode', render_mode);
+    }
+
     render();
 })
 
 d3.select('.reshuffle').on('click', () => {
     shuffleArray(allPapers);
+    if (ga) {
+        // console.log("asdasd--- ");
+        ga('send', 'event', 'Papers', 'reshuffle');
+    }
+
     render();
 })
 
@@ -189,8 +202,9 @@ const card_time_small = (openreview, show) => {
 <!--    <div class="pp-card-footer">-->
     <div class="text-center" style="margin-top: 10px;">
     ${cnt.session.filter(s => s.match(/.*[0-9]/g)).map(
-      (s,i) => `<a class="card-subtitle text-muted" href="?session=${encodeURIComponent(
-        s)}">${s.replace('Session ','')}</a> ${card_live(cnt.session_links[i])} ${card_cal(openreview, i)} `).join(', ')}
+      (s, i) => `<a class="card-subtitle text-muted" href="?session=${encodeURIComponent(
+        s)}">${s.replace('Session ', '')}</a> ${card_live(
+        cnt.session_links[i])} ${card_cal(openreview, i)} `).join(', ')}
     </div>
 <!--    </div>-->
     ` : '';
@@ -199,8 +213,8 @@ const card_time_small = (openreview, show) => {
 const card_icon_video = icon_video(16);
 const card_icon_cal = icon_cal(16);
 
-const card_live = (link)=>`<a class="text-muted" href="${link}">${card_icon_video}</a>`
-const card_cal = (openreview, i)=>  `<a class="text-muted" href="webcal://iclr.github.io/iclr-images/calendars/poster_${openreview.forum}.${i}.ics">${card_icon_cal}</a>`
+const card_live = (link) => `<a class="text-muted" href="${link}">${card_icon_video}</a>`
+const card_cal = (openreview, i) => `<a class="text-muted" href="webcal://iclr.github.io/iclr-images/calendars/poster_${openreview.forum}.${i}.ics">${card_icon_cal}</a>`
 
 // const card_time_detail = (openreview, show) => {
 //     const cnt = openreview.content;
