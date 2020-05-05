@@ -8,10 +8,7 @@ from suggest_reviewers import create_embeddings, calc_similarity_matrix
 from models import load_model
 import torch
 
-# accepted_submissions = pickle.load(open("../cached_or.pkl", "br"))
-
-with open("../sitedata/papers.json") as f:
-    accepted_submissions = json.load(f)
+accepted_submissions = pickle.load(open("../data/pkl/cached_or.pkl", "br"))
 
 # Load the model
 abstracts = []
