@@ -161,7 +161,14 @@ const setSession = (day, num) => {
   }
 }
 
-const doSearch = it => {
+const doExactSearch = it => {
+  return doSearch(it, true)
+  // Disabled since it somehow gets overridden by the typahead script
+  // Todo some other way to indicate that we perform an exact search?
+  // return doSearch((it.charAt(0) == '"' ? '' : '"') + it + (it.charAt(it.length -1) == '"' ? '' : '"'))
+}
+
+const doSearch = (it, exact) => {
 
     $('.typeahead_all').val(it);
     setQueryStringParameter("search", encodeURIComponent(it));
@@ -169,10 +176,14 @@ const doSearch = it => {
     const gridItems = $grid.find('.grid-item');
 
     // TODO improve search functionality
-
-    if (it.length > 0){
-      itarr = it.toLowerCase().split(" ");
-      itarr = jQuery(itarr).filter((i, el) => { return el.length >= 4 })
+    const query = it.trim().toLowerCase();
+    if (query.length > 0){
+      // const exact = (query.charAt(0) == '"' && query.charAt(query.length - 1) == '"')
+      let itarr = (
+        exact ? 
+        jQuery([query.substring(query.charAt(0) == '"' ? 1 : 0, query.length - (query.charAt(query.length - 1) == '"' ? 1 : 0))]) : 
+        jQuery(query.split(" ")).filter((i, el) => { return ['and', 'or', 'on', 'of', 'for', 'by', 'with', 'via', 'in', 'to', 'a', 'an', 'the'].indexOf(el) < 0 })
+      );
       gridItems.each((i, el) => {
         el = jQuery(el)
         const haystack = el.text();
@@ -289,8 +300,8 @@ const start = () => {
         proj_dict = {};
         jQuery.each(allProj, (i, el) => { proj_dict[el['id']] = el['pos']});
         calcAllKeys(allPapers, allKeys);
-        const allKeysCombined = allKeys['authors'].concat(allKeys['keywords'], allKeys['titles'])
-        initTypeAhead(allKeysCombined, '.typeahead_all', 'ilike', (el, it) => { doSearch(it) });
+        const allKeysCombined = allKeys['authors'].concat(allKeys['keywords'], allKeys['titles']);
+        initTypeAhead(allKeysCombined, '.typeahead_all', 'ilike', (el, it) => { allKeysCombined.indexOf(it) >= 0 ? doExactSearch(it) : doSearch(it) });
         updateCards(allPapers)
 
 
@@ -308,7 +319,7 @@ const start = () => {
 
 
         jQuery('.pp-card .keywords').on('click', 'a', function(){ 
-          doSearch(jQuery(this).text());
+          doExactSearch(jQuery(this).text());
           return false; 
         });
 
@@ -352,7 +363,8 @@ const start = () => {
         const sessionNumber = decodeURIComponent(getUrlParameter("session_number")) || 'all';
         setSession(sessionDay, sessionNumber);
         if (urlSearch !== '') {
-          doSearch(urlSearch)
+          let it = urlSearch;
+          allKeysCombined.indexOf(it) >= 0 ? doExactSearch(it) : doSearch(it)
         }
         // setSessionDay(sessionDay)
         // setSessionNumber(sessionNumber)
