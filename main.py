@@ -201,19 +201,13 @@ def paperLike(standalone=False):
             "page": "papers",
             "openreviews": site_data["papers"].values(), 
             "standalone": standalone,
-            "siteroot": "https://iclr.cc/virtual/" if standalone else ""}
+            "siteroot": "https://iclr.cc/virtual_2020/" if standalone else ""}
     return render_template('pages/paper_like.html', **data)
 
 
 @app.route('/paper_like_standalone.html')
 def paperLikeStandalone():
     return paperLike(True)
-    # data = {"keyword": "all",
-    #         "page": "papers",
-    #         "openreviews": site_data["papers"].values(), 
-    #         "standalone": True,
-    #         "siteroot": "https://iclr.cc/virtual/"}
-    # return render_template('pages/paper_like.html', **data)
 
 
 @app.route('/recs.html')
