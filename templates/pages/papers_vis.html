@@ -35,17 +35,8 @@
     <!--   <li class="nav-item"><a class="nav-link" href="#recs">Recommendations</a></li> -->
     <!-- </ul> -->
     <div class="container-lg" id="container" style="padding-top: 20px;">
-      <ul class="nav nav-pills justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link text-muted " href="papers.html">Browse
-          </a>
-        </li>
-        <li class="nav-item active" style="background-color: #bed972;">
-          <a class="nav-link text-muted " data-toggle="tab" href="#"
-            role="tab" aria-controls="nav-home" aria-selected="true">Visualization
-          </a>
-        </li>
-      </ul>
+      {% set active_paper_tab_id = "Visualization" %}
+      {% include 'misc/paper_tabs.html' %}
       <div class="row py-3">
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="input-group mb-3">
@@ -102,11 +93,11 @@
             {# data-toggle="buttons">#}
             {# <label class="btn btn-outline-secondary active">#}
             {# <input type="radio" name="options" value="compact" #}
-            {# autocomplete="off" checked> compact#}
+            {# autocomplete="off"> compact#}
             {# </label>#}
             {# <label class="btn btn-outline-secondary">#}
             {# <input type="radio" name="options" value="detail" #}
-            {# autocomplete="off"> detail#}
+            {# autocomplete="off" checked> detail#}
             {# </label>#}
             {#
           </div>

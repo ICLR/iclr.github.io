@@ -1,0 +1,69 @@
+{% set paper_tabs = [
+    ('papers.html', 'Browse'),
+    ('paper_vis.html', 'Visualization'),
+    ('paper_like.html', 'IlikeCLR'),
+] -%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+<ul class="nav nav-pills justify-content-center">
+  <style type="text/css" scoped>
+       .fa-thumbs-up.likon {
+          font-size: 80%;
+          position: relative;
+          top: -2px;
+        }
+         
+        body .nav-pills .nav-link.active {
+          background-color: #bed972;
+        }
+  </style>
+  {% for href, id in paper_tabs %}
+  {% if id == active_paper_tab_id %}
+  <li class="nav-item active">
+    <a class="nav-link text-muted active " data-toggle="tab"
+      href="#tab-browse" role="tab" aria-controls="nav-home"
+      aria-selected="true">{% if id == "IlikeCLR" %}I<i class="fa fa-thumbs-up likon"></i>CLR{% else %}{{id}}{% endif %}
+    </a>
+  </li>
+  {% else %}
+  <li class="nav-item">
+    <a class="nav-link text-muted" href="{{href}}">{% if id == "IlikeCLR" %}I<i class="fa fa-thumbs-up likon"></i>CLR{% else %}{{id}}{% endif %}
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
+
+
+<!--   <li class="nav-item">
+    <a class="nav-link text-muted" href="papers.html">Browse
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-muted" href="paper_vis.html">Visualization
+    </a>
+  </li>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link text-muted active " data-toggle="tab"
+      href="#tab-browse" role="tab" aria-controls="nav-home"
+      aria-selected="true">I<i class="fa fa-thumbs-up likon"></i>CLR
+    </a>
+  </li> -->
+</ul>
+<!-- 
+<ul class="nav nav-pills justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link text-muted" href="papers.html">Browse
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-muted" href="paper_vis.html">Visualization
+    </a>
+  </li>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link text-muted active " data-toggle="tab"
+      href="#tab-browse" role="tab" aria-controls="nav-home"
+      aria-selected="true">I<i class="fa fa-thumbs-up likon"></i>CLR
+    </a>
+  </li>
+</ul> -->

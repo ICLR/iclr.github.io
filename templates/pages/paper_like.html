@@ -5,13 +5,33 @@
   <body>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="static/css/ilike.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <script src="static/js/kriging.js" type="text/javascript"></script>
+
     <!-- NAV -->
-    {% set active_page = "Papers" %}
-    {% include 'pages/header.html' %}
+    {% set active_page = "IlikeCLR" %}
+
+    {% if standalone %}
+      {% include 'pages/header_like.html' %}
+    {% else %}
+      {% include 'pages/header.html' %}
+    {% endif %}
     <div class="container">
+
+          <div id="loading" class="overlay">
+              <div id="loading-indicator">
+              <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+              </div>
+          </div>
       <!-- Header -->
-      {% set active_paper_tab_id = "Browse" %}
+      {% if not standalone %}
+      {% set active_paper_tab_id = "IlikeCLR" %}
       {% include 'misc/paper_tabs.html' %}
+      {% endif %}
       <div class="row"></div>
       <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
         <div class="tab-pane active" id="tab-browse" role="tabpanel"
@@ -29,8 +49,20 @@
               </button>
             </div>
           </div>
+          <div class="row session_notice">
+            <div class="alert alert-success alert-dismissible fade show col-12"
+              role="alert">
+              Like papers (privately) and sort by <i class="fa fa-thumbs-up likon"></i>-lihood to get instant (maximum <i class="fa fa-thumbs-up likon"></i>-lihood) recommendations. Simply save the URL to recover your session.
+              <!-- To navigate all papers close this message. -->
+              <button type="button" class="close remove_alert"
+                data-dismiss="alert"
+                aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
           <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
               <div class="input-group mb-3">
                 <input type="text" class="form-control typeahead_all"
                   placeholder="Search">
@@ -41,7 +73,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4 text-center"
+            <div class="col-12 col-lg-1">
+              <label class="btn text-muted"><span class="filterCount">0</span> <span class="countLabel">papers</span></label>
+            </div>
+            <!-- <div class="col-12 col-sm-6 col-md-6 col-lg-4 text-center"
               style="margin-bottom: 10px;">
               <div class="btn-group btn-group-toggle filter_option">
                 <label class="btn btn-outline-secondary"
@@ -62,14 +97,9 @@
                   value="authors"
                   autocomplete="off" > author
                 </label>
-                <!-- <label class="btn btn-outline-secondary" -->
-                <!--        data-tippy-content="Search for papers closest related to authors or other papers"> -->
-                <!--     <input type="radio" name="options" value="recs" -->
-                <!--            autocomplete="off"> similar -->
-                <!-- </label> -->
               </div>
-            </div>
-            <div class="col-12 col-lg-4">
+            </div> -->
+            <!-- <div class="col-12 col-lg-4">
               <button class="btn btn-outline-secondary reshuffle"> shuffle
               </button>
               <div class="float-right">
@@ -82,18 +112,109 @@
                   <label class="btn btn-outline-secondary active">
                   <input type="radio" name="options"
                     value="compact"
-                    autocomplete="off" checked> compact
+                    autocomplete="off"> compact
                   </label>
                   <label class="btn btn-outline-secondary">
                   <input type="radio" name="options"
                     value="detail"
-                    autocomplete="off"> detail
+                    autocomplete="off" checked> detail
+                  </label>
+                </div>
+              </div>
+            </div> -->
+            <div class="col-12 col-lg-4 session-selector">
+              <label class="btn text-muted">Session</label>
+              <div class="float-right">
+                <!-- <div> -->
+                <div class="btn-group btn-group-toggle session_day"
+                  data-toggle="buttons">
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="session_day" value="all"
+                    autocomplete="off"> all
+                  </label>
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="session_day"
+                    value="mon"
+                    autocomplete="off"> mon
+                  </label>
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="session_day"
+                    value="tue"
+                    autocomplete="off"> tue
+                  </label>
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="session_day"
+                    value="wed"
+                    autocomplete="off"> wed
+                  </label>
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="session_day"
+                    value="thu"
+                    autocomplete="off"> thu
+                  </label>
+                </div>
+                <div class="btn-group btn-group-toggle session_number"
+                  data-toggle="buttons">
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="session_number" value="all"
+                    autocomplete="off"> all
+                  </label>
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="session_number"
+                    value="1"
+                    autocomplete="off"> 1
+                  </label>
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="session_number"
+                    value="2"
+                    autocomplete="off"> 2
+                  </label>
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="session_number"
+                    value="3"
+                    autocomplete="off"> 3
+                  </label>
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="session_number"
+                    value="4"
+                    autocomplete="off"> 4
+                  </label>
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="session_number"
+                    value="5"
+                    autocomplete="off"> 5
+                  </label>
+                </div>
+              <!-- </div> -->
+              </div>
+              <!-- <div class="float-right">
+                
+              </div> -->
+            </div>
+            <div class="col-12 col-lg-4">
+              <label class="btn text-muted">Order by</label>
+              <div class="float-right">
+                <div class="btn-group btn-group-toggle order_by"
+                  data-toggle="buttons">
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="order_by" value="random"
+                    autocomplete="off"> random
+                  </label>
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="order_by"
+                    value="search"
+                    autocomplete="off"> search
+                  </label>
+                  <label class="btn btn-outline-secondary">
+                  <input type="radio" name="order_by"
+                    value="likelihood"
+                    autocomplete="off"> <i class="fa fa-thumbs-up likon"></i>-lihood
                   </label>
                 </div>
               </div>
             </div>
           </div>
-          <div class="cards row">
+          <div class="cards row grid">
           </div>
         </div>
         <div class="tab-pane fade" id="tab-vis" role="tabpanel"
@@ -212,7 +333,7 @@
                     </p>
                     <p>You can <b>search</b> for papers by
                       author,
-                      keyword, or title
+                      keyword, or title 
                     </p>
                     <p><b>Drag a rectangle </b> to summarize an
                       area
@@ -235,13 +356,14 @@
     </div>
     <script src="static/js/icons.js"></script>
     <script src="static/js/typeahead_tools.js"></script>
-    <script src="static/js/papers.js"></script>
+    <script src="static/js/paper_like.js"></script>
     <script>
+      const SITE_ROOT = "{{siteroot}}";
       $(document).ready(function () {
           tippy('[data-tippy-content]', {trigger: 'mouseenter focus'});
           start();
       })
-
+      
     </script>
     {% include 'pages/footer.html' %}
   </body>
